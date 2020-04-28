@@ -1,0 +1,11 @@
+Framework: .NET framework
+Versión de framework: 4.7.2
+Base de datos: Oracle 19C
+Instalación base de datos: Tipo avanzada, clave global: oracle12345
+
+Creación base de datos:
+
+	Nombre nueva base de datos: oracleportafolio
+	SID: sidoraclepor
+	clave: oracle12345
+	Asignación de usuario: SYSTEM
