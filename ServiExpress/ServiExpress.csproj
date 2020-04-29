@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="app GUI\formRegistroUsuario.cs">
+    <Compile Include="app GUI\formNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\formRegistroUsuario.Designer.cs">
-      <DependentUpon>formRegistroUsuario.cs</DependentUpon>
+    <Compile Include="app GUI\formNuevoUsuario.Designer.cs">
+      <DependentUpon>formNuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\formUsuario2.cs">
       <SubType>Form</SubType>
@@ -85,8 +85,8 @@
     <Compile Include="controlador\controladorLoginUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="app GUI\formRegistroUsuario.resx">
-      <DependentUpon>formRegistroUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\formNuevoUsuario.resx">
+      <DependentUpon>formNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\formUsuario2.resx">
       <DependentUpon>formUsuario2.cs</DependentUpon>

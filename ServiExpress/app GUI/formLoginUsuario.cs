@@ -50,13 +50,8 @@ namespace ServiExpress
 
         private void btnRegistroUsuario_Click(object sender, EventArgs e)
         {
-            //formRegistroUsuario nuevoRegistroUsuario = new formRegistroUsuario();
-            //nuevoRegistroUsuario.ShowDialog();
-
-            WebServiceUsuario.WebServiceUsuarioClient webUsuario = new WebServiceUsuario.WebServiceUsuarioClient();
-            string[] resultado = webUsuario.WebServiceNuevoUsuario("184799650","Katherinne","Alejandra","Sepúlveda","Arriagada",962847949,
-                                              "sepulvedakatherinne@gmail.com","nuevo horizonte 781",2,"k.sepulveda",
-                                              2,"kate123");
+            formNuevoUsuario nuevoUsuario = new formNuevoUsuario();
+            nuevoUsuario.ShowDialog();
         }
     }
 }
