@@ -14,15 +14,17 @@ namespace ServiExpress.app_GUI
 {
     public partial class FormUsuario1 : Form
     {
+        private ControladorCliente controladorCliente;
         public FormUsuario1(string[] login)
         {
             InitializeComponent();
-            ControladorCliente controladorCliente = new ControladorCliente(login);
+            this.controladorCliente = new ControladorCliente(login);
+            controladorCliente.GetInfo();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();            
         }
 
         private void FormUsuario1_Load(object sender, EventArgs e)

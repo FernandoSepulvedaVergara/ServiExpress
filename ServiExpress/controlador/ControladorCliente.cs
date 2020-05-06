@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServiExpress.controlador
 {
-    public class ControladorCliente
+    public class ControladorCliente : ControladorPrincipal
     {
         private string[] login;
 
@@ -15,10 +15,12 @@ namespace ServiExpress.controlador
             this.login = login;
         }
 
-        public static string[] GetInfoCliente(string rut) 
+        
+        public override string[] GetInfo() 
         {
             WebServiceCliente.WebServiceClienteClient webCliente = new WebServiceCliente.WebServiceClienteClient();
-            return webCliente.GetInfoCliente(rut);            
+            string[] resultado = webCliente.GetInfoCliente(login[0]);
+            return resultado;
         }
     }
 }

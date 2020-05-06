@@ -13,7 +13,7 @@ namespace ServiExpress
             InitializeComponent();
         }
 
-        private void btnIngresarUsuario_Click(object sender, EventArgs e)
+        private void BtnIngresarUsuario_Click(object sender, EventArgs e)
         {
             string[] login = ControladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(),txtContraseñaUsuario.Text.Trim());
             if (login != null)
@@ -52,17 +52,17 @@ namespace ServiExpress
             }
         }
 
-        private void formLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnRegistroUsuario_Click(object sender, EventArgs e)
+        private void BtnRegistroUsuario_Click(object sender, EventArgs e)
         {
             FormNuevoUsuario nuevoUsuario = new FormNuevoUsuario();
             nuevoUsuario.ShowDialog();

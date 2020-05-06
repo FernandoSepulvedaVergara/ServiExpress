@@ -103,6 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="controlador\ControladorPrincipal.cs" />
     <Compile Include="controlador\ControladorCliente.cs" />
     <Compile Include="controlador\ControladorLoginUsuario.cs" />
     <Compile Include="Program.cs" />
