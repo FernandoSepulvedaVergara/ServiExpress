@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI
 {
-    public partial class formUsuario2 : Form
+    public partial class FormUsuario2 : Form
     {
-        public formUsuario2()
+        public FormUsuario2()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -25,6 +25,11 @@ namespace ServiExpress.app_GUI
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

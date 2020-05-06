@@ -5,21 +5,21 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceJava/WebServiceLogin?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="WebServiceValidarLogin">
-    <part name="parameters" element="tns:WebServiceValidarLogin" />
+  <message name="ValidarLogin">
+    <part name="parameters" element="tns:ValidarLogin" />
   </message>
-  <message name="WebServiceValidarLoginResponse">
-    <part name="parameters" element="tns:WebServiceValidarLoginResponse" />
+  <message name="ValidarLoginResponse">
+    <part name="parameters" element="tns:ValidarLoginResponse" />
   </message>
   <portType name="WebServiceLogin">
-    <operation name="WebServiceValidarLogin">
-      <input wsam:Action="http://Servicios/WebServiceLogin/WebServiceValidarLoginRequest" message="tns:WebServiceValidarLogin" />
-      <output wsam:Action="http://Servicios/WebServiceLogin/WebServiceValidarLoginResponse" message="tns:WebServiceValidarLoginResponse" />
+    <operation name="ValidarLogin">
+      <input wsam:Action="http://Servicios/WebServiceLogin/ValidarLoginRequest" message="tns:ValidarLogin" />
+      <output wsam:Action="http://Servicios/WebServiceLogin/ValidarLoginResponse" message="tns:ValidarLoginResponse" />
     </operation>
   </portType>
   <binding name="WebServiceLoginPortBinding" type="tns:WebServiceLogin">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="WebServiceValidarLogin">
+    <operation name="ValidarLogin">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

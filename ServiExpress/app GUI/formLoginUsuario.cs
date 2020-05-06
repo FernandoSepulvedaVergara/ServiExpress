@@ -15,21 +15,35 @@ namespace ServiExpress
 
         private void btnIngresarUsuario_Click(object sender, EventArgs e)
         {
-            string[] login = controladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(),txtContraseñaUsuario.Text.Trim());
+            string[] login = ControladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(),txtContraseñaUsuario.Text.Trim());
             if (login != null)
             {
                 if (int.Parse(login[3]) == 1)
                 {
-                    formUsuario1 usuario1 = new formUsuario1();
+                    FormUsuario1 usuario1 = new FormUsuario1(login);
                     this.Hide();
                     usuario1.Show();
                 }
 
                 else if(int.Parse(login[3]) == 2)
                 {
-                    formUsuario2 usuario2 = new formUsuario2();
+                    FormUsuario2 usuario2 = new FormUsuario2();
                     this.Hide();
                     usuario2.Show();
+                }
+
+                else if (int.Parse(login[3]) == 3)
+                {
+                    FormUsuario3 usuario3 = new FormUsuario3();
+                    this.Hide();
+                    usuario3.Show();
+                }
+
+                else if (int.Parse(login[3]) == 4)
+                {
+                    FormUsuario4 usuario4 = new FormUsuario4();
+                    this.Hide();
+                    usuario4.Show();
                 }
             }
             else
@@ -50,7 +64,7 @@ namespace ServiExpress
 
         private void btnRegistroUsuario_Click(object sender, EventArgs e)
         {
-            formNuevoUsuario nuevoUsuario = new formNuevoUsuario();
+            FormNuevoUsuario nuevoUsuario = new FormNuevoUsuario();
             nuevoUsuario.ShowDialog();
         }
     }

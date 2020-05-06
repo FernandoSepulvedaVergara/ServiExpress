@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class formNuevoUsuario
+    partial class FormNuevoUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formNuevoUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoUsuario));
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.txtPrimerNombre = new System.Windows.Forms.TextBox();
@@ -119,7 +119,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(39, 183);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(154, 20);
+            this.txtEmail.Size = new System.Drawing.Size(156, 20);
             this.txtEmail.TabIndex = 7;
             // 
             // txtSegundoNombre
@@ -301,7 +301,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(39, 277);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(197, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;

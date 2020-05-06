@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Calendario">
+      <HintPath>..\..\..\..\AppData\Local\Temp\Rar$DRa12960.23627\Calendario.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -48,29 +52,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="app GUI\formNuevoUsuario.cs">
+    <Compile Include="app GUI\FormNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\formNuevoUsuario.Designer.cs">
-      <DependentUpon>formNuevoUsuario.cs</DependentUpon>
+    <Compile Include="app GUI\FormNuevoUsuario.Designer.cs">
+      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\formUsuario2.cs">
+    <Compile Include="app GUI\FormUsuario2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\formUsuario2.Designer.cs">
-      <DependentUpon>formUsuario2.cs</DependentUpon>
+    <Compile Include="app GUI\FormUsuario2.Designer.cs">
+      <DependentUpon>FormUsuario2.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\formUsuario1.cs">
+    <Compile Include="app GUI\FormUsuario1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\formUsuario1.Designer.cs">
-      <DependentUpon>formUsuario1.cs</DependentUpon>
+    <Compile Include="app GUI\FormUsuario1.Designer.cs">
+      <DependentUpon>FormUsuario1.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\formLoginUsuario.cs">
+    <Compile Include="app GUI\FormLoginUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\formLoginUsuario.Designer.cs">
-      <DependentUpon>formLoginUsuario.cs</DependentUpon>
+    <Compile Include="app GUI\FormLoginUsuario.Designer.cs">
+      <DependentUpon>FormLoginUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\FormUsuario3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\FormUsuario3.Designer.cs">
+      <DependentUpon>FormUsuario3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\FormUsuario4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\FormUsuario4.Designer.cs">
+      <DependentUpon>FormUsuario4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WebServiceCliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WebServiceLoginUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -82,20 +103,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="controlador\controladorLoginUsuario.cs" />
+    <Compile Include="controlador\ControladorCliente.cs" />
+    <Compile Include="controlador\ControladorLoginUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="app GUI\formNuevoUsuario.resx">
-      <DependentUpon>formNuevoUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\FormNuevoUsuario.resx">
+      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\formUsuario2.resx">
-      <DependentUpon>formUsuario2.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\FormUsuario2.resx">
+      <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\formUsuario1.resx">
-      <DependentUpon>formUsuario1.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\FormUsuario1.resx">
+      <DependentUpon>FormUsuario1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\formLoginUsuario.resx">
-      <DependentUpon>formLoginUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
+      <DependentUpon>FormLoginUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\FormUsuario3.resx">
+      <DependentUpon>FormUsuario3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\FormUsuario4.resx">
+      <DependentUpon>FormUsuario4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,14 +134,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\WebServiceLoginUsuario\ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse.datasource">
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\WebServiceCliente.wsdl" />
+    <None Include="Connected Services\WebServiceCliente\WebServiceCliente.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WebServiceLoginUsuario\ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceLoginUsuario\WebServiceLogin.wsdl" />
     <None Include="Connected Services\WebServiceLoginUsuario\WebServiceLogin.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse.datasource">
+    <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.NuevoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceUsuario\WebServiceNuevoUsuario.wsdl" />
@@ -137,6 +172,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WebServiceCliente\" />
     <WCFMetadataStorage Include="Connected Services\WebServiceLoginUsuario\" />
     <WCFMetadataStorage Include="Connected Services\WebServiceUsuario\" />
   </ItemGroup>
@@ -160,6 +196,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\WebServiceUsuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WebServiceCliente\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WebServiceCliente\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WebServiceCliente\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

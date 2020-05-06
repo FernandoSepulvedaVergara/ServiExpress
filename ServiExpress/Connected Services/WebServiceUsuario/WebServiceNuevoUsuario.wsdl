@@ -5,21 +5,21 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceJava/WebServiceNuevoUsuario?xsd=1" namespace="http://Servicios/" />
     </xsd:schema>
   </types>
-  <message name="WebServiceNuevoUsuario">
-    <part name="parameters" element="tns:WebServiceNuevoUsuario" />
+  <message name="NuevoUsuario">
+    <part name="parameters" element="tns:NuevoUsuario" />
   </message>
-  <message name="WebServiceNuevoUsuarioResponse">
-    <part name="parameters" element="tns:WebServiceNuevoUsuarioResponse" />
+  <message name="NuevoUsuarioResponse">
+    <part name="parameters" element="tns:NuevoUsuarioResponse" />
   </message>
   <portType name="WebServiceUsuario">
-    <operation name="WebServiceNuevoUsuario">
-      <input wsam:Action="http://Servicios/WebServiceUsuario/WebServiceNuevoUsuarioRequest" message="tns:WebServiceNuevoUsuario" />
-      <output wsam:Action="http://Servicios/WebServiceUsuario/WebServiceNuevoUsuarioResponse" message="tns:WebServiceNuevoUsuarioResponse" />
+    <operation name="NuevoUsuario">
+      <input wsam:Action="http://Servicios/WebServiceUsuario/NuevoUsuarioRequest" message="tns:NuevoUsuario" />
+      <output wsam:Action="http://Servicios/WebServiceUsuario/NuevoUsuarioResponse" message="tns:NuevoUsuarioResponse" />
     </operation>
   </portType>
   <binding name="WebServiceUsuarioPortBinding" type="tns:WebServiceUsuario">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="WebServiceNuevoUsuario">
+    <operation name="NuevoUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

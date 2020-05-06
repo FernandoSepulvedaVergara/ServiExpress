@@ -16,20 +16,20 @@ namespace ServiExpress.WebServiceLoginUsuario {
     public interface WebServiceLogin {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceLogin/WebServiceValidarLoginRequest", ReplyAction="http://Servicios/WebServiceLogin/WebServiceValidarLoginResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceLogin/ValidarLoginRequest", ReplyAction="http://Servicios/WebServiceLogin/ValidarLoginResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse WebServiceValidarLogin(ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest request);
+        ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse ValidarLogin(ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceLogin/WebServiceValidarLoginRequest", ReplyAction="http://Servicios/WebServiceLogin/WebServiceValidarLoginResponse")]
-        System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse> WebServiceValidarLoginAsync(ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceLogin/ValidarLoginRequest", ReplyAction="http://Servicios/WebServiceLogin/ValidarLoginResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse> ValidarLoginAsync(ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WebServiceValidarLogin", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class WebServiceValidarLoginRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarLogin", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class ValidarLoginRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -39,10 +39,10 @@ namespace ServiExpress.WebServiceLoginUsuario {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string contraseña;
         
-        public WebServiceValidarLoginRequest() {
+        public ValidarLoginRequest() {
         }
         
-        public WebServiceValidarLoginRequest(string usuario, string contraseña) {
+        public ValidarLoginRequest(string usuario, string contraseña) {
             this.usuario = usuario;
             this.contraseña = contraseña;
         }
@@ -51,17 +51,17 @@ namespace ServiExpress.WebServiceLoginUsuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WebServiceValidarLoginResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class WebServiceValidarLoginResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarLoginResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class ValidarLoginResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
         public string[] @return;
         
-        public WebServiceValidarLoginResponse() {
+        public ValidarLoginResponse() {
         }
         
-        public WebServiceValidarLoginResponse(string[] @return) {
+        public ValidarLoginResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -94,28 +94,28 @@ namespace ServiExpress.WebServiceLoginUsuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse ServiExpress.WebServiceLoginUsuario.WebServiceLogin.WebServiceValidarLogin(ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest request) {
-            return base.Channel.WebServiceValidarLogin(request);
+        ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse ServiExpress.WebServiceLoginUsuario.WebServiceLogin.ValidarLogin(ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest request) {
+            return base.Channel.ValidarLogin(request);
         }
         
-        public string[] WebServiceValidarLogin(string usuario, string contraseña) {
-            ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest inValue = new ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest();
+        public string[] ValidarLogin(string usuario, string contraseña) {
+            ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest inValue = new ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest();
             inValue.usuario = usuario;
             inValue.contraseña = contraseña;
-            ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse retVal = ((ServiExpress.WebServiceLoginUsuario.WebServiceLogin)(this)).WebServiceValidarLogin(inValue);
+            ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse retVal = ((ServiExpress.WebServiceLoginUsuario.WebServiceLogin)(this)).ValidarLogin(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse> ServiExpress.WebServiceLoginUsuario.WebServiceLogin.WebServiceValidarLoginAsync(ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest request) {
-            return base.Channel.WebServiceValidarLoginAsync(request);
+        System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse> ServiExpress.WebServiceLoginUsuario.WebServiceLogin.ValidarLoginAsync(ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest request) {
+            return base.Channel.ValidarLoginAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginResponse> WebServiceValidarLoginAsync(string usuario, string contraseña) {
-            ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest inValue = new ServiExpress.WebServiceLoginUsuario.WebServiceValidarLoginRequest();
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse> ValidarLoginAsync(string usuario, string contraseña) {
+            ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest inValue = new ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest();
             inValue.usuario = usuario;
             inValue.contraseña = contraseña;
-            return ((ServiExpress.WebServiceLoginUsuario.WebServiceLogin)(this)).WebServiceValidarLoginAsync(inValue);
+            return ((ServiExpress.WebServiceLoginUsuario.WebServiceLogin)(this)).ValidarLoginAsync(inValue);
         }
     }
 }

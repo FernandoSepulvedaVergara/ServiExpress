@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI
 {
-    public partial class FormNuevoUsuario : Form
+    public partial class FormUsuario3 : Form
     {
-        public FormNuevoUsuario()
+        public FormUsuario3()
         {
             InitializeComponent();
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
-       
+
     }
 }

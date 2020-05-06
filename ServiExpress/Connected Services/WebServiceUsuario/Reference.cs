@@ -16,20 +16,20 @@ namespace ServiExpress.WebServiceUsuario {
     public interface WebServiceUsuario {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceUsuario/WebServiceNuevoUsuarioRequest", ReplyAction="http://Servicios/WebServiceUsuario/WebServiceNuevoUsuarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://Servicios/WebServiceUsuario/NuevoUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse WebServiceNuevoUsuario(ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest request);
+        ServiExpress.WebServiceUsuario.NuevoUsuarioResponse NuevoUsuario(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceUsuario/WebServiceNuevoUsuarioRequest", ReplyAction="http://Servicios/WebServiceUsuario/WebServiceNuevoUsuarioResponse")]
-        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse> WebServiceNuevoUsuarioAsync(ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://Servicios/WebServiceUsuario/NuevoUsuarioResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> NuevoUsuarioAsync(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WebServiceNuevoUsuario", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class WebServiceNuevoUsuarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="NuevoUsuario", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class NuevoUsuarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -79,10 +79,10 @@ namespace ServiExpress.WebServiceUsuario {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string contraseña;
         
-        public WebServiceNuevoUsuarioRequest() {
+        public NuevoUsuarioRequest() {
         }
         
-        public WebServiceNuevoUsuarioRequest(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
+        public NuevoUsuarioRequest(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
             this.rut = rut;
             this.primerNombre = primerNombre;
             this.segundoNombre = segundoNombre;
@@ -101,17 +101,17 @@ namespace ServiExpress.WebServiceUsuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="WebServiceNuevoUsuarioResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class WebServiceNuevoUsuarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="NuevoUsuarioResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class NuevoUsuarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
         public string[] @return;
         
-        public WebServiceNuevoUsuarioResponse() {
+        public NuevoUsuarioResponse() {
         }
         
-        public WebServiceNuevoUsuarioResponse(string[] @return) {
+        public NuevoUsuarioResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -144,12 +144,12 @@ namespace ServiExpress.WebServiceUsuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse ServiExpress.WebServiceUsuario.WebServiceUsuario.WebServiceNuevoUsuario(ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest request) {
-            return base.Channel.WebServiceNuevoUsuario(request);
+        ServiExpress.WebServiceUsuario.NuevoUsuarioResponse ServiExpress.WebServiceUsuario.WebServiceUsuario.NuevoUsuario(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request) {
+            return base.Channel.NuevoUsuario(request);
         }
         
-        public string[] WebServiceNuevoUsuario(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
-            ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest inValue = new ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest();
+        public string[] NuevoUsuario(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
+            ServiExpress.WebServiceUsuario.NuevoUsuarioRequest inValue = new ServiExpress.WebServiceUsuario.NuevoUsuarioRequest();
             inValue.rut = rut;
             inValue.primerNombre = primerNombre;
             inValue.segundoNombre = segundoNombre;
@@ -162,17 +162,17 @@ namespace ServiExpress.WebServiceUsuario {
             inValue.nombreUsuario = nombreUsuario;
             inValue.tipoUsuario = tipoUsuario;
             inValue.contraseña = contraseña;
-            ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse retVal = ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).WebServiceNuevoUsuario(inValue);
+            ServiExpress.WebServiceUsuario.NuevoUsuarioResponse retVal = ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).NuevoUsuario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse> ServiExpress.WebServiceUsuario.WebServiceUsuario.WebServiceNuevoUsuarioAsync(ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest request) {
-            return base.Channel.WebServiceNuevoUsuarioAsync(request);
+        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> ServiExpress.WebServiceUsuario.WebServiceUsuario.NuevoUsuarioAsync(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request) {
+            return base.Channel.NuevoUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioResponse> WebServiceNuevoUsuarioAsync(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
-            ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest inValue = new ServiExpress.WebServiceUsuario.WebServiceNuevoUsuarioRequest();
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> NuevoUsuarioAsync(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
+            ServiExpress.WebServiceUsuario.NuevoUsuarioRequest inValue = new ServiExpress.WebServiceUsuario.NuevoUsuarioRequest();
             inValue.rut = rut;
             inValue.primerNombre = primerNombre;
             inValue.segundoNombre = segundoNombre;
@@ -185,7 +185,7 @@ namespace ServiExpress.WebServiceUsuario {
             inValue.nombreUsuario = nombreUsuario;
             inValue.tipoUsuario = tipoUsuario;
             inValue.contraseña = contraseña;
-            return ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).WebServiceNuevoUsuarioAsync(inValue);
+            return ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).NuevoUsuarioAsync(inValue);
         }
     }
 }

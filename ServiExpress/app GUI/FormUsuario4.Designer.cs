@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class FormUsuario2
+    partial class FormUsuario4
     {
         /// <summary>
         /// Required designer variable.
@@ -32,67 +32,55 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(151, 47);
+            this.panel1.Location = new System.Drawing.Point(139, 81);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 338);
-            this.panel1.TabIndex = 13;
+            this.panel1.TabIndex = 9;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1, 344);
+            this.button3.Location = new System.Drawing.Point(0, 378);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 41);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 8;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1, 105);
+            this.button2.Location = new System.Drawing.Point(0, 116);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 41);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Nuevo pedido";
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Reservar hora";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1, 47);
+            this.button1.Location = new System.Drawing.Point(0, 69);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 41);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Datos personales";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Empleado";
-            // 
-            // formUsuario2
+            // formUsuario4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 397);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "formUsuario2";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "formUsuario4";
+            this.Text = "formUsuario4";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -102,6 +90,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="ValidarLogin" type="tns:ValidarLogin" />
-  <xs:element name="ValidarLoginResponse" type="tns:ValidarLoginResponse" />
-  <xs:complexType name="ValidarLogin">
+  <xs:element name="GetInfoCliente" type="tns:GetInfoCliente" />
+  <xs:element name="GetInfoClienteResponse" type="tns:GetInfoClienteResponse" />
+  <xs:complexType name="GetInfoCliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="usuario" type="xs:string" />
-      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ValidarLoginResponse">
+  <xs:complexType name="GetInfoClienteResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>

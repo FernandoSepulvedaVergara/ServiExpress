@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class FormUsuario2
+    partial class FormUsuario3
     {
         /// <summary>
         /// Required designer variable.
@@ -37,14 +37,14 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(151, 47);
+            this.panel1.Location = new System.Drawing.Point(145, 62);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 338);
             this.panel1.TabIndex = 13;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1, 344);
+            this.button3.Location = new System.Drawing.Point(6, 359);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 41);
             this.button3.TabIndex = 12;
@@ -53,16 +53,16 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1, 105);
+            this.button2.Location = new System.Drawing.Point(6, 115);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 41);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Nuevo pedido";
+            this.button2.Text = "Pedidos";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1, 47);
+            this.button1.Location = new System.Drawing.Point(6, 62);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 41);
             this.button1.TabIndex = 10;
@@ -72,25 +72,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 21);
+            this.label1.Location = new System.Drawing.Point(51, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Empleado";
+            this.label1.Text = "Proveedor";
             // 
-            // formUsuario2
+            // formUsuario3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 397);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "formUsuario2";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "formUsuario3";
+            this.Text = "formUsuario3";
             this.ResumeLayout(false);
             this.PerformLayout();
 

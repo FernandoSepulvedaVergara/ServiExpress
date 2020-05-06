@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServiExpress.controlador
 {
-    public static class controladorLoginUsuario
+    public static class ControladorLoginUsuario
     {      
 
         public static string[] ValidarUsuario(string username, string password) 
@@ -15,7 +15,7 @@ namespace ServiExpress.controlador
             string _username = null;
             string _password = null;
             WebServiceLoginUsuario.WebServiceLoginClient webLogin = new WebServiceLoginUsuario.WebServiceLoginClient();
-            string[] login = webLogin.WebServiceValidarLogin(username,password);
+            string[] login = webLogin.ValidarLogin(username,password);
 
             if (login != null)
             {
