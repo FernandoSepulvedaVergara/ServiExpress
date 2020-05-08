@@ -60,7 +60,7 @@
             this.btnSalir.TabIndex = 22;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // btnRegistroUsuario
             // 
@@ -71,7 +71,7 @@
             this.btnRegistroUsuario.TabIndex = 21;
             this.btnRegistroUsuario.Text = "Registrarse";
             this.btnRegistroUsuario.UseVisualStyleBackColor = false;
-            this.btnRegistroUsuario.Click += new System.EventHandler(this.btnRegistroUsuario_Click);
+            this.btnRegistroUsuario.Click += new System.EventHandler(this.BtnRegistroUsuario_Click);
             // 
             // btnIngresarUsuario
             // 
@@ -82,7 +82,7 @@
             this.btnIngresarUsuario.TabIndex = 20;
             this.btnIngresarUsuario.Text = "Ingresar";
             this.btnIngresarUsuario.UseVisualStyleBackColor = false;
-            this.btnIngresarUsuario.Click += new System.EventHandler(this.btnIngresarUsuario_Click);
+            this.btnIngresarUsuario.Click += new System.EventHandler(this.BtnIngresarUsuario_Click);
             // 
             // txtContraseñaUsuario
             // 
@@ -151,7 +151,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login ";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formLoginUsuario_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLoginUsuario_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

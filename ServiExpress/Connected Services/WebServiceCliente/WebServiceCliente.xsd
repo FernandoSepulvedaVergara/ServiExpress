@@ -2,14 +2,30 @@
 <xs:schema xmlns:tns="http://Servicios/" targetNamespace="http://Servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="GetInfoCliente" type="tns:GetInfoCliente" />
   <xs:element name="GetInfoClienteResponse" type="tns:GetInfoClienteResponse" />
+  <xs:element name="GetServicios" type="tns:GetServicios" />
+  <xs:element name="GetServiciosResponse" type="tns:GetServiciosResponse" />
   <xs:complexType name="GetInfoCliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetInfoClienteResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetServicios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetServiciosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:servicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="servicio">
+    <xs:sequence>
+      <xs:element name="id_servicio" type="xs:int" />
+      <xs:element minOccurs="0" name="servicio" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

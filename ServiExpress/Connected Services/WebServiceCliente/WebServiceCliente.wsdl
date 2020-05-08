@@ -11,15 +11,34 @@
   <message name="GetInfoClienteResponse">
     <part name="parameters" element="tns:GetInfoClienteResponse" />
   </message>
+  <message name="GetServicios">
+    <part name="parameters" element="tns:GetServicios" />
+  </message>
+  <message name="GetServiciosResponse">
+    <part name="parameters" element="tns:GetServiciosResponse" />
+  </message>
   <portType name="WebServiceCliente">
     <operation name="GetInfoCliente">
       <input wsam:Action="http://Servicios/WebServiceCliente/GetInfoClienteRequest" message="tns:GetInfoCliente" />
       <output wsam:Action="http://Servicios/WebServiceCliente/GetInfoClienteResponse" message="tns:GetInfoClienteResponse" />
     </operation>
+    <operation name="GetServicios">
+      <input wsam:Action="http://Servicios/WebServiceCliente/GetServiciosRequest" message="tns:GetServicios" />
+      <output wsam:Action="http://Servicios/WebServiceCliente/GetServiciosResponse" message="tns:GetServiciosResponse" />
+    </operation>
   </portType>
   <binding name="WebServiceClientePortBinding" type="tns:WebServiceCliente">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="GetInfoCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetServicios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

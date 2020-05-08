@@ -32,10 +32,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,16 +75,6 @@
             this.panel1.Size = new System.Drawing.Size(721, 460);
             this.panel1.TabIndex = 5;
             // 
-            // monthCalendar
-            // 
-            this.monthCalendar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.monthCalendar.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.monthCalendar.Location = new System.Drawing.Point(211, 9);
-            this.monthCalendar.MaxSelectionCount = 1;
-            this.monthCalendar.Name = "monthCalendar";
-            this.monthCalendar.TabIndex = 1;
-            this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar_DateChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -111,6 +101,17 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "label3";
+            // 
+            // monthCalendar
+            // 
+            this.monthCalendar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.monthCalendar.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
+            this.monthCalendar.Location = new System.Drawing.Point(231, 9);
+            this.monthCalendar.MaxSelectionCount = 1;
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 1;
+            this.monthCalendar.TabStop = false;
+            this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar_DateChanged);
             // 
             // FormUsuario1
             // 
@@ -145,8 +146,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MonthCalendar monthCalendar;
     }
 }

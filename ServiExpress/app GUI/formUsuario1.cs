@@ -20,6 +20,7 @@ namespace ServiExpress.app_GUI
             InitializeComponent();
             this.controladorCliente = new ControladorCliente(login);
             controladorCliente.GetInfo();
+            controladorCliente.GetServicios();
         }
 
         private void Button1_Click(object sender, EventArgs e)

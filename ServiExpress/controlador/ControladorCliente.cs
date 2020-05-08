@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiExpress.WebServiceCliente;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace ServiExpress.controlador
     public class ControladorCliente : ControladorPrincipal
     {
         private string[] login;
+        WebServiceCliente.WebServiceClienteClient webCliente = new WebServiceCliente.WebServiceClienteClient();
 
         public ControladorCliente(string[] login)
         {
@@ -17,9 +19,14 @@ namespace ServiExpress.controlador
 
         
         public override string[] GetInfo() 
-        {
-            WebServiceCliente.WebServiceClienteClient webCliente = new WebServiceCliente.WebServiceClienteClient();
+        {            
             string[] resultado = webCliente.GetInfoCliente(login[0]);
+            return resultado;
+        }
+
+        public servicio[] GetServicios()
+        {
+            ServiExpress.WebServiceCliente.servicio[] resultado = webCliente.GetServicios();
             return resultado;
         }
     }

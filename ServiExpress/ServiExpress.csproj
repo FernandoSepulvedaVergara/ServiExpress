@@ -138,6 +138,12 @@
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetServiciosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.servicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.wsdl" />
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.xsd">
       <SubType>Designer</SubType>
