@@ -1,4 +1,5 @@
-﻿using ServiExpress.controlador;
+﻿using ServiExpress.app_GUI.Usuario1;
+using ServiExpress.controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +31,7 @@ namespace ServiExpress.app_GUI
 
         private void FormUsuario1_Load(object sender, EventArgs e)
         {
-            DateTime localdate = DateTime.Now;
-            this.monthCalendar.MinDate =localdate;
+        
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -39,10 +39,17 @@ namespace ServiExpress.app_GUI
             Application.Exit();
         }
 
-        private void MonthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        private void BtnReservaAtencion_Click(object sender, EventArgs e)
         {
-            string fecha = monthCalendar.SelectionStart.Date.ToString().Substring(0,8);            
-            
+            if (splitContainer1.Panel2.Controls.Count >0) 
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            ReservaDeAtencion reservaDeAtencion = new ReservaDeAtencion();
+            reservaDeAtencion.TopLevel = false;
+            reservaDeAtencion.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(reservaDeAtencion);            
+            reservaDeAtencion.Show();
         }
     }
 }

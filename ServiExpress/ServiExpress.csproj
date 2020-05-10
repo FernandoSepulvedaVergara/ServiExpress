@@ -64,10 +64,10 @@
     <Compile Include="app GUI\FormUsuario2.Designer.cs">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\FormUsuario1.cs">
+    <Compile Include="app GUI\Usuario1\FormUsuario1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\FormUsuario1.Designer.cs">
+    <Compile Include="app GUI\Usuario1\FormUsuario1.Designer.cs">
       <DependentUpon>FormUsuario1.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\FormLoginUsuario.cs">
@@ -87,6 +87,12 @@
     </Compile>
     <Compile Include="app GUI\FormUsuario4.Designer.cs">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\Usuario1\ReservaDeAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\Usuario1\ReservaDeAtencion.Designer.cs">
+      <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WebServiceCliente\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -114,7 +120,7 @@
     <EmbeddedResource Include="app GUI\FormUsuario2.resx">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\FormUsuario1.resx">
+    <EmbeddedResource Include="app GUI\Usuario1\FormUsuario1.resx">
       <DependentUpon>FormUsuario1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\FormUsuario4.resx">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\Usuario1\ReservaDeAtencion.resx">
+      <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
