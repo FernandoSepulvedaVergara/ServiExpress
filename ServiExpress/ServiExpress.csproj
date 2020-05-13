@@ -58,10 +58,22 @@
     <Compile Include="app GUI\FormNuevoUsuario.Designer.cs">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\FormUsuario2.cs">
+    <Compile Include="app GUI\Usuario1\VehiculoCliente\AgregarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\FormUsuario2.Designer.cs">
+    <Compile Include="app GUI\Usuario1\VehiculoCliente\AgregarVehiculo.Designer.cs">
+      <DependentUpon>AgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\Usuario1\VehiculoCliente\VehiculosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\Usuario1\VehiculoCliente\VehiculosCliente.Designer.cs">
+      <DependentUpon>VehiculosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\Usuario2\FormUsuario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\Usuario2\FormUsuario2.Designer.cs">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\Usuario1\FormUsuario1.cs">
@@ -76,16 +88,16 @@
     <Compile Include="app GUI\FormLoginUsuario.Designer.cs">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\FormUsuario3.cs">
+    <Compile Include="app GUI\Usuario3\FormUsuario3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\FormUsuario3.Designer.cs">
+    <Compile Include="app GUI\Usuario3\FormUsuario3.Designer.cs">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\FormUsuario4.cs">
+    <Compile Include="app GUI\Usuario4\FormUsuario4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\FormUsuario4.Designer.cs">
+    <Compile Include="app GUI\Usuario4\FormUsuario4.Designer.cs">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\Usuario1\ReservaDeAtencion.cs">
@@ -117,7 +129,13 @@
     <EmbeddedResource Include="app GUI\FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\FormUsuario2.resx">
+    <EmbeddedResource Include="app GUI\Usuario1\VehiculoCliente\AgregarVehiculo.resx">
+      <DependentUpon>AgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\Usuario1\VehiculoCliente\VehiculosCliente.resx">
+      <DependentUpon>VehiculosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\Usuario2\FormUsuario2.resx">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\Usuario1\FormUsuario1.resx">
@@ -126,10 +144,10 @@
     <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\FormUsuario3.resx">
+    <EmbeddedResource Include="app GUI\Usuario3\FormUsuario3.resx">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\FormUsuario4.resx">
+    <EmbeddedResource Include="app GUI\Usuario4\FormUsuario4.resx">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\Usuario1\ReservaDeAtencion.resx">
@@ -147,10 +165,25 @@
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetServiciosResponse.datasource">
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetTipoDeServiciosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.servicio.datasource">
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetTipoDeVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetVehiculosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.IngresarVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.tipoDeServicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.tipoDeVehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.vehiculo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.wsdl" />
@@ -167,8 +200,8 @@
     <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.NuevoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WebServiceUsuario\WebServiceNuevoUsuario.wsdl" />
-    <None Include="Connected Services\WebServiceUsuario\WebServiceNuevoUsuario.xsd">
+    <None Include="Connected Services\WebServiceUsuario\WebServiceNuevoUsuario1.wsdl" />
+    <None Include="Connected Services\WebServiceUsuario\WebServiceNuevoUsuario1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

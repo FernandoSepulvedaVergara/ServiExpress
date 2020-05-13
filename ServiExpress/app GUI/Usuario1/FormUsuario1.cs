@@ -21,7 +21,7 @@ namespace ServiExpress.app_GUI
             InitializeComponent();
             this.controladorCliente = new ControladorCliente(login);
             controladorCliente.GetInfo();
-            controladorCliente.GetServicios();
+            controladorCliente.GetTipoVehiculos();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -50,6 +50,19 @@ namespace ServiExpress.app_GUI
             reservaDeAtencion.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(reservaDeAtencion);            
             reservaDeAtencion.Show();
+        }
+
+        private void BtnVehículos_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            VehiculosCliente vehiculosCliente = new VehiculosCliente(controladorCliente);
+            vehiculosCliente.TopLevel = false;
+            vehiculosCliente.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(vehiculosCliente);
+            vehiculosCliente.Show();
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1d2f802e-a9c8-45df-9573-234f66b0c83c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6859b6c4-4ab6-4962-86de-a8aa4ae0fc1d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServiceJava/WebServiceCliente?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServiceServiExpress/WebServiceCliente?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebServiceCliente.xsd" MetadataType="Schema" ID="43fd323a-a236-4b7b-b98a-dab09ba1c9b8" SourceId="1" SourceUrl="http://localhost:8080/WebServiceJava/WebServiceCliente?xsd=1" />
-    <MetadataFile FileName="WebServiceCliente.wsdl" MetadataType="Wsdl" ID="8736b703-7684-418e-8e2a-c48a410e4c16" SourceId="1" SourceUrl="http://localhost:8080/WebServiceJava/WebServiceCliente?WSDL" />
+    <MetadataFile FileName="WebServiceCliente.xsd" MetadataType="Schema" ID="ff49d243-1c7b-40ac-87b7-2721f52aa0db" SourceId="1" SourceUrl="http://localhost:8080/WebServiceServiExpress/WebServiceCliente?xsd=1" />
+    <MetadataFile FileName="WebServiceCliente.wsdl" MetadataType="Wsdl" ID="778d83cc-08bf-4c2b-92bd-692022db7d4f" SourceId="1" SourceUrl="http://localhost:8080/WebServiceServiExpress/WebServiceCliente?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

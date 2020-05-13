@@ -12,30 +12,30 @@ namespace ServiExpress.WebServiceLoginUsuario {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Servicios/", ConfigurationName="WebServiceLoginUsuario.WebServiceLogin")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://servicios/", ConfigurationName="WebServiceLoginUsuario.WebServiceLogin")]
     public interface WebServiceLogin {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceLogin/ValidarLoginRequest", ReplyAction="http://Servicios/WebServiceLogin/ValidarLoginResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceLogin/ValidarLoginRequest", ReplyAction="http://servicios/WebServiceLogin/ValidarLoginResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse ValidarLogin(ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceLogin/ValidarLoginRequest", ReplyAction="http://Servicios/WebServiceLogin/ValidarLoginResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceLogin/ValidarLoginRequest", ReplyAction="http://servicios/WebServiceLogin/ValidarLoginResponse")]
         System.Threading.Tasks.Task<ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse> ValidarLoginAsync(ServiExpress.WebServiceLoginUsuario.ValidarLoginRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarLogin", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarLogin", WrapperNamespace="http://servicios/", IsWrapped=true)]
     public partial class ValidarLoginRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string contraseña;
         
@@ -51,10 +51,10 @@ namespace ServiExpress.WebServiceLoginUsuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarLoginResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarLoginResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
     public partial class ValidarLoginResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
         public string[] @return;
         

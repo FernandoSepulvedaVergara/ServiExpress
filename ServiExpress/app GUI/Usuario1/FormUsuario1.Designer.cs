@@ -78,6 +78,7 @@
             this.BtnVehículos.TabIndex = 2;
             this.BtnVehículos.Text = "Mis vehículos";
             this.BtnVehículos.UseVisualStyleBackColor = true;
+            this.BtnVehículos.Click += new System.EventHandler(this.BtnVehículos_Click);
             // 
             // splitContainer1
             // 

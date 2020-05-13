@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WebServiceLogin" targetNamespace="http://Servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WebServiceLogin" targetNamespace="http://servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/WebServiceJava/WebServiceLogin?xsd=1" namespace="http://Servicios/" />
+      <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceLogin?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
   <message name="ValidarLogin">
@@ -13,8 +13,8 @@
   </message>
   <portType name="WebServiceLogin">
     <operation name="ValidarLogin">
-      <input wsam:Action="http://Servicios/WebServiceLogin/ValidarLoginRequest" message="tns:ValidarLogin" />
-      <output wsam:Action="http://Servicios/WebServiceLogin/ValidarLoginResponse" message="tns:ValidarLoginResponse" />
+      <input wsam:Action="http://servicios/WebServiceLogin/ValidarLoginRequest" message="tns:ValidarLogin" />
+      <output wsam:Action="http://servicios/WebServiceLogin/ValidarLoginResponse" message="tns:ValidarLoginResponse" />
     </operation>
   </portType>
   <binding name="WebServiceLoginPortBinding" type="tns:WebServiceLogin">
@@ -31,7 +31,7 @@
   </binding>
   <service name="WebServiceLogin">
     <port name="WebServiceLoginPort" binding="tns:WebServiceLoginPortBinding">
-      <soap:address location="http://localhost:8080/WebServiceJava/WebServiceLogin" />
+      <soap:address location="http://localhost:8080/WebServiceServiExpress/WebServiceLogin" />
     </port>
   </service>
 </definitions>

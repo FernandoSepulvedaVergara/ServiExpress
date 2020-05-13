@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServiceJava/WebServiceNuevoUsuario?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServiceServiExpress/WebServiceNuevoUsuario?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebServiceNuevoUsuario.xsd" MetadataType="Schema" ID="777afe6a-f433-450a-b486-877f6df77b9f" SourceId="1" SourceUrl="http://localhost:8080/WebServiceJava/WebServiceNuevoUsuario?xsd=1" />
-    <MetadataFile FileName="WebServiceNuevoUsuario.wsdl" MetadataType="Wsdl" ID="fbbdbf77-dc10-47c1-8c87-a5619bf3b3f0" SourceId="1" SourceUrl="http://localhost:8080/WebServiceJava/WebServiceNuevoUsuario?WSDL" />
+    <MetadataFile FileName="WebServiceNuevoUsuario1.xsd" MetadataType="Schema" ID="cb2855bc-cd3b-4dff-a42c-a8a241e55c5e" SourceId="1" SourceUrl="http://localhost:8080/WebServiceServiExpress/WebServiceNuevoUsuario?xsd=1" />
+    <MetadataFile FileName="WebServiceNuevoUsuario1.wsdl" MetadataType="Wsdl" ID="862b0f08-b2e5-4072-b460-584fa2bda9f0" SourceId="1" SourceUrl="http://localhost:8080/WebServiceServiExpress/WebServiceNuevoUsuario?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

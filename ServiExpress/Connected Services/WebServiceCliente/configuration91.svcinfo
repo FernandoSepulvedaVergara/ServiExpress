@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="lGfOPZPH0rai+chI1ofwmcnMDIerJBu/bswIyVe7UZc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ePZIu83Pf7ECAzpkvuRsGOfkscdWu2+QnAmTxVLsbgg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="WebServiceClientePortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WebServiceClientePort" contract="WebServiceCliente.WebServiceCliente" bindingType="basicHttpBinding" address="http://localhost:8080/WebServiceJava/WebServiceCliente" bindingConfiguration="WebServiceClientePortBinding">
+    <endpoint name="WebServiceClientePort" contract="WebServiceCliente.WebServiceCliente" bindingType="basicHttpBinding" address="http://localhost:8080/WebServiceServiExpress/WebServiceCliente" bindingConfiguration="WebServiceClientePortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServiceJava/WebServiceCliente</serializedValue>
+          <serializedValue>http://localhost:8080/WebServiceServiExpress/WebServiceCliente</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -12,70 +12,70 @@ namespace ServiExpress.WebServiceUsuario {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Servicios/", ConfigurationName="WebServiceUsuario.WebServiceUsuario")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://servicios/", ConfigurationName="WebServiceUsuario.WebServiceUsuario")]
     public interface WebServiceUsuario {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://Servicios/WebServiceUsuario/NuevoUsuarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://servicios/WebServiceUsuario/NuevoUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ServiExpress.WebServiceUsuario.NuevoUsuarioResponse NuevoUsuario(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://Servicios/WebServiceUsuario/NuevoUsuarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://servicios/WebServiceUsuario/NuevoUsuarioResponse")]
         System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> NuevoUsuarioAsync(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="NuevoUsuario", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="NuevoUsuario", WrapperNamespace="http://servicios/", IsWrapped=true)]
     public partial class NuevoUsuarioRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string rut;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string primerNombre;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string segundoNombre;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string apellidoPaterno;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string apellidoMaterno;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int telefono;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=6)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string email;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=7)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string direccion;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=8)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=8)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int comuna;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=9)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=9)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string nombreUsuario;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=10)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=10)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int tipoUsuario;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=11)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=11)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string contraseña;
         
@@ -101,10 +101,10 @@ namespace ServiExpress.WebServiceUsuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="NuevoUsuarioResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="NuevoUsuarioResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
     public partial class NuevoUsuarioResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
         public string[] @return;
         

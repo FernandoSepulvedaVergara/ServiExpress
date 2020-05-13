@@ -9,7 +9,7 @@ namespace ServiExpress.controlador
 {
     public class ControladorCliente : ControladorPrincipal
     {
-        private string[] login;
+        public string[] login { get; set; }
         WebServiceCliente.WebServiceClienteClient webCliente = new WebServiceCliente.WebServiceClienteClient();
 
         public ControladorCliente(string[] login)
@@ -24,9 +24,15 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
-        public servicio[] GetServicios()
+        public tipoDeServicio[] GetTipoDeServicios()
         {
-            ServiExpress.WebServiceCliente.servicio[] resultado = webCliente.GetServicios();
+            ServiExpress.WebServiceCliente.tipoDeServicio[] resultado = webCliente.GetTipoDeServicios();
+            return resultado;
+        }
+
+        public tipoDeVehiculo[] GetTipoVehiculos()
+        {
+            ServiExpress.WebServiceCliente.tipoDeVehiculo[] resultado = webCliente.GetTipoDeVehiculo();
             return resultado;
         }
     }

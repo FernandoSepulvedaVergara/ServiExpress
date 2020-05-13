@@ -35,7 +35,7 @@
             // 
             this.monthCalendar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.monthCalendar.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.monthCalendar.Location = new System.Drawing.Point(154, 70);
+            this.monthCalendar.Location = new System.Drawing.Point(40, 18);
             this.monthCalendar.MaxSelectionCount = 1;
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 2;
