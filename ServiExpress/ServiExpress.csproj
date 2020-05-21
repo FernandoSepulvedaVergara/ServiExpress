@@ -66,16 +66,16 @@
     <Compile Include="app GUI\FormNuevoUsuario.Designer.cs">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario1\VehiculoCliente\AgregarVehiculo.cs">
+    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario1\VehiculoCliente\AgregarVehiculo.Designer.cs">
+    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.Designer.cs">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario1\VehiculoCliente\VehiculosCliente.cs">
+    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario1\VehiculoCliente\VehiculosCliente.Designer.cs">
+    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.Designer.cs">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\Usuario2\FormUsuario2.cs">
@@ -84,10 +84,10 @@
     <Compile Include="app GUI\Usuario2\FormUsuario2.Designer.cs">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario1\FormUsuario1.cs">
+    <Compile Include="app GUI\UsuarioCliente\FormUsuario1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario1\FormUsuario1.Designer.cs">
+    <Compile Include="app GUI\UsuarioCliente\FormUsuario1.Designer.cs">
       <DependentUpon>FormUsuario1.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\FormLoginUsuario.cs">
@@ -108,10 +108,10 @@
     <Compile Include="app GUI\Usuario4\FormUsuario4.Designer.cs">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario1\ReservaDeAtencion.cs">
+    <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario1\ReservaDeAtencion.Designer.cs">
+    <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion.Designer.cs">
       <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WebServiceCliente\Reference.cs">
@@ -139,16 +139,16 @@
     <EmbeddedResource Include="app GUI\FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario1\VehiculoCliente\AgregarVehiculo.resx">
+    <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario1\VehiculoCliente\VehiculosCliente.resx">
+    <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\Usuario2\FormUsuario2.resx">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario1\FormUsuario1.resx">
+    <EmbeddedResource Include="app GUI\UsuarioCliente\FormUsuario1.resx">
       <DependentUpon>FormUsuario1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
@@ -160,7 +160,7 @@
     <EmbeddedResource Include="app GUI\Usuario4\FormUsuario4.resx">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario1\ReservaDeAtencion.resx">
+    <EmbeddedResource Include="app GUI\UsuarioCliente\ReservaDeAtencion.resx">
       <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
