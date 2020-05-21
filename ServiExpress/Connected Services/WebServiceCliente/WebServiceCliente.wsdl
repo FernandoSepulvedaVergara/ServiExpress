@@ -5,29 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceCliente?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="GetTipoDeServicios">
-    <part name="parameters" element="tns:GetTipoDeServicios" />
-  </message>
-  <message name="GetTipoDeServiciosResponse">
-    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
-  </message>
-  <message name="GetTipoDeVehiculo">
-    <part name="parameters" element="tns:GetTipoDeVehiculo" />
-  </message>
-  <message name="GetTipoDeVehiculoResponse">
-    <part name="parameters" element="tns:GetTipoDeVehiculoResponse" />
-  </message>
-  <message name="GetInfoCliente">
-    <part name="parameters" element="tns:GetInfoCliente" />
-  </message>
-  <message name="GetInfoClienteResponse">
-    <part name="parameters" element="tns:GetInfoClienteResponse" />
-  </message>
   <message name="IngresarVehiculo">
     <part name="parameters" element="tns:IngresarVehiculo" />
   </message>
   <message name="IngresarVehiculoResponse">
     <part name="parameters" element="tns:IngresarVehiculoResponse" />
+  </message>
+  <message name="GetSucursales">
+    <part name="parameters" element="tns:GetSucursales" />
+  </message>
+  <message name="GetSucursalesResponse">
+    <part name="parameters" element="tns:GetSucursalesResponse" />
   </message>
   <message name="GetVehiculos">
     <part name="parameters" element="tns:GetVehiculos" />
@@ -35,31 +23,63 @@
   <message name="GetVehiculosResponse">
     <part name="parameters" element="tns:GetVehiculosResponse" />
   </message>
+  <message name="GetInfoCliente">
+    <part name="parameters" element="tns:GetInfoCliente" />
+  </message>
+  <message name="GetInfoClienteResponse">
+    <part name="parameters" element="tns:GetInfoClienteResponse" />
+  </message>
+  <message name="RegistrarReservaDeHora">
+    <part name="parameters" element="tns:RegistrarReservaDeHora" />
+  </message>
+  <message name="RegistrarReservaDeHoraResponse">
+    <part name="parameters" element="tns:RegistrarReservaDeHoraResponse" />
+  </message>
+  <message name="GetTipoDeVehiculo">
+    <part name="parameters" element="tns:GetTipoDeVehiculo" />
+  </message>
+  <message name="GetTipoDeVehiculoResponse">
+    <part name="parameters" element="tns:GetTipoDeVehiculoResponse" />
+  </message>
+  <message name="GetTipoDeServicios">
+    <part name="parameters" element="tns:GetTipoDeServicios" />
+  </message>
+  <message name="GetTipoDeServiciosResponse">
+    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
+  </message>
   <portType name="WebServiceCliente">
-    <operation name="GetTipoDeServicios">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
-    </operation>
-    <operation name="GetTipoDeVehiculo">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoRequest" message="tns:GetTipoDeVehiculo" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoResponse" message="tns:GetTipoDeVehiculoResponse" />
-    </operation>
-    <operation name="GetInfoCliente">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteRequest" message="tns:GetInfoCliente" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteResponse" message="tns:GetInfoClienteResponse" />
-    </operation>
     <operation name="IngresarVehiculo">
       <input wsam:Action="http://servicios/WebServiceCliente/IngresarVehiculoRequest" message="tns:IngresarVehiculo" />
       <output wsam:Action="http://servicios/WebServiceCliente/IngresarVehiculoResponse" message="tns:IngresarVehiculoResponse" />
+    </operation>
+    <operation name="GetSucursales">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetSucursalesRequest" message="tns:GetSucursales" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetSucursalesResponse" message="tns:GetSucursalesResponse" />
     </operation>
     <operation name="GetVehiculos">
       <input wsam:Action="http://servicios/WebServiceCliente/GetVehiculosRequest" message="tns:GetVehiculos" />
       <output wsam:Action="http://servicios/WebServiceCliente/GetVehiculosResponse" message="tns:GetVehiculosResponse" />
     </operation>
+    <operation name="GetInfoCliente">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteRequest" message="tns:GetInfoCliente" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteResponse" message="tns:GetInfoClienteResponse" />
+    </operation>
+    <operation name="RegistrarReservaDeHora">
+      <input wsam:Action="http://servicios/WebServiceCliente/RegistrarReservaDeHoraRequest" message="tns:RegistrarReservaDeHora" />
+      <output wsam:Action="http://servicios/WebServiceCliente/RegistrarReservaDeHoraResponse" message="tns:RegistrarReservaDeHoraResponse" />
+    </operation>
+    <operation name="GetTipoDeVehiculo">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoRequest" message="tns:GetTipoDeVehiculo" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoResponse" message="tns:GetTipoDeVehiculoResponse" />
+    </operation>
+    <operation name="GetTipoDeServicios">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
+    </operation>
   </portType>
   <binding name="WebServiceClientePortBinding" type="tns:WebServiceCliente">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="GetTipoDeServicios">
+    <operation name="IngresarVehiculo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +88,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetTipoDeVehiculo">
+    <operation name="GetSucursales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVehiculos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +115,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="IngresarVehiculo">
+    <operation name="RegistrarReservaDeHora">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +124,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetVehiculos">
+    <operation name="GetTipoDeVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTipoDeServicios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

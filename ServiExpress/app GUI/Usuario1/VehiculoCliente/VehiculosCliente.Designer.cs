@@ -32,17 +32,29 @@
             this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_de_vehículo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_de_motor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_de_chasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVehiculosCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvVehiculosCliente
             // 
+            this.DgvVehiculosCliente.AllowUserToAddRows = false;
+            this.DgvVehiculosCliente.AllowUserToDeleteRows = false;
             this.DgvVehiculosCliente.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DgvVehiculosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvVehiculosCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Patente,
+            this.Tipo_de_vehículo,
+            this.Numero_de_motor,
+            this.Numero_de_chasis});
             this.DgvVehiculosCliente.Location = new System.Drawing.Point(159, 54);
             this.DgvVehiculosCliente.MultiSelect = false;
             this.DgvVehiculosCliente.Name = "DgvVehiculosCliente";
             this.DgvVehiculosCliente.ReadOnly = true;
+            this.DgvVehiculosCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DgvVehiculosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvVehiculosCliente.Size = new System.Drawing.Size(544, 384);
             this.DgvVehiculosCliente.TabIndex = 0;
@@ -75,6 +87,30 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
+            this.Patente.ReadOnly = true;
+            // 
+            // Tipo_de_vehículo
+            // 
+            this.Tipo_de_vehículo.HeaderText = "Tipo_de_vehículo";
+            this.Tipo_de_vehículo.Name = "Tipo_de_vehículo";
+            this.Tipo_de_vehículo.ReadOnly = true;
+            // 
+            // Numero_de_motor
+            // 
+            this.Numero_de_motor.HeaderText = "Numero_de_motor";
+            this.Numero_de_motor.Name = "Numero_de_motor";
+            this.Numero_de_motor.ReadOnly = true;
+            // 
+            // Numero_de_chasis
+            // 
+            this.Numero_de_chasis.HeaderText = "Numero_de_chasis";
+            this.Numero_de_chasis.Name = "Numero_de_chasis";
+            this.Numero_de_chasis.ReadOnly = true;
+            // 
             // VehiculosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,5 +138,9 @@
         private System.Windows.Forms.Button BtnAgregarVehiculo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_de_vehículo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_motor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_chasis;
     }
 }

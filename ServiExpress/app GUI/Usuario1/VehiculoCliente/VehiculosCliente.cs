@@ -3,12 +3,7 @@ using ServiExpress.controlador;
 using ServiExpress.WebServiceCliente;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI.Usuario1
@@ -30,13 +25,7 @@ namespace ServiExpress.app_GUI.Usuario1
 
         private void VehiculosCliente_Load(object sender, EventArgs e)
         {
-            WebServiceCliente.WebServiceClienteClient WebCliente = new WebServiceCliente.WebServiceClienteClient();
-            vehiculo[] resultado = WebCliente.GetVehiculos(controladorCliente.login[0]);
-
-            foreach (var r in resultado)
-            {
-                
-            }
+            controladorCliente.SetDataGridView(DgvVehiculosCliente);
         }
     }
 }
