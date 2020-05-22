@@ -21,6 +21,30 @@ namespace ServiExpress.app_GUI
         {
             this.Dispose();
         }
-       
+
+        private void txtRut_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

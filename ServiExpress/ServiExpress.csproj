@@ -277,10 +277,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fidelizar-clientes-en-el-taller.png" />
+    <Content Include="ImagenesProyecto\Banner.PNG" />
+    <Content Include="ImagenesProyecto\Iconos\automovil.png" />
+    <Content Include="ImagenesProyecto\Iconos\calendario.png" />
+    <Content Include="ImagenesProyecto\Iconos\casa.png" />
+    <Content Include="ImagenesProyecto\Iconos\dinero.png" />
+    <Content Include="ImagenesProyecto\Iconos\gdpr.png" />
+    <Content Include="ImagenesProyecto\Iconos\hacia-atras.png" />
+    <Content Include="ImagenesProyecto\Iconos\reloj.png" />
+    <Content Include="ImagenesProyecto\Iconos\reparacion-de-autos.png" />
+    <Content Include="ImagenesProyecto\Logo.png" />
+    <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
+    <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
+    <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Index2.png" />
+    <Folder Include="ImagenesProyecto\ImagenesProyecto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
