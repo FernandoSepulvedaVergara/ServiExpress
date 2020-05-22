@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReservaDeAtencion));
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.CmbSeleccionarHoras = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,13 +49,14 @@
             this.CmbSeleccionarSucursal = new System.Windows.Forms.ComboBox();
             this.LblSucursalSeleccionado = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // monthCalendar
             // 
             this.monthCalendar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.monthCalendar.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.monthCalendar.Location = new System.Drawing.Point(18, 6);
+            this.monthCalendar.Location = new System.Drawing.Point(20, 203);
             this.monthCalendar.MaxSelectionCount = 1;
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.TabIndex = 2;
@@ -63,10 +65,11 @@
             // 
             // CmbSeleccionarHoras
             // 
+            this.CmbSeleccionarHoras.BackColor = System.Drawing.Color.White;
             this.CmbSeleccionarHoras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CmbSeleccionarHoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSeleccionarHoras.FormattingEnabled = true;
-            this.CmbSeleccionarHoras.Location = new System.Drawing.Point(289, 27);
+            this.CmbSeleccionarHoras.Location = new System.Drawing.Point(20, 56);
             this.CmbSeleccionarHoras.Name = "CmbSeleccionarHoras";
             this.CmbSeleccionarHoras.Size = new System.Drawing.Size(142, 21);
             this.CmbSeleccionarHoras.TabIndex = 3;
@@ -75,20 +78,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Location = new System.Drawing.Point(289, 8);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Seleccionar hora";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Location = new System.Drawing.Point(289, 58);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.Size = new System.Drawing.Size(130, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Seleccionar servicio";
             // 
@@ -97,19 +104,21 @@
             this.CmbSeleccionarServicios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CmbSeleccionarServicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSeleccionarServicios.FormattingEnabled = true;
-            this.CmbSeleccionarServicios.Location = new System.Drawing.Point(289, 80);
+            this.CmbSeleccionarServicios.Location = new System.Drawing.Point(20, 112);
             this.CmbSeleccionarServicios.Name = "CmbSeleccionarServicios";
-            this.CmbSeleccionarServicios.Size = new System.Drawing.Size(411, 21);
+            this.CmbSeleccionarServicios.Size = new System.Drawing.Size(145, 21);
             this.CmbSeleccionarServicios.TabIndex = 5;
             this.CmbSeleccionarServicios.SelectedIndexChanged += new System.EventHandler(this.CmbSeleccionarServicios_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Location = new System.Drawing.Point(289, 112);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(223, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Seleccionar vehículo";
             // 
@@ -118,7 +127,7 @@
             this.CmbSeleccionarVehículo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CmbSeleccionarVehículo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSeleccionarVehículo.FormattingEnabled = true;
-            this.CmbSeleccionarVehículo.Location = new System.Drawing.Point(289, 131);
+            this.CmbSeleccionarVehículo.Location = new System.Drawing.Point(226, 53);
             this.CmbSeleccionarVehículo.Name = "CmbSeleccionarVehículo";
             this.CmbSeleccionarVehículo.Size = new System.Drawing.Size(142, 21);
             this.CmbSeleccionarVehículo.TabIndex = 7;
@@ -127,42 +136,54 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Location = new System.Drawing.Point(286, 268);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(223, 300);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Servicio: ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Location = new System.Drawing.Point(286, 246);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(223, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Hora: ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Location = new System.Drawing.Point(286, 223);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(223, 255);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(64, 18);
             this.label6.TabIndex = 12;
             this.label6.Text = "Fecha: ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Location = new System.Drawing.Point(286, 294);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(223, 326);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 13;
             this.label7.Text = "Vehículo: ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // LblVehículoSeleccionado
             // 
@@ -198,11 +219,12 @@
             // 
             // BtnReservarAtención
             // 
-            this.BtnReservarAtención.BackColor = System.Drawing.Color.YellowGreen;
+            this.BtnReservarAtención.BackColor = System.Drawing.Color.Yellow;
             this.BtnReservarAtención.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnReservarAtención.Location = new System.Drawing.Point(289, 346);
+            this.BtnReservarAtención.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReservarAtención.Location = new System.Drawing.Point(411, 389);
             this.BtnReservarAtención.Name = "BtnReservarAtención";
-            this.BtnReservarAtención.Size = new System.Drawing.Size(174, 58);
+            this.BtnReservarAtención.Size = new System.Drawing.Size(391, 63);
             this.BtnReservarAtención.TabIndex = 19;
             this.BtnReservarAtención.Text = "Reservar";
             this.BtnReservarAtención.UseVisualStyleBackColor = false;
@@ -211,10 +233,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Location = new System.Drawing.Point(289, 164);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(226, 96);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 13);
+            this.label8.Size = new System.Drawing.Size(133, 16);
             this.label8.TabIndex = 21;
             this.label8.Text = "Seleccionar sucursal";
             // 
@@ -223,7 +247,7 @@
             this.CmbSeleccionarSucursal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CmbSeleccionarSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbSeleccionarSucursal.FormattingEnabled = true;
-            this.CmbSeleccionarSucursal.Location = new System.Drawing.Point(289, 183);
+            this.CmbSeleccionarSucursal.Location = new System.Drawing.Point(226, 112);
             this.CmbSeleccionarSucursal.Name = "CmbSeleccionarSucursal";
             this.CmbSeleccionarSucursal.Size = new System.Drawing.Size(142, 21);
             this.CmbSeleccionarSucursal.TabIndex = 20;
@@ -240,19 +264,38 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Location = new System.Drawing.Point(286, 317);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(223, 349);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 13);
+            this.label10.Size = new System.Drawing.Size(76, 16);
             this.label10.TabIndex = 22;
             this.label10.Text = "Sucursal: ";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 178);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(265, 16);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Selecciona el dia que deseas ser atendido";
             // 
             // ReservaDeAtencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.LblSucursalSeleccionado);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -274,6 +317,7 @@
             this.Controls.Add(this.CmbSeleccionarHoras);
             this.Controls.Add(this.monthCalendar);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -307,5 +351,6 @@
         private System.Windows.Forms.ComboBox CmbSeleccionarSucursal;
         private System.Windows.Forms.Label LblSucursalSeleccionado;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

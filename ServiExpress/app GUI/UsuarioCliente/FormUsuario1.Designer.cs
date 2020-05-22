@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario1));
             this.BtnDatosPersonales = new System.Windows.Forms.Button();
             this.BtnReservaAtencion = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnVehículos = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnGlosarioPago = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -40,23 +46,29 @@
             // 
             // BtnDatosPersonales
             // 
+            this.BtnDatosPersonales.BackColor = System.Drawing.Color.White;
+            this.BtnDatosPersonales.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnDatosPersonales.BackgroundImage")));
+            this.BtnDatosPersonales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnDatosPersonales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDatosPersonales.Location = new System.Drawing.Point(12, 50);
+            this.BtnDatosPersonales.Location = new System.Drawing.Point(12, 25);
             this.BtnDatosPersonales.Name = "BtnDatosPersonales";
-            this.BtnDatosPersonales.Size = new System.Drawing.Size(133, 41);
+            this.BtnDatosPersonales.Size = new System.Drawing.Size(133, 91);
             this.BtnDatosPersonales.TabIndex = 2;
-            this.BtnDatosPersonales.Text = "Datos personales";
-            this.BtnDatosPersonales.UseVisualStyleBackColor = true;
+            this.BtnDatosPersonales.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnDatosPersonales.UseVisualStyleBackColor = false;
             // 
             // BtnReservaAtencion
             // 
+            this.BtnReservaAtencion.BackColor = System.Drawing.Color.White;
+            this.BtnReservaAtencion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnReservaAtencion.BackgroundImage")));
+            this.BtnReservaAtencion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnReservaAtencion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnReservaAtencion.Location = new System.Drawing.Point(12, 140);
+            this.BtnReservaAtencion.Location = new System.Drawing.Point(12, 281);
             this.BtnReservaAtencion.Name = "BtnReservaAtencion";
-            this.BtnReservaAtencion.Size = new System.Drawing.Size(133, 41);
+            this.BtnReservaAtencion.Size = new System.Drawing.Size(133, 93);
             this.BtnReservaAtencion.TabIndex = 3;
-            this.BtnReservaAtencion.Text = "Reservar atención";
-            this.BtnReservaAtencion.UseVisualStyleBackColor = true;
+            this.BtnReservaAtencion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnReservaAtencion.UseVisualStyleBackColor = false;
             this.BtnReservaAtencion.Click += new System.EventHandler(this.BtnReservaAtencion_Click);
             // 
             // button3
@@ -71,13 +83,17 @@
             // 
             // BtnVehículos
             // 
+            this.BtnVehículos.BackColor = System.Drawing.Color.White;
+            this.BtnVehículos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnVehículos.BackgroundImage")));
+            this.BtnVehículos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnVehículos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnVehículos.Location = new System.Drawing.Point(12, 97);
+            this.BtnVehículos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnVehículos.Location = new System.Drawing.Point(12, 150);
             this.BtnVehículos.Name = "BtnVehículos";
-            this.BtnVehículos.Size = new System.Drawing.Size(133, 37);
+            this.BtnVehículos.Size = new System.Drawing.Size(133, 93);
             this.BtnVehículos.TabIndex = 2;
-            this.BtnVehículos.Text = "Mis vehículos";
-            this.BtnVehículos.UseVisualStyleBackColor = true;
+            this.BtnVehículos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnVehículos.UseVisualStyleBackColor = false;
             this.BtnVehículos.Click += new System.EventHandler(this.BtnVehículos_Click);
             // 
             // splitContainer1
@@ -89,12 +105,73 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.btnGlosarioPago);
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.BtnReservaAtencion);
             this.splitContainer1.Panel1.Controls.Add(this.BtnDatosPersonales);
             this.splitContainer1.Panel1.Controls.Add(this.BtnVehículos);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
+            this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
+            this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(884, 541);
             this.splitContainer1.SplitterDistance = 155;
             this.splitContainer1.TabIndex = 9;
+            // 
+            // btnGlosarioPago
+            // 
+            this.btnGlosarioPago.BackColor = System.Drawing.Color.White;
+            this.btnGlosarioPago.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGlosarioPago.BackgroundImage")));
+            this.btnGlosarioPago.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGlosarioPago.Location = new System.Drawing.Point(12, 414);
+            this.btnGlosarioPago.Name = "btnGlosarioPago";
+            this.btnGlosarioPago.Size = new System.Drawing.Size(133, 93);
+            this.btnGlosarioPago.TabIndex = 0;
+            this.btnGlosarioPago.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGlosarioPago.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 398);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Glosario de Pago";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 265);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Reservar atención";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Mis vehículos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Datos personales";
             // 
             // FormUsuario1
             // 
@@ -111,6 +188,7 @@
             this.Name = "FormUsuario1";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -124,5 +202,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnVehículos;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button btnGlosarioPago;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

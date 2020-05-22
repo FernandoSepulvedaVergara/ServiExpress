@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.DgvVehiculosCliente = new System.Windows.Forms.DataGridView();
-            this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_de_vehículo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_de_motor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_de_chasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVehiculosCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,30 @@
             this.DgvVehiculosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvVehiculosCliente.Size = new System.Drawing.Size(544, 384);
             this.DgvVehiculosCliente.TabIndex = 0;
+            // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
+            this.Patente.ReadOnly = true;
+            // 
+            // Tipo_de_vehículo
+            // 
+            this.Tipo_de_vehículo.HeaderText = "Tipo_de_vehículo";
+            this.Tipo_de_vehículo.Name = "Tipo_de_vehículo";
+            this.Tipo_de_vehículo.ReadOnly = true;
+            // 
+            // Numero_de_motor
+            // 
+            this.Numero_de_motor.HeaderText = "Numero_de_motor";
+            this.Numero_de_motor.Name = "Numero_de_motor";
+            this.Numero_de_motor.ReadOnly = true;
+            // 
+            // Numero_de_chasis
+            // 
+            this.Numero_de_chasis.HeaderText = "Numero_de_chasis";
+            this.Numero_de_chasis.Name = "Numero_de_chasis";
+            this.Numero_de_chasis.ReadOnly = true;
             // 
             // BtnAgregarVehiculo
             // 
@@ -87,36 +111,12 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Patente
-            // 
-            this.Patente.HeaderText = "Patente";
-            this.Patente.Name = "Patente";
-            this.Patente.ReadOnly = true;
-            // 
-            // Tipo_de_vehículo
-            // 
-            this.Tipo_de_vehículo.HeaderText = "Tipo_de_vehículo";
-            this.Tipo_de_vehículo.Name = "Tipo_de_vehículo";
-            this.Tipo_de_vehículo.ReadOnly = true;
-            // 
-            // Numero_de_motor
-            // 
-            this.Numero_de_motor.HeaderText = "Numero_de_motor";
-            this.Numero_de_motor.Name = "Numero_de_motor";
-            this.Numero_de_motor.ReadOnly = true;
-            // 
-            // Numero_de_chasis
-            // 
-            this.Numero_de_chasis.HeaderText = "Numero_de_chasis";
-            this.Numero_de_chasis.Name = "Numero_de_chasis";
-            this.Numero_de_chasis.ReadOnly = true;
-            // 
             // VehiculosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(812, 457);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnAgregarVehiculo);

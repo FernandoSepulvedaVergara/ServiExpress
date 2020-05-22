@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLoginUsuario));
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistroUsuario = new System.Windows.Forms.Button();
             this.btnIngresarUsuario = new System.Windows.Forms.Button();
@@ -37,23 +38,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(25, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 29);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "ServiExpress";
-            // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Yellow;
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
             this.btnSalir.Location = new System.Drawing.Point(324, 225);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 28);
@@ -121,21 +112,27 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(30, 92);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 85);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 90);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "LogoMakr_9ZHS9g.png");
             // 
             // formLoginUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(428, 278);
-            this.Controls.Add(this.label7);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
+            this.ClientSize = new System.Drawing.Size(430, 278);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnRegistroUsuario);
             this.Controls.Add(this.btnIngresarUsuario);
@@ -159,8 +156,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistroUsuario;
         private System.Windows.Forms.Button btnIngresarUsuario;
@@ -169,6 +164,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
