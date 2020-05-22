@@ -46,8 +46,12 @@ namespace ServiExpress.app_GUI
             ReservaDeAtencion reservaDeAtencion = new ReservaDeAtencion(controladorCliente);
             reservaDeAtencion.TopLevel = false;
             reservaDeAtencion.Dock = DockStyle.Fill;
-            splitContainer1.Panel2.Controls.Add(reservaDeAtencion);            
-            reservaDeAtencion.Show();
+            splitContainer1.Panel2.Controls.Add(reservaDeAtencion);
+            try { reservaDeAtencion.Show(); }
+            catch 
+            {
+                this.BtnVehículos.Click += new System.EventHandler(this.BtnVehículos_Click);
+            }
         }
 
         private void BtnVehículos_Click(object sender, EventArgs e)

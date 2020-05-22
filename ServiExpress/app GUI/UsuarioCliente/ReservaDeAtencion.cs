@@ -1,5 +1,6 @@
 ﻿using Clases.ApiRest;
 using ServiExpress.controlador;
+using ServiExpress.WebServiceCliente;
 using System;
 using System.Windows.Forms;
 
@@ -65,18 +66,29 @@ namespace ServiExpress.app_GUI.Usuario1
                     CmbSeleccionarServicios.Items.Clear();
                     CmbSeleccionarVehículo.Items.Clear();
                     CmbSeleccionarSucursal.Items.Clear();
+
                     foreach (var r in this.controladorCliente.GetTipoDeServicios())
                     {
                         CmbSeleccionarServicios.Items.Add(String.Format("{0} - {1}", r.id_servicio,r.servicio));
-                    }
-                    foreach (var r in this.controladorCliente.GetVehiculos())
-                    {
-                        CmbSeleccionarVehículo.Items.Add(String.Format("{0} - {1}", r.patente, r.tipoDeVehiculo.tipo_de_vehiculo));
                     }
                     foreach (var r in this.controladorCliente.GetSucursales())
                     {
                         CmbSeleccionarSucursal.Items.Add(String.Format("{0} - {1}", r.id_sucursal, r.sucursal1));
                     }
+
+                    vehiculo[] vehiculos = this.controladorCliente.GetVehiculos();
+                    if (vehiculos != null)
+                    {
+                        foreach (var r in vehiculos)
+                        {
+                            CmbSeleccionarVehículo.Items.Add(String.Format("{0} - {1}", r.patente, r.tipoDeVehiculo.tipo_de_vehiculo));
+                        }
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Para agendar debe registrar un vehículo");
+                        this.Dispose();
+                    }                    
                 }
                 catch (Exception ex)
                 {
@@ -114,11 +126,19 @@ namespace ServiExpress.app_GUI.Usuario1
         {
             string fechaSeleccionada = LblFechaSeleccionada.Text;
             string horaSeleccionada = LblHoraSeleccionada.Text;
-            string servicioSeleccionado = LblServicioSeleccionado.Text.Substring(0, LblServicioSeleccionado.Text.IndexOf("-")).Trim();
+            int servicioSeleccionado = int.Parse(LblServicioSeleccionado.Text.Substring(0, LblServicioSeleccionado.Text.IndexOf("-")).Trim());
             string vehículoSeleccionado = LblVehículoSeleccionado.Text.Substring(0, LblVehículoSeleccionado.Text.IndexOf("-")).Trim();
-            string sucursalIdSeleccionada = LblSucursalSeleccionado.Text.Substring(0, LblSucursalSeleccionado.Text.IndexOf("-")).Trim();
+            int sucursalIdSeleccionada = int.Parse(LblSucursalSeleccionado.Text.Substring(0, LblSucursalSeleccionado.Text.IndexOf("-")).Trim());
 
-            //controladorCliente.RegistrarReservaDeHora();
+            if (fechaSeleccionada.Equals(null)|| horaSeleccionada.Equals(null)|| servicioSeleccionado.Equals(null)||
+                vehículoSeleccionado.Equals(null)|| sucursalIdSeleccionada.Equals(null)) 
+            {
+                MessageBox.Show("Faltan datos por seleccionar");
+            }
+            else
+            {
+                controladorCliente.RegistrarReservaDeAtencion(fechaSeleccionada, horaSeleccionada, sucursalIdSeleccionada, controladorCliente.login[0], servicioSeleccionado,vehículoSeleccionado);
+            }
         }
     }
 }

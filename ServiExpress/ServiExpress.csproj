@@ -191,7 +191,7 @@
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.IngresarVehiculoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.RegistrarReservaDeHoraResponse.datasource">
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.RegistrarReservaDeAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.sucursal.datasource">

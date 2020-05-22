@@ -30,22 +30,25 @@ namespace ServiExpress.controlador
             vehiculo[] resultado = GetVehiculos();
             List<string> listaTemporal = new List<string>();
 
-            foreach (var r in resultado)
+            if (resultado != null)
             {
-                listaTemporal.Add(r.patente);
-                listaTemporal.Add(r.tipoDeVehiculo.tipo_de_vehiculo);
-                listaTemporal.Add(r.numero_motor.ToString());
-                listaTemporal.Add(r.numero_chasis);
-
-                DataGridViewRow fila = new DataGridViewRow();
-                fila.CreateCells(DgvVehiculosCliente);
-                for (int i = 0; i < listaTemporal.Count; i++)
+                foreach (var r in resultado)
                 {
-                    fila.Cells[i].Value = listaTemporal[i].ToString();
+                    listaTemporal.Add(r.patente);
+                    listaTemporal.Add(r.tipoDeVehiculo.tipo_de_vehiculo);
+                    listaTemporal.Add(r.numero_motor.ToString());
+                    listaTemporal.Add(r.numero_chasis);
+
+                    DataGridViewRow fila = new DataGridViewRow();
+                    fila.CreateCells(DgvVehiculosCliente);
+                    for (int i = 0; i < listaTemporal.Count; i++)
+                    {
+                        fila.Cells[i].Value = listaTemporal[i].ToString();
+                    }
+                    DgvVehiculosCliente.Rows.Add(fila);
+                    listaTemporal.Clear();
                 }
-                DgvVehiculosCliente.Rows.Add(fila);
-                listaTemporal.Clear();
-            }
+            }            
             return DgvVehiculosCliente;
         }
 
@@ -64,12 +67,12 @@ namespace ServiExpress.controlador
         public vehiculo[] GetVehiculos()
         {
             vehiculo[] resultado = webCliente.GetVehiculos(this.login[0]);
-            if (resultado.Equals(null)) {
-                return null;
+            if (resultado != null) {
+                return resultado;
             }
             else 
             {
-                return resultado;
+                return null;
             }
         }
 
@@ -79,10 +82,16 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
-        public string[] RegistrarReservaDeHora() 
+        public string[] RegistrarReservaDeAtencion(string fecha_reserva,string hora_reserva, int id_sucursal, string rut, int id_tipo_de_servicio, string patente) 
         {
-            //string[] resultado = webCliente.RegistrarReservaDeHora();
-            return null;
+            string[] resultado = webCliente.RegistrarReservaDeAtencion(fecha_reserva, hora_reserva,id_sucursal,rut,id_tipo_de_servicio,patente);
+            return resultado;
+        }
+
+        public string[] RegistrarNuevoVehiculo(string patente, int numeroMotor, string numeroChasis, int idTipoDeVehiculo, string rut)
+        {
+            string[] resultado = webCliente.IngresarVehiculo(patente, numeroMotor, numeroChasis, idTipoDeVehiculo, rut);
+            return resultado;
         }
     }
 }

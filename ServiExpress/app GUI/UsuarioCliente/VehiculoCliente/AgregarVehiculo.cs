@@ -30,25 +30,14 @@ namespace ServiExpress.app_GUI.Usuario1.VehiculoCliente
         {
             foreach (var r in controladorCliente.GetTipoVehiculos()) 
             {
-                CmbTipoDeVehiculo.Items.Add(r.tipo_de_vehiculo);
+                CmbTipoDeVehiculo.Items.Add(String.Format("{0} - {1}",r.id_tipo_de_vehiculo,r.tipo_de_vehiculo));
             }
         }
 
         private void BtnGuardarAgregarVehiculo_Click(object sender, EventArgs e)
         {
-            string item = CmbTipoDeVehiculo.SelectedItem.ToString();
-            int id_tipoVehículo;
-            tipoDeVehiculo[] result = controladorCliente.GetTipoVehiculos();
-
-            foreach (var r in result) 
-            {
-                if (r.tipo_de_vehiculo.Contains(item)) 
-                {
-                    id_tipoVehículo = r.id_tipo_de_vehiculo;
-                    WebServiceCliente.WebServiceClienteClient WebJava = new WebServiceClienteClient();
-                    string[] resultado = WebJava.IngresarVehiculo(TxtPatente.Text,int.Parse(TxtNumeroMotor.Text),TxtNumeroChasis.Text,id_tipoVehículo,this.controladorCliente.login[0]);
-                }
-            }
+            int idTipoDeVehiculo = int.Parse(CmbTipoDeVehiculo.SelectedItem.ToString().Substring(0,CmbTipoDeVehiculo.SelectedItem.ToString().IndexOf("-")).Trim());
+            controladorCliente.RegistrarNuevoVehiculo(TxtPatente.Text,int.Parse(TxtNumeroMotor.Text),TxtNumeroChasis.Text,idTipoDeVehiculo,controladorCliente.login[0]);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace ServiExpress.app_GUI.Usuario1
         {
             AgregarVehiculo agregarVehiculo = new AgregarVehiculo(controladorCliente);
             agregarVehiculo.ShowDialog();
+            controladorCliente.SetDataGridView(DgvVehiculosCliente);
         }
 
         private void VehiculosCliente_Load(object sender, EventArgs e)
