@@ -78,10 +78,10 @@
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.Designer.cs">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario2\FormUsuario2.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario2\FormUsuario2.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario2.Designer.cs">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\FormUsuario1.cs">
@@ -96,10 +96,10 @@
     <Compile Include="app GUI\FormLoginUsuario.Designer.cs">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario3\FormUsuario3.cs">
+    <Compile Include="app GUI\UsuarioProveedor\FormUsuario3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario3\FormUsuario3.Designer.cs">
+    <Compile Include="app GUI\UsuarioProveedor\FormUsuario3.Designer.cs">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\Usuario4\FormUsuario4.cs">
@@ -145,7 +145,7 @@
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario2\FormUsuario2.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\FormUsuario2.resx">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\FormUsuario1.resx">
@@ -154,7 +154,7 @@
     <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario3\FormUsuario3.resx">
+    <EmbeddedResource Include="app GUI\UsuarioProveedor\FormUsuario3.resx">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\Usuario4\FormUsuario4.resx">
@@ -165,14 +165,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -281,6 +275,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImagenesProyecto\Banner.PNG" />
+    <Content Include="ImagenesProyecto\Iconos\automovil.png" />
+    <Content Include="ImagenesProyecto\Iconos\calendario.png" />
+    <Content Include="ImagenesProyecto\Iconos\casa.png" />
+    <Content Include="ImagenesProyecto\Iconos\dinero.png" />
+    <Content Include="ImagenesProyecto\Iconos\gdpr.png" />
+    <Content Include="ImagenesProyecto\Iconos\hacia-atras.png" />
+    <Content Include="ImagenesProyecto\Iconos\reloj.png" />
+    <Content Include="ImagenesProyecto\Iconos\reparacion-de-autos.png" />
+    <Content Include="ImagenesProyecto\Logo.png" />
+    <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
+    <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
+    <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImagenesProyecto\ImagenesProyecto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

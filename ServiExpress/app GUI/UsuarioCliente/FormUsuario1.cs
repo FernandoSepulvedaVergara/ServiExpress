@@ -66,5 +66,10 @@ namespace ServiExpress.app_GUI
             splitContainer1.Panel2.Controls.Add(vehiculosCliente);
             vehiculosCliente.Show();
         }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
