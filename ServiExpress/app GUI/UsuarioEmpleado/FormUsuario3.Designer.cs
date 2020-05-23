@@ -57,7 +57,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 41);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Pedidos";
+            this.button2.Text = "Nuevo pedido";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -74,11 +74,11 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(51, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Proveedor";
+            this.label1.Text = "Empleado";
             // 
-            // formUsuario3
+            // FormUsuario3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "formUsuario3";
+            this.Name = "FormUsuario3";
             this.Text = "formUsuario3";
             this.ResumeLayout(false);
             this.PerformLayout();

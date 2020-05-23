@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiExpress.WebServiceEmpleado;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,14 @@ namespace ServiExpress.controlador
 {
     class ControladorEmpleado : ControladorPrincipal
     {
+        public string[] login { get; set; }
+        WebServiceEmpleadoClient webEmpleado = new WebServiceEmpleadoClient();
+
+        public ControladorEmpleado(string[] login) 
+        {
+            this.login = login;
+        }
+
         public override string[] GetInfo()
         {
             return null;
