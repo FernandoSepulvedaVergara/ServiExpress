@@ -66,6 +66,12 @@
     <Compile Include="app GUI\FormNuevoUsuario.Designer.cs">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioCliente\GlosarioDePagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioCliente\GlosarioDePagos.Designer.cs">
+      <DependentUpon>GlosarioDePagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,10 +108,10 @@
     <Compile Include="app GUI\UsuarioProveedor\FormUsuario3.Designer.cs">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\Usuario4\FormUsuario4.cs">
+    <Compile Include="app GUI\UsuarioAdministrador\FormUsuario4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\Usuario4\FormUsuario4.Designer.cs">
+    <Compile Include="app GUI\UsuarioAdministrador\FormUsuario4.Designer.cs">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion.cs">
@@ -139,6 +145,9 @@
     <EmbeddedResource Include="app GUI\FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioCliente\GlosarioDePagos.resx">
+      <DependentUpon>GlosarioDePagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,7 +166,7 @@
     <EmbeddedResource Include="app GUI\UsuarioProveedor\FormUsuario3.resx">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\Usuario4\FormUsuario4.resx">
+    <EmbeddedResource Include="app GUI\UsuarioAdministrador\FormUsuario4.resx">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\ReservaDeAtencion.resx">
@@ -166,6 +175,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -180,6 +190,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetVehiculosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetVentasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.IngresarVehiculoResponse.datasource">
@@ -198,6 +211,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.vehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.ventas.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.wsdl" />
@@ -223,6 +239,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>

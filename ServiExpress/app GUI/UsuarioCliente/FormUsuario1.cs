@@ -1,4 +1,5 @@
 ﻿using ServiExpress.app_GUI.Usuario1;
+using ServiExpress.app_GUI.UsuarioCliente;
 using ServiExpress.controlador;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,19 @@ namespace ServiExpress.app_GUI
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnGlosarioPago_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            GlosarioDePagos glosarioDePagos = new GlosarioDePagos(controladorCliente);
+            glosarioDePagos.TopLevel = false;
+            glosarioDePagos.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(glosarioDePagos);
+            glosarioDePagos.Show();
         }
     }
 }

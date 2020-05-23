@@ -16,7 +16,7 @@ namespace ServiExpress.app_GUI.Usuario1.VehiculoCliente
     {
         ControladorCliente controladorCliente;
         public AgregarVehiculo(ControladorCliente controladorCliente)
-        {            
+        {
             this.controladorCliente = controladorCliente;
             InitializeComponent();
         }
@@ -28,16 +28,28 @@ namespace ServiExpress.app_GUI.Usuario1.VehiculoCliente
 
         private void AgregarVehiculo_Load(object sender, EventArgs e)
         {
-            foreach (var r in controladorCliente.GetTipoVehiculos()) 
+            foreach (var r in controladorCliente.GetTipoVehiculos())
             {
-                CmbTipoDeVehiculo.Items.Add(String.Format("{0} - {1}",r.id_tipo_de_vehiculo,r.tipo_de_vehiculo));
+                CmbTipoDeVehiculo.Items.Add(String.Format("{0} - {1}", r.id_tipo_de_vehiculo, r.tipo_de_vehiculo));
             }
         }
 
         private void BtnGuardarAgregarVehiculo_Click(object sender, EventArgs e)
         {
-            int idTipoDeVehiculo = int.Parse(CmbTipoDeVehiculo.SelectedItem.ToString().Substring(0,CmbTipoDeVehiculo.SelectedItem.ToString().IndexOf("-")).Trim());
-            controladorCliente.RegistrarNuevoVehiculo(TxtPatente.Text,int.Parse(TxtNumeroMotor.Text),TxtNumeroChasis.Text,idTipoDeVehiculo,controladorCliente.login[0]);
+            int idTipoDeVehiculo = int.Parse(CmbTipoDeVehiculo.SelectedItem.ToString().Substring(0, CmbTipoDeVehiculo.SelectedItem.ToString().IndexOf("-")).Trim());
+            string[] resultado = controladorCliente.RegistrarNuevoVehiculo(TxtPatente.Text, int.Parse(TxtNumeroMotor.Text), TxtNumeroChasis.Text, idTipoDeVehiculo, controladorCliente.login[0]);
+            if (resultado[0] != "false")
+            {
+                LimpiarFormulario();
+                MessageBox.Show("Vehículo guardado con éxito");            
+            }
+        }
+
+        private void LimpiarFormulario() 
+        {
+            TxtNumeroChasis.Clear();
+            TxtNumeroMotor.Clear();
+            TxtPatente.Clear();
         }
     }
 }

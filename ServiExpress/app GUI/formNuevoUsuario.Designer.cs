@@ -70,6 +70,7 @@
             this.btnGuardarUsuario.TabIndex = 14;
             this.btnGuardarUsuario.Text = "Guardar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
+            this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // btnAtras
             // 

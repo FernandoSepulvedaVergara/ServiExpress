@@ -121,8 +121,8 @@
             this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(884, 541);
-            this.splitContainer1.SplitterDistance = 155;
+            this.splitContainer1.Size = new System.Drawing.Size(1003, 541);
+            this.splitContainer1.SplitterDistance = 175;
             this.splitContainer1.TabIndex = 9;
             // 
             // btnGlosarioPago
@@ -136,6 +136,7 @@
             this.btnGlosarioPago.TabIndex = 0;
             this.btnGlosarioPago.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGlosarioPago.UseVisualStyleBackColor = false;
+            this.btnGlosarioPago.Click += new System.EventHandler(this.btnGlosarioPago_Click);
             // 
             // label4
             // 
@@ -179,7 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(884, 541);
+            this.ClientSize = new System.Drawing.Size(1003, 541);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
