@@ -222,9 +222,9 @@
             this.BtnReservarAtención.BackColor = System.Drawing.Color.Yellow;
             this.BtnReservarAtención.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnReservarAtención.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReservarAtención.Location = new System.Drawing.Point(411, 389);
+            this.BtnReservarAtención.Location = new System.Drawing.Point(414, 389);
             this.BtnReservarAtención.Name = "BtnReservarAtención";
-            this.BtnReservarAtención.Size = new System.Drawing.Size(391, 63);
+            this.BtnReservarAtención.Size = new System.Drawing.Size(389, 65);
             this.BtnReservarAtención.TabIndex = 19;
             this.BtnReservarAtención.Text = "Reservar";
             this.BtnReservarAtención.UseVisualStyleBackColor = false;
@@ -294,7 +294,7 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(803, 452);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.LblSucursalSeleccionado);
             this.Controls.Add(this.label10);
