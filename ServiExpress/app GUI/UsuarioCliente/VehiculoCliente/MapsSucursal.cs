@@ -40,5 +40,11 @@ namespace ServiExpress.app_GUI.UsuarioCliente.VehiculoCliente
             gMapControl1.Zoom = 15;
             gMapControl1.AutoScroll = true;
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            System.GC.Collect();
+        }
     }
 }
