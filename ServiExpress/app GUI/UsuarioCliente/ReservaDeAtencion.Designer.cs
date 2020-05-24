@@ -51,6 +51,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnMaps = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // monthCalendar
@@ -130,7 +131,7 @@
             this.CmbSeleccionarVehículo.FormattingEnabled = true;
             this.CmbSeleccionarVehículo.Location = new System.Drawing.Point(18, 144);
             this.CmbSeleccionarVehículo.Name = "CmbSeleccionarVehículo";
-            this.CmbSeleccionarVehículo.Size = new System.Drawing.Size(156, 21);
+            this.CmbSeleccionarVehículo.Size = new System.Drawing.Size(178, 21);
             this.CmbSeleccionarVehículo.TabIndex = 7;
             this.CmbSeleccionarVehículo.SelectedIndexChanged += new System.EventHandler(this.CmbSeleccionarVehículo_SelectedIndexChanged);
             // 
@@ -223,9 +224,9 @@
             this.BtnReservarAtención.BackColor = System.Drawing.Color.Yellow;
             this.BtnReservarAtención.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnReservarAtención.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReservarAtención.Location = new System.Drawing.Point(455, 456);
+            this.BtnReservarAtención.Location = new System.Drawing.Point(453, 456);
             this.BtnReservarAtención.Name = "BtnReservarAtención";
-            this.BtnReservarAtención.Size = new System.Drawing.Size(428, 65);
+            this.BtnReservarAtención.Size = new System.Drawing.Size(430, 70);
             this.BtnReservarAtención.TabIndex = 19;
             this.BtnReservarAtención.Text = "Reservar";
             this.BtnReservarAtención.UseVisualStyleBackColor = false;
@@ -250,7 +251,7 @@
             this.CmbSeleccionarSucursal.FormattingEnabled = true;
             this.CmbSeleccionarSucursal.Location = new System.Drawing.Point(18, 68);
             this.CmbSeleccionarSucursal.Name = "CmbSeleccionarSucursal";
-            this.CmbSeleccionarSucursal.Size = new System.Drawing.Size(156, 21);
+            this.CmbSeleccionarSucursal.Size = new System.Drawing.Size(178, 21);
             this.CmbSeleccionarSucursal.TabIndex = 20;
             this.CmbSeleccionarSucursal.SelectedIndexChanged += new System.EventHandler(this.CmbSeleccionarSucursal_SelectedIndexChanged);
             // 
@@ -290,14 +291,27 @@
             // 
             // btnMaps
             // 
-            this.btnMaps.BackColor = System.Drawing.Color.Lime;
-            this.btnMaps.Location = new System.Drawing.Point(226, 62);
+            this.btnMaps.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaps.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaps.BackgroundImage")));
+            this.btnMaps.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMaps.Location = new System.Drawing.Point(226, 63);
             this.btnMaps.Name = "btnMaps";
-            this.btnMaps.Size = new System.Drawing.Size(107, 31);
+            this.btnMaps.Size = new System.Drawing.Size(41, 29);
             this.btnMaps.TabIndex = 31;
-            this.btnMaps.Text = "Ver ubucacion";
             this.btnMaps.UseVisualStyleBackColor = false;
             this.btnMaps.Click += new System.EventHandler(this.btnMaps_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(223, 40);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 16);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Ver ubicacion";
             // 
             // ReservaDeAtencion
             // 
@@ -309,6 +323,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 521);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnMaps);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.LblSucursalSeleccionado);
@@ -370,5 +385,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnMaps;
+        private System.Windows.Forms.Label label11;
     }
 }

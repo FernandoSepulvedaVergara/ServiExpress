@@ -84,10 +84,10 @@
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.Designer.cs">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\MapsSucursal.cs">
+    <Compile Include="app GUI\UsuarioCliente\MapsSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\MapsSucursal.Designer.cs">
+    <Compile Include="app GUI\UsuarioCliente\MapsSucursal.Designer.cs">
       <DependentUpon>MapsSucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.cs">
@@ -163,7 +163,7 @@
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\MapsSucursal.resx">
+    <EmbeddedResource Include="app GUI\UsuarioCliente\MapsSucursal.resx">
       <DependentUpon>MapsSucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
@@ -322,12 +322,13 @@
     <Content Include="ImagenesProyecto\Iconos\hacia-atras.png" />
     <Content Include="ImagenesProyecto\Iconos\reloj.png" />
     <Content Include="ImagenesProyecto\Iconos\reparacion-de-autos.png" />
+    <Content Include="ImagenesProyecto\Iconos\ubicacion.png" />
     <Content Include="ImagenesProyecto\Logo.png" />
     <Content Include="ImagenesProyecto\Usuario\AgregarVehiculo.png" />
     <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
-    <None Include="Resources\AgregarVehiculo.png" />
+    <None Include="ImagenesProyecto\Resources\AgregarVehiculo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImagenesProyecto\ImagenesProyecto\" />

@@ -61,21 +61,25 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSalir.Location = new System.Drawing.Point(579, 423);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(111, 34);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // MapsSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 466);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
+            this.ClientSize = new System.Drawing.Size(751, 466);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.gMapControl1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "MapsSucursal";
             this.Text = "MapsSucursal";
             this.ResumeLayout(false);
