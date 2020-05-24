@@ -323,9 +323,11 @@
     <Content Include="ImagenesProyecto\Iconos\reloj.png" />
     <Content Include="ImagenesProyecto\Iconos\reparacion-de-autos.png" />
     <Content Include="ImagenesProyecto\Logo.png" />
+    <Content Include="ImagenesProyecto\Usuario\AgregarVehiculo.png" />
     <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
+    <None Include="Resources\AgregarVehiculo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImagenesProyecto\ImagenesProyecto\" />
