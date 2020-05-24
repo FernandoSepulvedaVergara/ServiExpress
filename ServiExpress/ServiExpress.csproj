@@ -37,6 +37,12 @@
     <Reference Include="Calendario">
       <HintPath>..\..\..\..\AppData\Local\Temp\Rar$DRa12960.23627\Calendario.dll</HintPath>
     </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.Designer.cs">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\MapsSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\MapsSucursal.Designer.cs">
+      <DependentUpon>MapsSucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.cs">
       <SubType>Form</SubType>
@@ -150,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\MapsSucursal.resx">
+      <DependentUpon>MapsSucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using Clases.ApiRest;
+using ServiExpress.app_GUI.UsuarioCliente.VehiculoCliente;
 using ServiExpress.controlador;
 using ServiExpress.WebServiceCliente;
 using System;
@@ -164,6 +165,17 @@ namespace ServiExpress.app_GUI.Usuario1
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMaps_Click(object sender, EventArgs e)
+        {
+            MapsSucursal mps = new MapsSucursal();
+            mps.ShowDialog();
         }
     }
 }
