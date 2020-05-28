@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiExpress.controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace ServiExpress.app_GUI
 {
     public partial class FormUsuario2 : Form
     {
-        public FormUsuario2()
+        private ControladorProveedor controladorProveedor;
+        public FormUsuario2(string[] login)
         {
             InitializeComponent();
+            this.controladorProveedor = new ControladorProveedor(login);
         }
 
         private void Button1_Click(object sender, EventArgs e)

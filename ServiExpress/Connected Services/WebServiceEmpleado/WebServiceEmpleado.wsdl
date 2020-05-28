@@ -5,21 +5,59 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceEmpleado?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
+  <message name="GetTipoDeServicios">
+    <part name="parameters" element="tns:GetTipoDeServicios" />
   </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
+  <message name="GetTipoDeServiciosResponse">
+    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
+  </message>
+  <message name="GetAtenciones">
+    <part name="parameters" element="tns:GetAtenciones" />
+  </message>
+  <message name="GetAtencionesResponse">
+    <part name="parameters" element="tns:GetAtencionesResponse" />
+  </message>
+  <message name="RegistrarAtencion">
+    <part name="parameters" element="tns:RegistrarAtencion" />
+  </message>
+  <message name="RegistrarAtencionResponse">
+    <part name="parameters" element="tns:RegistrarAtencionResponse" />
   </message>
   <portType name="WebServiceEmpleado">
-    <operation name="hello">
-      <input wsam:Action="http://servicios/WebServiceEmpleado/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://servicios/WebServiceEmpleado/helloResponse" message="tns:helloResponse" />
+    <operation name="GetTipoDeServicios">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
+    </operation>
+    <operation name="GetAtenciones">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/GetAtencionesRequest" message="tns:GetAtenciones" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/GetAtencionesResponse" message="tns:GetAtencionesResponse" />
+    </operation>
+    <operation name="RegistrarAtencion">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/RegistrarAtencionRequest" message="tns:RegistrarAtencion" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/RegistrarAtencionResponse" message="tns:RegistrarAtencionResponse" />
     </operation>
   </portType>
   <binding name="WebServiceEmpleadoPortBinding" type="tns:WebServiceEmpleado">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="hello">
+    <operation name="GetTipoDeServicios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAtenciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarAtencion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

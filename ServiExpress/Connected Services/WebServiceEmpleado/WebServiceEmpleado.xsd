@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="hello" type="tns:hello" />
-  <xs:element name="helloResponse" type="tns:helloResponse" />
-  <xs:complexType name="hello">
+  <xs:element name="GetAtenciones" type="tns:GetAtenciones" />
+  <xs:element name="GetAtencionesResponse" type="tns:GetAtencionesResponse" />
+  <xs:element name="GetTipoDeServicios" type="tns:GetTipoDeServicios" />
+  <xs:element name="GetTipoDeServiciosResponse" type="tns:GetTipoDeServiciosResponse" />
+  <xs:element name="RegistrarAtencion" type="tns:RegistrarAtencion" />
+  <xs:element name="RegistrarAtencionResponse" type="tns:RegistrarAtencionResponse" />
+  <xs:complexType name="GetTipoDeServicios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeServiciosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeServicio" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="helloResponse">
+  <xs:complexType name="tipoDeServicio">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element name="id_servicio" type="xs:int" />
+      <xs:element minOccurs="0" name="servicio" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAtenciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="filtro" type="xs:string" />
+      <xs:element minOccurs="0" name="valorFiltro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAtencionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:atenciones" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="atenciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha_reserva" type="xs:string" />
+      <xs:element minOccurs="0" name="hora_reserva" type="xs:string" />
+      <xs:element name="id_atencion" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_reserva" type="xs:int" />
+      <xs:element minOccurs="0" name="patente" type="xs:string" />
+      <xs:element minOccurs="0" name="sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario_rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarAtencion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaAtencion" type="xs:string" />
+      <xs:element minOccurs="0" name="horaAtencion" type="xs:string" />
+      <xs:element name="idTipoDeServicio" type="xs:int" />
+      <xs:element name="idReserva" type="xs:int" />
+      <xs:element name="idEstadoDeAtencion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarAtencionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

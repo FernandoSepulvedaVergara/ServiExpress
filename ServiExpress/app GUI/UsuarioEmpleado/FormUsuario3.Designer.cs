@@ -29,32 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DgvReservas = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnPedidos = new System.Windows.Forms.Button();
             this.BtnDatosPersonales = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnReservasDeAtencion = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.DgvReservas);
             this.panel1.Location = new System.Drawing.Point(145, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(772, 426);
             this.panel1.TabIndex = 13;
-            // 
-            // DgvReservas
-            // 
-            this.DgvReservas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.DgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvReservas.Location = new System.Drawing.Point(36, 111);
-            this.DgvReservas.Name = "DgvReservas";
-            this.DgvReservas.Size = new System.Drawing.Size(727, 299);
-            this.DgvReservas.TabIndex = 0;
             // 
             // button3
             // 
@@ -100,6 +87,7 @@
             this.BtnReservasDeAtencion.TabIndex = 15;
             this.BtnReservasDeAtencion.Text = "Reservas de atención";
             this.BtnReservasDeAtencion.UseVisualStyleBackColor = true;
+            this.BtnReservasDeAtencion.Click += new System.EventHandler(this.BtnReservasDeAtencion_Click);
             // 
             // FormUsuario3
             // 
@@ -114,8 +102,6 @@
             this.Controls.Add(this.BtnDatosPersonales);
             this.Name = "FormUsuario3";
             this.Text = "formUsuario3";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvReservas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +115,5 @@
         private System.Windows.Forms.Button BtnDatosPersonales;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnReservasDeAtencion;
-        private System.Windows.Forms.DataGridView DgvReservas;
     }
 }

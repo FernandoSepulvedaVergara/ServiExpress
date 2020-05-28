@@ -85,5 +85,10 @@ namespace ServiExpress.app_GUI
             splitContainer1.Panel2.Controls.Add(glosarioDePagos);
             glosarioDePagos.Show();
         }
+
+        private void BtnDatosPersonales_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

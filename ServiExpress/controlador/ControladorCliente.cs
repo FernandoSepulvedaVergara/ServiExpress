@@ -25,6 +25,7 @@ namespace ServiExpress.controlador
 
         public override DataGridView SetDataGridView(DataGridView Dgv)
         {
+            Dgv.Rows.Clear();
             if (Dgv.Name.Equals("DgvVehiculosCliente"))
             {
                 vehiculo[] resultado = GetVehiculos();

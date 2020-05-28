@@ -56,6 +56,7 @@
             this.BtnDatosPersonales.TabIndex = 2;
             this.BtnDatosPersonales.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnDatosPersonales.UseVisualStyleBackColor = false;
+            this.BtnDatosPersonales.Click += new System.EventHandler(this.BtnDatosPersonales_Click);
             // 
             // BtnReservaAtencion
             // 
