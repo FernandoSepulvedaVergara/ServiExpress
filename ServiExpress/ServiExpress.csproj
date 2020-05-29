@@ -278,19 +278,37 @@
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atencion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atenciones.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetAtencionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeServiciosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.producto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeServicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.VerAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\WebServiceEmpleado.wsdl" />

@@ -1,5 +1,6 @@
 ﻿using ServiExpress.app_GUI.UsuarioEmpleado;
 using ServiExpress.controlador;
+using ServiExpress.WebServiceEmpleado;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

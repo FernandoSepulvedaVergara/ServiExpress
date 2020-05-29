@@ -40,6 +40,7 @@
             this.TxtIdReservaDeAtencion = new System.Windows.Forms.TextBox();
             this.TxtHoraAtencion = new System.Windows.Forms.TextBox();
             this.TxtFechaAtencion = new System.Windows.Forms.TextBox();
+            this.BtnAgregarProducto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +76,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnAgregarProducto);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -91,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 192);
+            this.label4.Location = new System.Drawing.Point(22, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 7;
@@ -100,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 218);
+            this.label3.Location = new System.Drawing.Point(22, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 6;
@@ -109,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 37);
+            this.label2.Location = new System.Drawing.Point(21, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 5;
@@ -118,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 64);
+            this.label1.Location = new System.Drawing.Point(22, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 4;
@@ -128,7 +130,7 @@
             // 
             this.CmbTipoDeServicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTipoDeServicios.FormattingEnabled = true;
-            this.CmbTipoDeServicios.Location = new System.Drawing.Point(150, 34);
+            this.CmbTipoDeServicios.Location = new System.Drawing.Point(150, 100);
             this.CmbTipoDeServicios.Name = "CmbTipoDeServicios";
             this.CmbTipoDeServicios.Size = new System.Drawing.Size(317, 21);
             this.CmbTipoDeServicios.TabIndex = 3;
@@ -136,7 +138,7 @@
             // TxtIdReservaDeAtencion
             // 
             this.TxtIdReservaDeAtencion.Enabled = false;
-            this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(150, 61);
+            this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(150, 127);
             this.TxtIdReservaDeAtencion.Name = "TxtIdReservaDeAtencion";
             this.TxtIdReservaDeAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtIdReservaDeAtencion.TabIndex = 2;
@@ -144,7 +146,7 @@
             // TxtHoraAtencion
             // 
             this.TxtHoraAtencion.Enabled = false;
-            this.TxtHoraAtencion.Location = new System.Drawing.Point(150, 215);
+            this.TxtHoraAtencion.Location = new System.Drawing.Point(150, 61);
             this.TxtHoraAtencion.Name = "TxtHoraAtencion";
             this.TxtHoraAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtHoraAtencion.TabIndex = 1;
@@ -152,10 +154,19 @@
             // TxtFechaAtencion
             // 
             this.TxtFechaAtencion.Enabled = false;
-            this.TxtFechaAtencion.Location = new System.Drawing.Point(150, 189);
+            this.TxtFechaAtencion.Location = new System.Drawing.Point(150, 35);
             this.TxtFechaAtencion.Name = "TxtFechaAtencion";
             this.TxtFechaAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtFechaAtencion.TabIndex = 0;
+            // 
+            // BtnAgregarProducto
+            // 
+            this.BtnAgregarProducto.Location = new System.Drawing.Point(150, 199);
+            this.BtnAgregarProducto.Name = "BtnAgregarProducto";
+            this.BtnAgregarProducto.Size = new System.Drawing.Size(126, 40);
+            this.BtnAgregarProducto.TabIndex = 8;
+            this.BtnAgregarProducto.Text = "Agregar producto";
+            this.BtnAgregarProducto.UseVisualStyleBackColor = true;
             // 
             // RealizarReservaDeAtencion
             // 
@@ -167,6 +178,7 @@
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnCancelarAtencion);
             this.Controls.Add(this.BtnRegistrarAtencion);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RealizarReservaDeAtencion";
             this.Text = "RealizarReservaDeAtencion";
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CmbTipoDeServicios;
         private System.Windows.Forms.TextBox TxtIdReservaDeAtencion;
+        private System.Windows.Forms.Button BtnAgregarProducto;
     }
 }

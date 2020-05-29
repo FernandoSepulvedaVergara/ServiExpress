@@ -23,5 +23,10 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
         {
             this.Dispose();
         }
+
+        private void VerAtención_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

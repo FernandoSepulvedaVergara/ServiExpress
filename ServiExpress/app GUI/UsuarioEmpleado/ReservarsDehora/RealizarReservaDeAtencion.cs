@@ -39,16 +39,19 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
 
         private void BtnRegistrarAtencion_Click(object sender, EventArgs e)
         {
-            if (CmbTipoDeServicios.SelectedItem != null)
-            {
-                
-                int servicioRealizado = int.Parse(CmbTipoDeServicios.SelectedItem.ToString().Substring(0,CmbTipoDeServicios.SelectedItem.ToString().IndexOf("-")).Trim());
-                string[] resultado = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text,servicioRealizado,int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()),1);
-                MessageBox.Show(string.Format("{0}",resultado[1]));
-            }
-            else 
-            {
-                MessageBox.Show("Seleccione el servicio realizado");
+            if (true) {
+                if (CmbTipoDeServicios.SelectedItem != null)
+                {
+
+                    int servicioRealizado = int.Parse(CmbTipoDeServicios.SelectedItem.ToString().Substring(0, CmbTipoDeServicios.SelectedItem.ToString().IndexOf("-")).Trim());
+                    string[] resultado = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text, servicioRealizado, int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()), 1);
+                    MessageBox.Show(string.Format("{0}", resultado[1]));
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione el servicio realizado");
+                } 
             }
         }
 
@@ -56,11 +59,11 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
         {
             if (CmbTipoDeServicios.SelectedItem != null)
             {
-
                 int servicioRealizado = int.Parse(CmbTipoDeServicios.SelectedItem.ToString().Substring(0, CmbTipoDeServicios.SelectedItem.ToString().IndexOf("-")).Trim());
                 string[] resultado = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text, servicioRealizado, int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()), 3);
 
                 MessageBox.Show(string.Format("{0}", resultado[1]));
+                this.Close();
             }
             else
             {

@@ -2,6 +2,7 @@
 using ServiExpress.WebServiceEmpleado;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,14 +44,17 @@ namespace ServiExpress.controlador
                     DataGridViewButtonCell dataGridViewButtonCell = new DataGridViewButtonCell();
                     if (r.id_estado == 1)
                     {
+                        dataGridViewButtonCell.Style.BackColor = Color.Green;
                         dataGridViewButtonCell.Value = "Ver atención";
                     }
                     else if (r.id_estado == 3) 
                     {
+                        dataGridViewButtonCell.Style.BackColor = Color.LightBlue;
                         dataGridViewButtonCell.Value = "Cancelado";
                     }
                     else
                     {
+                        dataGridViewButtonCell.Style.BackColor = Color.Red;
                         dataGridViewButtonCell.Value = "Realizar atención";
                     }
 
@@ -98,6 +102,16 @@ namespace ServiExpress.controlador
         {
             string[] resultado = webEmpleado.RegistrarAtencion(fechaAtencion,horaAtencion,idTipoServicio,idReserva,idEstadoDeAtencion);
             return resultado;
+        }
+
+        public tipoDeProducto[] GetTipoDeProducto() 
+        {
+            return webEmpleado.GetTipoDeProducto();
+        }
+
+        public producto[] GetProductos(int idTipoDeProducto)
+        {
+            return webEmpleado.GetProductos(idTipoDeProducto);
         }
     }
 }
