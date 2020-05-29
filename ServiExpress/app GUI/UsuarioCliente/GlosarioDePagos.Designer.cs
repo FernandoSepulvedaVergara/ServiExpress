@@ -52,7 +52,7 @@
             this.Fecha,
             this.IdEstado,
             this.IdAtencion});
-            this.DgvVentas.Location = new System.Drawing.Point(119, 67);
+            this.DgvVentas.Location = new System.Drawing.Point(87, 92);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
@@ -110,6 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.DgvVentas);
