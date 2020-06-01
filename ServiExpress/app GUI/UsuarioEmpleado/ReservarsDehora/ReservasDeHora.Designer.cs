@@ -65,6 +65,7 @@
             this.DgvReservasDeHora.MultiSelect = false;
             this.DgvReservasDeHora.Name = "DgvReservasDeHora";
             this.DgvReservasDeHora.ReadOnly = true;
+            this.DgvReservasDeHora.RowHeadersVisible = false;
             this.DgvReservasDeHora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvReservasDeHora.Size = new System.Drawing.Size(780, 293);
             this.DgvReservasDeHora.TabIndex = 0;

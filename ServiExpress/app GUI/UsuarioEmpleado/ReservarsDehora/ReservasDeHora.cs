@@ -93,7 +93,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
 
         private void DgvReservasDeHora_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (DgvReservasDeHora.Rows[DgvReservasDeHora.CurrentRow.Index].Cells[0].RowIndex.Equals(e.ColumnIndex))
+            if (DgvReservasDeHora.Rows[DgvReservasDeHora.CurrentRow.Index].Cells[0].ColumnIndex.Equals(e.ColumnIndex))
             {
                 object objeto = DgvReservasDeHora.Rows[DgvReservasDeHora.CurrentRow.Index].Cells[0].Value;
                 DataGridViewRow fila = DgvReservasDeHora.SelectedRows[DgvReservasDeHora.CurrentRow.Index];

@@ -117,6 +117,12 @@
     <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.Designer.cs">
       <DependentUpon>ReservasDeHora.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.Designer.cs">
+      <DependentUpon>SeleccionarCantidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.resx">
       <DependentUpon>ReservasDeHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.resx">
+      <DependentUpon>SeleccionarCantidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.resx">
       <DependentUpon>VerAtención.cs</DependentUpon>
