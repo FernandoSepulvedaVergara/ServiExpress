@@ -311,6 +311,9 @@
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionVentaProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeProducto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
