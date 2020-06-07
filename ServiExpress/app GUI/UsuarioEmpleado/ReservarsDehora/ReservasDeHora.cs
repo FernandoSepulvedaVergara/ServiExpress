@@ -99,7 +99,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
                 DataGridViewRow fila = DgvReservasDeHora.SelectedRows[DgvReservasDeHora.CurrentRow.Index];
                 if (objeto.ToString().Equals("Realizar atención"))
                 {
-                    RealizarReservaDeAtencion realizarReservaDeAtencion = new RealizarReservaDeAtencion(controladorEmpleado,fila);
+                    RealizarRegistroDeAtencion realizarReservaDeAtencion = new RealizarRegistroDeAtencion(controladorEmpleado,fila);
                     realizarReservaDeAtencion.ShowDialog();
                 }
                 else if (objeto.ToString().Equals("Ver atención"))

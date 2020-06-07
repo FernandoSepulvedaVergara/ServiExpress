@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarProductos" type="tns:ActualizarProductos" />
+  <xs:element name="ActualizarProductosResponse" type="tns:ActualizarProductosResponse" />
   <xs:element name="GetAtenciones" type="tns:GetAtenciones" />
   <xs:element name="GetAtencionesResponse" type="tns:GetAtencionesResponse" />
   <xs:element name="GetProductos" type="tns:GetProductos" />
   <xs:element name="GetProductosResponse" type="tns:GetProductosResponse" />
+  <xs:element name="GetTipoDeDocumento" type="tns:GetTipoDeDocumento" />
+  <xs:element name="GetTipoDeDocumentoResponse" type="tns:GetTipoDeDocumentoResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
   <xs:element name="GetTipoDeProductoResponse" type="tns:GetTipoDeProductoResponse" />
   <xs:element name="GetTipoDeServicios" type="tns:GetTipoDeServicios" />
   <xs:element name="GetTipoDeServiciosResponse" type="tns:GetTipoDeServiciosResponse" />
   <xs:element name="RegistrarAtencion" type="tns:RegistrarAtencion" />
   <xs:element name="RegistrarAtencionResponse" type="tns:RegistrarAtencionResponse" />
-  <xs:element name="RegistrarAtencionVentaProducto" type="tns:RegistrarAtencionVentaProducto" />
-  <xs:element name="RegistrarAtencionVentaProductoResponse" type="tns:RegistrarAtencionVentaProductoResponse" />
+  <xs:element name="RegistrarVenta" type="tns:RegistrarVenta" />
+  <xs:element name="RegistrarVentaResponse" type="tns:RegistrarVentaResponse" />
   <xs:element name="VerAtencion" type="tns:VerAtencion" />
   <xs:element name="VerAtencionResponse" type="tns:VerAtencionResponse" />
   <xs:complexType name="VerAtencion">
@@ -34,20 +38,6 @@
       <xs:element name="id_tipo_de_servicio" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetTipoDeServicios">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetTipoDeServiciosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeServicio" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoDeServicio">
-    <xs:sequence>
-      <xs:element name="id_servicio" type="xs:int" />
-      <xs:element minOccurs="0" name="servicio" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="GetTipoDeProducto">
     <xs:sequence />
   </xs:complexType>
@@ -60,6 +50,20 @@
     <xs:sequence>
       <xs:element name="idTipoDeProducto" type="xs:int" />
       <xs:element minOccurs="0" name="producto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeServicios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeServiciosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeServicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDeServicio">
+    <xs:sequence>
+      <xs:element name="id_servicio" type="xs:int" />
+      <xs:element minOccurs="0" name="servicio" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetProductos">
@@ -111,29 +115,30 @@
       <xs:element minOccurs="0" name="usuario_rut" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="RegistrarAtencionVentaProducto">
+  <xs:complexType name="GetTipoDeDocumento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeDocumentoResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="fechaAtencion" type="xs:string" />
-      <xs:element minOccurs="0" name="horaAtencion" type="xs:string" />
-      <xs:element name="idTipoDeServicio" type="xs:int" />
-      <xs:element name="idReserva" type="xs:int" />
-      <xs:element name="idEstadoDeAtencion" type="xs:int" />
-      <xs:element name="idVenta" type="xs:int" />
-      <xs:element name="montoAPagar" type="xs:int" />
-      <xs:element name="montoPagado" type="xs:int" />
-      <xs:element minOccurs="0" name="fechaVenta" type="xs:string" />
-      <xs:element name="idEstadoVenta" type="xs:int" />
-      <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
-      <xs:element name="idAtencion" type="xs:int" />
-      <xs:element name="idDocumento" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDeDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documento" type="xs:string" />
+      <xs:element name="id_tipo_de_documento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarProductos">
+    <xs:sequence>
+      <xs:element name="VentasIdVenta" type="xs:int" />
       <xs:element name="idProductoVendido" type="xs:int" />
       <xs:element name="cantidad" type="xs:int" />
       <xs:element name="totalAPagar" type="xs:int" />
       <xs:element name="idProducto" type="xs:int" />
-      <xs:element name="VentasIdVenta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="RegistrarAtencionVentaProductoResponse">
+  <xs:complexType name="ActualizarProductosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -148,6 +153,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="RegistrarAtencionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarVenta">
+    <xs:sequence>
+      <xs:element name="idAtencion" type="xs:int" />
+      <xs:element name="idVenta" type="xs:int" />
+      <xs:element name="montoAPagar" type="xs:int" />
+      <xs:element name="montoPagado" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaVenta" type="xs:string" />
+      <xs:element name="idEstadoVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
+      <xs:element name="idDocumento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarVentaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>

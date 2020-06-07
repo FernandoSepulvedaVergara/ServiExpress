@@ -104,6 +104,18 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
+        public string[] RegistrarVenta(int idAtencion, int idVenta, int montoAPagar, int montoPagado, string fechaVenta, int idEstadoVenta, string usuarioRut, int idDocumento)
+        {
+            string[] resultado = webEmpleado.RegistrarVenta(idAtencion, idVenta, montoAPagar, montoPagado, fechaVenta, idEstadoVenta, usuarioRut, idDocumento);
+            return resultado;
+        }
+
+        public string[] ActualizarProductos(int ventasIdVentas, int idProductoVendido, int cantidad, int totalAPagar, int idProducto)
+        {
+            string[] resultado = webEmpleado.ActualizarProductos(ventasIdVentas, idProductoVendido, cantidad,totalAPagar, idProducto);
+            return resultado;
+        }
+
         public tipoDeProducto[] GetTipoDeProducto() 
         {
             return webEmpleado.GetTipoDeProducto();
@@ -112,6 +124,11 @@ namespace ServiExpress.controlador
         public producto[] GetProductos(int idTipoDeProducto)
         {
             return webEmpleado.GetProductos(idTipoDeProducto);
+        }
+
+        public tipoDeDocumento[] GetTipoDeDocumento() 
+        {
+            return webEmpleado.GetTipoDeDocumento();
         }
     }
 }

@@ -105,11 +105,11 @@
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.Designer.cs">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarReservaDeAtencion.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarReservaDeAtencion.Designer.cs">
-      <DependentUpon>RealizarReservaDeAtencion.cs</DependentUpon>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.Designer.cs">
+      <DependentUpon>RealizarRegistroDeAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.cs">
       <SubType>Form</SubType>
@@ -209,8 +209,8 @@
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarReservaDeAtencion.resx">
-      <DependentUpon>RealizarReservaDeAtencion.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.resx">
+      <DependentUpon>RealizarRegistroDeAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.resx">
       <DependentUpon>ReservasDeHora.cs</DependentUpon>
@@ -287,6 +287,9 @@
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.ActualizarProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atencion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -297,6 +300,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeDocumentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeProductoResponse.datasource">
@@ -311,7 +317,10 @@
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionVentaProductoResponse.datasource">
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeDocumento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeProducto.datasource">

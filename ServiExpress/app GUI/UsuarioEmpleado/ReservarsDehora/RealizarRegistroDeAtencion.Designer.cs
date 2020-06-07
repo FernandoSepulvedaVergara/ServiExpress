@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
 {
-    partial class RealizarReservaDeAtencion
+    partial class RealizarRegistroDeAtencion
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,8 @@
             this.BtnCancelarAtencion = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtRutCliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnQuitarProducto = new System.Windows.Forms.Button();
@@ -58,6 +60,8 @@
             this.TxtIdReservaDeAtencion = new System.Windows.Forms.TextBox();
             this.TxtHoraAtencion = new System.Windows.Forms.TextBox();
             this.TxtFechaAtencion = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CmbTipoDeDocumento = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
@@ -65,7 +69,7 @@
             // 
             // BtnRegistrarAtencion
             // 
-            this.BtnRegistrarAtencion.Location = new System.Drawing.Point(798, 46);
+            this.BtnRegistrarAtencion.Location = new System.Drawing.Point(819, 44);
             this.BtnRegistrarAtencion.Name = "BtnRegistrarAtencion";
             this.BtnRegistrarAtencion.Size = new System.Drawing.Size(108, 34);
             this.BtnRegistrarAtencion.TabIndex = 1;
@@ -75,7 +79,7 @@
             // 
             // BtnCancelarAtencion
             // 
-            this.BtnCancelarAtencion.Location = new System.Drawing.Point(798, 110);
+            this.BtnCancelarAtencion.Location = new System.Drawing.Point(819, 108);
             this.BtnCancelarAtencion.Name = "BtnCancelarAtencion";
             this.BtnCancelarAtencion.Size = new System.Drawing.Size(108, 34);
             this.BtnCancelarAtencion.TabIndex = 2;
@@ -85,7 +89,7 @@
             // 
             // BtnCerrar
             // 
-            this.BtnCerrar.Location = new System.Drawing.Point(798, 414);
+            this.BtnCerrar.Location = new System.Drawing.Point(819, 486);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(108, 34);
             this.BtnCerrar.TabIndex = 3;
@@ -95,6 +99,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.TxtRutCliente);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label4);
@@ -107,8 +113,25 @@
             this.panel1.Controls.Add(this.TxtFechaAtencion);
             this.panel1.Location = new System.Drawing.Point(32, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 525);
+            this.panel1.Size = new System.Drawing.Size(746, 571);
             this.panel1.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(21, 50);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Rut cliente:";
+            // 
+            // TxtRutCliente
+            // 
+            this.TxtRutCliente.Enabled = false;
+            this.TxtRutCliente.Location = new System.Drawing.Point(149, 47);
+            this.TxtRutCliente.Name = "TxtRutCliente";
+            this.TxtRutCliente.Size = new System.Drawing.Size(126, 20);
+            this.TxtRutCliente.TabIndex = 16;
             // 
             // label8
             // 
@@ -123,6 +146,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.CmbTipoDeDocumento);
             this.panel2.Controls.Add(this.BtnQuitarProducto);
             this.panel2.Controls.Add(this.LblMontoTotal);
             this.panel2.Controls.Add(this.label9);
@@ -132,14 +157,14 @@
             this.panel2.Controls.Add(this.CmbProductos);
             this.panel2.Controls.Add(this.CmbTipoDeProducto);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(0, 162);
+            this.panel2.Location = new System.Drawing.Point(0, 180);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(746, 363);
+            this.panel2.Size = new System.Drawing.Size(746, 391);
             this.panel2.TabIndex = 15;
             // 
             // BtnQuitarProducto
             // 
-            this.BtnQuitarProducto.Location = new System.Drawing.Point(3, 153);
+            this.BtnQuitarProducto.Location = new System.Drawing.Point(3, 179);
             this.BtnQuitarProducto.Name = "BtnQuitarProducto";
             this.BtnQuitarProducto.Size = new System.Drawing.Size(120, 26);
             this.BtnQuitarProducto.TabIndex = 5;
@@ -151,7 +176,7 @@
             // 
             this.LblMontoTotal.AutoSize = true;
             this.LblMontoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMontoTotal.Location = new System.Drawing.Point(631, 96);
+            this.LblMontoTotal.Location = new System.Drawing.Point(631, 72);
             this.LblMontoTotal.Name = "LblMontoTotal";
             this.LblMontoTotal.Size = new System.Drawing.Size(18, 20);
             this.LblMontoTotal.TabIndex = 16;
@@ -161,7 +186,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(508, 96);
+            this.label9.Location = new System.Drawing.Point(508, 72);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 20);
             this.label9.TabIndex = 15;
@@ -184,7 +209,7 @@
             this.Cantidad});
             this.DgvProductos.Cursor = System.Windows.Forms.Cursors.Default;
             this.DgvProductos.EnableHeadersVisualStyles = false;
-            this.DgvProductos.Location = new System.Drawing.Point(0, 185);
+            this.DgvProductos.Location = new System.Drawing.Point(0, 211);
             this.DgvProductos.MultiSelect = false;
             this.DgvProductos.Name = "DgvProductos";
             this.DgvProductos.ReadOnly = true;
@@ -198,42 +223,49 @@
             // 
             this.IdProducto.HeaderText = "Id producto";
             this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
             this.IdProducto.Width = 79;
             // 
             // Descripcion
             // 
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 88;
             // 
             // Marca
             // 
             this.Marca.HeaderText = "Marca";
             this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
             this.Marca.Width = 62;
             // 
             // Fecha_de_vencimiento
             // 
             this.Fecha_de_vencimiento.HeaderText = "Fecha de vencimiento";
             this.Fecha_de_vencimiento.Name = "Fecha_de_vencimiento";
+            this.Fecha_de_vencimiento.ReadOnly = true;
             this.Fecha_de_vencimiento.Width = 125;
             // 
             // Precio_unitario
             // 
             this.Precio_unitario.HeaderText = "Precio unitario";
             this.Precio_unitario.Name = "Precio_unitario";
+            this.Precio_unitario.ReadOnly = true;
             this.Precio_unitario.Width = 91;
             // 
             // Stock
             // 
             this.Stock.HeaderText = "Stock";
             this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
             this.Stock.Width = 60;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 74;
             // 
             // label7
@@ -241,7 +273,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(261, 13);
+            this.label7.Location = new System.Drawing.Point(261, 6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 20);
             this.label7.TabIndex = 14;
@@ -250,7 +282,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 42);
+            this.label5.Location = new System.Drawing.Point(20, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 12;
@@ -260,7 +292,7 @@
             // 
             this.CmbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbProductos.FormattingEnabled = true;
-            this.CmbProductos.Location = new System.Drawing.Point(24, 98);
+            this.CmbProductos.Location = new System.Drawing.Point(24, 141);
             this.CmbProductos.Name = "CmbProductos";
             this.CmbProductos.Size = new System.Drawing.Size(349, 21);
             this.CmbProductos.TabIndex = 11;
@@ -270,7 +302,7 @@
             // 
             this.CmbTipoDeProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTipoDeProducto.FormattingEnabled = true;
-            this.CmbTipoDeProducto.Location = new System.Drawing.Point(23, 58);
+            this.CmbTipoDeProducto.Location = new System.Drawing.Point(23, 101);
             this.CmbTipoDeProducto.Name = "CmbTipoDeProducto";
             this.CmbTipoDeProducto.Size = new System.Drawing.Size(350, 21);
             this.CmbTipoDeProducto.TabIndex = 10;
@@ -279,7 +311,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 82);
+            this.label6.Location = new System.Drawing.Point(21, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 13;
@@ -288,7 +320,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 48);
+            this.label4.Location = new System.Drawing.Point(21, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 7;
@@ -297,7 +329,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 74);
+            this.label3.Location = new System.Drawing.Point(21, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 6;
@@ -306,7 +338,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 103);
+            this.label2.Location = new System.Drawing.Point(20, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 5;
@@ -315,7 +347,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 130);
+            this.label1.Location = new System.Drawing.Point(21, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 4;
@@ -325,7 +357,7 @@
             // 
             this.CmbTipoDeServicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTipoDeServicios.FormattingEnabled = true;
-            this.CmbTipoDeServicios.Location = new System.Drawing.Point(149, 100);
+            this.CmbTipoDeServicios.Location = new System.Drawing.Point(149, 128);
             this.CmbTipoDeServicios.Name = "CmbTipoDeServicios";
             this.CmbTipoDeServicios.Size = new System.Drawing.Size(322, 21);
             this.CmbTipoDeServicios.TabIndex = 3;
@@ -333,7 +365,7 @@
             // TxtIdReservaDeAtencion
             // 
             this.TxtIdReservaDeAtencion.Enabled = false;
-            this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(149, 127);
+            this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(149, 155);
             this.TxtIdReservaDeAtencion.Name = "TxtIdReservaDeAtencion";
             this.TxtIdReservaDeAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtIdReservaDeAtencion.TabIndex = 2;
@@ -341,7 +373,7 @@
             // TxtHoraAtencion
             // 
             this.TxtHoraAtencion.Enabled = false;
-            this.TxtHoraAtencion.Location = new System.Drawing.Point(149, 71);
+            this.TxtHoraAtencion.Location = new System.Drawing.Point(149, 99);
             this.TxtHoraAtencion.Name = "TxtHoraAtencion";
             this.TxtHoraAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtHoraAtencion.TabIndex = 1;
@@ -349,25 +381,43 @@
             // TxtFechaAtencion
             // 
             this.TxtFechaAtencion.Enabled = false;
-            this.TxtFechaAtencion.Location = new System.Drawing.Point(149, 45);
+            this.TxtFechaAtencion.Location = new System.Drawing.Point(149, 73);
             this.TxtFechaAtencion.Name = "TxtFechaAtencion";
             this.TxtFechaAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtFechaAtencion.TabIndex = 0;
             // 
-            // RealizarReservaDeAtencion
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 45);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Tipo de documento";
+            // 
+            // CmbTipoDeDocumento
+            // 
+            this.CmbTipoDeDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTipoDeDocumento.FormattingEnabled = true;
+            this.CmbTipoDeDocumento.Location = new System.Drawing.Point(23, 61);
+            this.CmbTipoDeDocumento.Name = "CmbTipoDeDocumento";
+            this.CmbTipoDeDocumento.Size = new System.Drawing.Size(350, 21);
+            this.CmbTipoDeDocumento.TabIndex = 17;
+            // 
+            // RealizarRegistroDeAtencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(918, 572);
+            this.ClientSize = new System.Drawing.Size(939, 606);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnCancelarAtencion);
             this.Controls.Add(this.BtnRegistrarAtencion);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RealizarReservaDeAtencion";
-            this.Text = "RealizarReservaDeAtencion";
+            this.Name = "RealizarRegistroDeAtencion";
+            this.Text = "RealizarRegistroDeAtencion";
             this.Load += new System.EventHandler(this.RealizarReservaDeAtencion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -410,5 +460,9 @@
         private System.Windows.Forms.Label LblMontoTotal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnQuitarProducto;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtRutCliente;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox CmbTipoDeDocumento;
     }
 }

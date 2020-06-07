@@ -6,13 +6,13 @@ using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
 {
-    public partial class RealizarReservaDeAtencion : Form
+    public partial class RealizarRegistroDeAtencion : Form
     {
         ControladorEmpleado controladorEmpleado;
         DataGridViewRow dataGridViewRow;
         producto[] productos;
 
-        public RealizarReservaDeAtencion(ControladorEmpleado controladorEmpleado, DataGridViewRow dataGridViewRow)
+        public RealizarRegistroDeAtencion(ControladorEmpleado controladorEmpleado, DataGridViewRow dataGridViewRow)
         {
             this.controladorEmpleado = controladorEmpleado;
             this.dataGridViewRow = dataGridViewRow;
@@ -33,6 +33,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
             TxtFechaAtencion.Text = fechaActual.Substring(0, 8);
             TxtHoraAtencion.Text = fechaActual.Substring(9, 5);
             TxtIdReservaDeAtencion.Text = this.dataGridViewRow.Cells[5].Value.ToString();
+            TxtRutCliente.Text = this.dataGridViewRow.Cells[3].Value.ToString();
 
             tipoDeProducto[] tipoDeProductos = controladorEmpleado.GetTipoDeProducto();
             if (tipoDeProductos != null)
@@ -40,6 +41,15 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                 foreach (var objeto in tipoDeProductos)
                 {
                     CmbTipoDeProducto.Items.Add(string.Format("{0} - {1}", objeto.idTipoDeProducto, objeto.producto));
+                }
+            }
+
+            tipoDeDocumento[] tipoDeDocumento = controladorEmpleado.GetTipoDeDocumento();
+            if (tipoDeDocumento != null)
+            {
+                foreach (var objeto in tipoDeDocumento)
+                {
+                    CmbTipoDeDocumento.Items.Add(string.Format("{0} - {1}", objeto.id_tipo_de_documento, objeto.documento));
                 }
             }
         }
@@ -51,20 +61,64 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
 
         private void BtnRegistrarAtencion_Click(object sender, EventArgs e)
         {
-            if (true)
+            bool resultadoRegistro = false;
+            if (CmbTipoDeServicios.SelectedItem != null)
             {
-                if (CmbTipoDeServicios.SelectedItem != null)
+                int servicioRealizado = int.Parse(CmbTipoDeServicios.SelectedItem.ToString().Substring(0, CmbTipoDeServicios.SelectedItem.ToString().IndexOf("-")).Trim());
+                if (DgvProductos.Rows.Count != 0)
                 {
-
-                    int servicioRealizado = int.Parse(CmbTipoDeServicios.SelectedItem.ToString().Substring(0, CmbTipoDeServicios.SelectedItem.ToString().IndexOf("-")).Trim());
+                    if (CmbTipoDeDocumento.SelectedItem !=null) {
+                        string[] registroAtencion = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text, servicioRealizado, int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()), 1);
+                        int idDocumento = int.Parse(CmbTipoDeDocumento.SelectedItem.ToString().Substring(0, CmbTipoDeDocumento.SelectedItem.ToString().IndexOf("-")).Trim());
+                        if (registroAtencion[0] != "False")
+                        {
+                            string[] registroVenta = controladorEmpleado.RegistrarVenta(int.Parse(registroAtencion[2]), 0, int.Parse(LblMontoTotal.Text), 0, TxtFechaAtencion.Text, 1, TxtRutCliente.Text, idDocumento);
+                            if (registroVenta[0] != "False")
+                            {
+                                foreach (DataGridViewRow dataGridViewRow in DgvProductos.Rows) 
+                                {
+                                    try
+                                    {
+                                        int montoAPagar = int.Parse(dataGridViewRow.Cells[4].Value.ToString()) * int.Parse(dataGridViewRow.Cells[6].Value.ToString());
+                                        string[] actualizciónProductos = controladorEmpleado.ActualizarProductos(int.Parse(registroVenta[2]), 0, int.Parse(dataGridViewRow.Cells[6].Value.ToString()), montoAPagar, int.Parse(dataGridViewRow.Cells[0].Value.ToString()));
+                                        resultadoRegistro = true;
+                                    }
+                                    catch 
+                                    {
+                                        resultadoRegistro = false;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show(string.Format("{0} \n {1}", registroVenta[1], registroVenta[2]));
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show(string.Format("{0} \n {1}", registroAtencion[1], registroAtencion[2]));
+                        }
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Seleeccionar tipo de documento");
+                    }
+                }
+                else 
+                {
                     string[] resultado = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text, servicioRealizado, int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()), 1);
                     MessageBox.Show(string.Format("{0}", resultado[1]));
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Seleccione el servicio realizado");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el servicio realizado");
+            }
+
+            if (resultadoRegistro != false)
+            {
+                MessageBox.Show("Registro guardado con éxito");
             }
         }
 
@@ -125,7 +179,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
             }
             else
             {
-                 bool validarProductoAgregado = false;
+                bool validarProductoAgregado = false;
                 foreach (DataGridViewRow objecto in DgvProductos.Rows)
                 {
                     if (objecto.Cells[0].Value.Equals(idProducto))
@@ -157,7 +211,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                         }
                     }
                 }
-                else 
+                else
                 {
                     MessageBox.Show("Producto ya esta agregado");
                 }
@@ -165,7 +219,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
             ActualizarListaDeProductos(DgvProductos);
         }
 
-        private void ActualizarListaDeProductos(DataGridView dgv) 
+        private void ActualizarListaDeProductos(DataGridView dgv)
         {
             int montoTotal = 0;
             foreach (DataGridViewRow fila in dgv.Rows)
@@ -177,7 +231,8 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
 
         private void BtnQuitarProducto_Click(object sender, EventArgs e)
         {
-            if (DgvProductos.Rows.Count !=0) {
+            if (DgvProductos.Rows.Count != 0)
+            {
                 int indiceRow = DgvProductos.CurrentRow.Index;
                 DgvProductos.Rows.RemoveAt(indiceRow);
                 ActualizarListaDeProductos(DgvProductos);
@@ -191,7 +246,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                 int cantidadActual = Convert.ToInt32(DgvProductos.CurrentRow.Cells[6].Value);
                 int stock = Convert.ToInt32(DgvProductos.CurrentRow.Cells[5].Value);
                 int precioUnitario = Convert.ToInt32(DgvProductos.CurrentRow.Cells[4].Value);
-                SeleccionarCantidad seleccionarCantidad = new SeleccionarCantidad(cantidadActual,stock,precioUnitario);
+                SeleccionarCantidad seleccionarCantidad = new SeleccionarCantidad(cantidadActual, stock, precioUnitario);
                 seleccionarCantidad.ShowDialog();
                 DgvProductos.CurrentRow.Cells[6].Value = seleccionarCantidad.cantidad;
                 ActualizarListaDeProductos(DgvProductos);

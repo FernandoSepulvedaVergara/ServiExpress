@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.DgvReservasDeHora = new System.Windows.Forms.DataGridView();
-            this.EstadoDeAtención = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdReservación = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmbFiltros = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RdbSeleccionarHoy = new System.Windows.Forms.RadioButton();
@@ -44,6 +37,13 @@
             this.CmbSucursales = new System.Windows.Forms.ComboBox();
             this.PanelFiltrar = new System.Windows.Forms.Panel();
             this.RdbFiltrar = new System.Windows.Forms.RadioButton();
+            this.EstadoDeAtención = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RutCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdReservación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvReservasDeHora)).BeginInit();
             this.PanelFiltrar.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.EstadoDeAtención,
             this.HoraReserva,
             this.FechaReserva,
-            this.Rut,
+            this.RutCliente,
             this.Patente,
             this.IdReservación,
             this.Sucursal});
@@ -70,48 +70,6 @@
             this.DgvReservasDeHora.Size = new System.Drawing.Size(780, 293);
             this.DgvReservasDeHora.TabIndex = 0;
             this.DgvReservasDeHora.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReservasDeHora_CellClick);
-            // 
-            // EstadoDeAtención
-            // 
-            this.EstadoDeAtención.HeaderText = "Estado de atención";
-            this.EstadoDeAtención.Name = "EstadoDeAtención";
-            this.EstadoDeAtención.ReadOnly = true;
-            // 
-            // HoraReserva
-            // 
-            this.HoraReserva.HeaderText = "Hora de reservación";
-            this.HoraReserva.Name = "HoraReserva";
-            this.HoraReserva.ReadOnly = true;
-            // 
-            // FechaReserva
-            // 
-            this.FechaReserva.HeaderText = "Fecha de reservación";
-            this.FechaReserva.Name = "FechaReserva";
-            this.FechaReserva.ReadOnly = true;
-            // 
-            // Rut
-            // 
-            this.Rut.HeaderText = "Rut";
-            this.Rut.Name = "Rut";
-            this.Rut.ReadOnly = true;
-            // 
-            // Patente
-            // 
-            this.Patente.HeaderText = "Patente";
-            this.Patente.Name = "Patente";
-            this.Patente.ReadOnly = true;
-            // 
-            // IdReservación
-            // 
-            this.IdReservación.HeaderText = "Id reservación";
-            this.IdReservación.Name = "IdReservación";
-            this.IdReservación.ReadOnly = true;
-            // 
-            // Sucursal
-            // 
-            this.Sucursal.HeaderText = "Sucursal";
-            this.Sucursal.Name = "Sucursal";
-            this.Sucursal.ReadOnly = true;
             // 
             // CmbFiltros
             // 
@@ -203,6 +161,48 @@
             this.RdbFiltrar.UseVisualStyleBackColor = true;
             this.RdbFiltrar.CheckedChanged += new System.EventHandler(this.RdbFiltrar_CheckedChanged);
             // 
+            // EstadoDeAtención
+            // 
+            this.EstadoDeAtención.HeaderText = "Estado de atención";
+            this.EstadoDeAtención.Name = "EstadoDeAtención";
+            this.EstadoDeAtención.ReadOnly = true;
+            // 
+            // HoraReserva
+            // 
+            this.HoraReserva.HeaderText = "Hora de reservación";
+            this.HoraReserva.Name = "HoraReserva";
+            this.HoraReserva.ReadOnly = true;
+            // 
+            // FechaReserva
+            // 
+            this.FechaReserva.HeaderText = "Fecha de reservación";
+            this.FechaReserva.Name = "FechaReserva";
+            this.FechaReserva.ReadOnly = true;
+            // 
+            // RutCliente
+            // 
+            this.RutCliente.HeaderText = "Rut cliente";
+            this.RutCliente.Name = "RutCliente";
+            this.RutCliente.ReadOnly = true;
+            // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
+            this.Patente.ReadOnly = true;
+            // 
+            // IdReservación
+            // 
+            this.IdReservación.HeaderText = "Id reservación";
+            this.IdReservación.Name = "IdReservación";
+            this.IdReservación.ReadOnly = true;
+            // 
+            // Sucursal
+            // 
+            this.Sucursal.HeaderText = "Sucursal";
+            this.Sucursal.Name = "Sucursal";
+            this.Sucursal.ReadOnly = true;
+            // 
             // ReservasDeHora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +241,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDeAtención;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaReserva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RutCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdReservación;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sucursal;
