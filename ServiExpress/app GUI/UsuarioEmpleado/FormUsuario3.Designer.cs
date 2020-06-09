@@ -30,10 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.BtnPedidos = new System.Windows.Forms.Button();
             this.BtnDatosPersonales = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.BtnReservasDeAtencion = new System.Windows.Forms.Button();
+            this.BtnVentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,15 +51,6 @@
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // BtnPedidos
-            // 
-            this.BtnPedidos.Location = new System.Drawing.Point(6, 123);
-            this.BtnPedidos.Name = "BtnPedidos";
-            this.BtnPedidos.Size = new System.Drawing.Size(133, 41);
-            this.BtnPedidos.TabIndex = 11;
-            this.BtnPedidos.Text = "Pedidos";
-            this.BtnPedidos.UseVisualStyleBackColor = true;
-            // 
             // BtnDatosPersonales
             // 
             this.BtnDatosPersonales.Location = new System.Drawing.Point(6, 29);
@@ -69,15 +59,6 @@
             this.BtnDatosPersonales.TabIndex = 10;
             this.BtnDatosPersonales.Text = "Datos personales";
             this.BtnDatosPersonales.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 241);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Empleado";
             // 
             // BtnReservasDeAtencion
             // 
@@ -89,21 +70,32 @@
             this.BtnReservasDeAtencion.UseVisualStyleBackColor = true;
             this.BtnReservasDeAtencion.Click += new System.EventHandler(this.BtnReservasDeAtencion_Click);
             // 
+            // BtnVentas
+            // 
+            this.BtnVentas.Location = new System.Drawing.Point(6, 123);
+            this.BtnVentas.Name = "BtnVentas";
+            this.BtnVentas.Size = new System.Drawing.Size(133, 41);
+            this.BtnVentas.TabIndex = 16;
+            this.BtnVentas.Text = "Ventas";
+            this.BtnVentas.UseVisualStyleBackColor = true;
+            this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
+            // 
             // FormUsuario3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(920, 450);
+            this.Controls.Add(this.BtnVentas);
             this.Controls.Add(this.BtnReservasDeAtencion);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.BtnPedidos);
             this.Controls.Add(this.BtnDatosPersonales);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormUsuario3";
             this.Text = "formUsuario3";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -111,9 +103,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button BtnPedidos;
         private System.Windows.Forms.Button BtnDatosPersonales;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnReservasDeAtencion;
+        private System.Windows.Forms.Button BtnVentas;
     }
 }

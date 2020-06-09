@@ -1,4 +1,5 @@
-﻿using ServiExpress.WebServiceCliente;
+﻿using ServiExpress.app_GUI.UsuarioEmpleado;
+using ServiExpress.WebServiceCliente;
 using ServiExpress.WebServiceEmpleado;
 using System;
 using System.Collections.Generic;
@@ -85,6 +86,61 @@ namespace ServiExpress.controlador
             return Dgv;
         }
 
+        public DataGridView SetDataGridViewVentas(DataGridView Dgv, string filtro, string valorFiltro)
+        {
+            Dgv.Rows.Clear();
+            WebServiceEmpleado.ventas[] resultado = GetVentasEmpleado(filtro, valorFiltro);
+            List<string> listaTemporal = new List<string>();
+
+            if (resultado != null)
+            {
+                foreach (var r in resultado)
+                {
+                    DataGridViewButtonCell dataGridViewButtonCellButon1 = new DataGridViewButtonCell();
+                    DataGridViewButtonCell dataGridViewButtonCellButon2 = new DataGridViewButtonCell();
+                    dataGridViewButtonCellButon2.Value = "Documento";
+                    if (r.estadoDeVenta.estado == "No pagado")
+                    {
+                        dataGridViewButtonCellButon1.Value = "Pagar";
+                    }
+                    else if (r.estadoDeVenta.estado == "Pagado")
+                    {
+                        dataGridViewButtonCellButon1.Value = "Pagado";
+                    }
+
+                    listaTemporal.Add(r.estadoDeVenta.estado);
+                    listaTemporal.Add(r.id_venta.ToString());
+                    listaTemporal.Add(r.montoAPagar.ToString());
+                    listaTemporal.Add(r.montoPagado.ToString());
+                    listaTemporal.Add(r.fecha);
+                    listaTemporal.Add(r.rut);
+                    listaTemporal.Add(r.idAtencion.ToString());
+                    listaTemporal.Add(r.idDocumento.ToString());
+
+                    DataGridViewRow fila = new DataGridViewRow();
+                    fila.CreateCells(Dgv);
+                    for (int i = 0; i < listaTemporal.Count; i++)
+                    {
+                        if (i == 0)
+                        {
+                            fila.Cells[i] = dataGridViewButtonCellButon1;
+                        }
+                        else if (i == 7) 
+                        {
+                            fila.Cells[i] = dataGridViewButtonCellButon2;
+                        }
+                        else
+                        {
+                            fila.Cells[i].Value = listaTemporal[i].ToString();
+                        }
+                    }
+                    Dgv.Rows.Add(fila);
+                    listaTemporal.Clear();
+                }
+            }
+            return Dgv;
+        }
+
         public atenciones[] GetAtenciones(string id_sucursal, string filtro, string valorFiltro)
         {
             atenciones[] atenciones;
@@ -134,6 +190,11 @@ namespace ServiExpress.controlador
         public tipoDeDocumento[] GetTipoDeDocumento() 
         {
             return webEmpleado.GetTipoDeDocumento();
+        }
+
+        public WebServiceEmpleado.ventas[] GetVentasEmpleado(string filtro, string valorFiltro) 
+        {
+            return webEmpleado.GetVentasEmpleado(filtro, valorFiltro);
         }
     }
 }

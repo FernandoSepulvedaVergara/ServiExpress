@@ -39,5 +39,18 @@ namespace ServiExpress.app_GUI
             panel1.Controls.Add(reservasDeHora);
             reservasDeHora.Show();
         }
+
+        private void BtnVentas_Click(object sender, EventArgs e)
+        {
+            if (panel1.Controls.Count > 0)
+            {
+                panel1.Controls.Clear();
+            }
+            Ventas ventas = new Ventas(controladorEmpleado);
+            ventas.TopLevel = false;
+            ventas.Dock = DockStyle.Fill;
+            panel1.Controls.Add(ventas);
+            ventas.Show();
+        }
     }
 }

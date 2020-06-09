@@ -10,8 +10,8 @@
   <xs:element name="GetTipoDeVehiculoResponse" type="tns:GetTipoDeVehiculoResponse" />
   <xs:element name="GetVehiculos" type="tns:GetVehiculos" />
   <xs:element name="GetVehiculosResponse" type="tns:GetVehiculosResponse" />
-  <xs:element name="GetVentas" type="tns:GetVentas" />
-  <xs:element name="GetVentasResponse" type="tns:GetVentasResponse" />
+  <xs:element name="GetVentasCliente" type="tns:GetVentasCliente" />
+  <xs:element name="GetVentasClienteResponse" type="tns:GetVentasClienteResponse" />
   <xs:element name="IngresarVehiculo" type="tns:IngresarVehiculo" />
   <xs:element name="IngresarVehiculoResponse" type="tns:IngresarVehiculoResponse" />
   <xs:element name="RegistrarReservaDeAtencion" type="tns:RegistrarReservaDeAtencion" />
@@ -42,6 +42,34 @@
     <xs:sequence>
       <xs:element name="id_servicio" type="xs:int" />
       <xs:element minOccurs="0" name="servicio" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetVentasCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetVentasClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ventas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estadoDeVenta" type="tns:estadoDeVenta" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element name="idAtencion" type="xs:int" />
+      <xs:element name="idDocumento" type="xs:int" />
+      <xs:element name="id_venta" type="xs:int" />
+      <xs:element name="montoAPagar" type="xs:int" />
+      <xs:element name="montoPagado" type="xs:int" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoDeVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="idEstadoDeVenta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetSucursales">
@@ -116,34 +144,6 @@
   <xs:complexType name="GetTipoDeVehiculoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeVehiculo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetVentas">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetVentasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ventas" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ventas">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="estadoDeVenta" type="tns:estadoDeVenta" />
-      <xs:element minOccurs="0" name="fecha" type="xs:string" />
-      <xs:element name="idAtencion" type="xs:int" />
-      <xs:element name="idDocumento" type="xs:int" />
-      <xs:element name="id_venta" type="xs:int" />
-      <xs:element name="montoAPagar" type="xs:int" />
-      <xs:element name="montoPagado" type="xs:int" />
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="estadoDeVenta">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="estado" type="xs:string" />
-      <xs:element name="idEstadoDeVenta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -39,6 +39,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
             TxtFechaAtencion.Text = verAtencion.fecha_atencion;
             TxtHoraAtencion.Text = verAtencion.hora_atencion;
             TxtServicioRealizado.Text = verAtencion.tipo_de_servicio.servicio;
+            TxtPatente.Text = verAtencion.patente;
         }
     }
 }

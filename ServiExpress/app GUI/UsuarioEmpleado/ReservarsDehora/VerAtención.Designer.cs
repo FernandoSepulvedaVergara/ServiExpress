@@ -43,6 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtIdAtencion = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtPatente = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label10
@@ -65,7 +67,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(363, 103);
+            this.label4.Location = new System.Drawing.Point(23, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 25;
@@ -74,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(363, 129);
+            this.label3.Location = new System.Drawing.Point(23, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 24;
@@ -83,7 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 158);
+            this.label2.Location = new System.Drawing.Point(362, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 23;
@@ -109,7 +111,7 @@
             // TxtHoraAtencion
             // 
             this.TxtHoraAtencion.Enabled = false;
-            this.TxtHoraAtencion.Location = new System.Drawing.Point(491, 126);
+            this.TxtHoraAtencion.Location = new System.Drawing.Point(151, 177);
             this.TxtHoraAtencion.Name = "TxtHoraAtencion";
             this.TxtHoraAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtHoraAtencion.TabIndex = 19;
@@ -117,7 +119,7 @@
             // TxtFechaAtencion
             // 
             this.TxtFechaAtencion.Enabled = false;
-            this.TxtFechaAtencion.Location = new System.Drawing.Point(491, 100);
+            this.TxtFechaAtencion.Location = new System.Drawing.Point(151, 151);
             this.TxtFechaAtencion.Name = "TxtFechaAtencion";
             this.TxtFechaAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtFechaAtencion.TabIndex = 18;
@@ -125,7 +127,7 @@
             // TxtServicioRealizado
             // 
             this.TxtServicioRealizado.Enabled = false;
-            this.TxtServicioRealizado.Location = new System.Drawing.Point(491, 156);
+            this.TxtServicioRealizado.Location = new System.Drawing.Point(491, 126);
             this.TxtServicioRealizado.Name = "TxtServicioRealizado";
             this.TxtServicioRealizado.Size = new System.Drawing.Size(270, 20);
             this.TxtServicioRealizado.TabIndex = 28;
@@ -174,12 +176,31 @@
             this.TxtIdAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtIdAtencion.TabIndex = 32;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(363, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Patente :";
+            // 
+            // TxtPatente
+            // 
+            this.TxtPatente.Enabled = false;
+            this.TxtPatente.Location = new System.Drawing.Point(491, 100);
+            this.TxtPatente.Name = "TxtPatente";
+            this.TxtPatente.Size = new System.Drawing.Size(126, 20);
+            this.TxtPatente.TabIndex = 34;
+            // 
             // VerAtención
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.TxtPatente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtIdAtencion);
             this.Controls.Add(this.label6);
@@ -223,5 +244,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtIdAtencion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TxtPatente;
     }
 }

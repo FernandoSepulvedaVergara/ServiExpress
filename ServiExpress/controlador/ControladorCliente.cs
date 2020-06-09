@@ -54,7 +54,7 @@ namespace ServiExpress.controlador
             }
             else if (Dgv.Name.Equals("DgvVentas"))
             {
-                ventas[] resultado = GetVentas();
+                ventas[] resultado = GetVentasCliente();
                 List<string> listaTemporal = new List<string>();
 
                 if (resultado != null)
@@ -113,9 +113,9 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
-        public ventas[] GetVentas()
+        public ventas[] GetVentasCliente()
         {
-            ventas[] resultado = webCliente.GetVentas(login[0]);
+            ventas[] resultado = webCliente.GetVentasCliente(login[0]);
             return resultado;
         }
 
