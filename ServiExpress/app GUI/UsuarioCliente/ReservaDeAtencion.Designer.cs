@@ -354,7 +354,6 @@
             this.Name = "ReservaDeAtencion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ReservaDeAtencion";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.ReservaDeAtencion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

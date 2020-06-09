@@ -92,6 +92,11 @@ namespace ServiExpress.controlador
             return atenciones;
         }
 
+        public atencion GetAtencion(int idReserva) 
+        {
+            return webEmpleado.GetAtencion(idReserva);
+        }
+
         public tipoDeServicio[] GetTipoDeServicios()
         {
             tipoDeServicio[] resultado = webEmpleado.GetTipoDeServicios();

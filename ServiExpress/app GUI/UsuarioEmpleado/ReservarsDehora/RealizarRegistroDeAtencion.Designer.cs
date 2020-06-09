@@ -36,6 +36,8 @@
             this.TxtRutCliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CmbTipoDeDocumento = new System.Windows.Forms.ComboBox();
             this.BtnQuitarProducto = new System.Windows.Forms.Button();
             this.LblMontoTotal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.TxtIdReservaDeAtencion = new System.Windows.Forms.TextBox();
             this.TxtHoraAtencion = new System.Windows.Forms.TextBox();
             this.TxtFechaAtencion = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.CmbTipoDeDocumento = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
@@ -161,6 +161,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(746, 391);
             this.panel2.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 45);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 13);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Tipo de documento";
+            // 
+            // CmbTipoDeDocumento
+            // 
+            this.CmbTipoDeDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTipoDeDocumento.FormattingEnabled = true;
+            this.CmbTipoDeDocumento.Location = new System.Drawing.Point(23, 61);
+            this.CmbTipoDeDocumento.Name = "CmbTipoDeDocumento";
+            this.CmbTipoDeDocumento.Size = new System.Drawing.Size(350, 21);
+            this.CmbTipoDeDocumento.TabIndex = 17;
             // 
             // BtnQuitarProducto
             // 
@@ -385,24 +403,6 @@
             this.TxtFechaAtencion.Name = "TxtFechaAtencion";
             this.TxtFechaAtencion.Size = new System.Drawing.Size(126, 20);
             this.TxtFechaAtencion.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 45);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 13);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Tipo de documento";
-            // 
-            // CmbTipoDeDocumento
-            // 
-            this.CmbTipoDeDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbTipoDeDocumento.FormattingEnabled = true;
-            this.CmbTipoDeDocumento.Location = new System.Drawing.Point(23, 61);
-            this.CmbTipoDeDocumento.Name = "CmbTipoDeDocumento";
-            this.CmbTipoDeDocumento.Size = new System.Drawing.Size(350, 21);
-            this.CmbTipoDeDocumento.TabIndex = 17;
             // 
             // RealizarRegistroDeAtencion
             // 

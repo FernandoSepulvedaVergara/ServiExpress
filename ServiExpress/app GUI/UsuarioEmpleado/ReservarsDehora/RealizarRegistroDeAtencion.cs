@@ -8,8 +8,8 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
 {
     public partial class RealizarRegistroDeAtencion : Form
     {
-        ControladorEmpleado controladorEmpleado;
-        DataGridViewRow dataGridViewRow;
+        readonly ControladorEmpleado controladorEmpleado;
+        readonly DataGridViewRow dataGridViewRow;
         producto[] productos;
 
         public RealizarRegistroDeAtencion(ControladorEmpleado controladorEmpleado, DataGridViewRow dataGridViewRow)
@@ -82,6 +82,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                                         int montoAPagar = int.Parse(dataGridViewRow.Cells[4].Value.ToString()) * int.Parse(dataGridViewRow.Cells[6].Value.ToString());
                                         string[] actualizciónProductos = controladorEmpleado.ActualizarProductos(int.Parse(registroVenta[2]), 0, int.Parse(dataGridViewRow.Cells[6].Value.ToString()), montoAPagar, int.Parse(dataGridViewRow.Cells[0].Value.ToString()));
                                         resultadoRegistro = true;
+                                        this.Dispose();
                                     }
                                     catch 
                                     {
@@ -106,9 +107,16 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                 }
                 else 
                 {
-                    string[] resultado = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text, servicioRealizado, int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()), 1);
-                    MessageBox.Show(string.Format("{0}", resultado[1]));
-                    this.Close();
+                    try
+                    {
+                        string[] resultado = controladorEmpleado.RegistrarAtencion(TxtFechaAtencion.Text, TxtHoraAtencion.Text, servicioRealizado, int.Parse(this.dataGridViewRow.Cells[5].Value.ToString()), 1);
+                        resultadoRegistro = true;
+                        this.Dispose();
+                    }
+                    catch 
+                    {
+                        resultadoRegistro = false;
+                    }
                 }
             }
             else
@@ -171,7 +179,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                         dataGridViewRow.Cells[3].Value = objeto.fechaVencimiento;
                         dataGridViewRow.Cells[4].Value = objeto.precioVenta;
                         dataGridViewRow.Cells[5].Value = objeto.stock;
-                        dataGridViewRow.Cells[6].Value = 0;
+                        dataGridViewRow.Cells[6].Value = 1;
                         DgvProductos.Rows.Add(dataGridViewRow);
                         break;
                     }
@@ -224,7 +232,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
             int montoTotal = 0;
             foreach (DataGridViewRow fila in dgv.Rows)
             {
-                montoTotal = montoTotal + (int.Parse(fila.Cells[4].Value.ToString()) * int.Parse(fila.Cells[6].Value.ToString()));
+                montoTotal += (int.Parse(fila.Cells[4].Value.ToString()) * int.Parse(fila.Cells[6].Value.ToString()));
             }
             LblMontoTotal.Text = montoTotal.ToString();
         }

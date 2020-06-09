@@ -99,18 +99,39 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
                 DataGridViewRow fila = DgvReservasDeHora.SelectedRows[DgvReservasDeHora.CurrentRow.Index];
                 if (objeto.ToString().Equals("Realizar atención"))
                 {
-                    RealizarRegistroDeAtencion realizarReservaDeAtencion = new RealizarRegistroDeAtencion(controladorEmpleado,fila);
-                    realizarReservaDeAtencion.ShowDialog();
+                    try
+                    {
+                        RealizarRegistroDeAtencion realizarReservaDeAtencion = new RealizarRegistroDeAtencion(controladorEmpleado, fila);
+                        realizarReservaDeAtencion.ShowDialog();
+                    }
+                    catch 
+                    {
+                        MessageBox.Show("No se puede abrir el formulario");
+                    }
                 }
                 else if (objeto.ToString().Equals("Ver atención"))
                 {
-                    VerAtención verAtención = new VerAtención(fila);
-                    verAtención.ShowDialog();
+                    try
+                    {
+                        VerAtención verAtención = new VerAtención(this.controladorEmpleado, fila);
+                        verAtención.ShowDialog();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("No se puede visualizar la atención");
+                    }
                 }
                 else if (objeto.ToString().Equals("Cancelado"))
                 {
-                    VerAtención verAtención = new VerAtención(fila);
-                    verAtención.ShowDialog();
+                    try
+                    {
+                        VerAtención verAtención = new VerAtención(this.controladorEmpleado, fila);
+                        verAtención.ShowDialog();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("No se puede visualizar la atención");
+                    }
                 }
                 else 
                 {

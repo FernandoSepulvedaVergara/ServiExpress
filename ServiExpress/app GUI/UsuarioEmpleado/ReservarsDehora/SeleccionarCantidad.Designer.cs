@@ -42,10 +42,20 @@
             // NudCantidad
             // 
             this.NudCantidad.Location = new System.Drawing.Point(74, 93);
+            this.NudCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NudCantidad.Name = "NudCantidad";
             this.NudCantidad.ReadOnly = true;
             this.NudCantidad.Size = new System.Drawing.Size(69, 20);
             this.NudCantidad.TabIndex = 1;
+            this.NudCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NudCantidad.ValueChanged += new System.EventHandler(this.NudCantidad_ValueChanged);
             // 
             // label1
