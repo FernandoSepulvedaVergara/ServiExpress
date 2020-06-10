@@ -193,10 +193,6 @@ namespace ServiExpress.app_GUI.Usuario1
 
         private void btnMaps_Click(object sender, EventArgs e)
         {
-        }
-
-        private void btnMaps_Click(object sender, EventArgs e)
-        {
             MapsSucursal mps = new MapsSucursal();
             mps.ShowDialog();
         }
