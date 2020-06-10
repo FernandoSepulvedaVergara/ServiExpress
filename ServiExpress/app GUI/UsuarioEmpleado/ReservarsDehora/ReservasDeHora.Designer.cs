@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.DgvReservasDeHora = new System.Windows.Forms.DataGridView();
+            this.EstadoDeAtención = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RutCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdReservación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmbFiltros = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RdbSeleccionarHoy = new System.Windows.Forms.RadioButton();
@@ -37,13 +44,6 @@
             this.CmbSucursales = new System.Windows.Forms.ComboBox();
             this.PanelFiltrar = new System.Windows.Forms.Panel();
             this.RdbFiltrar = new System.Windows.Forms.RadioButton();
-            this.EstadoDeAtención = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RutCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdReservación = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvReservasDeHora)).BeginInit();
             this.PanelFiltrar.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,48 @@
             this.DgvReservasDeHora.Size = new System.Drawing.Size(780, 293);
             this.DgvReservasDeHora.TabIndex = 0;
             this.DgvReservasDeHora.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReservasDeHora_CellClick);
+            // 
+            // EstadoDeAtención
+            // 
+            this.EstadoDeAtención.HeaderText = "Estado de atención";
+            this.EstadoDeAtención.Name = "EstadoDeAtención";
+            this.EstadoDeAtención.ReadOnly = true;
+            // 
+            // HoraReserva
+            // 
+            this.HoraReserva.HeaderText = "Hora de reservación";
+            this.HoraReserva.Name = "HoraReserva";
+            this.HoraReserva.ReadOnly = true;
+            // 
+            // FechaReserva
+            // 
+            this.FechaReserva.HeaderText = "Fecha de reservación";
+            this.FechaReserva.Name = "FechaReserva";
+            this.FechaReserva.ReadOnly = true;
+            // 
+            // RutCliente
+            // 
+            this.RutCliente.HeaderText = "Rut cliente";
+            this.RutCliente.Name = "RutCliente";
+            this.RutCliente.ReadOnly = true;
+            // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
+            this.Patente.ReadOnly = true;
+            // 
+            // IdReservación
+            // 
+            this.IdReservación.HeaderText = "Id reservación";
+            this.IdReservación.Name = "IdReservación";
+            this.IdReservación.ReadOnly = true;
+            // 
+            // Sucursal
+            // 
+            this.Sucursal.HeaderText = "Sucursal";
+            this.Sucursal.Name = "Sucursal";
+            this.Sucursal.ReadOnly = true;
             // 
             // CmbFiltros
             // 
@@ -110,12 +152,13 @@
             // 
             // BtnFiltrar
             // 
-            this.BtnFiltrar.Location = new System.Drawing.Point(244, 33);
+            this.BtnFiltrar.BackColor = System.Drawing.Color.Yellow;
+            this.BtnFiltrar.Location = new System.Drawing.Point(240, 30);
             this.BtnFiltrar.Name = "BtnFiltrar";
-            this.BtnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.BtnFiltrar.Size = new System.Drawing.Size(87, 26);
             this.BtnFiltrar.TabIndex = 4;
             this.BtnFiltrar.Text = "Filtrar";
-            this.BtnFiltrar.UseVisualStyleBackColor = true;
+            this.BtnFiltrar.UseVisualStyleBackColor = false;
             this.BtnFiltrar.Click += new System.EventHandler(this.BtnFiltrar_Click);
             // 
             // TxtValorFiltro
@@ -161,53 +204,12 @@
             this.RdbFiltrar.UseVisualStyleBackColor = true;
             this.RdbFiltrar.CheckedChanged += new System.EventHandler(this.RdbFiltrar_CheckedChanged);
             // 
-            // EstadoDeAtención
-            // 
-            this.EstadoDeAtención.HeaderText = "Estado de atención";
-            this.EstadoDeAtención.Name = "EstadoDeAtención";
-            this.EstadoDeAtención.ReadOnly = true;
-            // 
-            // HoraReserva
-            // 
-            this.HoraReserva.HeaderText = "Hora de reservación";
-            this.HoraReserva.Name = "HoraReserva";
-            this.HoraReserva.ReadOnly = true;
-            // 
-            // FechaReserva
-            // 
-            this.FechaReserva.HeaderText = "Fecha de reservación";
-            this.FechaReserva.Name = "FechaReserva";
-            this.FechaReserva.ReadOnly = true;
-            // 
-            // RutCliente
-            // 
-            this.RutCliente.HeaderText = "Rut cliente";
-            this.RutCliente.Name = "RutCliente";
-            this.RutCliente.ReadOnly = true;
-            // 
-            // Patente
-            // 
-            this.Patente.HeaderText = "Patente";
-            this.Patente.Name = "Patente";
-            this.Patente.ReadOnly = true;
-            // 
-            // IdReservación
-            // 
-            this.IdReservación.HeaderText = "Id reservación";
-            this.IdReservación.Name = "IdReservación";
-            this.IdReservación.ReadOnly = true;
-            // 
-            // Sucursal
-            // 
-            this.Sucursal.HeaderText = "Sucursal";
-            this.Sucursal.Name = "Sucursal";
-            this.Sucursal.ReadOnly = true;
-            // 
             // ReservasDeHora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(804, 450);
             this.Controls.Add(this.RdbFiltrar);
             this.Controls.Add(this.PanelFiltrar);

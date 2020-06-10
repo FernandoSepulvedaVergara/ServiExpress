@@ -52,7 +52,7 @@
             this.Fecha,
             this.IdEstado,
             this.IdAtencion});
-            this.DgvVentas.Location = new System.Drawing.Point(87, 92);
+            this.DgvVentas.Location = new System.Drawing.Point(53, 94);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
@@ -99,12 +99,13 @@
             // 
             // BtnExportar
             // 
-            this.BtnExportar.Location = new System.Drawing.Point(634, 26);
+            this.BtnExportar.BackColor = System.Drawing.Color.Yellow;
+            this.BtnExportar.Location = new System.Drawing.Point(654, 387);
             this.BtnExportar.Name = "BtnExportar";
             this.BtnExportar.Size = new System.Drawing.Size(101, 39);
             this.BtnExportar.TabIndex = 1;
             this.BtnExportar.Text = "Exportar";
-            this.BtnExportar.UseVisualStyleBackColor = true;
+            this.BtnExportar.UseVisualStyleBackColor = false;
             // 
             // GlosarioDePagos
             // 

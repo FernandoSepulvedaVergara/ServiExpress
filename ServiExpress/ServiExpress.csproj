@@ -481,6 +481,7 @@
     <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
+    <None Include="Resources\AgregarVehiculo.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

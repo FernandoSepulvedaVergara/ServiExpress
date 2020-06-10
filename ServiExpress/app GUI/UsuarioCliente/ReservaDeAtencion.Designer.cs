@@ -322,7 +322,7 @@
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(882, 521);
+            this.ClientSize = new System.Drawing.Size(881, 521);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnMaps);
             this.Controls.Add(this.label9);

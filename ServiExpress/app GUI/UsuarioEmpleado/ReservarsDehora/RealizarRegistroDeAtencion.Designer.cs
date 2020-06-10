@@ -69,32 +69,35 @@
             // 
             // BtnRegistrarAtencion
             // 
+            this.BtnRegistrarAtencion.BackColor = System.Drawing.Color.Yellow;
             this.BtnRegistrarAtencion.Location = new System.Drawing.Point(819, 44);
             this.BtnRegistrarAtencion.Name = "BtnRegistrarAtencion";
             this.BtnRegistrarAtencion.Size = new System.Drawing.Size(108, 34);
             this.BtnRegistrarAtencion.TabIndex = 1;
             this.BtnRegistrarAtencion.Text = "Registrar atención";
-            this.BtnRegistrarAtencion.UseVisualStyleBackColor = true;
+            this.BtnRegistrarAtencion.UseVisualStyleBackColor = false;
             this.BtnRegistrarAtencion.Click += new System.EventHandler(this.BtnRegistrarAtencion_Click);
             // 
             // BtnCancelarAtencion
             // 
+            this.BtnCancelarAtencion.BackColor = System.Drawing.Color.Lime;
             this.BtnCancelarAtencion.Location = new System.Drawing.Point(819, 108);
             this.BtnCancelarAtencion.Name = "BtnCancelarAtencion";
             this.BtnCancelarAtencion.Size = new System.Drawing.Size(108, 34);
             this.BtnCancelarAtencion.TabIndex = 2;
             this.BtnCancelarAtencion.Text = "Cancelar atención";
-            this.BtnCancelarAtencion.UseVisualStyleBackColor = true;
+            this.BtnCancelarAtencion.UseVisualStyleBackColor = false;
             this.BtnCancelarAtencion.Click += new System.EventHandler(this.BtnCancelarAtencion_Click);
             // 
             // BtnCerrar
             // 
+            this.BtnCerrar.BackColor = System.Drawing.Color.Red;
             this.BtnCerrar.Location = new System.Drawing.Point(819, 486);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(108, 34);
             this.BtnCerrar.TabIndex = 3;
             this.BtnCerrar.Text = "Cerrar";
-            this.BtnCerrar.UseVisualStyleBackColor = true;
+            this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // panel1
@@ -130,7 +133,7 @@
             this.TxtRutCliente.Enabled = false;
             this.TxtRutCliente.Location = new System.Drawing.Point(149, 47);
             this.TxtRutCliente.Name = "TxtRutCliente";
-            this.TxtRutCliente.Size = new System.Drawing.Size(126, 20);
+            this.TxtRutCliente.Size = new System.Drawing.Size(287, 20);
             this.TxtRutCliente.TabIndex = 16;
             // 
             // label8
@@ -377,7 +380,7 @@
             this.CmbTipoDeServicios.FormattingEnabled = true;
             this.CmbTipoDeServicios.Location = new System.Drawing.Point(149, 128);
             this.CmbTipoDeServicios.Name = "CmbTipoDeServicios";
-            this.CmbTipoDeServicios.Size = new System.Drawing.Size(322, 21);
+            this.CmbTipoDeServicios.Size = new System.Drawing.Size(287, 21);
             this.CmbTipoDeServicios.TabIndex = 3;
             // 
             // TxtIdReservaDeAtencion
@@ -385,7 +388,7 @@
             this.TxtIdReservaDeAtencion.Enabled = false;
             this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(149, 155);
             this.TxtIdReservaDeAtencion.Name = "TxtIdReservaDeAtencion";
-            this.TxtIdReservaDeAtencion.Size = new System.Drawing.Size(126, 20);
+            this.TxtIdReservaDeAtencion.Size = new System.Drawing.Size(287, 20);
             this.TxtIdReservaDeAtencion.TabIndex = 2;
             // 
             // TxtHoraAtencion
@@ -393,7 +396,7 @@
             this.TxtHoraAtencion.Enabled = false;
             this.TxtHoraAtencion.Location = new System.Drawing.Point(149, 99);
             this.TxtHoraAtencion.Name = "TxtHoraAtencion";
-            this.TxtHoraAtencion.Size = new System.Drawing.Size(126, 20);
+            this.TxtHoraAtencion.Size = new System.Drawing.Size(287, 20);
             this.TxtHoraAtencion.TabIndex = 1;
             // 
             // TxtFechaAtencion
@@ -401,7 +404,7 @@
             this.TxtFechaAtencion.Enabled = false;
             this.TxtFechaAtencion.Location = new System.Drawing.Point(149, 73);
             this.TxtFechaAtencion.Name = "TxtFechaAtencion";
-            this.TxtFechaAtencion.Size = new System.Drawing.Size(126, 20);
+            this.TxtFechaAtencion.Size = new System.Drawing.Size(287, 20);
             this.TxtFechaAtencion.TabIndex = 0;
             // 
             // RealizarRegistroDeAtencion
@@ -409,6 +412,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(939, 606);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnCerrar);
