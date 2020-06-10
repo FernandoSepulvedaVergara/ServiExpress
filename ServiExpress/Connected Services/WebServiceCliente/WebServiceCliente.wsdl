@@ -47,6 +47,12 @@
   <message name="GetTipoDeServiciosResponse">
     <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
   </message>
+  <message name="GetReservaciones">
+    <part name="parameters" element="tns:GetReservaciones" />
+  </message>
+  <message name="GetReservacionesResponse">
+    <part name="parameters" element="tns:GetReservacionesResponse" />
+  </message>
   <message name="GetVentasCliente">
     <part name="parameters" element="tns:GetVentasCliente" />
   </message>
@@ -81,6 +87,10 @@
     <operation name="GetTipoDeServicios">
       <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
       <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
+    </operation>
+    <operation name="GetReservaciones">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetReservacionesRequest" message="tns:GetReservaciones" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetReservacionesResponse" message="tns:GetReservacionesResponse" />
     </operation>
     <operation name="GetVentasCliente">
       <input wsam:Action="http://servicios/WebServiceCliente/GetVentasClienteRequest" message="tns:GetVentasCliente" />
@@ -144,6 +154,15 @@
       </output>
     </operation>
     <operation name="GetTipoDeServicios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetReservaciones">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

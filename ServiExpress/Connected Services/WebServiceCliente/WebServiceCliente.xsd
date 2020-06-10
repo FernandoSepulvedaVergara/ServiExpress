@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="GetInfoCliente" type="tns:GetInfoCliente" />
   <xs:element name="GetInfoClienteResponse" type="tns:GetInfoClienteResponse" />
+  <xs:element name="GetReservaciones" type="tns:GetReservaciones" />
+  <xs:element name="GetReservacionesResponse" type="tns:GetReservacionesResponse" />
   <xs:element name="GetSucursales" type="tns:GetSucursales" />
   <xs:element name="GetSucursalesResponse" type="tns:GetSucursalesResponse" />
   <xs:element name="GetTipoDeServicios" type="tns:GetTipoDeServicios" />
@@ -126,6 +128,28 @@
   <xs:complexType name="RegistrarReservaDeAtencionResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetReservaciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetReservacionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:atenciones" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="atenciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha_reserva" type="xs:string" />
+      <xs:element minOccurs="0" name="hora_reserva" type="xs:string" />
+      <xs:element name="id_atencion" type="xs:int" />
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element name="id_reserva" type="xs:int" />
+      <xs:element minOccurs="0" name="patente" type="xs:string" />
+      <xs:element minOccurs="0" name="sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario_rut" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetInfoCliente">

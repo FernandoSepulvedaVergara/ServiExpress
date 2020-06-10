@@ -52,12 +52,13 @@
             this.Fecha,
             this.IdEstado,
             this.IdAtencion});
-            this.DgvVentas.Location = new System.Drawing.Point(87, 92);
+            this.DgvVentas.Location = new System.Drawing.Point(33, 71);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
+            this.DgvVentas.RowHeadersVisible = false;
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvVentas.Size = new System.Drawing.Size(643, 219);
+            this.DgvVentas.Size = new System.Drawing.Size(702, 219);
             this.DgvVentas.TabIndex = 0;
             // 
             // Venta
@@ -98,7 +99,7 @@
             // 
             // BtnExportar
             // 
-            this.BtnExportar.Location = new System.Drawing.Point(12, 67);
+            this.BtnExportar.Location = new System.Drawing.Point(634, 26);
             this.BtnExportar.Name = "BtnExportar";
             this.BtnExportar.Size = new System.Drawing.Size(101, 39);
             this.BtnExportar.TabIndex = 1;

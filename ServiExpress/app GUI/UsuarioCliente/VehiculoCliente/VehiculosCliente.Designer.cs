@@ -55,6 +55,7 @@
             this.DgvVehiculosCliente.Name = "DgvVehiculosCliente";
             this.DgvVehiculosCliente.ReadOnly = true;
             this.DgvVehiculosCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DgvVehiculosCliente.RowHeadersVisible = false;
             this.DgvVehiculosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvVehiculosCliente.Size = new System.Drawing.Size(544, 384);
             this.DgvVehiculosCliente.TabIndex = 0;

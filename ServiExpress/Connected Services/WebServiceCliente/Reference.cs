@@ -79,6 +79,15 @@ namespace ServiExpress.WebServiceCliente {
         System.Threading.Tasks.Task<ServiExpress.WebServiceCliente.GetTipoDeServiciosResponse> GetTipoDeServiciosAsync(ServiExpress.WebServiceCliente.GetTipoDeServiciosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceCliente/GetReservacionesRequest", ReplyAction="http://servicios/WebServiceCliente/GetReservacionesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceCliente.GetReservacionesResponse GetReservaciones(ServiExpress.WebServiceCliente.GetReservacionesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceCliente/GetReservacionesRequest", ReplyAction="http://servicios/WebServiceCliente/GetReservacionesResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceCliente.GetReservacionesResponse> GetReservacionesAsync(ServiExpress.WebServiceCliente.GetReservacionesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceCliente/GetVentasClienteRequest", ReplyAction="http://servicios/WebServiceCliente/GetVentasClienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -367,6 +376,136 @@ namespace ServiExpress.WebServiceCliente {
             set {
                 this.rutField = value;
                 this.RaisePropertyChanged("rut");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
+    public partial class atenciones : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fecha_reservaField;
+        
+        private string hora_reservaField;
+        
+        private int id_atencionField;
+        
+        private int id_estadoField;
+        
+        private int id_reservaField;
+        
+        private string patenteField;
+        
+        private string sucursalField;
+        
+        private string usuario_rutField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string fecha_reserva {
+            get {
+                return this.fecha_reservaField;
+            }
+            set {
+                this.fecha_reservaField = value;
+                this.RaisePropertyChanged("fecha_reserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string hora_reserva {
+            get {
+                return this.hora_reservaField;
+            }
+            set {
+                this.hora_reservaField = value;
+                this.RaisePropertyChanged("hora_reserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id_atencion {
+            get {
+                return this.id_atencionField;
+            }
+            set {
+                this.id_atencionField = value;
+                this.RaisePropertyChanged("id_atencion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_estado {
+            get {
+                return this.id_estadoField;
+            }
+            set {
+                this.id_estadoField = value;
+                this.RaisePropertyChanged("id_estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_reserva {
+            get {
+                return this.id_reservaField;
+            }
+            set {
+                this.id_reservaField = value;
+                this.RaisePropertyChanged("id_reserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string patente {
+            get {
+                return this.patenteField;
+            }
+            set {
+                this.patenteField = value;
+                this.RaisePropertyChanged("patente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string sucursal {
+            get {
+                return this.sucursalField;
+            }
+            set {
+                this.sucursalField = value;
+                this.RaisePropertyChanged("sucursal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string usuario_rut {
+            get {
+                return this.usuario_rutField;
+            }
+            set {
+                this.usuario_rutField = value;
+                this.RaisePropertyChanged("usuario_rut");
             }
         }
         
@@ -794,6 +933,42 @@ namespace ServiExpress.WebServiceCliente {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReservaciones", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetReservacionesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string rut;
+        
+        public GetReservacionesRequest() {
+        }
+        
+        public GetReservacionesRequest(string rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetReservacionesResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetReservacionesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public ServiExpress.WebServiceCliente.atenciones[] @return;
+        
+        public GetReservacionesResponse() {
+        }
+        
+        public GetReservacionesResponse(ServiExpress.WebServiceCliente.atenciones[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="GetVentasCliente", WrapperNamespace="http://servicios/", IsWrapped=true)]
     public partial class GetVentasClienteRequest {
         
@@ -1025,6 +1200,29 @@ namespace ServiExpress.WebServiceCliente {
         public System.Threading.Tasks.Task<ServiExpress.WebServiceCliente.GetTipoDeServiciosResponse> GetTipoDeServiciosAsync() {
             ServiExpress.WebServiceCliente.GetTipoDeServiciosRequest inValue = new ServiExpress.WebServiceCliente.GetTipoDeServiciosRequest();
             return ((ServiExpress.WebServiceCliente.WebServiceCliente)(this)).GetTipoDeServiciosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceCliente.GetReservacionesResponse ServiExpress.WebServiceCliente.WebServiceCliente.GetReservaciones(ServiExpress.WebServiceCliente.GetReservacionesRequest request) {
+            return base.Channel.GetReservaciones(request);
+        }
+        
+        public ServiExpress.WebServiceCliente.atenciones[] GetReservaciones(string rut) {
+            ServiExpress.WebServiceCliente.GetReservacionesRequest inValue = new ServiExpress.WebServiceCliente.GetReservacionesRequest();
+            inValue.rut = rut;
+            ServiExpress.WebServiceCliente.GetReservacionesResponse retVal = ((ServiExpress.WebServiceCliente.WebServiceCliente)(this)).GetReservaciones(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceCliente.GetReservacionesResponse> ServiExpress.WebServiceCliente.WebServiceCliente.GetReservacionesAsync(ServiExpress.WebServiceCliente.GetReservacionesRequest request) {
+            return base.Channel.GetReservacionesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceCliente.GetReservacionesResponse> GetReservacionesAsync(string rut) {
+            ServiExpress.WebServiceCliente.GetReservacionesRequest inValue = new ServiExpress.WebServiceCliente.GetReservacionesRequest();
+            inValue.rut = rut;
+            return ((ServiExpress.WebServiceCliente.WebServiceCliente)(this)).GetReservacionesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
