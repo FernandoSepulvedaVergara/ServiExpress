@@ -35,6 +35,7 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +56,9 @@
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
+            this.DgvVentas.RowHeadersVisible = false;
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvVentas.Size = new System.Drawing.Size(643, 219);
+            this.DgvVentas.Size = new System.Drawing.Size(702, 219);
             this.DgvVentas.TabIndex = 0;
             // 
             // Venta
@@ -95,6 +97,15 @@
             this.IdAtencion.Name = "IdAtencion";
             this.IdAtencion.ReadOnly = true;
             // 
+            // BtnExportar
+            // 
+            this.BtnExportar.Location = new System.Drawing.Point(634, 26);
+            this.BtnExportar.Name = "BtnExportar";
+            this.BtnExportar.Size = new System.Drawing.Size(101, 39);
+            this.BtnExportar.TabIndex = 1;
+            this.BtnExportar.Text = "Exportar";
+            this.BtnExportar.UseVisualStyleBackColor = true;
+            // 
             // GlosarioDePagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +113,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.DgvVentas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -123,5 +135,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAtencion;
+        private System.Windows.Forms.Button BtnExportar;
     }
 }

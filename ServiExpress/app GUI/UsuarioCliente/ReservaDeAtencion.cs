@@ -138,8 +138,27 @@ namespace ServiExpress.app_GUI.Usuario1
             }
             else
             {
-                controladorCliente.RegistrarReservaDeAtencion(fechaSeleccionada, horaSeleccionada, sucursalIdSeleccionada, controladorCliente.login[0], servicioSeleccionado,vehículoSeleccionado);
+                string[] resultado = controladorCliente.RegistrarReservaDeAtencion(fechaSeleccionada, horaSeleccionada, sucursalIdSeleccionada, controladorCliente.login[0], servicioSeleccionado,vehículoSeleccionado);
+                if (resultado[0] != "false")
+                {
+                    LimpiarFormulario();
+                    MessageBox.Show("Reserva de hora guardado con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo agregar, verifique todos los datos");
+                }
             }
+        }
+
+        private void LimpiarFormulario()
+        {
+            LblFechaSeleccionada.Text = "";
+            LblHoraSeleccionada.Text = "";
+            LblServicioSeleccionado.Text = "";
+            LblSucursalSeleccionado.Text = "";
+            LblVehículoSeleccionado.Text = "";
+
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -170,6 +189,10 @@ namespace ServiExpress.app_GUI.Usuario1
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMaps_Click(object sender, EventArgs e)
+        {
         }
 
         private void btnMaps_Click(object sender, EventArgs e)

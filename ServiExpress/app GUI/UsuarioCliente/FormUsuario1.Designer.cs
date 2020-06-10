@@ -39,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BtnReservaciones = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -56,6 +58,7 @@
             this.BtnDatosPersonales.TabIndex = 2;
             this.BtnDatosPersonales.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnDatosPersonales.UseVisualStyleBackColor = false;
+            this.BtnDatosPersonales.Click += new System.EventHandler(this.BtnDatosPersonales_Click);
             // 
             // BtnReservaAtencion
             // 
@@ -106,6 +109,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnReservaciones);
             this.splitContainer1.Panel1.Controls.Add(this.btnGlosarioPago);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
@@ -121,8 +126,8 @@
             this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1003, 541);
-            this.splitContainer1.SplitterDistance = 175;
+            this.splitContainer1.Size = new System.Drawing.Size(1364, 711);
+            this.splitContainer1.SplitterDistance = 237;
             this.splitContainer1.TabIndex = 9;
             // 
             // btnGlosarioPago
@@ -130,7 +135,7 @@
             this.btnGlosarioPago.BackColor = System.Drawing.Color.White;
             this.btnGlosarioPago.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGlosarioPago.BackgroundImage")));
             this.btnGlosarioPago.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGlosarioPago.Location = new System.Drawing.Point(12, 414);
+            this.btnGlosarioPago.Location = new System.Drawing.Point(12, 558);
             this.btnGlosarioPago.Name = "btnGlosarioPago";
             this.btnGlosarioPago.Size = new System.Drawing.Size(133, 93);
             this.btnGlosarioPago.TabIndex = 0;
@@ -141,7 +146,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 398);
+            this.label4.Location = new System.Drawing.Point(13, 542);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 6;
@@ -174,19 +179,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos personales";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 401);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Reservaciones";
+            // 
+            // BtnReservaciones
+            // 
+            this.BtnReservaciones.BackColor = System.Drawing.Color.White;
+            this.BtnReservaciones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnReservaciones.BackgroundImage")));
+            this.BtnReservaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnReservaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnReservaciones.Location = new System.Drawing.Point(12, 417);
+            this.BtnReservaciones.Name = "BtnReservaciones";
+            this.BtnReservaciones.Size = new System.Drawing.Size(133, 93);
+            this.BtnReservaciones.TabIndex = 7;
+            this.BtnReservaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnReservaciones.UseVisualStyleBackColor = false;
+            this.BtnReservaciones.Click += new System.EventHandler(this.BtnReservaciones_Click);
+            // 
             // FormUsuario1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1003, 541);
+            this.ClientSize = new System.Drawing.Size(1364, 711);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.button3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormUsuario1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -208,5 +237,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BtnReservaciones;
     }
 }

@@ -41,7 +41,11 @@ namespace ServiExpress.app_GUI.Usuario1.VehiculoCliente
             if (resultado[0] != "false")
             {
                 LimpiarFormulario();
-                MessageBox.Show("Vehículo guardado con éxito");            
+                MessageBox.Show("Vehículo guardado con éxito");
+            }
+            else 
+            {
+                MessageBox.Show("No se pudo agregar, verifique todos los datos");
             }
         }
 

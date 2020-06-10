@@ -1,5 +1,6 @@
 ﻿using ServiExpress.app_GUI.Usuario1;
 using ServiExpress.app_GUI.UsuarioCliente;
+using ServiExpress.app_GUI.UsuarioEmpleado;
 using ServiExpress.controlador;
 using System;
 using System.Collections.Generic;
@@ -84,6 +85,24 @@ namespace ServiExpress.app_GUI
             glosarioDePagos.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(glosarioDePagos);
             glosarioDePagos.Show();
+        }
+
+        private void BtnDatosPersonales_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnReservaciones_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            Reservaciones reservaciones = new Reservaciones(controladorCliente);
+            reservaciones.TopLevel = false;
+            reservaciones.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(reservaciones);
+            reservaciones.Show();
         }
     }
 }

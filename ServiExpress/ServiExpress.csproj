@@ -37,11 +37,26 @@
     <Reference Include="Calendario">
       <HintPath>..\..\..\..\AppData\Local\Temp\Rar$DRa12960.23627\Calendario.dll</HintPath>
     </Reference>
-    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
-      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
-      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -96,10 +111,46 @@
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.Designer.cs">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario2.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\Reservaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario2.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\Reservaciones.Designer.cs">
+      <DependentUpon>Reservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.Designer.cs">
+      <DependentUpon>RealizarRegistroDeAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.Designer.cs">
+      <DependentUpon>ReservasDeHora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.Designer.cs">
+      <DependentUpon>SeleccionarCantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.Designer.cs">
+      <DependentUpon>VerAtención.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\FormUsuario2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\FormUsuario2.Designer.cs">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\FormUsuario1.cs">
@@ -114,10 +165,10 @@
     <Compile Include="app GUI\FormLoginUsuario.Designer.cs">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioProveedor\FormUsuario3.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioProveedor\FormUsuario3.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario3.Designer.cs">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioAdministrador\FormUsuario4.cs">
@@ -137,6 +188,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\WebServiceEmpleado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\WebServiceLoginUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,13 +203,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="controlador\ControladorAdministrador.cs" />
+    <Compile Include="controlador\ControladorEmpleado.cs" />
     <Compile Include="controlador\ControladorPrincipal.cs" />
     <Compile Include="controlador\ControladorCliente.cs" />
     <Compile Include="controlador\ControladorLoginUsuario.cs" />
     <Compile Include="ApiFeriados.cs" />
+    <Compile Include="controlador\ControladorProveedor.cs" />
     <Compile Include="Horas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ValidacionEntradas.cs" />
     <EmbeddedResource Include="app GUI\FormNuevoUsuario.resx">
       <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,7 +230,25 @@
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\FormUsuario2.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\Reservaciones.resx">
+      <DependentUpon>Reservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.resx">
+      <DependentUpon>RealizarRegistroDeAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.resx">
+      <DependentUpon>ReservasDeHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.resx">
+      <DependentUpon>SeleccionarCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.resx">
+      <DependentUpon>VerAtención.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioProveedor\FormUsuario2.resx">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\FormUsuario1.resx">
@@ -178,7 +257,7 @@
     <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioProveedor\FormUsuario3.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\FormUsuario3.resx">
       <DependentUpon>FormUsuario3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\FormUsuario4.resx">
@@ -192,7 +271,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.atenciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetReservacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetSucursalesResponse.datasource">
@@ -207,7 +292,7 @@
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetVehiculosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetVentasResponse.datasource">
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetVentasClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.IngresarVehiculoResponse.datasource">
@@ -233,6 +318,61 @@
     </None>
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.wsdl" />
     <None Include="Connected Services\WebServiceCliente\WebServiceCliente.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.ActualizarProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atencion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atenciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetAtencionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetAtencionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeDocumentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeServiciosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetVentasEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeDocumento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeServicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.ventas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\WebServiceEmpleado.wsdl" />
+    <None Include="Connected Services\WebServiceEmpleado\WebServiceEmpleado.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\WebServiceLoginUsuario\ServiExpress.WebServiceLoginUsuario.ValidarLoginResponse.datasource">
@@ -273,6 +413,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\WebServiceCliente\" />
+    <WCFMetadataStorage Include="Connected Services\WebServiceEmpleado\" />
     <WCFMetadataStorage Include="Connected Services\WebServiceLoginUsuario\" />
     <WCFMetadataStorage Include="Connected Services\WebServiceUsuario\" />
   </ItemGroup>
@@ -313,6 +454,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\WebServiceEmpleado\configuration91.svcinfo" />
+    <None Include="Connected Services\WebServiceEmpleado\configuration.svcinfo" />
+    <None Include="Connected Services\WebServiceEmpleado\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ImagenesProyecto\Banner.PNG" />
     <Content Include="ImagenesProyecto\Iconos\automovil.png" />
     <Content Include="ImagenesProyecto\Iconos\calendario.png" />
@@ -328,10 +475,23 @@
     <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
-    <None Include="ImagenesProyecto\Resources\AgregarVehiculo.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ImagenesProyecto\ImagenesProyecto\" />
+    <Folder Include="Informes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
