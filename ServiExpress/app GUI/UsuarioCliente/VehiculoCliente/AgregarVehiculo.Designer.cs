@@ -45,9 +45,9 @@
             // BtnGuardarAgregarVehiculo
             // 
             this.BtnGuardarAgregarVehiculo.BackColor = System.Drawing.Color.Yellow;
-            this.BtnGuardarAgregarVehiculo.Location = new System.Drawing.Point(397, 442);
+            this.BtnGuardarAgregarVehiculo.Location = new System.Drawing.Point(448, 485);
             this.BtnGuardarAgregarVehiculo.Name = "BtnGuardarAgregarVehiculo";
-            this.BtnGuardarAgregarVehiculo.Size = new System.Drawing.Size(397, 54);
+            this.BtnGuardarAgregarVehiculo.Size = new System.Drawing.Size(455, 58);
             this.BtnGuardarAgregarVehiculo.TabIndex = 0;
             this.BtnGuardarAgregarVehiculo.Text = "Guardar";
             this.BtnGuardarAgregarVehiculo.UseVisualStyleBackColor = false;
@@ -64,15 +64,15 @@
             // 
             this.CmbTipoDeVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTipoDeVehiculo.FormattingEnabled = true;
-            this.CmbTipoDeVehiculo.Location = new System.Drawing.Point(170, 146);
+            this.CmbTipoDeVehiculo.Location = new System.Drawing.Point(188, 146);
             this.CmbTipoDeVehiculo.Name = "CmbTipoDeVehiculo";
-            this.CmbTipoDeVehiculo.Size = new System.Drawing.Size(133, 21);
+            this.CmbTipoDeVehiculo.Size = new System.Drawing.Size(100, 21);
             this.CmbTipoDeVehiculo.TabIndex = 2;
             // 
             // BtnCerrarAgregarVehiculo
             // 
             this.BtnCerrarAgregarVehiculo.BackColor = System.Drawing.Color.Red;
-            this.BtnCerrarAgregarVehiculo.Location = new System.Drawing.Point(218, 443);
+            this.BtnCerrarAgregarVehiculo.Location = new System.Drawing.Point(175, 494);
             this.BtnCerrarAgregarVehiculo.Name = "BtnCerrarAgregarVehiculo";
             this.BtnCerrarAgregarVehiculo.Size = new System.Drawing.Size(128, 41);
             this.BtnCerrarAgregarVehiculo.TabIndex = 3;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(167, 130);
+            this.label3.Location = new System.Drawing.Point(189, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 6;
@@ -110,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 254);
+            this.label4.Location = new System.Drawing.Point(185, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             // TxtNumeroChasis
             // 
-            this.TxtNumeroChasis.Location = new System.Drawing.Point(31, 280);
+            this.TxtNumeroChasis.Location = new System.Drawing.Point(188, 212);
             this.TxtNumeroChasis.Name = "TxtNumeroChasis";
             this.TxtNumeroChasis.Size = new System.Drawing.Size(100, 20);
             this.TxtNumeroChasis.TabIndex = 8;
@@ -158,8 +158,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
+            this.BackgroundImage = global::ServiExpress.Properties.Resources.AgregarVehiculo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 496);
+            this.ClientSize = new System.Drawing.Size(901, 541);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TxtNumeroMotor);

@@ -37,6 +37,12 @@
     <Reference Include="Calendario">
       <HintPath>..\..\..\..\AppData\Local\Temp\Rar$DRa12960.23627\Calendario.dll</HintPath>
     </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.Designer.cs">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioCliente\MapsSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioCliente\MapsSucursal.Designer.cs">
+      <DependentUpon>MapsSucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.cs">
       <SubType>Form</SubType>
@@ -217,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioCliente\MapsSucursal.resx">
+      <DependentUpon>MapsSucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
@@ -460,10 +475,13 @@
     <Content Include="ImagenesProyecto\Iconos\hacia-atras.png" />
     <Content Include="ImagenesProyecto\Iconos\reloj.png" />
     <Content Include="ImagenesProyecto\Iconos\reparacion-de-autos.png" />
+    <Content Include="ImagenesProyecto\Iconos\ubicacion.png" />
     <Content Include="ImagenesProyecto\Logo.png" />
+    <Content Include="ImagenesProyecto\Usuario\AgregarVehiculo.png" />
     <Content Include="ImagenesProyecto\Usuario\MenuUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\RegistrarUsuario.png" />
     <Content Include="ImagenesProyecto\Usuario\ReservaHora.png" />
+    <None Include="Resources\AgregarVehiculo.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

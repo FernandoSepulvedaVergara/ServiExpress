@@ -68,12 +68,13 @@
             // 
             // BtnFiltrar
             // 
+            this.BtnFiltrar.BackColor = System.Drawing.Color.Yellow;
             this.BtnFiltrar.Location = new System.Drawing.Point(626, 47);
             this.BtnFiltrar.Name = "BtnFiltrar";
             this.BtnFiltrar.Size = new System.Drawing.Size(138, 33);
             this.BtnFiltrar.TabIndex = 2;
             this.BtnFiltrar.Text = "Filtrar";
-            this.BtnFiltrar.UseVisualStyleBackColor = true;
+            this.BtnFiltrar.UseVisualStyleBackColor = false;
             this.BtnFiltrar.Click += new System.EventHandler(this.BtnFiltrar_Click);
             // 
             // DgvVentas
@@ -160,6 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(804, 411);
             this.Controls.Add(this.TxtFiltro);
             this.Controls.Add(this.DgvVentas);

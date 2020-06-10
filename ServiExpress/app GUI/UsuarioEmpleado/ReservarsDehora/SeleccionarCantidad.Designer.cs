@@ -41,7 +41,7 @@
             // 
             // NudCantidad
             // 
-            this.NudCantidad.Location = new System.Drawing.Point(74, 93);
+            this.NudCantidad.Location = new System.Drawing.Point(74, 83);
             this.NudCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -49,7 +49,7 @@
             0});
             this.NudCantidad.Name = "NudCantidad";
             this.NudCantidad.ReadOnly = true;
-            this.NudCantidad.Size = new System.Drawing.Size(69, 20);
+            this.NudCantidad.Size = new System.Drawing.Size(83, 20);
             this.NudCantidad.TabIndex = 1;
             this.NudCantidad.Value = new decimal(new int[] {
             1,
@@ -69,12 +69,13 @@
             // 
             // BtnGuardarCantidad
             // 
+            this.BtnGuardarCantidad.BackColor = System.Drawing.Color.Yellow;
             this.BtnGuardarCantidad.Location = new System.Drawing.Point(74, 119);
             this.BtnGuardarCantidad.Name = "BtnGuardarCantidad";
-            this.BtnGuardarCantidad.Size = new System.Drawing.Size(69, 27);
+            this.BtnGuardarCantidad.Size = new System.Drawing.Size(83, 27);
             this.BtnGuardarCantidad.TabIndex = 3;
             this.BtnGuardarCantidad.Text = "Guardar";
-            this.BtnGuardarCantidad.UseVisualStyleBackColor = true;
+            this.BtnGuardarCantidad.UseVisualStyleBackColor = false;
             this.BtnGuardarCantidad.Click += new System.EventHandler(this.BtnGuardarCantidad_Click);
             // 
             // LblStock
@@ -127,6 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(220, 158);
             this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.label4);
