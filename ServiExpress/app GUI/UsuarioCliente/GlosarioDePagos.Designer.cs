@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.DgvVentas = new System.Windows.Forms.DataGridView();
+            this.BtnExportar = new System.Windows.Forms.Button();
             this.Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoPagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnExportar = new System.Windows.Forms.Button();
+            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,15 +52,25 @@
             this.MontoPagado,
             this.Fecha,
             this.IdEstado,
-            this.IdAtencion});
+            this.IdAtencion,
+            this.Documento});
             this.DgvVentas.Location = new System.Drawing.Point(33, 71);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
             this.DgvVentas.RowHeadersVisible = false;
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvVentas.Size = new System.Drawing.Size(702, 219);
+            this.DgvVentas.Size = new System.Drawing.Size(714, 219);
             this.DgvVentas.TabIndex = 0;
+            // 
+            // BtnExportar
+            // 
+            this.BtnExportar.Location = new System.Drawing.Point(634, 26);
+            this.BtnExportar.Name = "BtnExportar";
+            this.BtnExportar.Size = new System.Drawing.Size(101, 39);
+            this.BtnExportar.TabIndex = 1;
+            this.BtnExportar.Text = "Exportar";
+            this.BtnExportar.UseVisualStyleBackColor = true;
             // 
             // Venta
             // 
@@ -97,14 +108,11 @@
             this.IdAtencion.Name = "IdAtencion";
             this.IdAtencion.ReadOnly = true;
             // 
-            // BtnExportar
+            // Documento
             // 
-            this.BtnExportar.Location = new System.Drawing.Point(634, 26);
-            this.BtnExportar.Name = "BtnExportar";
-            this.BtnExportar.Size = new System.Drawing.Size(101, 39);
-            this.BtnExportar.TabIndex = 1;
-            this.BtnExportar.Text = "Exportar";
-            this.BtnExportar.UseVisualStyleBackColor = true;
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
             // 
             // GlosarioDePagos
             // 
@@ -129,12 +137,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvVentas;
+        private System.Windows.Forms.Button BtnExportar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Venta;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoAPagar;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoPagado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAtencion;
-        private System.Windows.Forms.Button BtnExportar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
     }
 }
