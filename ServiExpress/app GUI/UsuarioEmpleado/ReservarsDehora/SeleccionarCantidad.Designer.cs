@@ -130,6 +130,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(220, 158);
+            this.ControlBox = false;
             this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LblPrecioUnitario);
@@ -144,6 +145,8 @@
             this.Name = "SeleccionarCantidad";
             this.ShowIcon = false;
             this.Text = "Seleccionar cantidad";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SeleccionarCantidad_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SeleccionarCantidad_FormClosed);
             this.Load += new System.EventHandler(this.SeleccionarCantidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NudCantidad)).EndInit();
             this.ResumeLayout(false);

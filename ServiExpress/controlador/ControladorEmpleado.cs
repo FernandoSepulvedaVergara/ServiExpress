@@ -196,5 +196,10 @@ namespace ServiExpress.controlador
         {
             return webEmpleado.GetVentasEmpleado(filtro, valorFiltro);
         }
+
+        public string[] Pagar(int id_venta, int montoPagado)
+        {
+            return webEmpleado.Pagar(id_venta,montoPagado);
+        }
     }
 }

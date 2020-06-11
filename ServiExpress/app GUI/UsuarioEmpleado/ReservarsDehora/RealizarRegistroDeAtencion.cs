@@ -213,7 +213,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                             dataGridViewRow.Cells[3].Value = objeto.fechaVencimiento;
                             dataGridViewRow.Cells[4].Value = objeto.precioVenta;
                             dataGridViewRow.Cells[5].Value = objeto.stock;
-                            dataGridViewRow.Cells[6].Value = 0;
+                            dataGridViewRow.Cells[6].Value = 1;
                             DgvProductos.Rows.Add(dataGridViewRow);
                             break;
                         }

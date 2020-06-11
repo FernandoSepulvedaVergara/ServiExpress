@@ -44,5 +44,15 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
         {
             LblTotal.Text = (NudCantidad.Value * this.precioUnitario).ToString();
         }
+
+        private void SeleccionarCantidad_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void SeleccionarCantidad_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }

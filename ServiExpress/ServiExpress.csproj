@@ -117,6 +117,12 @@
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.Designer.cs">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\Pagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\Pagar.Designer.cs">
+      <DependentUpon>Pagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioEmpleado\Reservaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\Pagar.resx">
+      <DependentUpon>Pagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\Reservaciones.resx">
       <DependentUpon>Reservaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +363,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetVentasEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.PagarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.producto.datasource">

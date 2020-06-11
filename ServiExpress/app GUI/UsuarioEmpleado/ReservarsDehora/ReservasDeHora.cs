@@ -96,7 +96,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             if (DgvReservasDeHora.Rows[DgvReservasDeHora.CurrentRow.Index].Cells[0].ColumnIndex.Equals(e.ColumnIndex))
             {
                 object objeto = DgvReservasDeHora.Rows[DgvReservasDeHora.CurrentRow.Index].Cells[0].Value;
-                DataGridViewRow fila = DgvReservasDeHora.SelectedRows[DgvReservasDeHora.CurrentRow.Index];
+                DataGridViewRow fila = DgvReservasDeHora.CurrentRow;
                 if (objeto.ToString().Equals("Realizar atención"))
                 {
                     try
@@ -137,8 +137,8 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
                 {
                     MessageBox.Show("Error");
                 }
-            }
-            controladorEmpleado.SetDataGridView(DgvReservasDeHora, this.id_sucursal, this.filtro, this.valorFiltro);
+                controladorEmpleado.SetDataGridView(DgvReservasDeHora, this.id_sucursal, this.filtro, this.valorFiltro);
+            }           
         }
     }
 }

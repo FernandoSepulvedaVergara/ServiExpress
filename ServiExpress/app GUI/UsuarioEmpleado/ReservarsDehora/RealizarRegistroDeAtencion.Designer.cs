@@ -69,7 +69,7 @@
             // 
             // BtnRegistrarAtencion
             // 
-            this.BtnRegistrarAtencion.BackColor = System.Drawing.Color.Yellow;
+            this.BtnRegistrarAtencion.BackColor = System.Drawing.Color.LimeGreen;
             this.BtnRegistrarAtencion.Location = new System.Drawing.Point(819, 44);
             this.BtnRegistrarAtencion.Name = "BtnRegistrarAtencion";
             this.BtnRegistrarAtencion.Size = new System.Drawing.Size(108, 34);
@@ -80,7 +80,7 @@
             // 
             // BtnCancelarAtencion
             // 
-            this.BtnCancelarAtencion.BackColor = System.Drawing.Color.Lime;
+            this.BtnCancelarAtencion.BackColor = System.Drawing.Color.Gold;
             this.BtnCancelarAtencion.Location = new System.Drawing.Point(819, 108);
             this.BtnCancelarAtencion.Name = "BtnCancelarAtencion";
             this.BtnCancelarAtencion.Size = new System.Drawing.Size(108, 34);

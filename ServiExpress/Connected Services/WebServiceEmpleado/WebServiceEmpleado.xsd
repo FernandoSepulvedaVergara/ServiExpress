@@ -16,6 +16,8 @@
   <xs:element name="GetTipoDeServiciosResponse" type="tns:GetTipoDeServiciosResponse" />
   <xs:element name="GetVentasEmpleado" type="tns:GetVentasEmpleado" />
   <xs:element name="GetVentasEmpleadoResponse" type="tns:GetVentasEmpleadoResponse" />
+  <xs:element name="Pagar" type="tns:Pagar" />
+  <xs:element name="PagarResponse" type="tns:PagarResponse" />
   <xs:element name="RegistrarAtencion" type="tns:RegistrarAtencion" />
   <xs:element name="RegistrarAtencionResponse" type="tns:RegistrarAtencionResponse" />
   <xs:element name="RegistrarVenta" type="tns:RegistrarVenta" />
@@ -165,6 +167,17 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="documento" type="xs:string" />
       <xs:element name="id_tipo_de_documento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Pagar">
+    <xs:sequence>
+      <xs:element name="id_venta" type="xs:int" />
+      <xs:element name="montoPagado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PagarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarProductos">

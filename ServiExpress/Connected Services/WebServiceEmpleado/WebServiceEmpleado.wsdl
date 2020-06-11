@@ -65,6 +65,12 @@
   <message name="GetVentasEmpleadoResponse">
     <part name="parameters" element="tns:GetVentasEmpleadoResponse" />
   </message>
+  <message name="Pagar">
+    <part name="parameters" element="tns:Pagar" />
+  </message>
+  <message name="PagarResponse">
+    <part name="parameters" element="tns:PagarResponse" />
+  </message>
   <portType name="WebServiceEmpleado">
     <operation name="GetAtenciones">
       <input wsam:Action="http://servicios/WebServiceEmpleado/GetAtencionesRequest" message="tns:GetAtenciones" />
@@ -105,6 +111,10 @@
     <operation name="GetVentasEmpleado">
       <input wsam:Action="http://servicios/WebServiceEmpleado/GetVentasEmpleadoRequest" message="tns:GetVentasEmpleado" />
       <output wsam:Action="http://servicios/WebServiceEmpleado/GetVentasEmpleadoResponse" message="tns:GetVentasEmpleadoResponse" />
+    </operation>
+    <operation name="Pagar">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/PagarRequest" message="tns:Pagar" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/PagarResponse" message="tns:PagarResponse" />
     </operation>
   </portType>
   <binding name="WebServiceEmpleadoPortBinding" type="tns:WebServiceEmpleado">
@@ -191,6 +201,15 @@
       </output>
     </operation>
     <operation name="GetVentasEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Pagar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -65,12 +65,13 @@
             // 
             // BtnExportar
             // 
-            this.BtnExportar.Location = new System.Drawing.Point(634, 26);
+            this.BtnExportar.BackColor = System.Drawing.Color.Yellow;
+            this.BtnExportar.Location = new System.Drawing.Point(654, 387);
             this.BtnExportar.Name = "BtnExportar";
             this.BtnExportar.Size = new System.Drawing.Size(101, 39);
             this.BtnExportar.TabIndex = 1;
             this.BtnExportar.Text = "Exportar";
-            this.BtnExportar.UseVisualStyleBackColor = true;
+            this.BtnExportar.UseVisualStyleBackColor = false;
             // 
             // Venta
             // 
@@ -110,13 +111,9 @@
             // 
             // Documento
             // 
-            this.BtnExportar.BackColor = System.Drawing.Color.Yellow;
-            this.BtnExportar.Location = new System.Drawing.Point(654, 387);
-            this.BtnExportar.Name = "BtnExportar";
-            this.BtnExportar.Size = new System.Drawing.Size(101, 39);
-            this.BtnExportar.TabIndex = 1;
-            this.BtnExportar.Text = "Exportar";
-            this.BtnExportar.UseVisualStyleBackColor = false;
+            this.Documento.HeaderText = "Documento";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
             // 
             // GlosarioDePagos
             // 

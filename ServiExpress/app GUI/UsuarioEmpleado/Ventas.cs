@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,6 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             InitializeComponent();
         }
 
-        private void Ventas_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnFiltrar_Click(object sender, EventArgs e)
         {
             if (CmbFiltro.SelectedItem == null)
@@ -46,16 +42,18 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             }
         }
 
-        private void DgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (DgvVentas.Rows[DgvVentas.CurrentRow.Index].Cells[0].ColumnIndex.Equals(e.ColumnIndex))
             {
-                if ((DgvVentas.Rows[DgvVentas.CurrentRow.Index].Cells[0].Value.Equals("Pagar"))) 
+                if (DgvVentas.Rows[DgvVentas.CurrentRow.Index].Cells[0].Value.Equals("Pagar"))
                 {
-                    MessageBox.Show("Pagar");
+                    Pagar pagar = new Pagar(this.controladorEmpleado, DgvVentas.Rows[DgvVentas.CurrentRow.Index]);
+                    pagar.ShowDialog();
+                    controladorEmpleado.SetDataGridViewVentas(DgvVentas,this.filtro, this.valorFiltro);
                 }
             }
-            else if(DgvVentas.Rows[DgvVentas.CurrentRow.Index].Cells[7].ColumnIndex.Equals(e.ColumnIndex)) 
+            else if (DgvVentas.Rows[DgvVentas.CurrentRow.Index].Cells[7].ColumnIndex.Equals(e.ColumnIndex))
             {
                 MessageBox.Show("Documento");
             }

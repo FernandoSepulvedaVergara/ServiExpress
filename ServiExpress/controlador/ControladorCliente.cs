@@ -62,6 +62,8 @@ namespace ServiExpress.controlador
                 {
                     foreach (var r in resultado)
                     {
+                        DataGridViewButtonCell dataGridViewButtonCell = new DataGridViewButtonCell();
+                        dataGridViewButtonCell.Value = "Documento";
                         listaTemporal.Add(r.id_venta.ToString());
                         listaTemporal.Add(r.montoAPagar.ToString());
                         listaTemporal.Add(r.montoPagado.ToString());
@@ -71,9 +73,16 @@ namespace ServiExpress.controlador
 
                         DataGridViewRow fila = new DataGridViewRow();
                         fila.CreateCells(Dgv);
-                        for (int i = 0; i < listaTemporal.Count; i++)
+                        for (int i = 0; i <= listaTemporal.Count; i++)
                         {
-                            fila.Cells[i].Value = listaTemporal[i].ToString();
+                            if (i == 6)
+                            {
+                                fila.Cells[i] = dataGridViewButtonCell;
+                            }
+                            else
+                            {
+                                fila.Cells[i].Value = listaTemporal[i].ToString();
+                            }
                         }
                         Dgv.Rows.Add(fila);
                         listaTemporal.Clear();

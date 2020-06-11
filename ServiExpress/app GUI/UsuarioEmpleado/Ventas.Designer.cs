@@ -91,7 +91,7 @@
             this.Rut,
             this.IdAtencion,
             this.IdDocumento});
-            this.DgvVentas.Location = new System.Drawing.Point(-1, 106);
+            this.DgvVentas.Location = new System.Drawing.Point(0, 106);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
@@ -99,7 +99,7 @@
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvVentas.Size = new System.Drawing.Size(803, 293);
             this.DgvVentas.TabIndex = 3;
-            this.DgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVentas_CellContentClick);
+            this.DgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVentas_CellClick);
             // 
             // EstadoDeVenta
             // 
@@ -173,7 +173,6 @@
             this.MinimizeBox = false;
             this.Name = "Ventas";
             this.Text = "Ventas";
-            this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

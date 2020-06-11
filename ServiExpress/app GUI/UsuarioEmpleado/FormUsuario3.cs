@@ -52,5 +52,10 @@ namespace ServiExpress.app_GUI
             panel1.Controls.Add(ventas);
             ventas.Show();
         }
+
+        private void FormUsuario3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
