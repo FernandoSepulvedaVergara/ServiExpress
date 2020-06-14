@@ -30,9 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.BtnAdministrarProducto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,39 +51,39 @@
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 41);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Pedidos";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1, 47);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 41);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Datos personales";
+            this.button1.Text = "Información";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Proveedor";
+            this.button2.Location = new System.Drawing.Point(1, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 41);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Pedidos";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // BtnAdministrarProducto
+            // 
+            this.BtnAdministrarProducto.Location = new System.Drawing.Point(1, 113);
+            this.BtnAdministrarProducto.Name = "BtnAdministrarProducto";
+            this.BtnAdministrarProducto.Size = new System.Drawing.Size(133, 41);
+            this.BtnAdministrarProducto.TabIndex = 15;
+            this.BtnAdministrarProducto.Text = "Administrar productos";
+            this.BtnAdministrarProducto.UseVisualStyleBackColor = true;
             // 
             // FormUsuario2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 452);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BtnAdministrarProducto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -92,7 +92,6 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -100,8 +99,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnAdministrarProducto;
     }
 }

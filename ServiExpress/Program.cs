@@ -1,4 +1,5 @@
 ﻿using Clases.ApiRest;
+using ServiExpress.controlador;
 using System;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace ServiExpress
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            formLoginUsuario loginUsuario = new formLoginUsuario();
+            formLoginUsuario loginUsuario = new formLoginUsuario(new ControladorLoginUsuario());
             loginUsuario.Show();
             Application.Run();
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.Logging;
 using ServiExpress.WebServiceCliente;
+using ServiExpress.WebServiceProveedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace ServiExpress.controlador
     public class ControladorProveedor : ControladorPrincipal
     {
         public string[] login { get; set; }
+        private WebServiceProveedorClient webProveedor = new WebServiceProveedorClient();
 
         public ControladorProveedor(string[] login)
         {
@@ -28,9 +30,13 @@ namespace ServiExpress.controlador
             return null;
         }
 
-        public tipoDeServicio[] GetTipoDeServicios() 
+        public tipoDeServicio[] GetTipoDeServicios()
         {
             return null;
+        }
+        public void Hello()
+        {
+            webProveedor.hello("");
         }
     }
 }

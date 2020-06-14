@@ -11,7 +11,7 @@ namespace ServiExpress.controlador
     public class ControladorCliente : ControladorPrincipal
     {
         public string[] login { get; set; }
-        WebServiceClienteClient webCliente = new WebServiceClienteClient();
+        private WebServiceClienteClient webCliente = new WebServiceClienteClient();
 
         public ControladorCliente(string[] login)
         {
@@ -65,10 +65,10 @@ namespace ServiExpress.controlador
                         DataGridViewButtonCell dataGridViewButtonCell = new DataGridViewButtonCell();
                         dataGridViewButtonCell.Value = "Documento";
                         listaTemporal.Add(r.id_venta.ToString());
+                        listaTemporal.Add(r.estadoDeVenta.estado);
                         listaTemporal.Add(r.montoAPagar.ToString());
                         listaTemporal.Add(r.montoPagado.ToString());
                         listaTemporal.Add(r.fecha);
-                        listaTemporal.Add(r.estadoDeVenta.estado);
                         listaTemporal.Add(r.idAtencion.ToString());
 
                         DataGridViewRow fila = new DataGridViewRow();

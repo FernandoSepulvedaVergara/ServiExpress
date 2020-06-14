@@ -31,10 +31,10 @@
             this.DgvVentas = new System.Windows.Forms.DataGridView();
             this.BtnExportar = new System.Windows.Forms.Button();
             this.Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoPagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
@@ -48,10 +48,10 @@
             this.DgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Venta,
+            this.IdEstado,
             this.MontoAPagar,
             this.MontoPagado,
             this.Fecha,
-            this.IdEstado,
             this.IdAtencion,
             this.Documento});
             this.DgvVentas.Location = new System.Drawing.Point(33, 71);
@@ -79,6 +79,12 @@
             this.Venta.Name = "Venta";
             this.Venta.ReadOnly = true;
             // 
+            // IdEstado
+            // 
+            this.IdEstado.HeaderText = "Estado";
+            this.IdEstado.Name = "IdEstado";
+            this.IdEstado.ReadOnly = true;
+            // 
             // MontoAPagar
             // 
             this.MontoAPagar.HeaderText = "Monto a pagar";
@@ -96,12 +102,6 @@
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            // 
-            // IdEstado
-            // 
-            this.IdEstado.HeaderText = "Estado";
-            this.IdEstado.Name = "IdEstado";
-            this.IdEstado.ReadOnly = true;
             // 
             // IdAtencion
             // 
@@ -140,10 +140,10 @@
         private System.Windows.Forms.DataGridView DgvVentas;
         private System.Windows.Forms.Button BtnExportar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Venta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoAPagar;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoPagado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAtencion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
     }

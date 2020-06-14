@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiExpress.WebServiceLoginUsuario;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace ServiExpress.controlador
 {
-    public static class ControladorLoginUsuario
-    {      
+    public class ControladorLoginUsuario
+    {
+        private WebServiceLoginClient webLogin = new WebServiceLoginClient();
 
-        public static string[] ValidarUsuario(string username, string password) 
+        public string[] ValidarUsuario(string username, string password) 
         {
             string _username = null;
-            string _password = null;
-            WebServiceLoginUsuario.WebServiceLoginClient webLogin = new WebServiceLoginUsuario.WebServiceLoginClient();
+            string _password = null;            
             string[] login = webLogin.ValidarLogin(username,password);
 
             if (login != null)
@@ -44,7 +45,11 @@ namespace ServiExpress.controlador
             {
                 return null;
             }
+        }
 
+        public string[] ValidarUsuarioProveedor(string username, string password) 
+        {
+            return webLogin.ValidarLoginProveedor(username,password);
         }
     }
 }
