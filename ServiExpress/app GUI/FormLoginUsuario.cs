@@ -8,48 +8,51 @@ namespace ServiExpress
 {
     public partial class formLoginUsuario : Form
     {
-        public formLoginUsuario()
-        {            
+        private ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
+
+        public formLoginUsuario(ControladorLoginUsuario controladorLoginUsuario)
+        {
+            this.controladorLoginUsuario = controladorLoginUsuario;
             InitializeComponent();
         }
 
         private void BtnIngresarUsuario_Click(object sender, EventArgs e)
         {
-            string[] login = ControladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(),txtContraseñaUsuario.Text.Trim());
-            if (login != null)
+            if (txtUserName.Text.Equals(null) || txtContraseñaUsuario.Text.Equals(null))
             {
-                if (int.Parse(login[3]) == 1)
-                {
-                    FormUsuario1 usuario1 = new FormUsuario1(login);
-                    this.Hide();
-                    usuario1.Show();
-                }
-
-                else if(int.Parse(login[3]) == 2)
-                {
-                    FormUsuario2 usuario2 = new FormUsuario2(login);
-                    this.Hide();
-                    usuario2.Show();
-                }
-
-                else if (int.Parse(login[3]) == 3)
-                {
-                    FormUsuario3 usuario3 = new FormUsuario3(login);
-                    this.Hide();
-                    usuario3.Show();
-                }
-
-                else if (int.Parse(login[3]) == 4)
-                {
-                    FormUsuario4 usuario4 = new FormUsuario4(login);
-                    this.Hide();
-                    usuario4.Show();
-                }
+                MessageBox.Show("Debe proporcionar todos los datos para ingresar");
             }
             else
             {
-                MessageBox.Show("Usuario no existe");
-            }
+                string[] login = controladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(), txtContraseñaUsuario.Text.Trim());
+                if (login != null)
+                {
+                    if (int.Parse(login[3]) == 1)
+                    {
+                        FormUsuario1 usuario1 = new FormUsuario1(login);
+                        this.Hide();
+                        usuario1.Show();
+                    }
+
+                    else if (int.Parse(login[3]) == 3)
+                    {
+                        FormUsuario3 usuario3 = new FormUsuario3(login);
+                        this.Hide();
+                        usuario3.Show();
+                    }
+
+                    else if (int.Parse(login[3]) == 4)
+                    {
+                        FormUsuario4 usuario4 = new FormUsuario4(login);
+                        this.Hide();
+                        usuario4.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta");
+                }
+            }            
         }
 
         private void FormLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
@@ -66,6 +69,46 @@ namespace ServiExpress
         {
             FormNuevoUsuario nuevoUsuario = new FormNuevoUsuario();
             nuevoUsuario.ShowDialog();
+        }
+
+        private void BtnIngresoProveedores_Click(object sender, EventArgs e)
+        {
+            if (BtnIngresoProveedores.Text.Equals("Ingreso proveedores")) {
+                panel2.Visible = true;
+                panel2.Visible = true;
+                BtnIngresoProveedores.Text = "Ingreso usuarios";
+            }
+            else {
+                panel1.Visible = true;
+                panel2.Visible = false;
+                BtnIngresoProveedores.Text = "Ingreso proveedores";
+            }
+        }
+
+        private void BtnSalirProveedor_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnIngresarProveedor_Click(object sender, EventArgs e)
+        {
+            if (TxtNombreUsuarioProveedor.Text.Equals(null) || TxtContraseñaProveedor.Text.Equals(null))
+            {
+                MessageBox.Show("Debe proporcionar todos los datos para ingresar");
+            }
+            else 
+            {
+                string[] login = controladorLoginUsuario.ValidarUsuarioProveedor(TxtNombreUsuarioProveedor.Text, TxtContraseñaProveedor.Text);
+                if (login.Equals(null)) 
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta");
+                }
+                {
+                    FormUsuario2 usuario2 = new FormUsuario2(login);
+                    this.Hide();
+                    usuario2.Show();
+                }
+            }
         }
     }
 }
