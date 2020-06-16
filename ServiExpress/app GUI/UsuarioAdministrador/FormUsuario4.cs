@@ -1,4 +1,5 @@
-﻿using ServiExpress.controlador;
+﻿using ServiExpress.app_GUI.UsuarioAdministrador;
+using ServiExpress.controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,19 @@ namespace ServiExpress.app_GUI
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BtnAdministrarProducto_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            AdministrarProductos administrarProductos = new AdministrarProductos(controladorAdministrador);
+            administrarProductos.TopLevel = false;
+            administrarProductos.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(administrarProductos);
+            administrarProductos.Show();
         }
     }
 }

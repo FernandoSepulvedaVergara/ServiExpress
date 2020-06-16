@@ -31,6 +31,7 @@
             this.DgvVentas = new System.Windows.Forms.DataGridView();
             this.BtnExportar = new System.Windows.Forms.Button();
             this.Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoPagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,19 +49,20 @@
             this.DgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Venta,
+            this.Patente,
             this.IdEstado,
             this.MontoAPagar,
             this.MontoPagado,
             this.Fecha,
             this.IdAtencion,
             this.Documento});
-            this.DgvVentas.Location = new System.Drawing.Point(33, 71);
+            this.DgvVentas.Location = new System.Drawing.Point(12, 69);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
             this.DgvVentas.RowHeadersVisible = false;
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvVentas.Size = new System.Drawing.Size(714, 219);
+            this.DgvVentas.Size = new System.Drawing.Size(803, 219);
             this.DgvVentas.TabIndex = 0;
             // 
             // BtnExportar
@@ -78,6 +80,12 @@
             this.Venta.HeaderText = "Venta";
             this.Venta.Name = "Venta";
             this.Venta.ReadOnly = true;
+            // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
+            this.Patente.ReadOnly = true;
             // 
             // IdEstado
             // 
@@ -121,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(813, 450);
             this.Controls.Add(this.BtnExportar);
             this.Controls.Add(this.DgvVentas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -140,6 +148,7 @@
         private System.Windows.Forms.DataGridView DgvVentas;
         private System.Windows.Forms.Button BtnExportar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Venta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoAPagar;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoPagado;

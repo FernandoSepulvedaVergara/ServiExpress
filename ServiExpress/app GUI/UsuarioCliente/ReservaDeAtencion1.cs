@@ -3,45 +3,30 @@ using ServiExpress.app_GUI.UsuarioCliente.VehiculoCliente;
 using ServiExpress.controlador;
 using ServiExpress.WebServiceCliente;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ServiExpress.app_GUI.Usuario1
+namespace ServiExpress.app_GUI.UsuarioCliente
 {
-    public partial class ReservaDeAtencion : Form
+    public partial class ReservaDeAtencion1 : Form
     {
         ControladorCliente controladorCliente;
-        public ReservaDeAtencion(ControladorCliente controladorCliente)
+        public ReservaDeAtencion1(ControladorCliente controladorCliente)
         {
             InitializeComponent();
             this.controladorCliente = controladorCliente;
         }
 
-        private void ReservaDeAtencion_Load(object sender, EventArgs e)
+
+        private void ReservaDeAtencion1_Load(object sender, EventArgs e)
         {
             ConfigurarReservaDeHora();
-        }
-
-        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            string fechaSeleccionada = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8).Replace("/", "");
-            DateTime fechaSeleccionadaDateTime = new DateTime(int.Parse(fechaSeleccionada.Substring(4, 2)), int.Parse(fechaSeleccionada.Substring(2, 2)), int.Parse(fechaSeleccionada.Substring(0, 2)));
-            string fechaSeleccionadaLbl = null;
-            foreach (var r in monthCalendar.BoldedDates)
-            {
-                if (r.Date.ToString().Equals(fechaSeleccionadaDateTime.Date.ToString()))
-                {
-                    MessageBox.Show("No se puede seleccionar fecha por día festivo");
-                    fechaSeleccionada = "";
-                    LblFechaSeleccionada.Text = null;
-                    fechaSeleccionadaLbl = null;
-                    break;
-                }
-                else
-                {
-                    fechaSeleccionadaLbl = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8);                    
-                }
-            }
-            LblFechaSeleccionada.Text = fechaSeleccionadaLbl;
         }
 
         private void ConfigurarReservaDeHora()
@@ -50,7 +35,8 @@ namespace ServiExpress.app_GUI.Usuario1
             DateTime localdate = DateTime.Now;
             this.monthCalendar.MinDate = localdate;
             CmbSeleccionarHoras.DataSource = Horas.GetHoras();
-            try {
+            try
+            {
                 ApiFeriados apiFeriados = new ApiFeriados();
                 dynamic respuesta = apiFeriados.Get("https://apis.digital.gob.cl/fl/feriados/2020");
                 DateTime[] feriados = new DateTime[respuesta.Count];
@@ -70,7 +56,7 @@ namespace ServiExpress.app_GUI.Usuario1
 
                     foreach (var r in this.controladorCliente.GetTipoDeServicios())
                     {
-                        CmbSeleccionarServicios.Items.Add(String.Format("{0} - {1}", r.id_servicio,r.servicio));
+                        CmbSeleccionarServicios.Items.Add(String.Format("{0} - {1}", r.id_servicio, r.servicio));
                     }
                     foreach (var r in this.controladorCliente.GetSucursales())
                     {
@@ -85,11 +71,11 @@ namespace ServiExpress.app_GUI.Usuario1
                             CmbSeleccionarVehículo.Items.Add(String.Format("{0} - {1}", r.patente, r.tipoDeVehiculo.tipo_de_vehiculo));
                         }
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show("Para agendar debe registrar un vehículo");
                         this.Dispose();
-                    }                    
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -101,54 +87,15 @@ namespace ServiExpress.app_GUI.Usuario1
                 MessageBox.Show("Error conexión API \n " + ex.Message);
             }
 
-        }        
-
-        private void CmbSeleccionarServicios_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LblServicioSeleccionado.Text= CmbSeleccionarServicios.SelectedItem.ToString();
-        }
-
-        private void CmbSeleccionarVehículo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LblVehículoSeleccionado.Text = CmbSeleccionarVehículo.SelectedItem.ToString();
-        }
-
-        private void CmbSeleccionarHoras_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LblHoraSeleccionada.Text = CmbSeleccionarHoras.SelectedItem.ToString();
-        }
-
-        private void CmbSeleccionarSucursal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LblSucursalSeleccionado.Text = CmbSeleccionarSucursal.SelectedItem.ToString();
-        }
-
-        private void BtnReservarAtención_Click(object sender, EventArgs e)
-        {
-            string fechaSeleccionada = LblFechaSeleccionada.Text;
-            string horaSeleccionada = LblHoraSeleccionada.Text;
-            int servicioSeleccionado = int.Parse(LblServicioSeleccionado.Text.Substring(0, LblServicioSeleccionado.Text.IndexOf("-")).Trim());
-            string vehículoSeleccionado = LblVehículoSeleccionado.Text.Substring(0, LblVehículoSeleccionado.Text.IndexOf("-")).Trim();
-            int sucursalIdSeleccionada = int.Parse(LblSucursalSeleccionado.Text.Substring(0, LblSucursalSeleccionado.Text.IndexOf("-")).Trim());
-
-            if (fechaSeleccionada.Equals(null)|| horaSeleccionada.Equals(null)|| servicioSeleccionado.Equals(null)||
-                vehículoSeleccionado.Equals(null)|| sucursalIdSeleccionada.Equals(null)) 
+            MapsSucursal mps = new MapsSucursal();
+            if (panel1.Controls.Count > 0)
             {
-                MessageBox.Show("Faltan datos por seleccionar");
+                panel1.Controls.Clear();
             }
-            else
-            {
-                string[] resultado = controladorCliente.RegistrarReservaDeAtencion(fechaSeleccionada, horaSeleccionada, sucursalIdSeleccionada, controladorCliente.login[0], servicioSeleccionado,vehículoSeleccionado);
-                if (resultado[0] != "false")
-                {
-                    LimpiarFormulario();
-                    MessageBox.Show("Reserva de hora guardado con éxito");
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo agregar, verifique todos los datos");
-                }
-            }
+            mps.TopLevel = false;
+            mps.Dock = DockStyle.Fill;
+            panel1.Controls.Add(mps);
+            mps.Show();
         }
 
         private void LimpiarFormulario()
@@ -161,40 +108,76 @@ namespace ServiExpress.app_GUI.Usuario1
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void monthCalendar_DateChanged_1(object sender, DateRangeEventArgs e)
         {
-
+            string fechaSeleccionada = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8).Replace("/", "");
+            DateTime fechaSeleccionadaDateTime = new DateTime(int.Parse(fechaSeleccionada.Substring(4, 2)), int.Parse(fechaSeleccionada.Substring(2, 2)), int.Parse(fechaSeleccionada.Substring(0, 2)));
+            string fechaSeleccionadaLbl = null;
+            foreach (var r in monthCalendar.BoldedDates)
+            {
+                if (r.Date.ToString().Equals(fechaSeleccionadaDateTime.Date.ToString()))
+                {
+                    MessageBox.Show("No se puede seleccionar fecha por día festivo");
+                    fechaSeleccionada = "";
+                    LblFechaSeleccionada.Text = null;
+                    fechaSeleccionadaLbl = null;
+                    break;
+                }
+                else
+                {
+                    fechaSeleccionadaLbl = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8);
+                }
+            }
+            LblFechaSeleccionada.Text = fechaSeleccionadaLbl;
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void CmbSeleccionarSucursal_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LblSucursalSeleccionado.Text = CmbSeleccionarSucursal.SelectedItem.ToString();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void CmbSeleccionarVehículo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LblVehículoSeleccionado.Text = CmbSeleccionarVehículo.SelectedItem.ToString();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void CmbSeleccionarHoras_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LblHoraSeleccionada.Text = CmbSeleccionarHoras.SelectedItem.ToString();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void CmbSeleccionarServicios_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LblServicioSeleccionado.Text = CmbSeleccionarServicios.SelectedItem.ToString();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void BtnReservarAtención_Click(object sender, EventArgs e)
         {
 
-        }
+            string fechaSeleccionada = LblFechaSeleccionada.Text;
+            string horaSeleccionada = LblHoraSeleccionada.Text;
+            int servicioSeleccionado = int.Parse(LblServicioSeleccionado.Text.Substring(0, LblServicioSeleccionado.Text.IndexOf("-")).Trim());
+            string vehículoSeleccionado = LblVehículoSeleccionado.Text.Substring(0, LblVehículoSeleccionado.Text.IndexOf("-")).Trim();
+            int sucursalIdSeleccionada = int.Parse(LblSucursalSeleccionado.Text.Substring(0, LblSucursalSeleccionado.Text.IndexOf("-")).Trim());
 
-        private void btnMaps_Click(object sender, EventArgs e)
-        {
-            MapsSucursal mps = new MapsSucursal();
-            mps.ShowDialog();
+            if (fechaSeleccionada.Equals(null) || horaSeleccionada.Equals(null) || servicioSeleccionado.Equals(null) ||
+                vehículoSeleccionado.Equals(null) || sucursalIdSeleccionada.Equals(null))
+            {
+                MessageBox.Show("Faltan datos por seleccionar");
+            }
+            else
+            {
+                string[] resultado = controladorCliente.RegistrarReservaDeAtencion(fechaSeleccionada, horaSeleccionada, sucursalIdSeleccionada, controladorCliente.login[0], servicioSeleccionado, vehículoSeleccionado);
+                if (resultado[0] != "false")
+                {
+                    LimpiarFormulario();
+                    MessageBox.Show("Reserva de hora guardado con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo agregar, verifique todos los datos");
+                }
+            }
         }
     }
 }

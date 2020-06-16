@@ -28,9 +28,21 @@ namespace ServiExpress.controlador
             throw new NotImplementedException();
         }
 
-        public void Hello ()
+        public tipoDeProducto[] GetTipoDeProductos() 
         {
-            webAdministrador.hello("");
+
+            tipoDeProducto[] resultado =  webAdministrador.GetTipoDeProducto();
+            return resultado;
+        }
+
+        public producto[] GetProductos(int idTipoDeProducto)
+        {
+            return webAdministrador.GetProductos(idTipoDeProducto);
+        }
+
+        public producto GetInfoProducto(int idProducto)
+        {
+            return webAdministrador.GetInfoProducto(idProducto);
         }
     }
 }

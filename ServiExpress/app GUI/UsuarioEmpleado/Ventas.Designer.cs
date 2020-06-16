@@ -32,15 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnFiltrar = new System.Windows.Forms.Button();
             this.DgvVentas = new System.Windows.Forms.DataGridView();
+            this.TxtFiltro = new System.Windows.Forms.TextBox();
             this.EstadoDeVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoAPagar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoPagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TxtFiltro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,8 +52,9 @@
             this.CmbFiltro.Items.AddRange(new object[] {
             "Id venta",
             "Fecha venta",
-            "Rut"});
-            this.CmbFiltro.Location = new System.Drawing.Point(473, 12);
+            "Rut",
+            "Patente"});
+            this.CmbFiltro.Location = new System.Drawing.Point(113, 14);
             this.CmbFiltro.Name = "CmbFiltro";
             this.CmbFiltro.Size = new System.Drawing.Size(121, 21);
             this.CmbFiltro.TabIndex = 0;
@@ -60,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(402, 15);
+            this.label1.Location = new System.Drawing.Point(42, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 1;
@@ -69,7 +71,7 @@
             // BtnFiltrar
             // 
             this.BtnFiltrar.BackColor = System.Drawing.Color.Yellow;
-            this.BtnFiltrar.Location = new System.Drawing.Point(626, 47);
+            this.BtnFiltrar.Location = new System.Drawing.Point(266, 49);
             this.BtnFiltrar.Name = "BtnFiltrar";
             this.BtnFiltrar.Size = new System.Drawing.Size(138, 33);
             this.BtnFiltrar.TabIndex = 2;
@@ -85,21 +87,29 @@
             this.DgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EstadoDeVenta,
             this.IdVenta,
+            this.Patente,
             this.MontoAPagar,
             this.MontoPagado,
             this.FechaVenta,
             this.Rut,
             this.IdAtencion,
             this.IdDocumento});
-            this.DgvVentas.Location = new System.Drawing.Point(0, 106);
+            this.DgvVentas.Location = new System.Drawing.Point(12, 106);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
             this.DgvVentas.RowHeadersVisible = false;
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvVentas.Size = new System.Drawing.Size(803, 293);
+            this.DgvVentas.Size = new System.Drawing.Size(910, 349);
             this.DgvVentas.TabIndex = 3;
             this.DgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVentas_CellClick);
+            // 
+            // TxtFiltro
+            // 
+            this.TxtFiltro.Location = new System.Drawing.Point(113, 61);
+            this.TxtFiltro.Name = "TxtFiltro";
+            this.TxtFiltro.Size = new System.Drawing.Size(121, 20);
+            this.TxtFiltro.TabIndex = 4;
             // 
             // EstadoDeVenta
             // 
@@ -112,6 +122,12 @@
             this.IdVenta.HeaderText = "Id venta";
             this.IdVenta.Name = "IdVenta";
             this.IdVenta.ReadOnly = true;
+            // 
+            // Patente
+            // 
+            this.Patente.HeaderText = "Patente";
+            this.Patente.Name = "Patente";
+            this.Patente.ReadOnly = true;
             // 
             // MontoAPagar
             // 
@@ -149,20 +165,13 @@
             this.IdDocumento.Name = "IdDocumento";
             this.IdDocumento.ReadOnly = true;
             // 
-            // TxtFiltro
-            // 
-            this.TxtFiltro.Location = new System.Drawing.Point(473, 59);
-            this.TxtFiltro.Name = "TxtFiltro";
-            this.TxtFiltro.Size = new System.Drawing.Size(121, 20);
-            this.TxtFiltro.TabIndex = 4;
-            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(804, 411);
+            this.ClientSize = new System.Drawing.Size(986, 482);
             this.Controls.Add(this.TxtFiltro);
             this.Controls.Add(this.DgvVentas);
             this.Controls.Add(this.BtnFiltrar);
@@ -185,14 +194,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnFiltrar;
         private System.Windows.Forms.DataGridView DgvVentas;
+        private System.Windows.Forms.TextBox TxtFiltro;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDeVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoAPagar;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoPagado;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rut;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAtencion;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdDocumento;
-        private System.Windows.Forms.TextBox TxtFiltro;
     }
 }

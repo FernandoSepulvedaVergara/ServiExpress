@@ -15,78 +15,348 @@ namespace ServiExpress.WebServiceAdministrador {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://servicios/", ConfigurationName="WebServiceAdministrador.WebServiceAdministrador")]
     public interface WebServiceAdministrador {
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento name del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/helloRequest", ReplyAction="http://servicios/WebServiceAdministrador/helloResponse")]
-        ServiExpress.WebServiceAdministrador.helloResponse hello(ServiExpress.WebServiceAdministrador.helloRequest request);
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/GetProductosRequest", ReplyAction="http://servicios/WebServiceAdministrador/GetProductosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceAdministrador.GetProductosResponse GetProductos(ServiExpress.WebServiceAdministrador.GetProductosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/helloRequest", ReplyAction="http://servicios/WebServiceAdministrador/helloResponse")]
-        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.helloResponse> helloAsync(ServiExpress.WebServiceAdministrador.helloRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/GetProductosRequest", ReplyAction="http://servicios/WebServiceAdministrador/GetProductosResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetProductosResponse> GetProductosAsync(ServiExpress.WebServiceAdministrador.GetProductosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoRequest", ReplyAction="http://servicios/WebServiceAdministrador/GetTipoDeProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse GetTipoDeProducto(ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoRequest", ReplyAction="http://servicios/WebServiceAdministrador/GetTipoDeProductoResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse> GetTipoDeProductoAsync(ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/GetInfoProductoRequest", ReplyAction="http://servicios/WebServiceAdministrador/GetInfoProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceAdministrador.GetInfoProductoResponse GetInfoProducto(ServiExpress.WebServiceAdministrador.GetInfoProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/GetInfoProductoRequest", ReplyAction="http://servicios/WebServiceAdministrador/GetInfoProductoResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetInfoProductoResponse> GetInfoProductoAsync(ServiExpress.WebServiceAdministrador.GetInfoProductoRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
+    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private string fechaVencimientoField;
+        
+        private int idOrdenDePedidoField;
+        
+        private int idProductoField;
+        
+        private int idTipoDeProductoField;
+        
+        private string marcaField;
+        
+        private int precioCompraField;
+        
+        private int precioVentaField;
+        
+        private string rutProveedorField;
+        
+        private int stockField;
+        
+        private int stockCriticoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string fechaVencimiento {
+            get {
+                return this.fechaVencimientoField;
+            }
+            set {
+                this.fechaVencimientoField = value;
+                this.RaisePropertyChanged("fechaVencimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idOrdenDePedido {
+            get {
+                return this.idOrdenDePedidoField;
+            }
+            set {
+                this.idOrdenDePedidoField = value;
+                this.RaisePropertyChanged("idOrdenDePedido");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idProducto {
+            get {
+                return this.idProductoField;
+            }
+            set {
+                this.idProductoField = value;
+                this.RaisePropertyChanged("idProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idTipoDeProducto {
+            get {
+                return this.idTipoDeProductoField;
+            }
+            set {
+                this.idTipoDeProductoField = value;
+                this.RaisePropertyChanged("idTipoDeProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string marca {
+            get {
+                return this.marcaField;
+            }
+            set {
+                this.marcaField = value;
+                this.RaisePropertyChanged("marca");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int precioCompra {
+            get {
+                return this.precioCompraField;
+            }
+            set {
+                this.precioCompraField = value;
+                this.RaisePropertyChanged("precioCompra");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int precioVenta {
+            get {
+                return this.precioVentaField;
+            }
+            set {
+                this.precioVentaField = value;
+                this.RaisePropertyChanged("precioVenta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string rutProveedor {
+            get {
+                return this.rutProveedorField;
+            }
+            set {
+                this.rutProveedorField = value;
+                this.RaisePropertyChanged("rutProveedor");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int stock {
+            get {
+                return this.stockField;
+            }
+            set {
+                this.stockField = value;
+                this.RaisePropertyChanged("stock");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public int stockCritico {
+            get {
+                return this.stockCriticoField;
+            }
+            set {
+                this.stockCriticoField = value;
+                this.RaisePropertyChanged("stockCritico");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
+    public partial class tipoDeProducto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idTipoDeProductoField;
+        
+        private string productoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idTipoDeProducto {
+            get {
+                return this.idTipoDeProductoField;
+            }
+            set {
+                this.idTipoDeProductoField = value;
+                this.RaisePropertyChanged("idTipoDeProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class helloRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetProductos", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetProductosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="hello", Namespace="http://servicios/", Order=0)]
-        public ServiExpress.WebServiceAdministrador.helloRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTipoDeProducto;
         
-        public helloRequest() {
+        public GetProductosRequest() {
         }
         
-        public helloRequest(ServiExpress.WebServiceAdministrador.helloRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class helloRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string name;
-        
-        public helloRequestBody() {
-        }
-        
-        public helloRequestBody(string name) {
-            this.name = name;
+        public GetProductosRequest(int idTipoDeProducto) {
+            this.idTipoDeProducto = idTipoDeProducto;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class helloResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetProductosResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetProductosResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="helloResponse", Namespace="http://servicios/", Order=0)]
-        public ServiExpress.WebServiceAdministrador.helloResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public ServiExpress.WebServiceAdministrador.producto[] @return;
         
-        public helloResponse() {
+        public GetProductosResponse() {
         }
         
-        public helloResponse(ServiExpress.WebServiceAdministrador.helloResponseBody Body) {
-            this.Body = Body;
+        public GetProductosResponse(ServiExpress.WebServiceAdministrador.producto[] @return) {
+            this.@return = @return;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class helloResponseBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTipoDeProducto", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetTipoDeProductoRequest {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
+        public GetTipoDeProductoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTipoDeProductoResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetTipoDeProductoResponse {
         
-        public helloResponseBody() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public ServiExpress.WebServiceAdministrador.tipoDeProducto[] @return;
+        
+        public GetTipoDeProductoResponse() {
         }
         
-        public helloResponseBody(string @return) {
+        public GetTipoDeProductoResponse(ServiExpress.WebServiceAdministrador.tipoDeProducto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetInfoProducto", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetInfoProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        public GetInfoProductoRequest() {
+        }
+        
+        public GetInfoProductoRequest(int idProducto) {
+            this.idProducto = idProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetInfoProductoResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetInfoProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ServiExpress.WebServiceAdministrador.producto @return;
+        
+        public GetInfoProductoResponse() {
+        }
+        
+        public GetInfoProductoResponse(ServiExpress.WebServiceAdministrador.producto @return) {
             this.@return = @return;
         }
     }
@@ -119,28 +389,70 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ServiExpress.WebServiceAdministrador.helloResponse ServiExpress.WebServiceAdministrador.WebServiceAdministrador.hello(ServiExpress.WebServiceAdministrador.helloRequest request) {
-            return base.Channel.hello(request);
+        ServiExpress.WebServiceAdministrador.GetProductosResponse ServiExpress.WebServiceAdministrador.WebServiceAdministrador.GetProductos(ServiExpress.WebServiceAdministrador.GetProductosRequest request) {
+            return base.Channel.GetProductos(request);
         }
         
-        public string hello(string name) {
-            ServiExpress.WebServiceAdministrador.helloRequest inValue = new ServiExpress.WebServiceAdministrador.helloRequest();
-            inValue.Body = new ServiExpress.WebServiceAdministrador.helloRequestBody();
-            inValue.Body.name = name;
-            ServiExpress.WebServiceAdministrador.helloResponse retVal = ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).hello(inValue);
-            return retVal.Body.@return;
+        public ServiExpress.WebServiceAdministrador.producto[] GetProductos(int idTipoDeProducto) {
+            ServiExpress.WebServiceAdministrador.GetProductosRequest inValue = new ServiExpress.WebServiceAdministrador.GetProductosRequest();
+            inValue.idTipoDeProducto = idTipoDeProducto;
+            ServiExpress.WebServiceAdministrador.GetProductosResponse retVal = ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetProductos(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.helloResponse> ServiExpress.WebServiceAdministrador.WebServiceAdministrador.helloAsync(ServiExpress.WebServiceAdministrador.helloRequest request) {
-            return base.Channel.helloAsync(request);
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetProductosResponse> ServiExpress.WebServiceAdministrador.WebServiceAdministrador.GetProductosAsync(ServiExpress.WebServiceAdministrador.GetProductosRequest request) {
+            return base.Channel.GetProductosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.helloResponse> helloAsync(string name) {
-            ServiExpress.WebServiceAdministrador.helloRequest inValue = new ServiExpress.WebServiceAdministrador.helloRequest();
-            inValue.Body = new ServiExpress.WebServiceAdministrador.helloRequestBody();
-            inValue.Body.name = name;
-            return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).helloAsync(inValue);
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetProductosResponse> GetProductosAsync(int idTipoDeProducto) {
+            ServiExpress.WebServiceAdministrador.GetProductosRequest inValue = new ServiExpress.WebServiceAdministrador.GetProductosRequest();
+            inValue.idTipoDeProducto = idTipoDeProducto;
+            return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetProductosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse ServiExpress.WebServiceAdministrador.WebServiceAdministrador.GetTipoDeProducto(ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest request) {
+            return base.Channel.GetTipoDeProducto(request);
+        }
+        
+        public ServiExpress.WebServiceAdministrador.tipoDeProducto[] GetTipoDeProducto() {
+            ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest inValue = new ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest();
+            ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse retVal = ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetTipoDeProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse> ServiExpress.WebServiceAdministrador.WebServiceAdministrador.GetTipoDeProductoAsync(ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest request) {
+            return base.Channel.GetTipoDeProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse> GetTipoDeProductoAsync() {
+            ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest inValue = new ServiExpress.WebServiceAdministrador.GetTipoDeProductoRequest();
+            return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetTipoDeProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceAdministrador.GetInfoProductoResponse ServiExpress.WebServiceAdministrador.WebServiceAdministrador.GetInfoProducto(ServiExpress.WebServiceAdministrador.GetInfoProductoRequest request) {
+            return base.Channel.GetInfoProducto(request);
+        }
+        
+        public ServiExpress.WebServiceAdministrador.producto GetInfoProducto(int idProducto) {
+            ServiExpress.WebServiceAdministrador.GetInfoProductoRequest inValue = new ServiExpress.WebServiceAdministrador.GetInfoProductoRequest();
+            inValue.idProducto = idProducto;
+            ServiExpress.WebServiceAdministrador.GetInfoProductoResponse retVal = ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetInfoProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetInfoProductoResponse> ServiExpress.WebServiceAdministrador.WebServiceAdministrador.GetInfoProductoAsync(ServiExpress.WebServiceAdministrador.GetInfoProductoRequest request) {
+            return base.Channel.GetInfoProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetInfoProductoResponse> GetInfoProductoAsync(int idProducto) {
+            ServiExpress.WebServiceAdministrador.GetInfoProductoRequest inValue = new ServiExpress.WebServiceAdministrador.GetInfoProductoRequest();
+            inValue.idProducto = idProducto;
+            return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetInfoProductoAsync(inValue);
         }
     }
 }

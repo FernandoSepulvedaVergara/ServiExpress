@@ -110,6 +110,7 @@ namespace ServiExpress.controlador
 
                     listaTemporal.Add(r.estadoDeVenta.estado);
                     listaTemporal.Add(r.id_venta.ToString());
+                    listaTemporal.Add(r.patente);
                     listaTemporal.Add(r.montoAPagar.ToString());
                     listaTemporal.Add(r.montoPagado.ToString());
                     listaTemporal.Add(r.fecha);
@@ -125,7 +126,7 @@ namespace ServiExpress.controlador
                         {
                             fila.Cells[i] = dataGridViewButtonCellButon1;
                         }
-                        else if (i == 7) 
+                        else if (i == 8) 
                         {
                             fila.Cells[i] = dataGridViewButtonCellButon2;
                         }

@@ -5,21 +5,59 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceAdministrador?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
+  <message name="GetProductos">
+    <part name="parameters" element="tns:GetProductos" />
   </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
+  <message name="GetProductosResponse">
+    <part name="parameters" element="tns:GetProductosResponse" />
+  </message>
+  <message name="GetTipoDeProducto">
+    <part name="parameters" element="tns:GetTipoDeProducto" />
+  </message>
+  <message name="GetTipoDeProductoResponse">
+    <part name="parameters" element="tns:GetTipoDeProductoResponse" />
+  </message>
+  <message name="GetInfoProducto">
+    <part name="parameters" element="tns:GetInfoProducto" />
+  </message>
+  <message name="GetInfoProductoResponse">
+    <part name="parameters" element="tns:GetInfoProductoResponse" />
   </message>
   <portType name="WebServiceAdministrador">
-    <operation name="hello">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/helloResponse" message="tns:helloResponse" />
+    <operation name="GetProductos">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProductosRequest" message="tns:GetProductos" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProductosResponse" message="tns:GetProductosResponse" />
+    </operation>
+    <operation name="GetTipoDeProducto">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoRequest" message="tns:GetTipoDeProducto" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoResponse" message="tns:GetTipoDeProductoResponse" />
+    </operation>
+    <operation name="GetInfoProducto">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoRequest" message="tns:GetInfoProducto" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoResponse" message="tns:GetInfoProductoResponse" />
     </operation>
   </portType>
   <binding name="WebServiceAdministradorPortBinding" type="tns:WebServiceAdministrador">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="hello">
+    <operation name="GetProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTipoDeProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInfoProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -39,7 +39,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(145, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 426);
+            this.panel1.Size = new System.Drawing.Size(1207, 687);
             this.panel1.TabIndex = 13;
             // 
             // button3
@@ -85,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.ClientSize = new System.Drawing.Size(1364, 711);
             this.Controls.Add(this.BtnVentas);
             this.Controls.Add(this.BtnReservasDeAtencion);
             this.Controls.Add(this.panel1);
