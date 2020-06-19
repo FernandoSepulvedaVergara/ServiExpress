@@ -14,10 +14,10 @@ using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI.UsuarioCliente
 {
-    public partial class ReservaDeAtencion1 : Form
+    public partial class ReservaDeAtencion : Form
     {
         ControladorCliente controladorCliente;
-        public ReservaDeAtencion1(ControladorCliente controladorCliente)
+        public ReservaDeAtencion(ControladorCliente controladorCliente)
         {
             InitializeComponent();
             this.controladorCliente = controladorCliente;
@@ -101,7 +101,6 @@ namespace ServiExpress.app_GUI.UsuarioCliente
         private void LimpiarFormulario()
         {
             LblFechaSeleccionada.Text = "";
-            LblHoraSeleccionada.Text = "";
             LblServicioSeleccionado.Text = "";
             LblSucursalSeleccionado.Text = "";
             LblVehículoSeleccionado.Text = "";
@@ -113,6 +112,7 @@ namespace ServiExpress.app_GUI.UsuarioCliente
             string fechaSeleccionada = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8).Replace("/", "");
             DateTime fechaSeleccionadaDateTime = new DateTime(int.Parse(fechaSeleccionada.Substring(4, 2)), int.Parse(fechaSeleccionada.Substring(2, 2)), int.Parse(fechaSeleccionada.Substring(0, 2)));
             string fechaSeleccionadaLbl = null;
+            bool validarDisponibilidad = false;
             foreach (var r in monthCalendar.BoldedDates)
             {
                 if (r.Date.ToString().Equals(fechaSeleccionadaDateTime.Date.ToString()))
@@ -121,14 +121,31 @@ namespace ServiExpress.app_GUI.UsuarioCliente
                     fechaSeleccionada = "";
                     LblFechaSeleccionada.Text = null;
                     fechaSeleccionadaLbl = null;
+                    validarDisponibilidad = false;
                     break;
                 }
                 else
                 {
                     fechaSeleccionadaLbl = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8);
+                    validarDisponibilidad = true;
                 }
             }
-            LblFechaSeleccionada.Text = fechaSeleccionadaLbl;
+
+            if (validarDisponibilidad) 
+            {
+                bool?[] validacion = controladorCliente.ValidarDisponibilidad(fechaSeleccionadaLbl,LblHoraSeleccionada.Text, controladorCliente.login[0]);
+                if (validacion[0] == true){
+                    if (validacion[1] == true) {
+                        LblFechaSeleccionada.Text = fechaSeleccionadaLbl;
+                    }
+                    else{
+                        MessageBox.Show("Seleccione otra hora");
+                    }
+                }
+                else{
+                    MessageBox.Show("No hay horas disponible en este horario");
+                }
+            }
         }
 
         private void CmbSeleccionarSucursal_SelectedIndexChanged(object sender, EventArgs e)

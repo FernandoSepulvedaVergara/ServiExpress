@@ -70,5 +70,11 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             TxtOrdenDePedido.Text = resultado.idOrdenDePedido.ToString();
             TxtProveedor.Text = resultado.rutProveedor;
         }
+
+        private void BtnGenerarPedido_Click(object sender, EventArgs e)
+        {
+            GenerarPedido generarPedido = new GenerarPedido();
+            generarPedido.ShowDialog();
+        }
     }
 }

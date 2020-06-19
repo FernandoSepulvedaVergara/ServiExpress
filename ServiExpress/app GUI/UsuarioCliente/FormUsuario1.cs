@@ -45,7 +45,7 @@ namespace ServiExpress.app_GUI
             {
                 splitContainer1.Panel2.Controls.Clear();
             }
-            ReservaDeAtencion1 reservaDeAtencion = new ReservaDeAtencion1(controladorCliente);
+            ReservaDeAtencion reservaDeAtencion = new ReservaDeAtencion(controladorCliente);
             reservaDeAtencion.TopLevel = false;
             reservaDeAtencion.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(reservaDeAtencion);

@@ -31,6 +31,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.CmbProductos = new System.Windows.Forms.ComboBox();
             this.CmbSeleccionarProducto = new System.Windows.Forms.ComboBox();
+            this.TxtStockCritico = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TxtProveedor = new System.Windows.Forms.TextBox();
             this.TxtOrdenDePedido = new System.Windows.Forms.TextBox();
             this.BtnGenerarPedido = new System.Windows.Forms.Button();
@@ -42,14 +44,12 @@
             this.TxtStock = new System.Windows.Forms.TextBox();
             this.TxtIdProducto = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TxtStockCritico = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -103,6 +103,25 @@
             this.CmbSeleccionarProducto.TabIndex = 0;
             this.CmbSeleccionarProducto.SelectedIndexChanged += new System.EventHandler(this.CmbSeleccionarProducto_SelectedIndexChanged);
             // 
+            // TxtStockCritico
+            // 
+            this.TxtStockCritico.Enabled = false;
+            this.TxtStockCritico.Location = new System.Drawing.Point(482, 124);
+            this.TxtStockCritico.Name = "TxtStockCritico";
+            this.TxtStockCritico.ReadOnly = true;
+            this.TxtStockCritico.Size = new System.Drawing.Size(100, 20);
+            this.TxtStockCritico.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Red;
+            this.pictureBox2.Location = new System.Drawing.Point(474, 115);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(114, 37);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
             // TxtProveedor
             // 
             this.TxtProveedor.Enabled = false;
@@ -129,6 +148,7 @@
             this.BtnGenerarPedido.TabIndex = 8;
             this.BtnGenerarPedido.Text = "Generar pedido";
             this.BtnGenerarPedido.UseVisualStyleBackColor = true;
+            this.BtnGenerarPedido.Click += new System.EventHandler(this.BtnGenerarPedido_Click);
             // 
             // TxtDescripcion
             // 
@@ -203,25 +223,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // TxtStockCritico
-            // 
-            this.TxtStockCritico.Enabled = false;
-            this.TxtStockCritico.Location = new System.Drawing.Point(482, 124);
-            this.TxtStockCritico.Name = "TxtStockCritico";
-            this.TxtStockCritico.ReadOnly = true;
-            this.TxtStockCritico.Size = new System.Drawing.Size(100, 20);
-            this.TxtStockCritico.TabIndex = 12;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Red;
-            this.pictureBox2.Location = new System.Drawing.Point(474, 115);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 37);
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,8 +239,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

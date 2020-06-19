@@ -199,5 +199,11 @@ namespace ServiExpress.controlador
             atenciones[] resultado = webCliente.GetReservaciones(rut);
             return resultado;
         }
+
+        public bool?[] ValidarDisponibilidad(string fecha, string hora, string rut) 
+        {
+            bool?[] resultado = webCliente.ValidarDisponibilidad(fecha, hora, rut);
+            return resultado;
+        }
     }
 }

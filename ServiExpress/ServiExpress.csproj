@@ -96,17 +96,23 @@
     <Compile Include="app GUI\UsuarioAdministrador\AdministrarProductos.Designer.cs">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\GenerarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\GenerarPedido.Designer.cs">
+      <DependentUpon>GenerarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioCliente\GlosarioDePagos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\GlosarioDePagos.Designer.cs">
       <DependentUpon>GlosarioDePagos.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion1.cs">
+    <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion1.Designer.cs">
-      <DependentUpon>ReservaDeAtencion1.cs</DependentUpon>
+    <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion.Designer.cs">
+      <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.cs">
       <SubType>Form</SubType>
@@ -246,11 +252,14 @@
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\AdministrarProductos.resx">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioAdministrador\GenerarPedido.resx">
+      <DependentUpon>GenerarPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\GlosarioDePagos.resx">
       <DependentUpon>GlosarioDePagos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioCliente\ReservaDeAtencion1.resx">
-      <DependentUpon>ReservaDeAtencion1.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\UsuarioCliente\ReservaDeAtencion.resx">
+      <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\AgregarVehiculo.resx">
       <DependentUpon>AgregarVehiculo.cs</DependentUpon>
@@ -358,6 +367,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.tipoDeVehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.ValidarDisponibilidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.vehiculo.datasource">
