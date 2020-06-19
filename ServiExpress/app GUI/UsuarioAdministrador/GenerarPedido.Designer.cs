@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbProveedores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -36,14 +36,14 @@
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // CmbProveedores
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(46, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1.TabIndex = 0;
+            this.CmbProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbProveedores.FormattingEnabled = true;
+            this.CmbProveedores.Location = new System.Drawing.Point(46, 38);
+            this.CmbProveedores.Name = "CmbProveedores";
+            this.CmbProveedores.Size = new System.Drawing.Size(214, 21);
+            this.CmbProveedores.TabIndex = 0;
             // 
             // label1
             // 
@@ -63,7 +63,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.CmbProveedores);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 110;
@@ -80,6 +80,7 @@
             this.MinimizeBox = false;
             this.Name = "GenerarPedido";
             this.Text = "Generar pedido";
+            this.Load += new System.EventHandler(this.GenerarPedido_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -90,7 +91,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbProveedores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }

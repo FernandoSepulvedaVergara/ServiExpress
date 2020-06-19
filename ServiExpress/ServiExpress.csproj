@@ -317,10 +317,16 @@
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetProductosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetProveedoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.proveedor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.tipoDeProducto.datasource">

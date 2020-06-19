@@ -5,17 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceAdministrador?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="GetProductos">
-    <part name="parameters" element="tns:GetProductos" />
-  </message>
-  <message name="GetProductosResponse">
-    <part name="parameters" element="tns:GetProductosResponse" />
-  </message>
   <message name="GetTipoDeProducto">
     <part name="parameters" element="tns:GetTipoDeProducto" />
   </message>
   <message name="GetTipoDeProductoResponse">
     <part name="parameters" element="tns:GetTipoDeProductoResponse" />
+  </message>
+  <message name="GetProveedores">
+    <part name="parameters" element="tns:GetProveedores" />
+  </message>
+  <message name="GetProveedoresResponse">
+    <part name="parameters" element="tns:GetProveedoresResponse" />
+  </message>
+  <message name="GetProductos">
+    <part name="parameters" element="tns:GetProductos" />
+  </message>
+  <message name="GetProductosResponse">
+    <part name="parameters" element="tns:GetProductosResponse" />
   </message>
   <message name="GetInfoProducto">
     <part name="parameters" element="tns:GetInfoProducto" />
@@ -24,13 +30,17 @@
     <part name="parameters" element="tns:GetInfoProductoResponse" />
   </message>
   <portType name="WebServiceAdministrador">
-    <operation name="GetProductos">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProductosRequest" message="tns:GetProductos" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProductosResponse" message="tns:GetProductosResponse" />
-    </operation>
     <operation name="GetTipoDeProducto">
       <input wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoRequest" message="tns:GetTipoDeProducto" />
       <output wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoResponse" message="tns:GetTipoDeProductoResponse" />
+    </operation>
+    <operation name="GetProveedores">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProveedoresRequest" message="tns:GetProveedores" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProveedoresResponse" message="tns:GetProveedoresResponse" />
+    </operation>
+    <operation name="GetProductos">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProductosRequest" message="tns:GetProductos" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProductosResponse" message="tns:GetProductosResponse" />
     </operation>
     <operation name="GetInfoProducto">
       <input wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoRequest" message="tns:GetInfoProducto" />
@@ -39,7 +49,7 @@
   </portType>
   <binding name="WebServiceAdministradorPortBinding" type="tns:WebServiceAdministrador">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="GetProductos">
+    <operation name="GetTipoDeProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -48,7 +58,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetTipoDeProducto">
+    <operation name="GetProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetProductos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

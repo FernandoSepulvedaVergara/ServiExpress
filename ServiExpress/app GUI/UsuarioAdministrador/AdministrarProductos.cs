@@ -73,7 +73,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void BtnGenerarPedido_Click(object sender, EventArgs e)
         {
-            GenerarPedido generarPedido = new GenerarPedido();
+            GenerarPedido generarPedido = new GenerarPedido(this.controladorAdministrador);
             generarPedido.ShowDialog();
         }
     }

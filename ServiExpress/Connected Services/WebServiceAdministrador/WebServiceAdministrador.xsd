@@ -4,8 +4,29 @@
   <xs:element name="GetInfoProductoResponse" type="tns:GetInfoProductoResponse" />
   <xs:element name="GetProductos" type="tns:GetProductos" />
   <xs:element name="GetProductosResponse" type="tns:GetProductosResponse" />
+  <xs:element name="GetProveedores" type="tns:GetProveedores" />
+  <xs:element name="GetProveedoresResponse" type="tns:GetProveedoresResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
   <xs:element name="GetTipoDeProductoResponse" type="tns:GetTipoDeProductoResponse" />
+  <xs:complexType name="GetProveedores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetProveedoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:proveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="proveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+      <xs:element name="tipoDeUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetInfoProducto">
     <xs:sequence>
       <xs:element name="idProducto" type="xs:int" />

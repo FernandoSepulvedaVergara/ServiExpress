@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ServiExpress.controlador;
+using ServiExpress.WebServiceAdministrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,20 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 {
     public partial class GenerarPedido : Form
     {
-        public GenerarPedido()
+        ControladorAdministrador controladorAdministrador;
+        public GenerarPedido(ControladorAdministrador controladorAdministrador)
         {
+            this.controladorAdministrador = controladorAdministrador;
             InitializeComponent();
+        }
+
+        private void GenerarPedido_Load(object sender, EventArgs e)
+        {
+            proveedor[] proveedores = controladorAdministrador.GetProveedores();
+
+            foreach (var proveedor in proveedores) {
+                CmbProveedores.Items.Add(string.Format("{0} - {1}", proveedor.rutProveedor, proveedor.razonSocial));
+            } 
         }
     }
 }

@@ -44,5 +44,10 @@ namespace ServiExpress.controlador
         {
             return webAdministrador.GetInfoProducto(idProducto);
         }
+
+        public proveedor[] GetProveedores() 
+        {
+            return webAdministrador.GetProveedores();
+        }
     }
 }
