@@ -39,5 +39,18 @@ namespace ServiExpress.app_GUI
             splitContainer1.Panel2.Controls.Add(administrarProductos);
             administrarProductos.Show();
         }
+
+        private void BtnPedidos_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            Pedidos pedidos = new Pedidos(controladorAdministrador);
+            pedidos.TopLevel = false;
+            pedidos.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(pedidos);
+            pedidos.Show();
+        }
     }
 }

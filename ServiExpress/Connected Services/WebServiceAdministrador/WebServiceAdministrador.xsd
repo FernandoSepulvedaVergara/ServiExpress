@@ -3,11 +3,36 @@
   <xs:element name="GetInfoProducto" type="tns:GetInfoProducto" />
   <xs:element name="GetInfoProductoResponse" type="tns:GetInfoProductoResponse" />
   <xs:element name="GetProductos" type="tns:GetProductos" />
+  <xs:element name="GetProductosProveedor" type="tns:GetProductosProveedor" />
+  <xs:element name="GetProductosProveedorResponse" type="tns:GetProductosProveedorResponse" />
   <xs:element name="GetProductosResponse" type="tns:GetProductosResponse" />
   <xs:element name="GetProveedores" type="tns:GetProveedores" />
   <xs:element name="GetProveedoresResponse" type="tns:GetProveedoresResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
   <xs:element name="GetTipoDeProductoResponse" type="tns:GetTipoDeProductoResponse" />
+  <xs:complexType name="GetProductosProveedor">
+    <xs:sequence>
+      <xs:element name="idTipoDeProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetProductosProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:productoProveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productoProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaDeVencimiento" type="xs:string" />
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element name="idTipoDeProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="marca" type="xs:string" />
+      <xs:element name="precioDeCompra" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetProveedores">
     <xs:sequence />
   </xs:complexType>

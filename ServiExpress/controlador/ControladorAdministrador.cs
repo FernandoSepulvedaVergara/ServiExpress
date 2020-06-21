@@ -35,6 +35,13 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
+        public productoProveedor[] GetProductosProveedor(int idTipoDeProducto, string rutProveedor)
+        {
+
+            productoProveedor[] resultado = webAdministrador.GetProductosProveedor(idTipoDeProducto,rutProveedor);
+            return resultado;
+        }
+
         public producto[] GetProductos(int idTipoDeProducto)
         {
             return webAdministrador.GetProductos(idTipoDeProducto);

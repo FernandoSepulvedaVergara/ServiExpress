@@ -35,7 +35,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TxtProveedor = new System.Windows.Forms.TextBox();
             this.TxtOrdenDePedido = new System.Windows.Forms.TextBox();
-            this.BtnGenerarPedido = new System.Windows.Forms.Button();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.TxtMarca = new System.Windows.Forms.TextBox();
             this.TxtFechaDeVencimiento = new System.Windows.Forms.TextBox();
@@ -70,7 +69,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel2.Controls.Add(this.TxtProveedor);
             this.splitContainer1.Panel2.Controls.Add(this.TxtOrdenDePedido);
-            this.splitContainer1.Panel2.Controls.Add(this.BtnGenerarPedido);
             this.splitContainer1.Panel2.Controls.Add(this.TxtDescripcion);
             this.splitContainer1.Panel2.Controls.Add(this.TxtMarca);
             this.splitContainer1.Panel2.Controls.Add(this.TxtFechaDeVencimiento);
@@ -139,16 +137,6 @@
             this.TxtOrdenDePedido.ReadOnly = true;
             this.TxtOrdenDePedido.Size = new System.Drawing.Size(100, 20);
             this.TxtOrdenDePedido.TabIndex = 9;
-            // 
-            // BtnGenerarPedido
-            // 
-            this.BtnGenerarPedido.Location = new System.Drawing.Point(12, 167);
-            this.BtnGenerarPedido.Name = "BtnGenerarPedido";
-            this.BtnGenerarPedido.Size = new System.Drawing.Size(155, 50);
-            this.BtnGenerarPedido.TabIndex = 8;
-            this.BtnGenerarPedido.Text = "Generar pedido";
-            this.BtnGenerarPedido.UseVisualStyleBackColor = true;
-            this.BtnGenerarPedido.Click += new System.EventHandler(this.BtnGenerarPedido_Click);
             // 
             // TxtDescripcion
             // 
@@ -249,7 +237,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ComboBox CmbSeleccionarProducto;
-        private System.Windows.Forms.Button BtnGenerarPedido;
         private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.TextBox TxtMarca;
         private System.Windows.Forms.TextBox TxtFechaDeVencimiento;

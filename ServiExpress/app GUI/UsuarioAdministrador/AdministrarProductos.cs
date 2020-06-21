@@ -68,13 +68,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             TxtStock.Text = resultado.stock.ToString();
             TxtStockCritico.Text = resultado.stockCritico.ToString();
             TxtOrdenDePedido.Text = resultado.idOrdenDePedido.ToString();
-            TxtProveedor.Text = resultado.rutProveedor;
-        }
-
-        private void BtnGenerarPedido_Click(object sender, EventArgs e)
-        {
-            GenerarPedido generarPedido = new GenerarPedido(this.controladorAdministrador);
-            generarPedido.ShowDialog();
+            TxtProveedor.Text = resultado.rutProveedor;        
         }
     }
 }
