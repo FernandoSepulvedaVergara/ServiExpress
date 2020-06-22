@@ -10,7 +10,7 @@ namespace ServiExpress.controlador
 {
     public class ControladorAdministrador : ControladorPrincipal
     {
-        string[] login { get; set; }
+        public string[] login { get; set; }
         private WebServiceAdministradorClient webAdministrador = new WebServiceAdministradorClient();
 
         public ControladorAdministrador(string[] login)
@@ -52,9 +52,29 @@ namespace ServiExpress.controlador
             return webAdministrador.GetInfoProducto(idProducto);
         }
 
+        public productoProveedor GetInfoProductoProveedor(int idProductoProveedor)
+        {
+            return webAdministrador.GetInfoProductoProveedor(idProductoProveedor);
+        }
+
         public proveedor[] GetProveedores() 
         {
             return webAdministrador.GetProveedores();
+        }
+
+        public ordenDePedido[] GetOrdenesDePedido()
+        {
+            return webAdministrador.GetOrdenesDePedido();
+        }
+
+        public string[] RegistrarOrdenDePedido(int total, string usuarioRut, int idEstadoPedido)
+        {
+            return webAdministrador.RegistrarOrdenDePedido(total, usuarioRut, idEstadoPedido);
+        }
+
+        public string[] RegistrarPedido(int cantidad, int totalAPagar,int idOrdenPedido,int idProductoProveedor) {
+
+            return webAdministrador.RegistrarPedido(cantidad, totalAPagar, idOrdenPedido, idProductoProveedor);
         }
     }
 }

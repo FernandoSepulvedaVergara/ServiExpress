@@ -108,6 +108,12 @@
     <Compile Include="app GUI\UsuarioAdministrador\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\VerOrdenDePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\VerOrdenDePedido.Designer.cs">
+      <DependentUpon>VerOrdenDePedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioCliente\GlosarioDePagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,7 +326,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetOrdenesDePedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetProductosProveedorResponse.datasource">
@@ -335,6 +347,9 @@
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ordenDePedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.producto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -342,6 +357,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.proveedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.RegistrarOrdenDePedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.RegistrarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.tipoDeProducto.datasource">

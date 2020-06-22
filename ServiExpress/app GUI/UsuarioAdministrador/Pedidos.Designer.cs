@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.BtnGenerarPedido = new System.Windows.Forms.Button();
-            this.DgvPedidos = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPedidos)).BeginInit();
+            this.DgvOrdenesDePedido = new System.Windows.Forms.DataGridView();
+            this.EstadoDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdOrdenPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Administrador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnGenerarPedido
@@ -45,36 +47,49 @@
             this.BtnGenerarPedido.UseVisualStyleBackColor = true;
             this.BtnGenerarPedido.Click += new System.EventHandler(this.BtnGenerarPedido_Click);
             // 
-            // DgvPedidos
+            // DgvOrdenesDePedido
             // 
-            this.DgvPedidos.AllowUserToAddRows = false;
-            this.DgvPedidos.AllowUserToDeleteRows = false;
-            this.DgvPedidos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPedidos.Location = new System.Drawing.Point(12, 112);
-            this.DgvPedidos.MultiSelect = false;
-            this.DgvPedidos.Name = "DgvPedidos";
-            this.DgvPedidos.ReadOnly = true;
-            this.DgvPedidos.RowHeadersVisible = false;
-            this.DgvPedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvPedidos.Size = new System.Drawing.Size(776, 297);
-            this.DgvPedidos.TabIndex = 1;
+            this.DgvOrdenesDePedido.AllowUserToAddRows = false;
+            this.DgvOrdenesDePedido.AllowUserToDeleteRows = false;
+            this.DgvOrdenesDePedido.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DgvOrdenesDePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvOrdenesDePedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EstadoDePedido,
+            this.IdOrdenPedido,
+            this.Total,
+            this.Administrador});
+            this.DgvOrdenesDePedido.Location = new System.Drawing.Point(12, 112);
+            this.DgvOrdenesDePedido.MultiSelect = false;
+            this.DgvOrdenesDePedido.Name = "DgvOrdenesDePedido";
+            this.DgvOrdenesDePedido.ReadOnly = true;
+            this.DgvOrdenesDePedido.RowHeadersVisible = false;
+            this.DgvOrdenesDePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvOrdenesDePedido.Size = new System.Drawing.Size(776, 297);
+            this.DgvOrdenesDePedido.TabIndex = 1;
             // 
-            // comboBox1
+            // EstadoDePedido
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.EstadoDePedido.HeaderText = "Estado de pedido";
+            this.EstadoDePedido.Name = "EstadoDePedido";
+            this.EstadoDePedido.ReadOnly = true;
             // 
-            // comboBox2
+            // IdOrdenPedido
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(12, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
+            this.IdOrdenPedido.HeaderText = "Id orden de pedido";
+            this.IdOrdenPedido.Name = "IdOrdenPedido";
+            this.IdOrdenPedido.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Administrador
+            // 
+            this.Administrador.HeaderText = "Administrador";
+            this.Administrador.Name = "Administrador";
+            this.Administrador.ReadOnly = true;
             // 
             // Pedidos
             // 
@@ -83,16 +98,15 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.DgvPedidos);
+            this.Controls.Add(this.DgvOrdenesDePedido);
             this.Controls.Add(this.BtnGenerarPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pedidos";
             this.Text = "Pedidos";
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPedidos)).EndInit();
+            this.Load += new System.EventHandler(this.Pedidos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,8 +114,10 @@
         #endregion
 
         private System.Windows.Forms.Button BtnGenerarPedido;
-        private System.Windows.Forms.DataGridView DgvPedidos;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView DgvOrdenesDePedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDePedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdOrdenPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Administrador;
     }
 }
