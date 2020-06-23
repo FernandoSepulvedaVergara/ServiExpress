@@ -69,5 +69,14 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 DgvOrdenesDePedido.Rows.Add(dataGridViewRow);
             }
         }
+
+        private void DgvOrdenesDePedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DgvOrdenesDePedido.Rows[DgvOrdenesDePedido.CurrentRow.Index].Cells[0].ColumnIndex.Equals(e.ColumnIndex))
+            {
+                VerOrdenDePedido verOrdenDePedido = new VerOrdenDePedido(controladorAdministrador, int.Parse(DgvOrdenesDePedido.CurrentRow.Cells[1].Value.ToString()));
+                verOrdenDePedido.ShowDialog();
+            }
+        }
     }
 }

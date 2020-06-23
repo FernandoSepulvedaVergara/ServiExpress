@@ -66,6 +66,7 @@
             this.DgvOrdenesDePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvOrdenesDePedido.Size = new System.Drawing.Size(776, 297);
             this.DgvOrdenesDePedido.TabIndex = 1;
+            this.DgvOrdenesDePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrdenesDePedido_CellClick);
             // 
             // EstadoDePedido
             // 
