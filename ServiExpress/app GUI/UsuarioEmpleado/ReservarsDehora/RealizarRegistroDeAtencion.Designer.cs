@@ -30,7 +30,6 @@
         {
             this.BtnRegistrarAtencion = new System.Windows.Forms.Button();
             this.BtnCancelarAtencion = new System.Windows.Forms.Button();
-            this.BtnCerrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.TxtRutCliente = new System.Windows.Forms.TextBox();
@@ -88,17 +87,6 @@
             this.BtnCancelarAtencion.Text = "Cancelar atención";
             this.BtnCancelarAtencion.UseVisualStyleBackColor = false;
             this.BtnCancelarAtencion.Click += new System.EventHandler(this.BtnCancelarAtencion_Click);
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.BackColor = System.Drawing.Color.Red;
-            this.BtnCerrar.Location = new System.Drawing.Point(819, 486);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(108, 34);
-            this.BtnCerrar.TabIndex = 3;
-            this.BtnCerrar.Text = "Cerrar";
-            this.BtnCerrar.UseVisualStyleBackColor = false;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // panel1
             // 
@@ -415,13 +403,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(939, 606);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.BtnCancelarAtencion);
             this.Controls.Add(this.BtnRegistrarAtencion);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RealizarRegistroDeAtencion";
-            this.Text = "RealizarRegistroDeAtencion";
+            this.Text = "Registrar atención";
             this.Load += new System.EventHandler(this.RealizarReservaDeAtencion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -436,7 +425,6 @@
 
         private System.Windows.Forms.Button BtnRegistrarAtencion;
         private System.Windows.Forms.Button BtnCancelarAtencion;
-        private System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtFechaAtencion;
         private System.Windows.Forms.TextBox TxtHoraAtencion;

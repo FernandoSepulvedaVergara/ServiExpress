@@ -57,5 +57,10 @@ namespace ServiExpress.app_GUI
         {
 
         }
+
+        private void FormUsuario3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

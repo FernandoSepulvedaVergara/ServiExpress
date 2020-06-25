@@ -21,7 +21,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             InitializeComponent();
             this.controladorEmpleado = controladorEmpleado;
             this.dataGridViewRow = dataGridViewRow;
-            LblMontoAPagar.Text = dataGridViewRow.Cells[2].Value.ToString();
+            LblMontoAPagar.Text = dataGridViewRow.Cells[3].Value.ToString();
         }
 
         private void BtnPagar_Click(object sender, EventArgs e)

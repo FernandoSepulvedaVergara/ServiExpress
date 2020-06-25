@@ -95,6 +95,7 @@
             this.MinimizeBox = false;
             this.Name = "FormUsuario3";
             this.Text = "formUsuario3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario3_FormClosed);
             this.Load += new System.EventHandler(this.FormUsuario3_Load);
             this.ResumeLayout(false);
 

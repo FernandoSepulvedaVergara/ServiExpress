@@ -156,28 +156,28 @@
     <Compile Include="app GUI\UsuarioEmpleado\Reservaciones.Designer.cs">
       <DependentUpon>Reservaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\RealizarRegistroDeAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\RealizarRegistroDeAtencion.Designer.cs">
       <DependentUpon>RealizarRegistroDeAtencion.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\ReservasDeHora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\ReservasDeHora.Designer.cs">
       <DependentUpon>ReservasDeHora.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\SeleccionarCantidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\SeleccionarCantidad.Designer.cs">
       <DependentUpon>SeleccionarCantidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\VerAtención.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.Designer.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\ReservarsDeHora\VerAtención.Designer.cs">
       <DependentUpon>VerAtención.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioEmpleado\Ventas.cs">
@@ -294,16 +294,16 @@
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\Reservaciones.resx">
       <DependentUpon>Reservaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\RealizarRegistroDeAtencion.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDeHora\RealizarRegistroDeAtencion.resx">
       <DependentUpon>RealizarRegistroDeAtencion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\ReservasDeHora.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDeHora\ReservasDeHora.resx">
       <DependentUpon>ReservasDeHora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\SeleccionarCantidad.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDeHora\SeleccionarCantidad.resx">
       <DependentUpon>SeleccionarCantidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDehora\VerAtención.resx">
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\ReservarsDeHora\VerAtención.resx">
       <DependentUpon>VerAtención.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\Ventas.resx">

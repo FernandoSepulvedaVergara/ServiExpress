@@ -52,5 +52,10 @@ namespace ServiExpress.app_GUI
             splitContainer1.Panel2.Controls.Add(pedidos);
             pedidos.Show();
         }
+
+        private void FormUsuario4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
