@@ -67,9 +67,9 @@ namespace ServiExpress.controlador
             return webAdministrador.GetOrdenesDePedido();
         }
 
-        public string[] RegistrarOrdenDePedido(int total, string usuarioRut, int idEstadoPedido)
+        public string[] RegistrarOrdenDePedido(string fechaDePedido, int total, string usuarioRut, int idEstadoPedido)
         {
-            return webAdministrador.RegistrarOrdenDePedido(total, usuarioRut, idEstadoPedido);
+            return webAdministrador.RegistrarOrdenDePedido(fechaDePedido,total, usuarioRut, idEstadoPedido);
         }
 
         public string[] RegistrarPedido(int cantidad, int totalAPagar,int idOrdenPedido,int idProductoProveedor) {
@@ -86,5 +86,9 @@ namespace ServiExpress.controlador
         {
             return webAdministrador.GetPedidos(idOrdenDePedido);
         }
+
+        public bool?[] ActualizarEstadoPedido(){
+            return null;
+        } 
     }
 }

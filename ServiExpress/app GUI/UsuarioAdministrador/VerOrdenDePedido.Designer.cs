@@ -46,7 +46,9 @@
             this.TxtEstado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CmbCambiarEstado = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LblActualizarEstado = new System.Windows.Forms.Label();
+            this.TxtFechaDePedido = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,7 +162,7 @@
             // TxtTotal
             // 
             this.TxtTotal.Enabled = false;
-            this.TxtTotal.Location = new System.Drawing.Point(120, 55);
+            this.TxtTotal.Location = new System.Drawing.Point(120, 81);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.ReadOnly = true;
             this.TxtTotal.Size = new System.Drawing.Size(100, 20);
@@ -169,7 +171,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 58);
+            this.label3.Location = new System.Drawing.Point(77, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 5;
@@ -201,15 +203,34 @@
             this.CmbCambiarEstado.Name = "CmbCambiarEstado";
             this.CmbCambiarEstado.Size = new System.Drawing.Size(138, 21);
             this.CmbCambiarEstado.TabIndex = 9;
+            this.CmbCambiarEstado.SelectedIndexChanged += new System.EventHandler(this.CmbCambiarEstado_SelectedIndexChanged);
             // 
-            // label5
+            // LblActualizarEstado
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(529, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Actualizar estado :";
+            this.LblActualizarEstado.AutoSize = true;
+            this.LblActualizarEstado.Location = new System.Drawing.Point(529, 32);
+            this.LblActualizarEstado.Name = "LblActualizarEstado";
+            this.LblActualizarEstado.Size = new System.Drawing.Size(94, 13);
+            this.LblActualizarEstado.TabIndex = 10;
+            this.LblActualizarEstado.Text = "Actualizar estado :";
+            // 
+            // TxtFechaDePedido
+            // 
+            this.TxtFechaDePedido.Enabled = false;
+            this.TxtFechaDePedido.Location = new System.Drawing.Point(120, 55);
+            this.TxtFechaDePedido.Name = "TxtFechaDePedido";
+            this.TxtFechaDePedido.ReadOnly = true;
+            this.TxtFechaDePedido.Size = new System.Drawing.Size(100, 20);
+            this.TxtFechaDePedido.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Fecha de pedido :";
             // 
             // VerOrdenDePedido
             // 
@@ -217,7 +238,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(897, 367);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TxtFechaDePedido);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.LblActualizarEstado);
             this.Controls.Add(this.CmbCambiarEstado);
             this.Controls.Add(this.TxtEstado);
             this.Controls.Add(this.label4);
@@ -228,6 +251,7 @@
             this.Controls.Add(this.DgvPedidos);
             this.Controls.Add(this.TxtIdOrdenDePedido);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VerOrdenDePedido";
@@ -250,7 +274,7 @@
         private System.Windows.Forms.TextBox TxtEstado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CmbCambiarEstado;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblActualizarEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioDeCompra;
@@ -259,5 +283,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeVencimiento;
+        private System.Windows.Forms.TextBox TxtFechaDePedido;
+        private System.Windows.Forms.Label label6;
     }
 }

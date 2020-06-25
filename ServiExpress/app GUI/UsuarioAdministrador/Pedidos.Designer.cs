@@ -32,6 +32,7 @@
             this.DgvOrdenesDePedido = new System.Windows.Forms.DataGridView();
             this.EstadoDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdOrdenPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Administrador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).BeginInit();
@@ -56,6 +57,7 @@
             this.DgvOrdenesDePedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EstadoDePedido,
             this.IdOrdenPedido,
+            this.FechaDePedido,
             this.Total,
             this.Administrador});
             this.DgvOrdenesDePedido.Location = new System.Drawing.Point(12, 112);
@@ -79,6 +81,12 @@
             this.IdOrdenPedido.HeaderText = "Id orden de pedido";
             this.IdOrdenPedido.Name = "IdOrdenPedido";
             this.IdOrdenPedido.ReadOnly = true;
+            // 
+            // FechaDePedido
+            // 
+            this.FechaDePedido.HeaderText = "Fecha de pedido";
+            this.FechaDePedido.Name = "FechaDePedido";
+            this.FechaDePedido.ReadOnly = true;
             // 
             // Total
             // 
@@ -118,6 +126,7 @@
         private System.Windows.Forms.DataGridView DgvOrdenesDePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdOrdenPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Administrador;
     }

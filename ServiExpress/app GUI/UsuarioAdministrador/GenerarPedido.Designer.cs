@@ -48,6 +48,8 @@
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnRegistrarPedido = new System.Windows.Forms.Button();
+            this.TxtFechaDePedido = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,9 +85,12 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.TxtFechaDePedido);
             this.splitContainer1.Panel1.Controls.Add(this.CmbProductos);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.CmbTipoDeProducto);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnRegistrarPedido);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.CmbProveedores);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -96,7 +101,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.LblMontoAPagar);
             this.splitContainer1.Panel2.Controls.Add(this.BtnQuitarProducto);
             this.splitContainer1.Panel2.Controls.Add(this.DgvProductosProveedor);
-            this.splitContainer1.Panel2.Controls.Add(this.BtnRegistrarPedido);
             this.splitContainer1.Size = new System.Drawing.Size(959, 459);
             this.splitContainer1.SplitterDistance = 187;
             this.splitContainer1.TabIndex = 2;
@@ -242,13 +246,31 @@
             // 
             // BtnRegistrarPedido
             // 
-            this.BtnRegistrarPedido.Location = new System.Drawing.Point(826, 3);
+            this.BtnRegistrarPedido.Location = new System.Drawing.Point(796, 33);
             this.BtnRegistrarPedido.Name = "BtnRegistrarPedido";
-            this.BtnRegistrarPedido.Size = new System.Drawing.Size(108, 35);
+            this.BtnRegistrarPedido.Size = new System.Drawing.Size(138, 50);
             this.BtnRegistrarPedido.TabIndex = 7;
             this.BtnRegistrarPedido.Text = "Registrar pedido";
             this.BtnRegistrarPedido.UseVisualStyleBackColor = true;
             this.BtnRegistrarPedido.Click += new System.EventHandler(this.BtnRegistrarPedido_Click);
+            // 
+            // TxtFechaDePedido
+            // 
+            this.TxtFechaDePedido.Enabled = false;
+            this.TxtFechaDePedido.Location = new System.Drawing.Point(557, 33);
+            this.TxtFechaDePedido.Name = "TxtFechaDePedido";
+            this.TxtFechaDePedido.ReadOnly = true;
+            this.TxtFechaDePedido.Size = new System.Drawing.Size(100, 20);
+            this.TxtFechaDePedido.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(458, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Fecha de pedido :";
             // 
             // GenerarPedido
             // 
@@ -295,5 +317,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LblMontoAPagar;
+        private System.Windows.Forms.TextBox TxtFechaDePedido;
+        private System.Windows.Forms.Label label5;
     }
 }

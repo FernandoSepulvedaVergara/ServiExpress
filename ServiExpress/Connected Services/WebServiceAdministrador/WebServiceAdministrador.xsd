@@ -48,6 +48,7 @@
   <xs:complexType name="ordenDePedido">
     <xs:sequence>
       <xs:element minOccurs="0" name="estadoDePedido" type="tns:estadoDePedido" />
+      <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
       <xs:element name="idOrdenPedido" type="xs:int" />
       <xs:element name="total" type="xs:int" />
       <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
@@ -61,6 +62,7 @@
   </xs:complexType>
   <xs:complexType name="RegistrarOrdenDePedido">
     <xs:sequence>
+      <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
       <xs:element name="total" type="xs:int" />
       <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
       <xs:element name="idEstadoDePedido" type="xs:int" />
@@ -104,6 +106,25 @@
       <xs:element minOccurs="0" name="return" type="tns:productoProveedor" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="GetProveedores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetProveedoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:proveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="proveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+      <xs:element name="tipoDeUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetPedidos">
     <xs:sequence>
       <xs:element name="idOrdenDePedido" type="xs:int" />
@@ -124,25 +145,6 @@
       <xs:element minOccurs="0" name="marca" type="xs:string" />
       <xs:element name="precioCompra" type="xs:int" />
       <xs:element name="totalAPagar" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetProveedores">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetProveedoresResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:proveedor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="proveedor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
-      <xs:element minOccurs="0" name="email" type="xs:string" />
-      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
-      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
-      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
-      <xs:element name="telefono" type="xs:int" />
-      <xs:element name="tipoDeUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetOrdenesDePedido">

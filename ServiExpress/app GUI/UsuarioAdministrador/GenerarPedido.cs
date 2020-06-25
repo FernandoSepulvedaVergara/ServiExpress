@@ -20,6 +20,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         {
             this.controladorAdministrador = controladorAdministrador;
             InitializeComponent();
+            TxtFechaDePedido.Text = DateTime.Now.ToString().Substring(0, 8);
         }
 
         private void GenerarPedido_Load(object sender, EventArgs e)
@@ -150,7 +151,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 MessageBox.Show("No se ha agregado ningún producto");
             }
             else {
-                string[] resultadoRegistrarOrdePedido = controladorAdministrador.RegistrarOrdenDePedido(int.Parse(LblMontoAPagar.Text), controladorAdministrador.login[0], 1);
+                string[] resultadoRegistrarOrdePedido = controladorAdministrador.RegistrarOrdenDePedido(TxtFechaDePedido.Text,int.Parse(LblMontoAPagar.Text), controladorAdministrador.login[0], 1);
                 bool resultado = false;
                 if (Convert.ToBoolean(resultadoRegistrarOrdePedido[0]))
                 {
