@@ -113,6 +113,15 @@ namespace ServiExpress.WebServiceAdministrador {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/RegistrarOrdenDePedidoRequest", ReplyAction="http://servicios/WebServiceAdministrador/RegistrarOrdenDePedidoResponse")]
         System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.RegistrarOrdenDePedidoResponse> RegistrarOrdenDePedidoAsync(ServiExpress.WebServiceAdministrador.RegistrarOrdenDePedidoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoRequest", ReplyAction="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse ActualizarEstadoPedido(ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoRequest", ReplyAction="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse> ActualizarEstadoPedidoAsync(ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest request);
     }
     
     /// <remarks/>
@@ -1250,6 +1259,47 @@ namespace ServiExpress.WebServiceAdministrador {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarEstadoPedido", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class ActualizarEstadoPedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOrdenDePedido;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEstado;
+        
+        public ActualizarEstadoPedidoRequest() {
+        }
+        
+        public ActualizarEstadoPedidoRequest(int idOrdenDePedido, int idEstado) {
+            this.idOrdenDePedido = idOrdenDePedido;
+            this.idEstado = idEstado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarEstadoPedidoResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class ActualizarEstadoPedidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public ActualizarEstadoPedidoResponse() {
+        }
+        
+        public ActualizarEstadoPedidoResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebServiceAdministradorChannel : ServiExpress.WebServiceAdministrador.WebServiceAdministrador, System.ServiceModel.IClientChannel {
     }
@@ -1536,6 +1586,31 @@ namespace ServiExpress.WebServiceAdministrador {
             inValue.usuarioRut = usuarioRut;
             inValue.idEstadoDePedido = idEstadoDePedido;
             return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).RegistrarOrdenDePedidoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse ServiExpress.WebServiceAdministrador.WebServiceAdministrador.ActualizarEstadoPedido(ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest request) {
+            return base.Channel.ActualizarEstadoPedido(request);
+        }
+        
+        public bool ActualizarEstadoPedido(int idOrdenDePedido, int idEstado) {
+            ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest inValue = new ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest();
+            inValue.idOrdenDePedido = idOrdenDePedido;
+            inValue.idEstado = idEstado;
+            ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse retVal = ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).ActualizarEstadoPedido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse> ServiExpress.WebServiceAdministrador.WebServiceAdministrador.ActualizarEstadoPedidoAsync(ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest request) {
+            return base.Channel.ActualizarEstadoPedidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse> ActualizarEstadoPedidoAsync(int idOrdenDePedido, int idEstado) {
+            ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest inValue = new ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoRequest();
+            inValue.idOrdenDePedido = idOrdenDePedido;
+            inValue.idEstado = idEstado;
+            return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).ActualizarEstadoPedidoAsync(inValue);
         }
     }
 }

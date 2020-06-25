@@ -1,5 +1,6 @@
 ﻿using ServiExpress.controlador;
 using ServiExpress.WebServiceAdministrador;
+using System;
 using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI.UsuarioAdministrador
@@ -7,32 +8,43 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
     public partial class VerOrdenDePedido : Form
     {
         ControladorAdministrador controladorAdministrador;
-        public VerOrdenDePedido(ControladorAdministrador controladorAdministrador,int idOrdenDePedido)
+        int idOrdenPedido;
+        public VerOrdenDePedido(ControladorAdministrador controladorAdministrador,int idOrdenPedido)
         {
-            this.controladorAdministrador = controladorAdministrador;
-            ordenDePedido ordenDePedido = this.controladorAdministrador.GetOrdenDePedido(idOrdenDePedido);
-            pedidos[] pedidos = this.controladorAdministrador.GetPedidos(idOrdenDePedido);
             InitializeComponent();
+            this.controladorAdministrador = controladorAdministrador;
+            this.idOrdenPedido = idOrdenPedido;
+            InfoOrdenDePedido(idOrdenPedido);
+        }
+
+        private void InfoOrdenDePedido(int idOrdenDePedido)
+        {
+            ordenDePedido ordenDePedido = this.controladorAdministrador.GetOrdenDePedido(idOrdenPedido);
+            pedidos[] pedidos = this.controladorAdministrador.GetPedidos(idOrdenDePedido);
             TxtIdOrdenDePedido.Text = ordenDePedido.idOrdenPedido.ToString();
             TxtTotal.Text = ordenDePedido.total.ToString();
             TxtAdministrador.Text = ordenDePedido.usuarioRut;
             TxtEstado.Text = ordenDePedido.estadoDePedido.estado;
             TxtFechaDePedido.Text = ordenDePedido.fechaDePedido;
 
-            if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(1) || ordenDePedido.estadoDePedido.idEstadoPedido.Equals(2)){
+            if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(1) || ordenDePedido.estadoDePedido.idEstadoPedido.Equals(2))
+            {
                 CmbCambiarEstado.Items.Add("Cancelar");
             }
-            else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(3)) {
+            else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(3))
+            {
                 CmbCambiarEstado.Items.Add("Registrar entrega");
                 CmbCambiarEstado.Items.Add("Cancelar");
             }
-            else{
+            else
+            {
                 CmbCambiarEstado.Items.Clear();
                 CmbCambiarEstado.Visible = false;
                 LblActualizarEstado.Visible = false;
             }
-
-            foreach (pedidos pedido in pedidos){
+            DgvPedidos.Rows.Clear();
+            foreach (pedidos pedido in pedidos)
+            {
                 DataGridViewRow dataGridViewRow = new DataGridViewRow();
                 dataGridViewRow.CreateCells(DgvPedidos);
                 dataGridViewRow.Cells[0].Value = pedido.idPedido;
@@ -54,10 +66,25 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             if (dialogResult == DialogResult.Yes)
             {
                 if (actualizarEstado.Equals("Registrar entrega")){
-                    controladorAdministrador.ActualizarEstadoPedido();
+                    if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 4)) {
+                        MessageBox.Show("Orden de pedido se ha actualizado correctamente");
+                        InfoOrdenDePedido(this.idOrdenPedido);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar");
+                    }
                 }
                 else if (actualizarEstado.Equals("Cancelar")){
-                
+                    if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 5))
+                    {
+                        MessageBox.Show("Orden de pedido se ha actualizado correctamente");
+                        InfoOrdenDePedido(this.idOrdenPedido);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar");
+                    }
                 }
             }
         }

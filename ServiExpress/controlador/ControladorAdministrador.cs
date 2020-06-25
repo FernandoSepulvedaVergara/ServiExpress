@@ -87,8 +87,9 @@ namespace ServiExpress.controlador
             return webAdministrador.GetPedidos(idOrdenDePedido);
         }
 
-        public bool?[] ActualizarEstadoPedido(){
-            return null;
+        public bool ActualizarEstadoPedido(int idPedido, int idEstado)
+        {
+            return webAdministrador.ActualizarEstadoPedido(idPedido, idEstado);
         } 
     }
 }

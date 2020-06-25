@@ -26,7 +26,6 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         {
             GenerarPedido generarPedido = new GenerarPedido(this.controladorAdministrador);
             generarPedido.ShowDialog();
-            DgvOrdenesDePedido.Rows.Clear();
             ActualizarOrdenesDePedido();
         }
 
@@ -38,6 +37,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         private void ActualizarOrdenesDePedido()
         {
             ordenDePedido[] ordenesDePedido = controladorAdministrador.GetOrdenesDePedido();
+            DgvOrdenesDePedido.Rows.Clear();
             foreach (var ordenDePedido in ordenesDePedido)
             {
                 DataGridViewRow dataGridViewRow = new DataGridViewRow();
@@ -78,6 +78,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             {
                 VerOrdenDePedido verOrdenDePedido = new VerOrdenDePedido(controladorAdministrador, int.Parse(DgvOrdenesDePedido.CurrentRow.Cells[1].Value.ToString()));
                 verOrdenDePedido.ShowDialog();
+                ActualizarOrdenesDePedido();
             }
         }
     }

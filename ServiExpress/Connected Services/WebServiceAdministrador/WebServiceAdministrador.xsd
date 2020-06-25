@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarEstadoPedido" type="tns:ActualizarEstadoPedido" />
+  <xs:element name="ActualizarEstadoPedidoResponse" type="tns:ActualizarEstadoPedidoResponse" />
   <xs:element name="GetInfoProducto" type="tns:GetInfoProducto" />
   <xs:element name="GetInfoProductoProveedor" type="tns:GetInfoProductoProveedor" />
   <xs:element name="GetInfoProductoProveedorResponse" type="tns:GetInfoProductoProveedorResponse" />
@@ -153,6 +155,17 @@
   <xs:complexType name="GetOrdenesDePedidoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarEstadoPedido">
+    <xs:sequence>
+      <xs:element name="idOrdenDePedido" type="xs:int" />
+      <xs:element name="idEstado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarEstadoPedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetInfoProducto">

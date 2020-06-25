@@ -329,6 +329,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
