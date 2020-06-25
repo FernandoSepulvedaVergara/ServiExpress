@@ -76,11 +76,13 @@ namespace ServiExpress
             if (BtnIngresoProveedores.Text.Equals("Ingreso proveedores")) {
                 panel2.Visible = true;
                 panel2.Visible = true;
+                btnRegistroUsuario.Visible = false;
                 BtnIngresoProveedores.Text = "Ingreso usuarios";
             }
             else {
                 panel1.Visible = true;
                 panel2.Visible = false;
+                btnRegistroUsuario.Visible = true;
                 BtnIngresoProveedores.Text = "Ingreso proveedores";
             }
         }
