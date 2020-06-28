@@ -186,6 +186,12 @@
     <Compile Include="app GUI\UsuarioEmpleado\Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\AdministrarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\AdministrarProductos.Designer.cs">
+      <DependentUpon>AdministrarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioProveedor\FormUsuario2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,12 @@
     </Compile>
     <Compile Include="app GUI\UsuarioAdministrador\FormUsuario4.Designer.cs">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WebServiceAdministrador\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -309,6 +321,9 @@
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioProveedor\AdministrarProductos.resx">
+      <DependentUpon>AdministrarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioProveedor\FormUsuario2.resx">
       <DependentUpon>FormUsuario2.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,12 +339,18 @@
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\FormUsuario4.resx">
       <DependentUpon>FormUsuario4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioProveedor\Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizarProductosCancelarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse.datasource">

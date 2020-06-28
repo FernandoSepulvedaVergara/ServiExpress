@@ -90,6 +90,23 @@ namespace ServiExpress.controlador
         public bool ActualizarEstadoPedido(int idPedido, int idEstado)
         {
             return webAdministrador.ActualizarEstadoPedido(idPedido, idEstado);
-        } 
+        }
+
+        public bool ActualizarProductosCancelarPedido(DataGridViewRowCollection dataGridViewRows)
+        {
+            bool resultado = false;
+            foreach (DataGridViewRow dataGridViewRow in dataGridViewRows) {
+                string[] actualizarProductosCancelarPedido = webAdministrador.ActualizarProductosCancelarPedido(int.Parse(dataGridViewRow.Cells[4].Value.ToString()), int.Parse(dataGridViewRow.Cells[1].Value.ToString()));
+                
+                if (bool.Parse(actualizarProductosCancelarPedido[0])) {
+                    resultado = true;
+                }
+                else {
+                    resultado = false;
+                    break;
+                }
+            }
+            return resultado;
+        }
     }
 }

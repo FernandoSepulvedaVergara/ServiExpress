@@ -31,7 +31,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             {
                 CmbCambiarEstado.Items.Add("Cancelar");
             }
-            else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(3))
+            else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(4))
             {
                 CmbCambiarEstado.Items.Add("Registrar entrega");
                 CmbCambiarEstado.Items.Add("Cancelar");
@@ -65,8 +65,8 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             DialogResult dialogResult = MessageBox.Show(string.Format("¿{0}?",CmbCambiarEstado.SelectedItem.ToString()), "Actualizar estado", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                if (actualizarEstado.Equals("Registrar entrega")){
-                    if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 4)) {
+                if (actualizarEstado.Equals("Registrar entrega")) {
+                    if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 5)) {
                         MessageBox.Show("Orden de pedido se ha actualizado correctamente");
                         InfoOrdenDePedido(this.idOrdenPedido);
                     }
@@ -75,15 +75,34 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                         MessageBox.Show("No se pudo actualizar");
                     }
                 }
-                else if (actualizarEstado.Equals("Cancelar")){
-                    if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 5))
-                    {
-                        MessageBox.Show("Orden de pedido se ha actualizado correctamente");
-                        InfoOrdenDePedido(this.idOrdenPedido);
+                else if (actualizarEstado.Equals("Cancelar")) {
+                    if (TxtEstado.Text.Equals("Aprobado") || TxtEstado.Text.Equals("En camino"))
+                    { 
+                        if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 6))
+                        {
+                            bool actualizarProductosCancelarPedidos = controladorAdministrador.ActualizarProductosCancelarPedido(DgvPedidos.Rows);
+                            if (actualizarProductosCancelarPedidos)
+                            {
+                                MessageBox.Show("Orden de pedido se ha actualizado correctamente");
+                                InfoOrdenDePedido(this.idOrdenPedido);
+                            }
+                            else {
+                                MessageBox.Show("No se pudieron actualizar los productos del proveedor");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("No se pudo actualizar");
+                    else {
+                        if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 6)){
+                            MessageBox.Show("Orden de pedido se ha actualizado correctamente");
+                            InfoOrdenDePedido(this.idOrdenPedido);
+                        }
+                        else{
+                            MessageBox.Show("No se pudo actualizar");
+                        }
                     }
                 }
             }

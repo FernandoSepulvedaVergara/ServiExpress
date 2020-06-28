@@ -53,15 +53,23 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 }
                 else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(3))
                 {
-                    dataGridViewButtonCell.Value = "En camino";
+                    dataGridViewButtonCell.Value = "Rechazado";
                 }
                 else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(4))
                 {
+                    dataGridViewButtonCell.Value = "En camino";
+                }
+                else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(5))
+                {
                     dataGridViewButtonCell.Value = "Entregado";
+                }
+                else if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(6))
+                {
+                    dataGridViewButtonCell.Value = "Cancelado";
                 }
                 else
                 {
-                    dataGridViewButtonCell.Value = "Cancelado";
+                    dataGridViewButtonCell.Value = "Error estado";
                 }
                 dataGridViewRow.Cells[0] = dataGridViewButtonCell;
                 dataGridViewRow.Cells[1].Value = ordenDePedido.idOrdenPedido;
