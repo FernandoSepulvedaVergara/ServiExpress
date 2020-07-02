@@ -165,7 +165,8 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
         private void CmbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataGridViewRow dataGridViewRow = new DataGridViewRow();
-            int idProducto = int.Parse(CmbProductos.SelectedItem.ToString().Substring(0, CmbProductos.SelectedItem.ToString().IndexOf("-")).Trim());
+            int? idProducto = int.Parse(CmbProductos.SelectedItem.ToString().Substring(0, CmbProductos.SelectedItem.ToString().IndexOf("-")).Trim());
+            if (idProducto !=null) { 
             dataGridViewRow.CreateCells(DgvProductos);
             if (DgvProductos.Rows.Count == 0)
             {
@@ -223,7 +224,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado.ReservarsDehora
                 {
                     MessageBox.Show("Producto ya esta agregado");
                 }
-            }
+            } }
             ActualizarListaDeProductos(DgvProductos);
         }
 

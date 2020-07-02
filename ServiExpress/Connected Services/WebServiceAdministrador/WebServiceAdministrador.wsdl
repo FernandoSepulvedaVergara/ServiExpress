@@ -5,47 +5,29 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceAdministrador?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="GetProductosProveedor">
-    <part name="parameters" element="tns:GetProductosProveedor" />
-  </message>
-  <message name="GetProductosProveedorResponse">
-    <part name="parameters" element="tns:GetProductosProveedorResponse" />
-  </message>
-  <message name="GetOrdenesDePedido">
-    <part name="parameters" element="tns:GetOrdenesDePedido" />
-  </message>
-  <message name="GetOrdenesDePedidoResponse">
-    <part name="parameters" element="tns:GetOrdenesDePedidoResponse" />
-  </message>
-  <message name="ActualizarEstadoPedido">
-    <part name="parameters" element="tns:ActualizarEstadoPedido" />
-  </message>
-  <message name="ActualizarEstadoPedidoResponse">
-    <part name="parameters" element="tns:ActualizarEstadoPedidoResponse" />
-  </message>
-  <message name="GetInfoProductoProveedor">
-    <part name="parameters" element="tns:GetInfoProductoProveedor" />
-  </message>
-  <message name="GetInfoProductoProveedorResponse">
-    <part name="parameters" element="tns:GetInfoProductoProveedorResponse" />
-  </message>
-  <message name="RegistrarOrdenDePedido">
-    <part name="parameters" element="tns:RegistrarOrdenDePedido" />
-  </message>
-  <message name="RegistrarOrdenDePedidoResponse">
-    <part name="parameters" element="tns:RegistrarOrdenDePedidoResponse" />
-  </message>
-  <message name="GetTipoDeProducto">
-    <part name="parameters" element="tns:GetTipoDeProducto" />
-  </message>
-  <message name="GetTipoDeProductoResponse">
-    <part name="parameters" element="tns:GetTipoDeProductoResponse" />
-  </message>
   <message name="ActualizarProductosCancelarPedido">
     <part name="parameters" element="tns:ActualizarProductosCancelarPedido" />
   </message>
   <message name="ActualizarProductosCancelarPedidoResponse">
     <part name="parameters" element="tns:ActualizarProductosCancelarPedidoResponse" />
+  </message>
+  <message name="ActualizarProductosEntregarPedido">
+    <part name="parameters" element="tns:ActualizarProductosEntregarPedido" />
+  </message>
+  <message name="ActualizarProductosEntregarPedidoResponse">
+    <part name="parameters" element="tns:ActualizarProductosEntregarPedidoResponse" />
+  </message>
+  <message name="GetProveedores">
+    <part name="parameters" element="tns:GetProveedores" />
+  </message>
+  <message name="GetProveedoresResponse">
+    <part name="parameters" element="tns:GetProveedoresResponse" />
+  </message>
+  <message name="GetOrdenDePedido">
+    <part name="parameters" element="tns:GetOrdenDePedido" />
+  </message>
+  <message name="GetOrdenDePedidoResponse">
+    <part name="parameters" element="tns:GetOrdenDePedidoResponse" />
   </message>
   <message name="GetInfoProducto">
     <part name="parameters" element="tns:GetInfoProducto" />
@@ -65,52 +47,76 @@
   <message name="GetPedidosResponse">
     <part name="parameters" element="tns:GetPedidosResponse" />
   </message>
-  <message name="GetOrdenDePedido">
-    <part name="parameters" element="tns:GetOrdenDePedido" />
-  </message>
-  <message name="GetOrdenDePedidoResponse">
-    <part name="parameters" element="tns:GetOrdenDePedidoResponse" />
-  </message>
   <message name="RegistrarPedido">
     <part name="parameters" element="tns:RegistrarPedido" />
   </message>
   <message name="RegistrarPedidoResponse">
     <part name="parameters" element="tns:RegistrarPedidoResponse" />
   </message>
-  <message name="GetProveedores">
-    <part name="parameters" element="tns:GetProveedores" />
+  <message name="GetTipoDeProducto">
+    <part name="parameters" element="tns:GetTipoDeProducto" />
   </message>
-  <message name="GetProveedoresResponse">
-    <part name="parameters" element="tns:GetProveedoresResponse" />
+  <message name="GetTipoDeProductoResponse">
+    <part name="parameters" element="tns:GetTipoDeProductoResponse" />
+  </message>
+  <message name="RegistrarOrdenDePedido">
+    <part name="parameters" element="tns:RegistrarOrdenDePedido" />
+  </message>
+  <message name="RegistrarOrdenDePedidoResponse">
+    <part name="parameters" element="tns:RegistrarOrdenDePedidoResponse" />
+  </message>
+  <message name="GetProductosProveedor">
+    <part name="parameters" element="tns:GetProductosProveedor" />
+  </message>
+  <message name="GetProductosProveedorResponse">
+    <part name="parameters" element="tns:GetProductosProveedorResponse" />
+  </message>
+  <message name="ActualizarProductosAprobarPedido">
+    <part name="parameters" element="tns:ActualizarProductosAprobarPedido" />
+  </message>
+  <message name="ActualizarProductosAprobarPedidoResponse">
+    <part name="parameters" element="tns:ActualizarProductosAprobarPedidoResponse" />
+  </message>
+  <message name="ActualizarEstadoPedido">
+    <part name="parameters" element="tns:ActualizarEstadoPedido" />
+  </message>
+  <message name="ActualizarEstadoPedidoResponse">
+    <part name="parameters" element="tns:ActualizarEstadoPedidoResponse" />
+  </message>
+  <message name="GetOrdenesDePedido">
+    <part name="parameters" element="tns:GetOrdenesDePedido" />
+  </message>
+  <message name="GetOrdenesDePedidoResponse">
+    <part name="parameters" element="tns:GetOrdenesDePedidoResponse" />
+  </message>
+  <message name="GetInfoProductoProveedor">
+    <part name="parameters" element="tns:GetInfoProductoProveedor" />
+  </message>
+  <message name="GetInfoProductoProveedorResponse">
+    <part name="parameters" element="tns:GetInfoProductoProveedorResponse" />
+  </message>
+  <message name="ActualizarEstadoProducto">
+    <part name="parameters" element="tns:ActualizarEstadoProducto" />
+  </message>
+  <message name="ActualizarEstadoProductoResponse">
+    <part name="parameters" element="tns:ActualizarEstadoProductoResponse" />
   </message>
   <portType name="WebServiceAdministrador">
-    <operation name="GetProductosProveedor">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProductosProveedorRequest" message="tns:GetProductosProveedor" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProductosProveedorResponse" message="tns:GetProductosProveedorResponse" />
-    </operation>
-    <operation name="GetOrdenesDePedido">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenesDePedidoRequest" message="tns:GetOrdenesDePedido" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenesDePedidoResponse" message="tns:GetOrdenesDePedidoResponse" />
-    </operation>
-    <operation name="ActualizarEstadoPedido">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoRequest" message="tns:ActualizarEstadoPedido" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoResponse" message="tns:ActualizarEstadoPedidoResponse" />
-    </operation>
-    <operation name="GetInfoProductoProveedor">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoProveedorRequest" message="tns:GetInfoProductoProveedor" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoProveedorResponse" message="tns:GetInfoProductoProveedorResponse" />
-    </operation>
-    <operation name="RegistrarOrdenDePedido">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/RegistrarOrdenDePedidoRequest" message="tns:RegistrarOrdenDePedido" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/RegistrarOrdenDePedidoResponse" message="tns:RegistrarOrdenDePedidoResponse" />
-    </operation>
-    <operation name="GetTipoDeProducto">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoRequest" message="tns:GetTipoDeProducto" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoResponse" message="tns:GetTipoDeProductoResponse" />
-    </operation>
     <operation name="ActualizarProductosCancelarPedido">
       <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizarProductosCancelarPedidoRequest" message="tns:ActualizarProductosCancelarPedido" />
       <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizarProductosCancelarPedidoResponse" message="tns:ActualizarProductosCancelarPedidoResponse" />
+    </operation>
+    <operation name="ActualizarProductosEntregarPedido">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizarProductosEntregarPedidoRequest" message="tns:ActualizarProductosEntregarPedido" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizarProductosEntregarPedidoResponse" message="tns:ActualizarProductosEntregarPedidoResponse" />
+    </operation>
+    <operation name="GetProveedores">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProveedoresRequest" message="tns:GetProveedores" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProveedoresResponse" message="tns:GetProveedoresResponse" />
+    </operation>
+    <operation name="GetOrdenDePedido">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenDePedidoRequest" message="tns:GetOrdenDePedido" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenDePedidoResponse" message="tns:GetOrdenDePedidoResponse" />
     </operation>
     <operation name="GetInfoProducto">
       <input wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoRequest" message="tns:GetInfoProducto" />
@@ -124,76 +130,73 @@
       <input wsam:Action="http://servicios/WebServiceAdministrador/GetPedidosRequest" message="tns:GetPedidos" />
       <output wsam:Action="http://servicios/WebServiceAdministrador/GetPedidosResponse" message="tns:GetPedidosResponse" />
     </operation>
-    <operation name="GetOrdenDePedido">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenDePedidoRequest" message="tns:GetOrdenDePedido" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenDePedidoResponse" message="tns:GetOrdenDePedidoResponse" />
-    </operation>
     <operation name="RegistrarPedido">
       <input wsam:Action="http://servicios/WebServiceAdministrador/RegistrarPedidoRequest" message="tns:RegistrarPedido" />
       <output wsam:Action="http://servicios/WebServiceAdministrador/RegistrarPedidoResponse" message="tns:RegistrarPedidoResponse" />
     </operation>
-    <operation name="GetProveedores">
-      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProveedoresRequest" message="tns:GetProveedores" />
-      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProveedoresResponse" message="tns:GetProveedoresResponse" />
+    <operation name="GetTipoDeProducto">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoRequest" message="tns:GetTipoDeProducto" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetTipoDeProductoResponse" message="tns:GetTipoDeProductoResponse" />
+    </operation>
+    <operation name="RegistrarOrdenDePedido">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/RegistrarOrdenDePedidoRequest" message="tns:RegistrarOrdenDePedido" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/RegistrarOrdenDePedidoResponse" message="tns:RegistrarOrdenDePedidoResponse" />
+    </operation>
+    <operation name="GetProductosProveedor">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetProductosProveedorRequest" message="tns:GetProductosProveedor" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetProductosProveedorResponse" message="tns:GetProductosProveedorResponse" />
+    </operation>
+    <operation name="ActualizarProductosAprobarPedido">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizarProductosAprobarPedidoRequest" message="tns:ActualizarProductosAprobarPedido" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizarProductosAprobarPedidoResponse" message="tns:ActualizarProductosAprobarPedidoResponse" />
+    </operation>
+    <operation name="ActualizarEstadoPedido">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoRequest" message="tns:ActualizarEstadoPedido" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizarEstadoPedidoResponse" message="tns:ActualizarEstadoPedidoResponse" />
+    </operation>
+    <operation name="GetOrdenesDePedido">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenesDePedidoRequest" message="tns:GetOrdenesDePedido" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetOrdenesDePedidoResponse" message="tns:GetOrdenesDePedidoResponse" />
+    </operation>
+    <operation name="GetInfoProductoProveedor">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoProveedorRequest" message="tns:GetInfoProductoProveedor" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetInfoProductoProveedorResponse" message="tns:GetInfoProductoProveedorResponse" />
+    </operation>
+    <operation name="ActualizarEstadoProducto">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizarEstadoProductoRequest" message="tns:ActualizarEstadoProducto" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizarEstadoProductoResponse" message="tns:ActualizarEstadoProductoResponse" />
     </operation>
   </portType>
   <binding name="WebServiceAdministradorPortBinding" type="tns:WebServiceAdministrador">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="GetProductosProveedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="GetOrdenesDePedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ActualizarEstadoPedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="GetInfoProductoProveedor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="RegistrarOrdenDePedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="GetTipoDeProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="ActualizarProductosCancelarPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarProductosEntregarPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetOrdenDePedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -229,15 +232,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetOrdenDePedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="RegistrarPedido">
       <soap:operation soapAction="" />
       <input>
@@ -247,7 +241,70 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetProveedores">
+    <operation name="GetTipoDeProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarOrdenDePedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetProductosProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarProductosAprobarPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarEstadoPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetOrdenesDePedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInfoProductoProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarEstadoProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

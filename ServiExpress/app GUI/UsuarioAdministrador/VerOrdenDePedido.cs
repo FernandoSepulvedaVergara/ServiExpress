@@ -67,8 +67,17 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             {
                 if (actualizarEstado.Equals("Registrar entrega")) {
                     if (controladorAdministrador.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 5)) {
-                        MessageBox.Show("Orden de pedido se ha actualizado correctamente");
-                        InfoOrdenDePedido(this.idOrdenPedido);
+
+                        string[] actualizarProductosEntregarPedido = controladorAdministrador.ActualizarProductosEntregarPedido(int.Parse(TxtIdOrdenDePedido.Text));
+                        if (bool.Parse(actualizarProductosEntregarPedido[0]))
+                        {
+                            MessageBox.Show(actualizarProductosEntregarPedido[1]);
+                            InfoOrdenDePedido(this.idOrdenPedido);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo registrar la entrega");
+                        }
                     }
                     else
                     {

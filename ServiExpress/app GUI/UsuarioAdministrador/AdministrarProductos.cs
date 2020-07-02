@@ -47,28 +47,92 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void CmbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ActualizarInfo();
+        }
+
+        private void ChbEstadoDeProducto_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ActualizarInfo() {
             int idProducto = int.Parse(CmbProductos.SelectedItem.ToString().Substring(0, CmbProductos.SelectedItem.ToString().IndexOf("-")).Trim());
             WebServiceAdministrador.producto resultado = controladorAdministrador.GetInfoProducto(idProducto);
 
             TxtIdProducto.Text = resultado.idProducto.ToString();
             TxtDescripcion.Text = resultado.descripcion;
             TxtMarca.Text = resultado.marca;
-            if (resultado.fechaVencimiento != null){
+            if (resultado.fechaVencimiento != null)
+            {
                 TxtFechaDeVencimiento.Text = resultado.fechaVencimiento;
             }
-            else {
+            else
+            {
                 TxtFechaDeVencimiento.Text = "Sin fecha de vencimiento";
             }
             TxtPrecioDeCompra.Text = resultado.precioCompra.ToString();
             TxtPrecioDeVenta.Text = resultado.precioVenta.ToString();
-            if (resultado.stock <= resultado.stockCritico){
+            if (resultado.stock <= resultado.stockCritico)
+            {
                 pictureBox1.Visible = true;
                 pictureBox2.Visible = true;
             }
             TxtStock.Text = resultado.stock.ToString();
             TxtStockCritico.Text = resultado.stockCritico.ToString();
             TxtOrdenDePedido.Text = resultado.idOrdenDePedido.ToString();
-            TxtProveedor.Text = resultado.rutProveedor;        
+            TxtProveedor.Text = resultado.rutProveedor;
+            if (resultado.estadoDeProducto.idEstadoDeProducto.Equals(1))
+            {
+                ChbEstadoDeProducto.Checked = true;
+                ChbEstadoDeProducto.Text = "Disponible";
+            }
+            else
+            {
+                ChbEstadoDeProducto.Checked = false;
+                ChbEstadoDeProducto.Text = "No disponible";
+            }
+            panel1.Visible = true;
+        }
+
+        private void ChbEstadoDeProducto_Click(object sender, EventArgs e)
+        {
+            if (ChbEstadoDeProducto.Checked)
+            {
+                DialogResult dialogResult = MessageBox.Show(string.Format("¿Quitar stock de este producto?"), "Estado de producto", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (controladorAdministrador.ActualizarEstadoProducto(int.Parse(TxtIdProducto.Text), 2))
+                    {
+                        ChbEstadoDeProducto.Checked = false;
+                        MessageBox.Show("Estado actualizado con éxito");
+                    }
+                    else
+                    {
+                        ChbEstadoDeProducto.Checked = true;
+                        MessageBox.Show("Error al actualizar estado");
+                    }
+                }
+            }
+            else if (ChbEstadoDeProducto.Checked.Equals(false))
+            {
+                DialogResult dialogResult = MessageBox.Show(string.Format("¿Colocar en stock este producto?"), "Estado de producto", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (controladorAdministrador.ActualizarEstadoProducto(int.Parse(TxtIdProducto.Text), 1))
+                    {
+                        MessageBox.Show("Estado actualizado con éxito");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar estado");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error al validar checkbox");
+            }
+            ActualizarInfo();
         }
     }
 }

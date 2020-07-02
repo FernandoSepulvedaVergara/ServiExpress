@@ -108,5 +108,13 @@ namespace ServiExpress.controlador
             }
             return resultado;
         }
+
+        public string[] ActualizarProductosEntregarPedido(int idOrdenDePedido) {
+            return webAdministrador.ActualizarProductosEntregarPedido(idOrdenDePedido);
+        }
+
+        public bool ActualizarEstadoProducto(int idProducto, int idEstado) {
+            return webAdministrador.ActualizarEstadoProducto(idProducto, idEstado);
+        }
     }
 }

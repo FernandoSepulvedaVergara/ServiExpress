@@ -90,6 +90,7 @@
   <xs:complexType name="producto">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoDeProducto" type="tns:estadoDeProducto" />
       <xs:element minOccurs="0" name="fechaVencimiento" type="xs:string" />
       <xs:element name="idOrdenDePedido" type="xs:int" />
       <xs:element name="idProducto" type="xs:int" />
@@ -100,6 +101,12 @@
       <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
       <xs:element name="stock" type="xs:int" />
       <xs:element name="stockCritico" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoDeProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="idEstadoDeProducto" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetAtenciones">
