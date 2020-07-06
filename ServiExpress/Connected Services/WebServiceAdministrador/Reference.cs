@@ -373,6 +373,8 @@ namespace ServiExpress.WebServiceAdministrador {
         
         private string descripcionField;
         
+        private estadoDeProducto estadoDeProductoField;
+        
         private string fechaDeVencimientoField;
         
         private int idProductoField;
@@ -401,6 +403,18 @@ namespace ServiExpress.WebServiceAdministrador {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public estadoDeProducto estadoDeProducto {
+            get {
+                return this.estadoDeProductoField;
+            }
+            set {
+                this.estadoDeProductoField = value;
+                this.RaisePropertyChanged("estadoDeProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string fechaDeVencimiento {
             get {
                 return this.fechaDeVencimientoField;
@@ -412,7 +426,7 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int idProducto {
             get {
                 return this.idProductoField;
@@ -424,7 +438,7 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int idTipoDeProducto {
             get {
                 return this.idTipoDeProductoField;
@@ -436,7 +450,7 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string marca {
             get {
                 return this.marcaField;
@@ -448,7 +462,7 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int precioDeCompra {
             get {
                 return this.precioDeCompraField;
@@ -460,7 +474,7 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string rutProveedor {
             get {
                 return this.rutProveedorField;
@@ -472,7 +486,7 @@ namespace ServiExpress.WebServiceAdministrador {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public int stock {
             get {
                 return this.stockField;
@@ -480,6 +494,52 @@ namespace ServiExpress.WebServiceAdministrador {
             set {
                 this.stockField = value;
                 this.RaisePropertyChanged("stock");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
+    public partial class estadoDeProducto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string estadoField;
+        
+        private int idEstadoDeProductoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idEstadoDeProducto {
+            get {
+                return this.idEstadoDeProductoField;
+            }
+            set {
+                this.idEstadoDeProductoField = value;
+                this.RaisePropertyChanged("idEstadoDeProducto");
             }
         }
         
@@ -656,52 +716,6 @@ namespace ServiExpress.WebServiceAdministrador {
             set {
                 this.totalAPagarField = value;
                 this.RaisePropertyChanged("totalAPagar");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
-    public partial class estadoDeProducto : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string estadoField;
-        
-        private int idEstadoDeProductoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idEstadoDeProducto {
-            get {
-                return this.idEstadoDeProductoField;
-            }
-            set {
-                this.idEstadoDeProductoField = value;
-                this.RaisePropertyChanged("idEstadoDeProducto");
             }
         }
         
@@ -1498,11 +1512,16 @@ namespace ServiExpress.WebServiceAdministrador {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idProductoProveedor;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string rutProveedor;
+        
         public GetInfoProductoProveedorRequest() {
         }
         
-        public GetInfoProductoProveedorRequest(int idProductoProveedor) {
+        public GetInfoProductoProveedorRequest(int idProductoProveedor, string rutProveedor) {
             this.idProductoProveedor = idProductoProveedor;
+            this.rutProveedor = rutProveedor;
         }
     }
     
@@ -1933,9 +1952,10 @@ namespace ServiExpress.WebServiceAdministrador {
             return base.Channel.GetInfoProductoProveedor(request);
         }
         
-        public ServiExpress.WebServiceAdministrador.productoProveedor GetInfoProductoProveedor(int idProductoProveedor) {
+        public ServiExpress.WebServiceAdministrador.productoProveedor GetInfoProductoProveedor(int idProductoProveedor, string rutProveedor) {
             ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorRequest inValue = new ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorRequest();
             inValue.idProductoProveedor = idProductoProveedor;
+            inValue.rutProveedor = rutProveedor;
             ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse retVal = ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetInfoProductoProveedor(inValue);
             return retVal.@return;
         }
@@ -1945,9 +1965,10 @@ namespace ServiExpress.WebServiceAdministrador {
             return base.Channel.GetInfoProductoProveedorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse> GetInfoProductoProveedorAsync(int idProductoProveedor) {
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse> GetInfoProductoProveedorAsync(int idProductoProveedor, string rutProveedor) {
             ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorRequest inValue = new ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorRequest();
             inValue.idProductoProveedor = idProductoProveedor;
+            inValue.rutProveedor = rutProveedor;
             return ((ServiExpress.WebServiceAdministrador.WebServiceAdministrador)(this)).GetInfoProductoProveedorAsync(inValue);
         }
         

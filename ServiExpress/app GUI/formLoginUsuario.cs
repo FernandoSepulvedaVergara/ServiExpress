@@ -1,5 +1,6 @@
 ﻿using ServiExpress.app_GUI;
 using ServiExpress.controlador;
+using ServiExpress.Informes;
 using ServiExpress.WebServiceUsuario;
 using System;
 using System.Windows.Forms;
@@ -111,6 +112,12 @@ namespace ServiExpress
                     usuario2.Show();
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
     }
 }

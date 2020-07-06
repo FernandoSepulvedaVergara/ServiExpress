@@ -52,9 +52,9 @@ namespace ServiExpress.controlador
             return webAdministrador.GetInfoProducto(idProducto);
         }
 
-        public productoProveedor GetInfoProductoProveedor(int idProductoProveedor)
+        public productoProveedor GetInfoProductoProveedor(int idProductoProveedor, string rutProveedor)
         {
-            return webAdministrador.GetInfoProductoProveedor(idProductoProveedor);
+            return webAdministrador.GetInfoProductoProveedor(idProductoProveedor, rutProveedor);
         }
 
         public proveedor[] GetProveedores() 

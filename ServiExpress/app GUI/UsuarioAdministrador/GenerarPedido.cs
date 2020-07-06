@@ -49,17 +49,18 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             CmbProductos.Items.Clear();
             string rutProveedor = CmbProveedores.SelectedItem.ToString().Substring(0, CmbProveedores.SelectedItem.ToString().IndexOf("-")).Trim();
             int idTipoDeProducto = int.Parse(CmbTipoDeProducto.SelectedItem.ToString().Substring(0, CmbTipoDeProducto.SelectedItem.ToString().IndexOf("-")).Trim());
-            productoProveedor[] tipoDeProductos = controladorAdministrador.GetProductosProveedor(idTipoDeProducto, rutProveedor);
-            foreach (var tipoDeProducto in tipoDeProductos)
+            productoProveedor[] productosProveedor = controladorAdministrador.GetProductosProveedor(idTipoDeProducto, rutProveedor);
+            foreach (var producto in productosProveedor)
             {
-                CmbProductos.Items.Add(string.Format("{0} - {1}", tipoDeProducto.idProducto, tipoDeProducto.descripcion));
+                CmbProductos.Items.Add(string.Format("{0} - {1}", producto.idProducto, producto.descripcion));
             }
         }
 
         private void CmbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
             int idProductoProveedor = int.Parse(CmbProductos.SelectedItem.ToString().Substring(0, CmbProductos.SelectedItem.ToString().IndexOf("-")).Trim());
-            productoProveedor productoProveedor = controladorAdministrador.GetInfoProductoProveedor(idProductoProveedor);
+            string rutProveedor = CmbProveedores.SelectedItem.ToString().Substring(0, CmbProveedores.SelectedItem.ToString().IndexOf("-")).Trim();
+            productoProveedor productoProveedor = controladorAdministrador.GetInfoProductoProveedor(idProductoProveedor, rutProveedor);
             DataGridViewRow dataGridViewRow = new DataGridViewRow();
             dataGridViewRow.CreateCells(DgvProductosProveedor);
             if (DgvProductosProveedor.Rows.Count == 0)

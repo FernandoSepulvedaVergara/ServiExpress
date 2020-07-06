@@ -73,6 +73,7 @@
             this.BtnAdministrarProducto.TabIndex = 15;
             this.BtnAdministrarProducto.Text = "Administrar productos";
             this.BtnAdministrarProducto.UseVisualStyleBackColor = true;
+            this.BtnAdministrarProducto.Click += new System.EventHandler(this.BtnAdministrarProducto_Click);
             // 
             // splitContainer2
             // 
@@ -105,7 +106,6 @@
             this.ShowInTaskbar = false;
             this.Text = "Form2";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario2_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);

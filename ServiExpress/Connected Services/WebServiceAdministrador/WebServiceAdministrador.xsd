@@ -48,6 +48,7 @@
   <xs:complexType name="GetInfoProductoProveedor">
     <xs:sequence>
       <xs:element name="idProductoProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetInfoProductoProveedorResponse">
@@ -58,6 +59,7 @@
   <xs:complexType name="productoProveedor">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoDeProducto" type="tns:estadoDeProducto" />
       <xs:element minOccurs="0" name="fechaDeVencimiento" type="xs:string" />
       <xs:element name="idProducto" type="xs:int" />
       <xs:element name="idTipoDeProducto" type="xs:int" />
@@ -65,6 +67,12 @@
       <xs:element name="precioDeCompra" type="xs:int" />
       <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
       <xs:element name="stock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoDeProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="idEstadoDeProducto" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetProveedores">
@@ -257,12 +265,6 @@
       <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
       <xs:element name="stock" type="xs:int" />
       <xs:element name="stockCritico" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="estadoDeProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="estado" type="xs:string" />
-      <xs:element name="idEstadoDeProducto" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetProductos">

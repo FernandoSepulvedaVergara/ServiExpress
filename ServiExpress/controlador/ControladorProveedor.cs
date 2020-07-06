@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.Logging;
+using ServiExpress.WebServiceAdministrador;
 using ServiExpress.WebServiceCliente;
 using ServiExpress.WebServiceProveedor;
 using System;
@@ -30,13 +31,33 @@ namespace ServiExpress.controlador
             return null;
         }
 
-        public tipoDeServicio[] GetTipoDeServicios()
+        public WebServiceProveedor.tipoDeProducto[] GetTipoDeProducto()
         {
-            return null;
+            return webProveedor.GetTipoDeProducto();
         }
-        public void Hello()
+        public WebServiceProveedor.productoProveedor[] GetProductosProveedor(int idTipoDeProducto)
         {
-            webProveedor.hello("");
+            return webProveedor.GetProductosProveedor(idTipoDeProducto,this.login[0]);
+        }
+
+        public WebServiceProveedor.productoProveedor GetInfoProductoProveedor(int idProductoProveedor)
+        {
+            return  webProveedor.ObtenerInfoProductoProveedor(idProductoProveedor,this.login[0]);
+        }
+
+        public bool ActualizarEstadoProductoProveedor(int idProducto, int idEstado)
+        {
+            return webProveedor.ActualizarEstadoProductoProveedor(idProducto, idEstado);
+        }
+
+        public string[] ActualizarProductoProveedor(int idProducto, string fechaDeVencimiento, int stock, int precioDeCompra)
+        {
+            return webProveedor.ActualizarProductoProveedor(idProducto, fechaDeVencimiento, stock, precioDeCompra);
+        }
+
+        public string[] AgregarNuevoTipoDeProducto(string tipoDeProducto)
+        {
+            return webProveedor.AgregarNuevoTipoDeProducto(tipoDeProducto);
         }
     }
 }

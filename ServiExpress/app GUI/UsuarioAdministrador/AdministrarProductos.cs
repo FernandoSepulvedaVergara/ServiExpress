@@ -50,11 +50,6 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             ActualizarInfo();
         }
 
-        private void ChbEstadoDeProducto_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ActualizarInfo() {
             int idProducto = int.Parse(CmbProductos.SelectedItem.ToString().Substring(0, CmbProductos.SelectedItem.ToString().IndexOf("-")).Trim());
             WebServiceAdministrador.producto resultado = controladorAdministrador.GetInfoProducto(idProducto);
@@ -76,6 +71,10 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             {
                 pictureBox1.Visible = true;
                 pictureBox2.Visible = true;
+            }
+            else {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
             }
             TxtStock.Text = resultado.stock.ToString();
             TxtStockCritico.Text = resultado.stockCritico.ToString();
