@@ -12,6 +12,8 @@
   <xs:element name="GetTipoDeProductoResponse" type="tns:GetTipoDeProductoResponse" />
   <xs:element name="ObtenerInfoProductoProveedor" type="tns:ObtenerInfoProductoProveedor" />
   <xs:element name="ObtenerInfoProductoProveedorResponse" type="tns:ObtenerInfoProductoProveedorResponse" />
+  <xs:element name="RegistrarNuevoProductoProveedor" type="tns:RegistrarNuevoProductoProveedor" />
+  <xs:element name="RegistrarNuevoProductoProveedorResponse" type="tns:RegistrarNuevoProductoProveedorResponse" />
   <xs:complexType name="ObtenerInfoProductoProveedor">
     <xs:sequence>
       <xs:element name="idTipoDeProducto" type="xs:int" />
@@ -59,6 +61,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgregarNuevoTipoDeProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarNuevoProductoProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="marca" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaDeVencimiento" type="xs:string" />
+      <xs:element name="precioDeCompra" type="xs:int" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="idTipoDeProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+      <xs:element name="idEstadoDeProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarNuevoProductoProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>

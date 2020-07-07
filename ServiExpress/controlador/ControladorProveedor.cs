@@ -59,5 +59,10 @@ namespace ServiExpress.controlador
         {
             return webProveedor.AgregarNuevoTipoDeProducto(tipoDeProducto);
         }
+
+        public string[] RegistrarNuevoProductoProveedor(string descripcion, string marca, string fechaDeVencimiento, int precioDeCompra, int stock, int idTipoDeProducto, int idEstadoDeProducto)
+        {
+            return webProveedor.RegistrarNuevoProductoProveedor(descripcion, marca, fechaDeVencimiento, precioDeCompra, stock, idTipoDeProducto, this.login[0], idEstadoDeProducto);
+        }
     }
 }

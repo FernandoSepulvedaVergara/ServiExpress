@@ -61,6 +61,15 @@ namespace ServiExpress.WebServiceProveedor {
         System.Threading.Tasks.Task<ServiExpress.WebServiceProveedor.AgregarNuevoTipoDeProductoResponse> AgregarNuevoTipoDeProductoAsync(ServiExpress.WebServiceProveedor.AgregarNuevoTipoDeProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceProveedor/RegistrarNuevoProductoProveedorRequest", ReplyAction="http://servicios/WebServiceProveedor/RegistrarNuevoProductoProveedorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse RegistrarNuevoProductoProveedor(ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceProveedor/RegistrarNuevoProductoProveedorRequest", ReplyAction="http://servicios/WebServiceProveedor/RegistrarNuevoProductoProveedorResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse> RegistrarNuevoProductoProveedorAsync(ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceProveedor/ActualizarProductoProveedorRequest", ReplyAction="http://servicios/WebServiceProveedor/ActualizarProductoProveedorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -496,6 +505,77 @@ namespace ServiExpress.WebServiceProveedor {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarNuevoProductoProveedor", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class RegistrarNuevoProductoProveedorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string marca;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaDeVencimiento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int precioDeCompra;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int stock;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTipoDeProducto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string rutProveedor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEstadoDeProducto;
+        
+        public RegistrarNuevoProductoProveedorRequest() {
+        }
+        
+        public RegistrarNuevoProductoProveedorRequest(string descripcion, string marca, string fechaDeVencimiento, int precioDeCompra, int stock, int idTipoDeProducto, string rutProveedor, int idEstadoDeProducto) {
+            this.descripcion = descripcion;
+            this.marca = marca;
+            this.fechaDeVencimiento = fechaDeVencimiento;
+            this.precioDeCompra = precioDeCompra;
+            this.stock = stock;
+            this.idTipoDeProducto = idTipoDeProducto;
+            this.rutProveedor = rutProveedor;
+            this.idEstadoDeProducto = idEstadoDeProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarNuevoProductoProveedorResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class RegistrarNuevoProductoProveedorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string[] @return;
+        
+        public RegistrarNuevoProductoProveedorResponse() {
+        }
+        
+        public RegistrarNuevoProductoProveedorResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarProductoProveedor", WrapperNamespace="http://servicios/", IsWrapped=true)]
     public partial class ActualizarProductoProveedorRequest {
         
@@ -688,6 +768,43 @@ namespace ServiExpress.WebServiceProveedor {
             ServiExpress.WebServiceProveedor.AgregarNuevoTipoDeProductoRequest inValue = new ServiExpress.WebServiceProveedor.AgregarNuevoTipoDeProductoRequest();
             inValue.tipoDeProducto = tipoDeProducto;
             return ((ServiExpress.WebServiceProveedor.WebServiceProveedor)(this)).AgregarNuevoTipoDeProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse ServiExpress.WebServiceProveedor.WebServiceProveedor.RegistrarNuevoProductoProveedor(ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest request) {
+            return base.Channel.RegistrarNuevoProductoProveedor(request);
+        }
+        
+        public string[] RegistrarNuevoProductoProveedor(string descripcion, string marca, string fechaDeVencimiento, int precioDeCompra, int stock, int idTipoDeProducto, string rutProveedor, int idEstadoDeProducto) {
+            ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest inValue = new ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest();
+            inValue.descripcion = descripcion;
+            inValue.marca = marca;
+            inValue.fechaDeVencimiento = fechaDeVencimiento;
+            inValue.precioDeCompra = precioDeCompra;
+            inValue.stock = stock;
+            inValue.idTipoDeProducto = idTipoDeProducto;
+            inValue.rutProveedor = rutProveedor;
+            inValue.idEstadoDeProducto = idEstadoDeProducto;
+            ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse retVal = ((ServiExpress.WebServiceProveedor.WebServiceProveedor)(this)).RegistrarNuevoProductoProveedor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse> ServiExpress.WebServiceProveedor.WebServiceProveedor.RegistrarNuevoProductoProveedorAsync(ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest request) {
+            return base.Channel.RegistrarNuevoProductoProveedorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse> RegistrarNuevoProductoProveedorAsync(string descripcion, string marca, string fechaDeVencimiento, int precioDeCompra, int stock, int idTipoDeProducto, string rutProveedor, int idEstadoDeProducto) {
+            ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest inValue = new ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorRequest();
+            inValue.descripcion = descripcion;
+            inValue.marca = marca;
+            inValue.fechaDeVencimiento = fechaDeVencimiento;
+            inValue.precioDeCompra = precioDeCompra;
+            inValue.stock = stock;
+            inValue.idTipoDeProducto = idTipoDeProducto;
+            inValue.rutProveedor = rutProveedor;
+            inValue.idEstadoDeProducto = idEstadoDeProducto;
+            return ((ServiExpress.WebServiceProveedor.WebServiceProveedor)(this)).RegistrarNuevoProductoProveedorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

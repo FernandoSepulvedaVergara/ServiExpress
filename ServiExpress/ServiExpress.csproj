@@ -594,6 +594,9 @@
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.productoProveedor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.RegistrarNuevoProductoProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.tipoDeProducto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

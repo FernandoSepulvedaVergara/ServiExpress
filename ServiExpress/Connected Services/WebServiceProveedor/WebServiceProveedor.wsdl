@@ -35,6 +35,12 @@
   <message name="AgregarNuevoTipoDeProductoResponse">
     <part name="parameters" element="tns:AgregarNuevoTipoDeProductoResponse" />
   </message>
+  <message name="RegistrarNuevoProductoProveedor">
+    <part name="parameters" element="tns:RegistrarNuevoProductoProveedor" />
+  </message>
+  <message name="RegistrarNuevoProductoProveedorResponse">
+    <part name="parameters" element="tns:RegistrarNuevoProductoProveedorResponse" />
+  </message>
   <message name="ActualizarProductoProveedor">
     <part name="parameters" element="tns:ActualizarProductoProveedor" />
   </message>
@@ -61,6 +67,10 @@
     <operation name="AgregarNuevoTipoDeProducto">
       <input wsam:Action="http://servicios/WebServiceProveedor/AgregarNuevoTipoDeProductoRequest" message="tns:AgregarNuevoTipoDeProducto" />
       <output wsam:Action="http://servicios/WebServiceProveedor/AgregarNuevoTipoDeProductoResponse" message="tns:AgregarNuevoTipoDeProductoResponse" />
+    </operation>
+    <operation name="RegistrarNuevoProductoProveedor">
+      <input wsam:Action="http://servicios/WebServiceProveedor/RegistrarNuevoProductoProveedorRequest" message="tns:RegistrarNuevoProductoProveedor" />
+      <output wsam:Action="http://servicios/WebServiceProveedor/RegistrarNuevoProductoProveedorResponse" message="tns:RegistrarNuevoProductoProveedorResponse" />
     </operation>
     <operation name="ActualizarProductoProveedor">
       <input wsam:Action="http://servicios/WebServiceProveedor/ActualizarProductoProveedorRequest" message="tns:ActualizarProductoProveedor" />
@@ -106,6 +116,15 @@
       </output>
     </operation>
     <operation name="AgregarNuevoTipoDeProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarNuevoProductoProveedor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

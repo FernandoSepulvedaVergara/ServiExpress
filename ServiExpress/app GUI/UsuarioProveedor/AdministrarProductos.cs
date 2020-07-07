@@ -161,7 +161,7 @@ namespace ServiExpress.app_GUI.UsuarioProveedor
 
         private void BtmGuardar_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(string.Format("¿{0}?", "Actulizar producto"), "Actualizar producto", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(string.Format("¿{0}?", "Actualizar producto"), "Actualizar producto", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes) {
                 string[] resultado = controladorProveedor.ActualizarProductoProveedor(int.Parse(TxtIdProducto.Text), TxtFechaDeVencimiento.Text, int.Parse(NumStock.Value.ToString()), int.Parse(TxtPrecioDeCompra.Text));
                 MessageBox.Show(string.Format("{0}", resultado[1]));
