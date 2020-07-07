@@ -1,7 +1,6 @@
 ﻿using ServiExpress.app_GUI;
 using ServiExpress.controlador;
 using ServiExpress.Informes;
-using ServiExpress.WebServiceUsuario;
 using System;
 using System.Windows.Forms;
 
@@ -53,7 +52,7 @@ namespace ServiExpress
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrecta");
                 }
-            }            
+            }
         }
 
         private void FormLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
@@ -74,13 +73,15 @@ namespace ServiExpress
 
         private void BtnIngresoProveedores_Click(object sender, EventArgs e)
         {
-            if (BtnIngresoProveedores.Text.Equals("Ingreso proveedores")) {
+            if (BtnIngresoProveedores.Text.Equals("Ingreso proveedores"))
+            {
                 panel2.Visible = true;
                 panel2.Visible = true;
                 btnRegistroUsuario.Visible = false;
                 BtnIngresoProveedores.Text = "Ingreso usuarios";
             }
-            else {
+            else
+            {
                 panel1.Visible = true;
                 panel2.Visible = false;
                 btnRegistroUsuario.Visible = true;
@@ -99,13 +100,14 @@ namespace ServiExpress
             {
                 MessageBox.Show("Debe proporcionar todos los datos para ingresar");
             }
-            else 
+            else
             {
                 string[] login = controladorLoginUsuario.ValidarUsuarioProveedor(TxtNombreUsuarioProveedor.Text, TxtContraseñaProveedor.Text);
-                if (login.Equals(null)) 
+                if (login[0] == null)
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrecta");
                 }
+                else
                 {
                     FormUsuario2 usuario2 = new FormUsuario2(login);
                     this.Hide();
