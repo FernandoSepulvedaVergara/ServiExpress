@@ -144,6 +144,7 @@
       <xs:element minOccurs="0" name="estadoDePedido" type="tns:estadoDePedido" />
       <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
       <xs:element name="idOrdenPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
       <xs:element name="total" type="xs:int" />
       <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
     </xs:sequence>
@@ -160,9 +161,21 @@
       <xs:element name="total" type="xs:int" />
       <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
       <xs:element name="idEstadoDePedido" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="RegistrarOrdenDePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarProductosAprobarPedido">
+    <xs:sequence>
+      <xs:element name="idProductoProveedor" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarProductosAprobarPedidoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -176,17 +189,6 @@
   <xs:complexType name="GetProductosProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:productoProveedor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ActualizarProductosAprobarPedido">
-    <xs:sequence>
-      <xs:element name="idProductoProveedor" type="xs:int" />
-      <xs:element name="cantidad" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ActualizarProductosAprobarPedidoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetPedidos">

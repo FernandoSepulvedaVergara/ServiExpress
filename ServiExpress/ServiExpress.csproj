@@ -582,6 +582,9 @@
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.AgregarNuevoTipoDeProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetOrdenesDePedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetProductosProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -589,6 +592,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ObtenerInfoProductoProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ordenDePedido.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.productoProveedor.datasource">

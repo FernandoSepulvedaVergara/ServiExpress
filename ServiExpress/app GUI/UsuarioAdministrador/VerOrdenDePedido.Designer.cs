@@ -49,6 +49,8 @@
             this.LblActualizarEstado = new System.Windows.Forms.Label();
             this.TxtFechaDePedido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.TxtProveedor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,7 +146,7 @@
             // TxtAdministrador
             // 
             this.TxtAdministrador.Enabled = false;
-            this.TxtAdministrador.Location = new System.Drawing.Point(339, 29);
+            this.TxtAdministrador.Location = new System.Drawing.Point(338, 55);
             this.TxtAdministrador.Name = "TxtAdministrador";
             this.TxtAdministrador.ReadOnly = true;
             this.TxtAdministrador.Size = new System.Drawing.Size(100, 20);
@@ -153,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 32);
+            this.label2.Location = new System.Drawing.Point(256, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 3;
@@ -180,7 +182,7 @@
             // TxtEstado
             // 
             this.TxtEstado.Enabled = false;
-            this.TxtEstado.Location = new System.Drawing.Point(339, 55);
+            this.TxtEstado.Location = new System.Drawing.Point(338, 81);
             this.TxtEstado.Name = "TxtEstado";
             this.TxtEstado.ReadOnly = true;
             this.TxtEstado.Size = new System.Drawing.Size(100, 20);
@@ -189,7 +191,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(287, 58);
+            this.label4.Location = new System.Drawing.Point(286, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 7;
@@ -232,12 +234,32 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Fecha de pedido :";
             // 
+            // TxtProveedor
+            // 
+            this.TxtProveedor.Enabled = false;
+            this.TxtProveedor.Location = new System.Drawing.Point(338, 29);
+            this.TxtProveedor.Name = "TxtProveedor";
+            this.TxtProveedor.ReadOnly = true;
+            this.TxtProveedor.Size = new System.Drawing.Size(100, 20);
+            this.TxtProveedor.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(270, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Proveedor :";
+            // 
             // VerOrdenDePedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(897, 367);
+            this.Controls.Add(this.TxtProveedor);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtFechaDePedido);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LblActualizarEstado);
@@ -256,6 +278,7 @@
             this.MinimizeBox = false;
             this.Name = "VerOrdenDePedido";
             this.Text = "VerOrdenDePedido";
+            this.Load += new System.EventHandler(this.VerOrdenDePedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPedidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,5 +308,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeVencimiento;
         private System.Windows.Forms.TextBox TxtFechaDePedido;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtProveedor;
+        private System.Windows.Forms.Label label5;
     }
 }

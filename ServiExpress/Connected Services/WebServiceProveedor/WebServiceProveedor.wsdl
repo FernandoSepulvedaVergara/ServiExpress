@@ -23,6 +23,12 @@
   <message name="ObtenerInfoProductoProveedorResponse">
     <part name="parameters" element="tns:ObtenerInfoProductoProveedorResponse" />
   </message>
+  <message name="GetOrdenesDePedido">
+    <part name="parameters" element="tns:GetOrdenesDePedido" />
+  </message>
+  <message name="GetOrdenesDePedidoResponse">
+    <part name="parameters" element="tns:GetOrdenesDePedidoResponse" />
+  </message>
   <message name="ActualizarEstadoProductoProveedor">
     <part name="parameters" element="tns:ActualizarEstadoProductoProveedor" />
   </message>
@@ -59,6 +65,10 @@
     <operation name="ObtenerInfoProductoProveedor">
       <input wsam:Action="http://servicios/WebServiceProveedor/ObtenerInfoProductoProveedorRequest" message="tns:ObtenerInfoProductoProveedor" />
       <output wsam:Action="http://servicios/WebServiceProveedor/ObtenerInfoProductoProveedorResponse" message="tns:ObtenerInfoProductoProveedorResponse" />
+    </operation>
+    <operation name="GetOrdenesDePedido">
+      <input wsam:Action="http://servicios/WebServiceProveedor/GetOrdenesDePedidoRequest" message="tns:GetOrdenesDePedido" />
+      <output wsam:Action="http://servicios/WebServiceProveedor/GetOrdenesDePedidoResponse" message="tns:GetOrdenesDePedidoResponse" />
     </operation>
     <operation name="ActualizarEstadoProductoProveedor">
       <input wsam:Action="http://servicios/WebServiceProveedor/ActualizarEstadoProductoProveedorRequest" message="tns:ActualizarEstadoProductoProveedor" />
@@ -98,6 +108,15 @@
       </output>
     </operation>
     <operation name="ObtenerInfoProductoProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetOrdenesDePedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

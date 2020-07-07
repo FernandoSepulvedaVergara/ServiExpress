@@ -26,6 +26,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             TxtAdministrador.Text = ordenDePedido.usuarioRut;
             TxtEstado.Text = ordenDePedido.estadoDePedido.estado;
             TxtFechaDePedido.Text = ordenDePedido.fechaDePedido;
+            TxtProveedor.Text = ordenDePedido.rutProveedor;
 
             if (ordenDePedido.estadoDePedido.idEstadoPedido.Equals(1) || ordenDePedido.estadoDePedido.idEstadoPedido.Equals(2))
             {
@@ -115,6 +116,11 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                     }
                 }
             }
+        }
+
+        private void VerOrdenDePedido_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

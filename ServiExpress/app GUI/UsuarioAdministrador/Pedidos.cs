@@ -76,6 +76,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 dataGridViewRow.Cells[2].Value = ordenDePedido.fechaDePedido;
                 dataGridViewRow.Cells[3].Value = ordenDePedido.total;
                 dataGridViewRow.Cells[4].Value = ordenDePedido.usuarioRut;
+                dataGridViewRow.Cells[5].Value = ordenDePedido.rutProveedor;
                 DgvOrdenesDePedido.Rows.Add(dataGridViewRow);
             }
         }

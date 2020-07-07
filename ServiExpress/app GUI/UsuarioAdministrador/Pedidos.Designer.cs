@@ -35,6 +35,7 @@
             this.FechaDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Administrador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             this.IdOrdenPedido,
             this.FechaDePedido,
             this.Total,
-            this.Administrador});
+            this.Administrador,
+            this.Proveedor});
             this.DgvOrdenesDePedido.Location = new System.Drawing.Point(12, 112);
             this.DgvOrdenesDePedido.MultiSelect = false;
             this.DgvOrdenesDePedido.Name = "DgvOrdenesDePedido";
@@ -100,6 +102,12 @@
             this.Administrador.Name = "Administrador";
             this.Administrador.ReadOnly = true;
             // 
+            // Proveedor
+            // 
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,5 +137,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaDePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Administrador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
     }
 }

@@ -152,7 +152,8 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 MessageBox.Show("No se ha agregado ningún producto");
             }
             else {
-                string[] resultadoRegistrarOrdePedido = controladorAdministrador.RegistrarOrdenDePedido(TxtFechaDePedido.Text,int.Parse(LblMontoAPagar.Text), controladorAdministrador.login[0], 1);
+                string rutProveedor = CmbProveedores.SelectedItem.ToString().Substring(0, CmbProveedores.SelectedItem.ToString().IndexOf("-")).Trim();
+                string[] resultadoRegistrarOrdePedido = controladorAdministrador.RegistrarOrdenDePedido(TxtFechaDePedido.Text,int.Parse(LblMontoAPagar.Text), controladorAdministrador.login[0], 1, rutProveedor);
                 bool resultado = false;
                 if (Convert.ToBoolean(resultadoRegistrarOrdePedido[0]))
                 {

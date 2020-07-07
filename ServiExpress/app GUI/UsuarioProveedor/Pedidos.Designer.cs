@@ -28,27 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.DgvOrdenesDePedido = new System.Windows.Forms.DataGridView();
+            this.EstadoDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdOrdenPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Administrador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnGenerarPedido = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // DgvOrdenesDePedido
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(44, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 21);
-            this.comboBox1.TabIndex = 0;
+            this.DgvOrdenesDePedido.AllowUserToAddRows = false;
+            this.DgvOrdenesDePedido.AllowUserToDeleteRows = false;
+            this.DgvOrdenesDePedido.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DgvOrdenesDePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvOrdenesDePedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EstadoDePedido,
+            this.IdOrdenPedido,
+            this.FechaDePedido,
+            this.Total,
+            this.Administrador});
+            this.DgvOrdenesDePedido.Location = new System.Drawing.Point(71, 147);
+            this.DgvOrdenesDePedido.MultiSelect = false;
+            this.DgvOrdenesDePedido.Name = "DgvOrdenesDePedido";
+            this.DgvOrdenesDePedido.ReadOnly = true;
+            this.DgvOrdenesDePedido.RowHeadersVisible = false;
+            this.DgvOrdenesDePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvOrdenesDePedido.Size = new System.Drawing.Size(776, 297);
+            this.DgvOrdenesDePedido.TabIndex = 3;
             // 
-            // comboBox2
+            // EstadoDePedido
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(44, 64);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(212, 21);
-            this.comboBox2.TabIndex = 1;
+            this.EstadoDePedido.HeaderText = "Estado de pedido";
+            this.EstadoDePedido.Name = "EstadoDePedido";
+            this.EstadoDePedido.ReadOnly = true;
+            // 
+            // IdOrdenPedido
+            // 
+            this.IdOrdenPedido.HeaderText = "Id orden de pedido";
+            this.IdOrdenPedido.Name = "IdOrdenPedido";
+            this.IdOrdenPedido.ReadOnly = true;
+            // 
+            // FechaDePedido
+            // 
+            this.FechaDePedido.HeaderText = "Fecha de pedido";
+            this.FechaDePedido.Name = "FechaDePedido";
+            this.FechaDePedido.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Administrador
+            // 
+            this.Administrador.HeaderText = "Administrador";
+            this.Administrador.Name = "Administrador";
+            this.Administrador.ReadOnly = true;
+            // 
+            // BtnGenerarPedido
+            // 
+            this.BtnGenerarPedido.Location = new System.Drawing.Point(674, 65);
+            this.BtnGenerarPedido.Name = "BtnGenerarPedido";
+            this.BtnGenerarPedido.Size = new System.Drawing.Size(119, 39);
+            this.BtnGenerarPedido.TabIndex = 2;
+            this.BtnGenerarPedido.Text = "Generar pedido";
+            this.BtnGenerarPedido.UseVisualStyleBackColor = true;
             // 
             // Pedidos
             // 
@@ -57,20 +105,27 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(918, 509);
             this.ControlBox = false;
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.DgvOrdenesDePedido);
+            this.Controls.Add(this.BtnGenerarPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pedidos";
             this.Text = "Pedidos";
+            this.Load += new System.EventHandler(this.Pedidos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView DgvOrdenesDePedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDePedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdOrdenPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDePedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Administrador;
+        private System.Windows.Forms.Button BtnGenerarPedido;
     }
 }
