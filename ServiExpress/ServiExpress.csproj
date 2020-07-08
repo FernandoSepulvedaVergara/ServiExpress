@@ -240,6 +240,12 @@
     <Compile Include="app GUI\UsuarioProveedor\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\VerPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioProveedor\VerPedido.Designer.cs">
+      <DependentUpon>VerPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\WebServiceAdministrador\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -373,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioProveedor\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioProveedor\VerPedido.resx">
+      <DependentUpon>VerPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -573,16 +582,31 @@
     <None Include="Connected Services\WebServiceLoginUsuario\WebServiceLogin.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ActualizarEstadoPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ActualizarEstadoProductoProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ActualizarProductoProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ActualizarProductosAprobarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.AgregarNuevoTipoDeProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetOrdenDePedidoProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetOrdenesDePedidoProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetOrdenesDePedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetPedidosProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetProductosProveedorResponse.datasource">
@@ -595,6 +619,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.ordenDePedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.pedidos.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.productoProveedor.datasource">

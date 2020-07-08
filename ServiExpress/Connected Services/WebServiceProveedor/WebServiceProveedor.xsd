@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarEstadoPedido" type="tns:ActualizarEstadoPedido" />
+  <xs:element name="ActualizarEstadoPedidoResponse" type="tns:ActualizarEstadoPedidoResponse" />
   <xs:element name="ActualizarEstadoProductoProveedor" type="tns:ActualizarEstadoProductoProveedor" />
   <xs:element name="ActualizarEstadoProductoProveedorResponse" type="tns:ActualizarEstadoProductoProveedorResponse" />
   <xs:element name="ActualizarProductoProveedor" type="tns:ActualizarProductoProveedor" />
   <xs:element name="ActualizarProductoProveedorResponse" type="tns:ActualizarProductoProveedorResponse" />
+  <xs:element name="ActualizarProductosAprobarPedido" type="tns:ActualizarProductosAprobarPedido" />
+  <xs:element name="ActualizarProductosAprobarPedidoResponse" type="tns:ActualizarProductosAprobarPedidoResponse" />
   <xs:element name="AgregarNuevoTipoDeProducto" type="tns:AgregarNuevoTipoDeProducto" />
   <xs:element name="AgregarNuevoTipoDeProductoResponse" type="tns:AgregarNuevoTipoDeProductoResponse" />
-  <xs:element name="GetOrdenesDePedido" type="tns:GetOrdenesDePedido" />
-  <xs:element name="GetOrdenesDePedidoResponse" type="tns:GetOrdenesDePedidoResponse" />
+  <xs:element name="GetOrdenDePedidoProveedor" type="tns:GetOrdenDePedidoProveedor" />
+  <xs:element name="GetOrdenDePedidoProveedorResponse" type="tns:GetOrdenDePedidoProveedorResponse" />
+  <xs:element name="GetOrdenesDePedidoProveedor" type="tns:GetOrdenesDePedidoProveedor" />
+  <xs:element name="GetOrdenesDePedidoProveedorResponse" type="tns:GetOrdenesDePedidoProveedorResponse" />
+  <xs:element name="GetPedidosProveedor" type="tns:GetPedidosProveedor" />
+  <xs:element name="GetPedidosProveedorResponse" type="tns:GetPedidosProveedorResponse" />
   <xs:element name="GetProductosProveedor" type="tns:GetProductosProveedor" />
   <xs:element name="GetProductosProveedorResponse" type="tns:GetProductosProveedorResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
@@ -46,6 +54,28 @@
       <xs:element name="idEstadoDeProducto" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="GetPedidosProveedor">
+    <xs:sequence>
+      <xs:element name="idOrdenDePedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetPedidosProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:pedidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedidos">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaDeVencimiento" type="xs:string" />
+      <xs:element name="idPedido" type="xs:int" />
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="marca" type="xs:string" />
+      <xs:element name="precioCompra" type="xs:int" />
+      <xs:element name="totalAPagar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetProductosProveedor">
     <xs:sequence>
       <xs:element name="idTipoDeProducto" type="xs:int" />
@@ -67,6 +97,17 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ActualizarProductosAprobarPedido">
+    <xs:sequence>
+      <xs:element name="idProductoProveedor" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarProductosAprobarPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="RegistrarNuevoProductoProveedor">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
@@ -84,12 +125,25 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetOrdenesDePedido">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetOrdenesDePedidoResponse">
+  <xs:complexType name="ActualizarEstadoPedido">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
+      <xs:element name="idOrdenDePedido" type="xs:int" />
+      <xs:element name="idEstado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarEstadoPedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOrdenDePedidoProveedor">
+    <xs:sequence>
+      <xs:element name="idOrdenDePedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOrdenDePedidoProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ordenDePedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ordenDePedido">
@@ -144,6 +198,16 @@
   <xs:complexType name="ActualizarProductoProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOrdenesDePedidoProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOrdenesDePedidoProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -34,7 +34,9 @@
             this.FechaDePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Administrador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnGenerarPedido = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CmbFiltro = new System.Windows.Forms.ComboBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,7 @@
             this.DgvOrdenesDePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvOrdenesDePedido.Size = new System.Drawing.Size(776, 297);
             this.DgvOrdenesDePedido.TabIndex = 3;
+            this.DgvOrdenesDePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrdenesDePedido_CellClick);
             // 
             // EstadoDePedido
             // 
@@ -89,14 +92,30 @@
             this.Administrador.Name = "Administrador";
             this.Administrador.ReadOnly = true;
             // 
-            // BtnGenerarPedido
+            // textBox1
             // 
-            this.BtnGenerarPedido.Location = new System.Drawing.Point(674, 65);
-            this.BtnGenerarPedido.Name = "BtnGenerarPedido";
-            this.BtnGenerarPedido.Size = new System.Drawing.Size(119, 39);
-            this.BtnGenerarPedido.TabIndex = 2;
-            this.BtnGenerarPedido.Text = "Generar pedido";
-            this.BtnGenerarPedido.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(66, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(179, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // CmbFiltro
+            // 
+            this.CmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbFiltro.FormattingEnabled = true;
+            this.CmbFiltro.Location = new System.Drawing.Point(66, 42);
+            this.CmbFiltro.Name = "CmbFiltro";
+            this.CmbFiltro.Size = new System.Drawing.Size(121, 21);
+            this.CmbFiltro.TabIndex = 5;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(264, 67);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(98, 23);
+            this.BtnBuscar.TabIndex = 6;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
             // Pedidos
             // 
@@ -105,8 +124,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(918, 509);
             this.ControlBox = false;
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.CmbFiltro);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.DgvOrdenesDePedido);
-            this.Controls.Add(this.BtnGenerarPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -115,6 +136,7 @@
             this.Load += new System.EventHandler(this.Pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvOrdenesDePedido)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,6 +148,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaDePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Administrador;
-        private System.Windows.Forms.Button BtnGenerarPedido;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox CmbFiltro;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }

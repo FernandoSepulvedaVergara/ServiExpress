@@ -64,5 +64,44 @@ namespace ServiExpress.controlador
         {
             return webProveedor.RegistrarNuevoProductoProveedor(descripcion, marca, fechaDeVencimiento, precioDeCompra, stock, idTipoDeProducto, this.login[0], idEstadoDeProducto);
         }
+
+        public WebServiceProveedor.ordenDePedido[] GetOrdenesDePedidoProveedor() {
+            return webProveedor.GetOrdenesDePedidoProveedor(login[0]);
+        }
+        
+        public WebServiceProveedor.ordenDePedido GetOrdenDePedidoProveedor(int idOrdenDePedido)
+        {
+            return webProveedor.GetOrdenDePedidoProveedor(idOrdenDePedido);
+        }
+
+        public WebServiceProveedor.pedidos[] GetPedidosProveedor(int idOrdenDePedido)
+        {
+            return webProveedor.GetPedidosProveedor(idOrdenDePedido);
+        }
+
+        public bool ActualizarEstadoPedido(int idPedido, int idEstado)
+        {
+            return webProveedor.ActualizarEstadoPedido(idPedido, idEstado);
+        }
+
+        public bool ActualizarProductosAprobarPedido(DataGridViewRowCollection dataGridViewRows)
+        {
+            bool resultado = false;
+            foreach (DataGridViewRow dataGridViewRow in dataGridViewRows)
+            {
+                string[] actualizarProductosAprobarPedido = webProveedor.ActualizarProductosAprobarPedido(int.Parse(dataGridViewRow.Cells[4].Value.ToString()), int.Parse(dataGridViewRow.Cells[1].Value.ToString()));
+
+                if (bool.Parse(actualizarProductosAprobarPedido[0]))
+                {
+                    resultado = true;
+                }
+                else
+                {
+                    resultado = false;
+                    break;
+                }
+            }
+            return resultado;
+        }
     }
 }

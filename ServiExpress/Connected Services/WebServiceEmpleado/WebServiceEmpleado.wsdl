@@ -23,17 +23,17 @@
   <message name="GetAtencionesResponse">
     <part name="parameters" element="tns:GetAtencionesResponse" />
   </message>
-  <message name="RegistrarVenta">
-    <part name="parameters" element="tns:RegistrarVenta" />
-  </message>
-  <message name="RegistrarVentaResponse">
-    <part name="parameters" element="tns:RegistrarVentaResponse" />
-  </message>
   <message name="Pagar">
     <part name="parameters" element="tns:Pagar" />
   </message>
   <message name="PagarResponse">
     <part name="parameters" element="tns:PagarResponse" />
+  </message>
+  <message name="RegistrarVenta">
+    <part name="parameters" element="tns:RegistrarVenta" />
+  </message>
+  <message name="RegistrarVentaResponse">
+    <part name="parameters" element="tns:RegistrarVentaResponse" />
   </message>
   <message name="GetTipoDeProducto">
     <part name="parameters" element="tns:GetTipoDeProducto" />
@@ -41,11 +41,11 @@
   <message name="GetTipoDeProductoResponse">
     <part name="parameters" element="tns:GetTipoDeProductoResponse" />
   </message>
-  <message name="GetVentasEmpleado">
-    <part name="parameters" element="tns:GetVentasEmpleado" />
+  <message name="GetTipoDeServicios">
+    <part name="parameters" element="tns:GetTipoDeServicios" />
   </message>
-  <message name="GetVentasEmpleadoResponse">
-    <part name="parameters" element="tns:GetVentasEmpleadoResponse" />
+  <message name="GetTipoDeServiciosResponse">
+    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
   </message>
   <message name="ActualizarProductos">
     <part name="parameters" element="tns:ActualizarProductos" />
@@ -53,11 +53,11 @@
   <message name="ActualizarProductosResponse">
     <part name="parameters" element="tns:ActualizarProductosResponse" />
   </message>
-  <message name="GetTipoDeServicios">
-    <part name="parameters" element="tns:GetTipoDeServicios" />
+  <message name="RegistrarAtencion">
+    <part name="parameters" element="tns:RegistrarAtencion" />
   </message>
-  <message name="GetTipoDeServiciosResponse">
-    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
+  <message name="RegistrarAtencionResponse">
+    <part name="parameters" element="tns:RegistrarAtencionResponse" />
   </message>
   <message name="GetTipoDeDocumento">
     <part name="parameters" element="tns:GetTipoDeDocumento" />
@@ -65,11 +65,11 @@
   <message name="GetTipoDeDocumentoResponse">
     <part name="parameters" element="tns:GetTipoDeDocumentoResponse" />
   </message>
-  <message name="RegistrarAtencion">
-    <part name="parameters" element="tns:RegistrarAtencion" />
+  <message name="GetVentasEmpleado">
+    <part name="parameters" element="tns:GetVentasEmpleado" />
   </message>
-  <message name="RegistrarAtencionResponse">
-    <part name="parameters" element="tns:RegistrarAtencionResponse" />
+  <message name="GetVentasEmpleadoResponse">
+    <part name="parameters" element="tns:GetVentasEmpleadoResponse" />
   </message>
   <portType name="WebServiceEmpleado">
     <operation name="GetProductos">
@@ -84,37 +84,37 @@
       <input wsam:Action="http://servicios/WebServiceEmpleado/GetAtencionesRequest" message="tns:GetAtenciones" />
       <output wsam:Action="http://servicios/WebServiceEmpleado/GetAtencionesResponse" message="tns:GetAtencionesResponse" />
     </operation>
-    <operation name="RegistrarVenta">
-      <input wsam:Action="http://servicios/WebServiceEmpleado/RegistrarVentaRequest" message="tns:RegistrarVenta" />
-      <output wsam:Action="http://servicios/WebServiceEmpleado/RegistrarVentaResponse" message="tns:RegistrarVentaResponse" />
-    </operation>
     <operation name="Pagar">
       <input wsam:Action="http://servicios/WebServiceEmpleado/PagarRequest" message="tns:Pagar" />
       <output wsam:Action="http://servicios/WebServiceEmpleado/PagarResponse" message="tns:PagarResponse" />
+    </operation>
+    <operation name="RegistrarVenta">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/RegistrarVentaRequest" message="tns:RegistrarVenta" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/RegistrarVentaResponse" message="tns:RegistrarVentaResponse" />
     </operation>
     <operation name="GetTipoDeProducto">
       <input wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeProductoRequest" message="tns:GetTipoDeProducto" />
       <output wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeProductoResponse" message="tns:GetTipoDeProductoResponse" />
     </operation>
-    <operation name="GetVentasEmpleado">
-      <input wsam:Action="http://servicios/WebServiceEmpleado/GetVentasEmpleadoRequest" message="tns:GetVentasEmpleado" />
-      <output wsam:Action="http://servicios/WebServiceEmpleado/GetVentasEmpleadoResponse" message="tns:GetVentasEmpleadoResponse" />
+    <operation name="GetTipoDeServicios">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
     </operation>
     <operation name="ActualizarProductos">
       <input wsam:Action="http://servicios/WebServiceEmpleado/ActualizarProductosRequest" message="tns:ActualizarProductos" />
       <output wsam:Action="http://servicios/WebServiceEmpleado/ActualizarProductosResponse" message="tns:ActualizarProductosResponse" />
     </operation>
-    <operation name="GetTipoDeServicios">
-      <input wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
-      <output wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
+    <operation name="RegistrarAtencion">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/RegistrarAtencionRequest" message="tns:RegistrarAtencion" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/RegistrarAtencionResponse" message="tns:RegistrarAtencionResponse" />
     </operation>
     <operation name="GetTipoDeDocumento">
       <input wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeDocumentoRequest" message="tns:GetTipoDeDocumento" />
       <output wsam:Action="http://servicios/WebServiceEmpleado/GetTipoDeDocumentoResponse" message="tns:GetTipoDeDocumentoResponse" />
     </operation>
-    <operation name="RegistrarAtencion">
-      <input wsam:Action="http://servicios/WebServiceEmpleado/RegistrarAtencionRequest" message="tns:RegistrarAtencion" />
-      <output wsam:Action="http://servicios/WebServiceEmpleado/RegistrarAtencionResponse" message="tns:RegistrarAtencionResponse" />
+    <operation name="GetVentasEmpleado">
+      <input wsam:Action="http://servicios/WebServiceEmpleado/GetVentasEmpleadoRequest" message="tns:GetVentasEmpleado" />
+      <output wsam:Action="http://servicios/WebServiceEmpleado/GetVentasEmpleadoResponse" message="tns:GetVentasEmpleadoResponse" />
     </operation>
   </portType>
   <binding name="WebServiceEmpleadoPortBinding" type="tns:WebServiceEmpleado">
@@ -146,7 +146,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="RegistrarVenta">
+    <operation name="Pagar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -155,7 +155,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Pagar">
+    <operation name="RegistrarVenta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -173,7 +173,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetVentasEmpleado">
+    <operation name="GetTipoDeServicios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -191,7 +191,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetTipoDeServicios">
+    <operation name="RegistrarAtencion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -209,7 +209,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="RegistrarAtencion">
+    <operation name="GetVentasEmpleado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
