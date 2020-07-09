@@ -57,5 +57,10 @@ namespace ServiExpress.app_GUI
         {
             Application.Exit();
         }
+
+        private void BtnAdministrarUsuarios_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

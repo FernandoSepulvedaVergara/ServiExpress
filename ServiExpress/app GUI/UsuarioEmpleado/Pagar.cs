@@ -1,13 +1,5 @@
 ﻿using ServiExpress.controlador;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI.UsuarioEmpleado
@@ -34,7 +26,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             {
                 if (LblMontoAPagar.Text.Equals(TxtMontoPago.Text.Trim()))
                 {
-                    string[] resultado = controladorEmpleado.Pagar(int.Parse(this.dataGridViewRow.Cells[1].Value.ToString()), int.Parse(this.dataGridViewRow.Cells[2].Value.ToString()));
+                    string[] resultado = controladorEmpleado.Pagar(int.Parse(this.dataGridViewRow.Cells[1].Value.ToString()), int.Parse(TxtMontoPago.Text));
                     MessageBox.Show(resultado[1]);
                 }
                 else
@@ -42,11 +34,6 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
                     MessageBox.Show("El monto ingresado no coincide con el total a pagar");
                 }
             }
-        }
-
-        private void Pagar_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

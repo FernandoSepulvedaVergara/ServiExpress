@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario4));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.BtnAdministrarSucursales = new System.Windows.Forms.Button();
+            this.BtnAdministrarUsuarios = new System.Windows.Forms.Button();
             this.BtnPedidos = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnAdministrarProducto = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.BtnAdministrarSucursales = new System.Windows.Forms.Button();
-            this.BtnAdministrarUsuarios = new System.Windows.Forms.Button();
+            this.BtnAdministrarProveedores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -50,8 +51,9 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.BtnAdministrarSucursales);
             this.splitContainer1.Panel1.Controls.Add(this.BtnAdministrarUsuarios);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnAdministrarProveedores);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnAdministrarSucursales);
             this.splitContainer1.Panel1.Controls.Add(this.BtnPedidos);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
@@ -61,9 +63,28 @@
             this.splitContainer1.SplitterDistance = 192;
             this.splitContainer1.TabIndex = 0;
             // 
+            // BtnAdministrarSucursales
+            // 
+            this.BtnAdministrarSucursales.Location = new System.Drawing.Point(26, 417);
+            this.BtnAdministrarSucursales.Name = "BtnAdministrarSucursales";
+            this.BtnAdministrarSucursales.Size = new System.Drawing.Size(133, 41);
+            this.BtnAdministrarSucursales.TabIndex = 21;
+            this.BtnAdministrarSucursales.Text = "Administrar sucursales";
+            this.BtnAdministrarSucursales.UseVisualStyleBackColor = true;
+            // 
+            // BtnAdministrarUsuarios
+            // 
+            this.BtnAdministrarUsuarios.Location = new System.Drawing.Point(26, 190);
+            this.BtnAdministrarUsuarios.Name = "BtnAdministrarUsuarios";
+            this.BtnAdministrarUsuarios.Size = new System.Drawing.Size(133, 41);
+            this.BtnAdministrarUsuarios.TabIndex = 20;
+            this.BtnAdministrarUsuarios.Text = "Administrar usuarios";
+            this.BtnAdministrarUsuarios.UseVisualStyleBackColor = true;
+            this.BtnAdministrarUsuarios.Click += new System.EventHandler(this.BtnAdministrarUsuarios_Click);
+            // 
             // BtnPedidos
             // 
-            this.BtnPedidos.Location = new System.Drawing.Point(26, 336);
+            this.BtnPedidos.Location = new System.Drawing.Point(26, 360);
             this.BtnPedidos.Name = "BtnPedidos";
             this.BtnPedidos.Size = new System.Drawing.Size(133, 41);
             this.BtnPedidos.TabIndex = 19;
@@ -82,7 +103,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(26, 501);
+            this.button3.Location = new System.Drawing.Point(26, 525);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 41);
             this.button3.TabIndex = 18;
@@ -91,7 +112,7 @@
             // 
             // BtnAdministrarProducto
             // 
-            this.BtnAdministrarProducto.Location = new System.Drawing.Point(26, 280);
+            this.BtnAdministrarProducto.Location = new System.Drawing.Point(26, 304);
             this.BtnAdministrarProducto.Name = "BtnAdministrarProducto";
             this.BtnAdministrarProducto.Size = new System.Drawing.Size(133, 41);
             this.BtnAdministrarProducto.TabIndex = 17;
@@ -110,23 +131,14 @@
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // BtnAdministrarSucursales
+            // BtnAdministrarProveedores
             // 
-            this.BtnAdministrarSucursales.Location = new System.Drawing.Point(26, 393);
-            this.BtnAdministrarSucursales.Name = "BtnAdministrarSucursales";
-            this.BtnAdministrarSucursales.Size = new System.Drawing.Size(133, 41);
-            this.BtnAdministrarSucursales.TabIndex = 21;
-            this.BtnAdministrarSucursales.Text = "Administrar sucursales";
-            this.BtnAdministrarSucursales.UseVisualStyleBackColor = true;
-            // 
-            // BtnAdministrarUsuarios
-            // 
-            this.BtnAdministrarUsuarios.Location = new System.Drawing.Point(26, 225);
-            this.BtnAdministrarUsuarios.Name = "BtnAdministrarUsuarios";
-            this.BtnAdministrarUsuarios.Size = new System.Drawing.Size(133, 41);
-            this.BtnAdministrarUsuarios.TabIndex = 20;
-            this.BtnAdministrarUsuarios.Text = "Administrar usuarios";
-            this.BtnAdministrarUsuarios.UseVisualStyleBackColor = true;
+            this.BtnAdministrarProveedores.Location = new System.Drawing.Point(26, 247);
+            this.BtnAdministrarProveedores.Name = "BtnAdministrarProveedores";
+            this.BtnAdministrarProveedores.Size = new System.Drawing.Size(133, 41);
+            this.BtnAdministrarProveedores.TabIndex = 22;
+            this.BtnAdministrarProveedores.Text = "Administrar proveedores";
+            this.BtnAdministrarProveedores.UseVisualStyleBackColor = true;
             // 
             // FormUsuario4
             // 
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnAdministrarSucursales;
         private System.Windows.Forms.Button BtnAdministrarUsuarios;
+        private System.Windows.Forms.Button BtnAdministrarProveedores;
     }
 }

@@ -116,5 +116,10 @@ namespace ServiExpress.controlador
         public bool ActualizarEstadoProducto(int idProducto, int idEstado) {
             return webAdministrador.ActualizarEstadoProducto(idProducto, idEstado);
         }
+
+        public usuarios[] GetUsuarios()
+        {
+            return webAdministrador.GetUsuarios();
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace ServiExpress.app_GUI.UsuarioCliente
 
         private void GlosarioDePagos_Load(object sender, EventArgs e)
         {
-            controladorCliente.SetDataGridView(DgvVentas);   
+            controladorCliente.SetDataGridView(DgvVentas);            
         }
     }
 }

@@ -82,7 +82,6 @@
             this.MinimizeBox = false;
             this.Name = "Pagar";
             this.Text = "Pagar";
-            this.Load += new System.EventHandler(this.Pagar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
