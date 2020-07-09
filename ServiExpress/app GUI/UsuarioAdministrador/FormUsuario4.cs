@@ -60,7 +60,15 @@ namespace ServiExpress.app_GUI
 
         private void BtnAdministrarUsuarios_Click(object sender, EventArgs e)
         {
-            
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            AdministrarUsuarios administrarUsuarios = new AdministrarUsuarios(controladorAdministrador);
+            administrarUsuarios.TopLevel = false;
+            administrarUsuarios.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(administrarUsuarios);
+            administrarUsuarios.Show();
         }
     }
 }

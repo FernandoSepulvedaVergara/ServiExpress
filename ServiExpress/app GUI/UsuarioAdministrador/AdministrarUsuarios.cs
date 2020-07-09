@@ -23,11 +23,10 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void AdministrarUsuarios_Load(object sender, EventArgs e)
         {
-            usuarios[] resultado = controladorAdministrador.GetUsuarios();
-
+            ActualizarUsuarios();
         }
 
-        private void ActualizarOrdenesDePedido()
+        private void ActualizarUsuarios()
         {
             usuarios[] usuarios = controladorAdministrador.GetUsuarios();
             DgvUsuarios.Rows.Clear();
