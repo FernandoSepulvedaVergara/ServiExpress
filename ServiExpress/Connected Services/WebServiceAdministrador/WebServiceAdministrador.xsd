@@ -8,6 +8,10 @@
   <xs:element name="ActualizarProductosCancelarPedidoResponse" type="tns:ActualizarProductosCancelarPedidoResponse" />
   <xs:element name="ActualizarProductosEntregarPedido" type="tns:ActualizarProductosEntregarPedido" />
   <xs:element name="ActualizarProductosEntregarPedidoResponse" type="tns:ActualizarProductosEntregarPedidoResponse" />
+  <xs:element name="FiltrarPorRut" type="tns:FiltrarPorRut" />
+  <xs:element name="FiltrarPorRutResponse" type="tns:FiltrarPorRutResponse" />
+  <xs:element name="FiltrarPorUsuario" type="tns:FiltrarPorUsuario" />
+  <xs:element name="FiltrarPorUsuarioResponse" type="tns:FiltrarPorUsuarioResponse" />
   <xs:element name="GetInfoProducto" type="tns:GetInfoProducto" />
   <xs:element name="GetInfoProductoProveedor" type="tns:GetInfoProductoProveedor" />
   <xs:element name="GetInfoProductoProveedorResponse" type="tns:GetInfoProductoProveedorResponse" />
@@ -94,6 +98,38 @@
       <xs:element name="tipoDeUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="FiltrarPorRut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FiltrarPorRutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:usuarios" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoDeUsuario" type="tns:estadoDeUsuario" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDeUsuario" type="tns:tipoDeUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoDeUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estadoDeUsuario" type="xs:string" />
+      <xs:element name="idEstadoDeUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDeUsuario">
+    <xs:sequence>
+      <xs:element name="idTipoDeUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoDeUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ActualizarEstadoProducto">
     <xs:sequence>
       <xs:element name="idProducto" type="xs:int" />
@@ -137,42 +173,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:usuarios" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="usuarios">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="estadoDeUsuario" type="tns:estadoDeUsuario" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
-      <xs:element minOccurs="0" name="tipoDeUsuario" type="tns:tipoDeUsuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="estadoDeUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="estadoDeUsuario" type="xs:string" />
-      <xs:element name="idEstadoDeUsuario" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoDeUsuario">
-    <xs:sequence>
-      <xs:element name="idTipoDeUsuario" type="xs:int" />
-      <xs:element minOccurs="0" name="tipoDeUsuario" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="RegistrarOrdenDePedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
-      <xs:element name="total" type="xs:int" />
-      <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
-      <xs:element name="idEstadoDePedido" type="xs:int" />
-      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="RegistrarOrdenDePedidoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="GetOrdenDePedido">
     <xs:sequence>
       <xs:element name="idOrdenDePedido" type="xs:int" />
@@ -199,6 +199,20 @@
       <xs:element name="idEstadoPedido" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="RegistrarOrdenDePedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
+      <xs:element name="total" type="xs:int" />
+      <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
+      <xs:element name="idEstadoDePedido" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarOrdenDePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetProductosProveedor">
     <xs:sequence>
       <xs:element name="idTipoDeProducto" type="xs:int" />
@@ -208,14 +222,6 @@
   <xs:complexType name="GetProductosProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:productoProveedor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetOrdenesDePedido">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetOrdenesDePedidoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetPedidos">
@@ -238,6 +244,14 @@
       <xs:element minOccurs="0" name="marca" type="xs:string" />
       <xs:element name="precioCompra" type="xs:int" />
       <xs:element name="totalAPagar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOrdenesDePedido">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetOrdenesDePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarProductosCancelarPedido">
@@ -286,6 +300,18 @@
       <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
       <xs:element name="stock" type="xs:int" />
       <xs:element name="stockCritico" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FiltrarPorUsuario">
+    <xs:sequence>
+      <xs:element name="filtroAdministrado" type="xs:boolean" />
+      <xs:element name="filtroCliente" type="xs:boolean" />
+      <xs:element name="filtroEmpleado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FiltrarPorUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:usuarios" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetProductos">

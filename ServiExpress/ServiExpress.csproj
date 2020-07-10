@@ -422,6 +422,12 @@
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizarProductosEntregarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.FiltrarPorRutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.FiltrarPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoProductoProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -622,9 +628,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetOrdenesDePedidoProveedorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetOrdenesDePedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceProveedor\ServiExpress.WebServiceProveedor.GetPedidosProveedorResponse.datasource">

@@ -121,5 +121,14 @@ namespace ServiExpress.controlador
         {
             return webAdministrador.GetUsuarios();
         }
+
+       public usuarios[] FiltrarPorUsuario(bool filtroAdministrado, bool filtroCliente, bool filtroEmpleado) {
+            return webAdministrador.FiltrarPorUsuario(filtroAdministrado, filtroCliente, filtroEmpleado);
+        }
+
+        public usuarios[] FiltrarPorRut(string rut)
+        {
+            return webAdministrador.FiltrarPorRut(rut);
+        }
     }
 }

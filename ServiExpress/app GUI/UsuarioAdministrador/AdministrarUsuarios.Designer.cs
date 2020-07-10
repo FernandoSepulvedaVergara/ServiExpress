@@ -31,11 +31,6 @@
             this.TxtBuscarRut = new System.Windows.Forms.TextBox();
             this.ChbCliente = new System.Windows.Forms.CheckBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.ChbAdministrador = new System.Windows.Forms.CheckBox();
-            this.ChbEmpleado = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.VerUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +38,11 @@
             this.ApellidoPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoDeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChbAdministrador = new System.Windows.Forms.CheckBox();
+            this.ChbEmpleado = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,7 @@
             this.ChbCliente.TabIndex = 1;
             this.ChbCliente.Text = "Cliente";
             this.ChbCliente.UseVisualStyleBackColor = true;
+            this.ChbCliente.CheckedChanged += new System.EventHandler(this.ChbCliente_CheckedChanged);
             // 
             // DgvUsuarios
             // 
@@ -85,53 +86,6 @@
             this.DgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvUsuarios.Size = new System.Drawing.Size(776, 321);
             this.DgvUsuarios.TabIndex = 4;
-            // 
-            // ChbAdministrador
-            // 
-            this.ChbAdministrador.AutoSize = true;
-            this.ChbAdministrador.Location = new System.Drawing.Point(519, 57);
-            this.ChbAdministrador.Name = "ChbAdministrador";
-            this.ChbAdministrador.Size = new System.Drawing.Size(89, 17);
-            this.ChbAdministrador.TabIndex = 5;
-            this.ChbAdministrador.Text = "Administrador";
-            this.ChbAdministrador.UseVisualStyleBackColor = true;
-            // 
-            // ChbEmpleado
-            // 
-            this.ChbEmpleado.AutoSize = true;
-            this.ChbEmpleado.Location = new System.Drawing.Point(519, 34);
-            this.ChbEmpleado.Name = "ChbEmpleado";
-            this.ChbEmpleado.Size = new System.Drawing.Size(73, 17);
-            this.ChbEmpleado.TabIndex = 6;
-            this.ChbEmpleado.Text = "Empleado";
-            this.ChbEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(412, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Buscar por usuario :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Buscar por rut :";
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Location = new System.Drawing.Point(152, 35);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(100, 28);
-            this.BtnBuscar.TabIndex = 10;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
             // VerUsuario
             // 
@@ -174,6 +128,56 @@
             this.EstadoDeUsuario.HeaderText = "Estado de usuario";
             this.EstadoDeUsuario.Name = "EstadoDeUsuario";
             this.EstadoDeUsuario.ReadOnly = true;
+            // 
+            // ChbAdministrador
+            // 
+            this.ChbAdministrador.AutoSize = true;
+            this.ChbAdministrador.Location = new System.Drawing.Point(519, 57);
+            this.ChbAdministrador.Name = "ChbAdministrador";
+            this.ChbAdministrador.Size = new System.Drawing.Size(89, 17);
+            this.ChbAdministrador.TabIndex = 5;
+            this.ChbAdministrador.Text = "Administrador";
+            this.ChbAdministrador.UseVisualStyleBackColor = true;
+            this.ChbAdministrador.CheckedChanged += new System.EventHandler(this.ChbAdministrador_CheckedChanged);
+            // 
+            // ChbEmpleado
+            // 
+            this.ChbEmpleado.AutoSize = true;
+            this.ChbEmpleado.Location = new System.Drawing.Point(519, 34);
+            this.ChbEmpleado.Name = "ChbEmpleado";
+            this.ChbEmpleado.Size = new System.Drawing.Size(73, 17);
+            this.ChbEmpleado.TabIndex = 6;
+            this.ChbEmpleado.Text = "Empleado";
+            this.ChbEmpleado.UseVisualStyleBackColor = true;
+            this.ChbEmpleado.CheckedChanged += new System.EventHandler(this.ChbEmpleado_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(412, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Buscar por usuario :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(67, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Buscar por rut :";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(152, 35);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.BtnBuscar.TabIndex = 10;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // AdministrarUsuarios
             // 
