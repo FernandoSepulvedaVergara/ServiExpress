@@ -23,30 +23,8 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void AdministrarUsuarios_Load(object sender, EventArgs e)
         {
-            ActualizarUsuarios();
-        }
-
-        private void ActualizarUsuarios()
-        {
-            usuarios[] usuarios = controladorAdministrador.GetUsuarios();
-            DgvUsuarios.Rows.Clear();
-            foreach (var usuario in usuarios)
-            {
-                DataGridViewRow dataGridViewRow = new DataGridViewRow();
-                DataGridViewButtonCell dataGridViewButtonCell = new DataGridViewButtonCell();
-                dataGridViewButtonCell.Value = "Gestionar usuario";
-                dataGridViewRow.CreateCells(DgvUsuarios);
-
-                dataGridViewRow.Cells[0] = dataGridViewButtonCell;
-                dataGridViewRow.Cells[1].Value = usuario.tipoDeUsuario.tipoDeUsuario1;
-                dataGridViewRow.Cells[2].Value = usuario.rut;
-                dataGridViewRow.Cells[3].Value = usuario.nombre;
-                dataGridViewRow.Cells[4].Value = usuario.apellidoPaterno;
-                dataGridViewRow.Cells[5].Value = usuario.apellidoMaterno;
-                dataGridViewRow.Cells[6].Value = usuario.estadoDeUsuario.estadoDeUsuario1;
-                DgvUsuarios.Rows.Add(dataGridViewRow);
-            }
-        }
+            SeleccionarTodosLosUsuarios();
+        }       
 
         private void FiltrarPorUsuario()
         {
@@ -84,6 +62,64 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             }
         }
 
+        private void FiltrarPorRut() {
+
+            usuarios[] usuarios = controladorAdministrador.FiltrarPorRut(TxtBuscarRut.Text);
+            DgvUsuarios.Rows.Clear();
+            if (usuarios != null)
+            {
+                foreach (var usuario in usuarios)
+                {
+                    DataGridViewRow dataGridViewRow = new DataGridViewRow();
+                    DataGridViewButtonCell dataGridViewButtonCell = new DataGridViewButtonCell();
+                    dataGridViewButtonCell.Value = "Gestionar usuario";
+                    dataGridViewRow.CreateCells(DgvUsuarios);
+
+                    dataGridViewRow.Cells[0] = dataGridViewButtonCell;
+                    dataGridViewRow.Cells[1].Value = usuario.tipoDeUsuario.tipoDeUsuario1;
+                    dataGridViewRow.Cells[2].Value = usuario.rut;
+                    dataGridViewRow.Cells[3].Value = usuario.nombre;
+                    dataGridViewRow.Cells[4].Value = usuario.apellidoPaterno;
+                    dataGridViewRow.Cells[5].Value = usuario.apellidoMaterno;
+                    dataGridViewRow.Cells[6].Value = usuario.estadoDeUsuario.estadoDeUsuario1;
+                    DgvUsuarios.Rows.Add(dataGridViewRow);
+                }
+            }
+            else
+            {
+                DgvUsuarios.Rows.Clear();
+            }
+        }
+
+        private void SeleccionarTodosLosUsuarios()
+        {
+            usuarios[] usuarios = controladorAdministrador.SeleccionarTodosLosUsuarios();
+            DgvUsuarios.Rows.Clear();
+            if (usuarios != null)
+            {
+                foreach (var usuario in usuarios)
+                {
+                    DataGridViewRow dataGridViewRow = new DataGridViewRow();
+                    DataGridViewButtonCell dataGridViewButtonCell = new DataGridViewButtonCell();
+                    dataGridViewButtonCell.Value = "Gestionar usuario";
+                    dataGridViewRow.CreateCells(DgvUsuarios);
+
+                    dataGridViewRow.Cells[0] = dataGridViewButtonCell;
+                    dataGridViewRow.Cells[1].Value = usuario.tipoDeUsuario.tipoDeUsuario1;
+                    dataGridViewRow.Cells[2].Value = usuario.rut;
+                    dataGridViewRow.Cells[3].Value = usuario.nombre;
+                    dataGridViewRow.Cells[4].Value = usuario.apellidoPaterno;
+                    dataGridViewRow.Cells[5].Value = usuario.apellidoMaterno;
+                    dataGridViewRow.Cells[6].Value = usuario.estadoDeUsuario.estadoDeUsuario1;
+                    DgvUsuarios.Rows.Add(dataGridViewRow);
+                }
+            }
+            else
+            {
+                DgvUsuarios.Rows.Clear();
+            }
+        }
+
         private void ChbCliente_CheckedChanged(object sender, EventArgs e)
         {
             FiltrarPorUsuario();
@@ -101,7 +137,12 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            controladorAdministrador.FiltrarPorRut(TxtBuscarRut.Text);
+            FiltrarPorRut();
+        }
+
+        private void BtnSeleccionarTodosLosUsuarios_Click(object sender, EventArgs e)
+        {
+            SeleccionarTodosLosUsuarios();
         }
     }
 }

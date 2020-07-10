@@ -43,12 +43,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnSeleccionarTodosLosUsuarios = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtBuscarRut
             // 
-            this.TxtBuscarRut.Location = new System.Drawing.Point(152, 9);
+            this.TxtBuscarRut.Location = new System.Drawing.Point(351, 9);
             this.TxtBuscarRut.Name = "TxtBuscarRut";
             this.TxtBuscarRut.Size = new System.Drawing.Size(100, 20);
             this.TxtBuscarRut.TabIndex = 0;
@@ -56,7 +57,7 @@
             // ChbCliente
             // 
             this.ChbCliente.AutoSize = true;
-            this.ChbCliente.Location = new System.Drawing.Point(519, 11);
+            this.ChbCliente.Location = new System.Drawing.Point(641, 11);
             this.ChbCliente.Name = "ChbCliente";
             this.ChbCliente.Size = new System.Drawing.Size(58, 17);
             this.ChbCliente.TabIndex = 1;
@@ -132,7 +133,7 @@
             // ChbAdministrador
             // 
             this.ChbAdministrador.AutoSize = true;
-            this.ChbAdministrador.Location = new System.Drawing.Point(519, 57);
+            this.ChbAdministrador.Location = new System.Drawing.Point(641, 57);
             this.ChbAdministrador.Name = "ChbAdministrador";
             this.ChbAdministrador.Size = new System.Drawing.Size(89, 17);
             this.ChbAdministrador.TabIndex = 5;
@@ -143,7 +144,7 @@
             // ChbEmpleado
             // 
             this.ChbEmpleado.AutoSize = true;
-            this.ChbEmpleado.Location = new System.Drawing.Point(519, 34);
+            this.ChbEmpleado.Location = new System.Drawing.Point(641, 34);
             this.ChbEmpleado.Name = "ChbEmpleado";
             this.ChbEmpleado.Size = new System.Drawing.Size(73, 17);
             this.ChbEmpleado.TabIndex = 6;
@@ -154,7 +155,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(412, 12);
+            this.label1.Location = new System.Drawing.Point(534, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 8;
@@ -163,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 12);
+            this.label2.Location = new System.Drawing.Point(266, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 9;
@@ -171,7 +172,7 @@
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(152, 35);
+            this.BtnBuscar.Location = new System.Drawing.Point(351, 35);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(100, 28);
             this.BtnBuscar.TabIndex = 10;
@@ -179,12 +180,23 @@
             this.BtnBuscar.UseVisualStyleBackColor = true;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
+            // BtnSeleccionarTodosLosUsuarios
+            // 
+            this.BtnSeleccionarTodosLosUsuarios.Location = new System.Drawing.Point(27, 7);
+            this.BtnSeleccionarTodosLosUsuarios.Name = "BtnSeleccionarTodosLosUsuarios";
+            this.BtnSeleccionarTodosLosUsuarios.Size = new System.Drawing.Size(168, 37);
+            this.BtnSeleccionarTodosLosUsuarios.TabIndex = 12;
+            this.BtnSeleccionarTodosLosUsuarios.Text = "Seleccionar todos los usuarios";
+            this.BtnSeleccionarTodosLosUsuarios.UseVisualStyleBackColor = true;
+            this.BtnSeleccionarTodosLosUsuarios.Click += new System.EventHandler(this.BtnSeleccionarTodosLosUsuarios_Click);
+            // 
             // AdministrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnSeleccionarTodosLosUsuarios);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -223,5 +235,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoPaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoMaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDeUsuario;
+        private System.Windows.Forms.Button BtnSeleccionarTodosLosUsuarios;
     }
 }

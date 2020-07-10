@@ -117,9 +117,9 @@ namespace ServiExpress.controlador
             return webAdministrador.ActualizarEstadoProducto(idProducto, idEstado);
         }
 
-        public usuarios[] GetUsuarios()
+        public usuarios[] SeleccionarTodosLosUsuarios()
         {
-            return webAdministrador.GetUsuarios();
+            return webAdministrador.SeleccionarTodosLosUsuarios();
         }
 
        public usuarios[] FiltrarPorUsuario(bool filtroAdministrado, bool filtroCliente, bool filtroEmpleado) {
