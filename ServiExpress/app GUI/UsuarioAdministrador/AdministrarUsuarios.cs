@@ -15,6 +15,9 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
     public partial class AdministrarUsuarios : Form
     {
         ControladorAdministrador controladorAdministrador;
+        bool filtroTodosLosUsuario = false;
+        bool filtroRut = false;
+        bool filtroUsuarios = false;
         public AdministrarUsuarios(ControladorAdministrador controladorAdministrador)
         {
             this.controladorAdministrador = controladorAdministrador;
@@ -24,6 +27,9 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         private void AdministrarUsuarios_Load(object sender, EventArgs e)
         {
             SeleccionarTodosLosUsuarios();
+            this.filtroTodosLosUsuario = true;
+            this.filtroRut = false;
+            this.filtroUsuarios = false;
         }       
 
         private void FiltrarPorUsuario()
@@ -122,27 +128,67 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void ChbCliente_CheckedChanged(object sender, EventArgs e)
         {
+            this.filtroTodosLosUsuario = false;
+            this.filtroRut = false;
+            this.filtroUsuarios = true;
             FiltrarPorUsuario();
         }
 
         private void ChbEmpleado_CheckedChanged(object sender, EventArgs e)
         {
+            this.filtroTodosLosUsuario = false;
+            this.filtroRut = false;
+            this.filtroUsuarios = true;
             FiltrarPorUsuario();
         }
 
         private void ChbAdministrador_CheckedChanged(object sender, EventArgs e)
         {
+            this.filtroTodosLosUsuario = false;
+            this.filtroRut = false;
+            this.filtroUsuarios = true;
             FiltrarPorUsuario();
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            this.filtroTodosLosUsuario = false;
+            this.filtroRut = true;
+            this.filtroUsuarios = false;
             FiltrarPorRut();
         }
 
         private void BtnSeleccionarTodosLosUsuarios_Click(object sender, EventArgs e)
         {
             SeleccionarTodosLosUsuarios();
+            this.filtroTodosLosUsuario = true;
+            this.filtroRut = false;
+            this.filtroUsuarios = false;
+        }
+
+        private void DgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DgvUsuarios.Rows[DgvUsuarios.CurrentRow.Index].Cells[0].ColumnIndex.Equals(e.ColumnIndex))
+            {
+                GestionarUsuario gestionarUsuario = new GestionarUsuario(controladorAdministrador, DgvUsuarios.CurrentRow.Cells[2].Value.ToString());
+                gestionarUsuario.ShowDialog();
+                Filtrar();
+            }
+        }
+
+        private void Filtrar() {
+            if (this.filtroTodosLosUsuario.Equals(true)) {
+                SeleccionarTodosLosUsuarios();
+            }
+            else if (this.filtroRut.Equals(true)) {
+                FiltrarPorRut();
+            }
+            else if (this.filtroUsuarios.Equals(true)) {
+                FiltrarPorUsuario();
+            }
+            else {
+                MessageBox.Show("Error en cargar usuarios");
+            }
         }
     }
 }

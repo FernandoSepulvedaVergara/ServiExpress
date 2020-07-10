@@ -29,11 +29,17 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BtnAgregarNuevoProducto = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.CmbProductosProveedor = new System.Windows.Forms.ComboBox();
             this.CmbSeleccionarTipoDeProducto = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NumStock = new System.Windows.Forms.NumericUpDown();
+            this.BtmGuardar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnActualizarProducto = new System.Windows.Forms.Button();
             this.TxtStock = new System.Windows.Forms.TextBox();
             this.ChbEstadoDeProducto = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,19 +56,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.TxtProveedor = new System.Windows.Forms.TextBox();
-            this.BtnActualizarProducto = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtmGuardar = new System.Windows.Forms.Button();
-            this.NumStock = new System.Windows.Forms.NumericUpDown();
-            this.BtnAgregarNuevoProducto = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -87,6 +88,26 @@
             this.splitContainer1.Size = new System.Drawing.Size(996, 541);
             this.splitContainer1.SplitterDistance = 123;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(631, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 45);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Agregar nuevo tipo de producto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnAgregarNuevoProducto
+            // 
+            this.BtnAgregarNuevoProducto.Location = new System.Drawing.Point(790, 15);
+            this.BtnAgregarNuevoProducto.Name = "BtnAgregarNuevoProducto";
+            this.BtnAgregarNuevoProducto.Size = new System.Drawing.Size(143, 45);
+            this.BtnAgregarNuevoProducto.TabIndex = 30;
+            this.BtnAgregarNuevoProducto.Text = "Agregar nuevo producto";
+            this.BtnAgregarNuevoProducto.UseVisualStyleBackColor = true;
+            this.BtnAgregarNuevoProducto.Click += new System.EventHandler(this.BtnAgregarNuevoProducto_Click);
             // 
             // label12
             // 
@@ -129,6 +150,7 @@
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.NumStock);
             this.panel1.Controls.Add(this.BtmGuardar);
             this.panel1.Controls.Add(this.BtnCancelar);
@@ -155,6 +177,57 @@
             this.panel1.TabIndex = 25;
             this.panel1.Visible = false;
             // 
+            // NumStock
+            // 
+            this.NumStock.Location = new System.Drawing.Point(662, 109);
+            this.NumStock.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumStock.Name = "NumStock";
+            this.NumStock.ReadOnly = true;
+            this.NumStock.Size = new System.Drawing.Size(100, 20);
+            this.NumStock.TabIndex = 31;
+            this.NumStock.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumStock.Visible = false;
+            // 
+            // BtmGuardar
+            // 
+            this.BtmGuardar.Location = new System.Drawing.Point(567, 17);
+            this.BtmGuardar.Name = "BtmGuardar";
+            this.BtmGuardar.Size = new System.Drawing.Size(110, 45);
+            this.BtmGuardar.TabIndex = 30;
+            this.BtmGuardar.Text = "Guardar";
+            this.BtmGuardar.UseVisualStyleBackColor = true;
+            this.BtmGuardar.Visible = false;
+            this.BtmGuardar.Click += new System.EventHandler(this.BtmGuardar_Click);
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Location = new System.Drawing.Point(427, 17);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(110, 45);
+            this.BtnCancelar.TabIndex = 29;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Visible = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnActualizarProducto
+            // 
+            this.BtnActualizarProducto.Location = new System.Drawing.Point(284, 17);
+            this.BtnActualizarProducto.Name = "BtnActualizarProducto";
+            this.BtnActualizarProducto.Size = new System.Drawing.Size(110, 45);
+            this.BtnActualizarProducto.TabIndex = 28;
+            this.BtnActualizarProducto.Text = "Actualizar producto";
+            this.BtnActualizarProducto.UseVisualStyleBackColor = true;
+            this.BtnActualizarProducto.Click += new System.EventHandler(this.BtnActualizarProducto_Click);
+            // 
             // TxtStock
             // 
             this.TxtStock.Enabled = false;
@@ -169,7 +242,7 @@
             this.ChbEstadoDeProducto.AutoCheck = false;
             this.ChbEstadoDeProducto.AutoSize = true;
             this.ChbEstadoDeProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChbEstadoDeProducto.Location = new System.Drawing.Point(35, 33);
+            this.ChbEstadoDeProducto.Location = new System.Drawing.Point(36, 33);
             this.ChbEstadoDeProducto.Name = "ChbEstadoDeProducto";
             this.ChbEstadoDeProducto.Size = new System.Drawing.Size(15, 14);
             this.ChbEstadoDeProducto.TabIndex = 24;
@@ -303,76 +376,14 @@
             this.TxtProveedor.Size = new System.Drawing.Size(100, 20);
             this.TxtProveedor.TabIndex = 10;
             // 
-            // BtnActualizarProducto
+            // label13
             // 
-            this.BtnActualizarProducto.Location = new System.Drawing.Point(187, 17);
-            this.BtnActualizarProducto.Name = "BtnActualizarProducto";
-            this.BtnActualizarProducto.Size = new System.Drawing.Size(110, 45);
-            this.BtnActualizarProducto.TabIndex = 28;
-            this.BtnActualizarProducto.Text = "Actualizar producto";
-            this.BtnActualizarProducto.UseVisualStyleBackColor = true;
-            this.BtnActualizarProducto.Click += new System.EventHandler(this.BtnActualizarProducto_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Location = new System.Drawing.Point(330, 17);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(110, 45);
-            this.BtnCancelar.TabIndex = 29;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            this.BtnCancelar.Visible = false;
-            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
-            // 
-            // BtmGuardar
-            // 
-            this.BtmGuardar.Location = new System.Drawing.Point(470, 17);
-            this.BtmGuardar.Name = "BtmGuardar";
-            this.BtmGuardar.Size = new System.Drawing.Size(110, 45);
-            this.BtmGuardar.TabIndex = 30;
-            this.BtmGuardar.Text = "Guardar";
-            this.BtmGuardar.UseVisualStyleBackColor = true;
-            this.BtmGuardar.Visible = false;
-            this.BtmGuardar.Click += new System.EventHandler(this.BtmGuardar_Click);
-            // 
-            // NumStock
-            // 
-            this.NumStock.Location = new System.Drawing.Point(662, 109);
-            this.NumStock.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumStock.Name = "NumStock";
-            this.NumStock.ReadOnly = true;
-            this.NumStock.Size = new System.Drawing.Size(100, 20);
-            this.NumStock.TabIndex = 31;
-            this.NumStock.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumStock.Visible = false;
-            // 
-            // BtnAgregarNuevoProducto
-            // 
-            this.BtnAgregarNuevoProducto.Location = new System.Drawing.Point(790, 15);
-            this.BtnAgregarNuevoProducto.Name = "BtnAgregarNuevoProducto";
-            this.BtnAgregarNuevoProducto.Size = new System.Drawing.Size(143, 45);
-            this.BtnAgregarNuevoProducto.TabIndex = 30;
-            this.BtnAgregarNuevoProducto.Text = "Agregar nuevo producto";
-            this.BtnAgregarNuevoProducto.UseVisualStyleBackColor = true;
-            this.BtnAgregarNuevoProducto.Click += new System.EventHandler(this.BtnAgregarNuevoProducto_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(631, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 45);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Agregar nuevo tipo de producto";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(33, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(148, 13);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Actualizar estado de producto";
             // 
             // AdministrarProductos
             // 
@@ -395,8 +406,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +442,6 @@
         private System.Windows.Forms.NumericUpDown NumStock;
         private System.Windows.Forms.Button BtnAgregarNuevoProducto;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -87,6 +87,7 @@
             this.DgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvUsuarios.Size = new System.Drawing.Size(776, 321);
             this.DgvUsuarios.TabIndex = 4;
+            this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             // 
             // VerUsuario
             // 

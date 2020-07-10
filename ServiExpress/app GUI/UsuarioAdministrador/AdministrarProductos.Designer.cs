@@ -57,6 +57,7 @@
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.TxtOrdenDePedido = new System.Windows.Forms.TextBox();
             this.TxtProveedor = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -128,6 +129,7 @@
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.TxtStock);
             this.panel1.Controls.Add(this.ChbEstadoDeProducto);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -171,7 +173,7 @@
             this.ChbEstadoDeProducto.AutoCheck = false;
             this.ChbEstadoDeProducto.AutoSize = true;
             this.ChbEstadoDeProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChbEstadoDeProducto.Location = new System.Drawing.Point(35, 33);
+            this.ChbEstadoDeProducto.Location = new System.Drawing.Point(36, 33);
             this.ChbEstadoDeProducto.Name = "ChbEstadoDeProducto";
             this.ChbEstadoDeProducto.Size = new System.Drawing.Size(15, 14);
             this.ChbEstadoDeProducto.TabIndex = 24;
@@ -369,6 +371,15 @@
             this.TxtProveedor.Size = new System.Drawing.Size(100, 20);
             this.TxtProveedor.TabIndex = 10;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(33, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(148, 13);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Actualizar estado de producto";
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +435,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
     }
 }

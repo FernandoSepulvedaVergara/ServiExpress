@@ -130,5 +130,10 @@ namespace ServiExpress.controlador
         {
             return webAdministrador.FiltrarPorRut(rut);
         }
+
+        public usuario GetInfoUsuario(string rut)
+        {
+            return webAdministrador.GetInfoUsuario(rut);
+        }
     }
 }

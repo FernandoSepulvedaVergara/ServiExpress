@@ -114,6 +114,12 @@
     <Compile Include="app GUI\UsuarioAdministrador\GenerarPedido.Designer.cs">
       <DependentUpon>GenerarPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\GestionarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\GestionarUsuario.Designer.cs">
+      <DependentUpon>GestionarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioAdministrador\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,9 @@
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\GenerarPedido.resx">
       <DependentUpon>GenerarPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioAdministrador\GestionarUsuario.resx">
+      <DependentUpon>GestionarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -410,6 +419,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizaEstadoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizarEstadoPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -432,6 +444,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetInfoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetOrdenDePedidoResponse.datasource">
@@ -480,6 +495,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.tipoDeProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.usuarios.datasource">

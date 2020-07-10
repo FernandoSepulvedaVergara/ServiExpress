@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceAdministrador?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
+  <message name="ActualizaEstadoUsuario">
+    <part name="parameters" element="tns:ActualizaEstadoUsuario" />
+  </message>
+  <message name="ActualizaEstadoUsuarioResponse">
+    <part name="parameters" element="tns:ActualizaEstadoUsuarioResponse" />
+  </message>
   <message name="SeleccionarTodosLosUsuarios">
     <part name="parameters" element="tns:SeleccionarTodosLosUsuarios" />
   </message>
@@ -113,7 +119,17 @@
   <message name="FiltrarPorRutResponse">
     <part name="parameters" element="tns:FiltrarPorRutResponse" />
   </message>
+  <message name="GetInfoUsuario">
+    <part name="parameters" element="tns:GetInfoUsuario" />
+  </message>
+  <message name="GetInfoUsuarioResponse">
+    <part name="parameters" element="tns:GetInfoUsuarioResponse" />
+  </message>
   <portType name="WebServiceAdministrador">
+    <operation name="ActualizaEstadoUsuario">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/ActualizaEstadoUsuarioRequest" message="tns:ActualizaEstadoUsuario" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/ActualizaEstadoUsuarioResponse" message="tns:ActualizaEstadoUsuarioResponse" />
+    </operation>
     <operation name="SeleccionarTodosLosUsuarios">
       <input wsam:Action="http://servicios/WebServiceAdministrador/SeleccionarTodosLosUsuariosRequest" message="tns:SeleccionarTodosLosUsuarios" />
       <output wsam:Action="http://servicios/WebServiceAdministrador/SeleccionarTodosLosUsuariosResponse" message="tns:SeleccionarTodosLosUsuariosResponse" />
@@ -186,9 +202,22 @@
       <input wsam:Action="http://servicios/WebServiceAdministrador/FiltrarPorRutRequest" message="tns:FiltrarPorRut" />
       <output wsam:Action="http://servicios/WebServiceAdministrador/FiltrarPorRutResponse" message="tns:FiltrarPorRutResponse" />
     </operation>
+    <operation name="GetInfoUsuario">
+      <input wsam:Action="http://servicios/WebServiceAdministrador/GetInfoUsuarioRequest" message="tns:GetInfoUsuario" />
+      <output wsam:Action="http://servicios/WebServiceAdministrador/GetInfoUsuarioResponse" message="tns:GetInfoUsuarioResponse" />
+    </operation>
   </portType>
   <binding name="WebServiceAdministradorPortBinding" type="tns:WebServiceAdministrador">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ActualizaEstadoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="SeleccionarTodosLosUsuarios">
       <soap:operation soapAction="" />
       <input>
@@ -343,6 +372,15 @@
       </output>
     </operation>
     <operation name="FiltrarPorRut">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInfoUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
