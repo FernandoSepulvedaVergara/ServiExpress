@@ -34,6 +34,7 @@
             this.CmbProductos = new System.Windows.Forms.ComboBox();
             this.CmbSeleccionarProducto = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.TxtStock = new System.Windows.Forms.TextBox();
             this.ChbEstadoDeProducto = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,7 +58,6 @@
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.TxtOrdenDePedido = new System.Windows.Forms.TextBox();
             this.TxtProveedor = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -159,6 +159,15 @@
             this.panel1.TabIndex = 25;
             this.panel1.Visible = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(33, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(148, 13);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Actualizar estado de producto";
+            // 
             // TxtStock
             // 
             this.TxtStock.Enabled = false;
@@ -178,6 +187,7 @@
             this.ChbEstadoDeProducto.Size = new System.Drawing.Size(15, 14);
             this.ChbEstadoDeProducto.TabIndex = 24;
             this.ChbEstadoDeProducto.UseVisualStyleBackColor = true;
+            this.ChbEstadoDeProducto.CheckedChanged += new System.EventHandler(this.ChbEstadoDeProducto_CheckedChanged);
             this.ChbEstadoDeProducto.Click += new System.EventHandler(this.ChbEstadoDeProducto_Click);
             // 
             // pictureBox1
@@ -370,15 +380,6 @@
             this.TxtProveedor.ReadOnly = true;
             this.TxtProveedor.Size = new System.Drawing.Size(100, 20);
             this.TxtProveedor.TabIndex = 10;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(33, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(148, 13);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Actualizar estado de producto";
             // 
             // AdministrarProductos
             // 

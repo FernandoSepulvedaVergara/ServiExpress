@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="ActualizaEstadoUsuario" type="tns:ActualizaEstadoUsuario" />
-  <xs:element name="ActualizaEstadoUsuarioResponse" type="tns:ActualizaEstadoUsuarioResponse" />
   <xs:element name="ActualizarEstadoPedido" type="tns:ActualizarEstadoPedido" />
   <xs:element name="ActualizarEstadoPedidoResponse" type="tns:ActualizarEstadoPedidoResponse" />
   <xs:element name="ActualizarEstadoProducto" type="tns:ActualizarEstadoProducto" />
   <xs:element name="ActualizarEstadoProductoResponse" type="tns:ActualizarEstadoProductoResponse" />
+  <xs:element name="ActualizarEstadoUsuario" type="tns:ActualizarEstadoUsuario" />
+  <xs:element name="ActualizarEstadoUsuarioResponse" type="tns:ActualizarEstadoUsuarioResponse" />
   <xs:element name="ActualizarProductosCancelarPedido" type="tns:ActualizarProductosCancelarPedido" />
   <xs:element name="ActualizarProductosCancelarPedidoResponse" type="tns:ActualizarProductosCancelarPedidoResponse" />
   <xs:element name="ActualizarProductosEntregarPedido" type="tns:ActualizarProductosEntregarPedido" />
   <xs:element name="ActualizarProductosEntregarPedidoResponse" type="tns:ActualizarProductosEntregarPedidoResponse" />
+  <xs:element name="ActualizarUsuario" type="tns:ActualizarUsuario" />
+  <xs:element name="ActualizarUsuarioResponse" type="tns:ActualizarUsuarioResponse" />
   <xs:element name="FiltrarPorRut" type="tns:FiltrarPorRut" />
   <xs:element name="FiltrarPorRutResponse" type="tns:FiltrarPorRutResponse" />
   <xs:element name="FiltrarPorUsuario" type="tns:FiltrarPorUsuario" />
   <xs:element name="FiltrarPorUsuarioResponse" type="tns:FiltrarPorUsuarioResponse" />
+  <xs:element name="GetComunas" type="tns:GetComunas" />
+  <xs:element name="GetComunasResponse" type="tns:GetComunasResponse" />
   <xs:element name="GetInfoProducto" type="tns:GetInfoProducto" />
   <xs:element name="GetInfoProductoProveedor" type="tns:GetInfoProductoProveedor" />
   <xs:element name="GetInfoProductoProveedorResponse" type="tns:GetInfoProductoProveedorResponse" />
@@ -32,6 +36,8 @@
   <xs:element name="GetProductosResponse" type="tns:GetProductosResponse" />
   <xs:element name="GetProveedores" type="tns:GetProveedores" />
   <xs:element name="GetProveedoresResponse" type="tns:GetProveedoresResponse" />
+  <xs:element name="GetRegiones" type="tns:GetRegiones" />
+  <xs:element name="GetRegionesResponse" type="tns:GetRegionesResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
   <xs:element name="GetTipoDeProductoResponse" type="tns:GetTipoDeProductoResponse" />
   <xs:element name="RegistrarOrdenDePedido" type="tns:RegistrarOrdenDePedido" />
@@ -83,14 +89,25 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetInfoUsuario">
+  <xs:complexType name="GetRegiones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetRegionesResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:region" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetInfoUsuarioResponse">
+  <xs:complexType name="region">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+      <xs:element name="idRegion" type="xs:int" />
+      <xs:element minOccurs="0" name="region" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizarUsuario" type="tns:usuario" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="usuario">
@@ -101,6 +118,7 @@
       <xs:element minOccurs="0" name="contraseña" type="xs:string" />
       <xs:element minOccurs="0" name="direccion" type="xs:string" />
       <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoDeUsuario" type="tns:estadoDeUsuario" />
       <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
       <xs:element minOccurs="0" name="primerNombre" type="xs:string" />
       <xs:element minOccurs="0" name="region" type="tns:region" />
@@ -116,10 +134,19 @@
       <xs:element name="idComuna" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="region">
+  <xs:complexType name="ActualizarUsuarioResponse">
     <xs:sequence>
-      <xs:element name="idRegion" type="xs:int" />
-      <xs:element minOccurs="0" name="region" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetInfoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetInfoUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetInfoProductoProveedor">
@@ -181,14 +208,15 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:usuarios" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ActualizaEstadoUsuario">
+  <xs:complexType name="ActualizarEstadoUsuario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element name="idEstadoDeUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ActualizaEstadoUsuarioResponse">
+  <xs:complexType name="ActualizarEstadoUsuarioResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarEstadoProducto">
@@ -226,6 +254,20 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="RegistrarOrdenDePedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
+      <xs:element name="total" type="xs:int" />
+      <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
+      <xs:element name="idEstadoDePedido" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarOrdenDePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetOrdenDePedido">
     <xs:sequence>
       <xs:element name="idOrdenDePedido" type="xs:int" />
@@ -252,20 +294,6 @@
       <xs:element name="idEstadoPedido" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="RegistrarOrdenDePedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fechaDePedido" type="xs:string" />
-      <xs:element name="total" type="xs:int" />
-      <xs:element minOccurs="0" name="usuarioRut" type="xs:string" />
-      <xs:element name="idEstadoDePedido" type="xs:int" />
-      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="RegistrarOrdenDePedidoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="GetProductosProveedor">
     <xs:sequence>
       <xs:element name="idTipoDeProducto" type="xs:int" />
@@ -275,6 +303,14 @@
   <xs:complexType name="GetProductosProveedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:productoProveedor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOrdenesDePedido">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetOrdenesDePedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetPedidos">
@@ -299,23 +335,14 @@
       <xs:element name="totalAPagar" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetOrdenesDePedido">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetOrdenesDePedidoResponse">
+  <xs:complexType name="GetComunas">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:ordenDePedido" />
+      <xs:element name="idRegion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ActualizarProductosCancelarPedido">
+  <xs:complexType name="GetComunasResponse">
     <xs:sequence>
-      <xs:element name="idProductoProveedor" type="xs:int" />
-      <xs:element name="cantidad" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ActualizarProductosCancelarPedidoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:comuna" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarEstadoPedido">
@@ -327,6 +354,17 @@
   <xs:complexType name="ActualizarEstadoPedidoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarProductosCancelarPedido">
+    <xs:sequence>
+      <xs:element name="idProductoProveedor" type="xs:int" />
+      <xs:element name="cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarProductosCancelarPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetInfoProducto">

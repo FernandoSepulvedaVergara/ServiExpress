@@ -1,13 +1,6 @@
 ﻿using ServiExpress.app_GUI.UsuarioAdministrador;
 using ServiExpress.controlador;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI
@@ -69,6 +62,19 @@ namespace ServiExpress.app_GUI
             administrarUsuarios.Dock = DockStyle.Fill;
             splitContainer1.Panel2.Controls.Add(administrarUsuarios);
             administrarUsuarios.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            Info info = new Info(controladorAdministrador);
+            info.TopLevel = false;
+            info.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(info);
+            info.Show();
         }
     }
 }

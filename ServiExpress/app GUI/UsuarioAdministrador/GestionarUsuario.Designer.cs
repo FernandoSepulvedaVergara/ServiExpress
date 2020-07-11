@@ -30,7 +30,7 @@
         {
             this.TxtRut = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ChbCambiarEstado = new System.Windows.Forms.CheckBox();
+            this.ChbEstadoDeUsuario = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtPrimerNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@
             this.TxtComuna = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.TxtRegion = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtRut
@@ -63,7 +65,7 @@
             this.TxtRut.Location = new System.Drawing.Point(155, 114);
             this.TxtRut.Name = "TxtRut";
             this.TxtRut.ReadOnly = true;
-            this.TxtRut.Size = new System.Drawing.Size(151, 20);
+            this.TxtRut.Size = new System.Drawing.Size(111, 20);
             this.TxtRut.TabIndex = 0;
             // 
             // label1
@@ -75,15 +77,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Rut : ";
             // 
-            // ChbCambiarEstado
+            // ChbEstadoDeUsuario
             // 
-            this.ChbCambiarEstado.AutoSize = true;
-            this.ChbCambiarEstado.Location = new System.Drawing.Point(146, 48);
-            this.ChbCambiarEstado.Name = "ChbCambiarEstado";
-            this.ChbCambiarEstado.Size = new System.Drawing.Size(80, 17);
-            this.ChbCambiarEstado.TabIndex = 2;
-            this.ChbCambiarEstado.Text = "checkBox1";
-            this.ChbCambiarEstado.UseVisualStyleBackColor = true;
+            this.ChbEstadoDeUsuario.AutoCheck = false;
+            this.ChbEstadoDeUsuario.AutoSize = true;
+            this.ChbEstadoDeUsuario.Location = new System.Drawing.Point(281, 25);
+            this.ChbEstadoDeUsuario.Name = "ChbEstadoDeUsuario";
+            this.ChbEstadoDeUsuario.Size = new System.Drawing.Size(90, 17);
+            this.ChbEstadoDeUsuario.TabIndex = 2;
+            this.ChbEstadoDeUsuario.Text = "Deshabilitado";
+            this.ChbEstadoDeUsuario.UseVisualStyleBackColor = true;
+            this.ChbEstadoDeUsuario.Click += new System.EventHandler(this.ChbEstadoDeUsuario_Click);
             // 
             // label2
             // 
@@ -172,7 +176,7 @@
             this.TxtTelefono.Location = new System.Drawing.Point(155, 244);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.ReadOnly = true;
-            this.TxtTelefono.Size = new System.Drawing.Size(151, 20);
+            this.TxtTelefono.Size = new System.Drawing.Size(111, 20);
             this.TxtTelefono.TabIndex = 11;
             // 
             // label7
@@ -208,7 +212,7 @@
             this.TxtDireccion.Location = new System.Drawing.Point(536, 114);
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.ReadOnly = true;
-            this.TxtDireccion.Size = new System.Drawing.Size(151, 20);
+            this.TxtDireccion.Size = new System.Drawing.Size(180, 20);
             this.TxtDireccion.TabIndex = 15;
             // 
             // label9
@@ -226,7 +230,7 @@
             this.TxtNombreUsuario.Location = new System.Drawing.Point(536, 140);
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.ReadOnly = true;
-            this.TxtNombreUsuario.Size = new System.Drawing.Size(151, 20);
+            this.TxtNombreUsuario.Size = new System.Drawing.Size(180, 20);
             this.TxtNombreUsuario.TabIndex = 17;
             // 
             // label10
@@ -243,8 +247,9 @@
             this.TxtContraseña.Enabled = false;
             this.TxtContraseña.Location = new System.Drawing.Point(536, 166);
             this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.PasswordChar = '*';
             this.TxtContraseña.ReadOnly = true;
-            this.TxtContraseña.Size = new System.Drawing.Size(151, 20);
+            this.TxtContraseña.Size = new System.Drawing.Size(180, 20);
             this.TxtContraseña.TabIndex = 19;
             // 
             // label11
@@ -262,7 +267,7 @@
             this.TxtTipoDeUsuario.Location = new System.Drawing.Point(536, 192);
             this.TxtTipoDeUsuario.Name = "TxtTipoDeUsuario";
             this.TxtTipoDeUsuario.ReadOnly = true;
-            this.TxtTipoDeUsuario.Size = new System.Drawing.Size(151, 20);
+            this.TxtTipoDeUsuario.Size = new System.Drawing.Size(180, 20);
             this.TxtTipoDeUsuario.TabIndex = 21;
             // 
             // label12
@@ -280,7 +285,7 @@
             this.TxtComuna.Location = new System.Drawing.Point(536, 218);
             this.TxtComuna.Name = "TxtComuna";
             this.TxtComuna.ReadOnly = true;
-            this.TxtComuna.Size = new System.Drawing.Size(151, 20);
+            this.TxtComuna.Size = new System.Drawing.Size(180, 20);
             this.TxtComuna.TabIndex = 23;
             // 
             // label13
@@ -298,8 +303,28 @@
             this.TxtRegion.Location = new System.Drawing.Point(536, 244);
             this.TxtRegion.Name = "TxtRegion";
             this.TxtRegion.ReadOnly = true;
-            this.TxtRegion.Size = new System.Drawing.Size(151, 20);
+            this.TxtRegion.Size = new System.Drawing.Size(180, 20);
             this.TxtRegion.TabIndex = 25;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(105, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(149, 13);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Actualizar estado de usuario : ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(722, 166);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 20);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Ver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // GestionarUsuario
             // 
@@ -307,6 +332,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(810, 460);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.TxtRegion);
             this.Controls.Add(this.label12);
@@ -331,7 +358,7 @@
             this.Controls.Add(this.TxtSegundoNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtPrimerNombre);
-            this.Controls.Add(this.ChbCambiarEstado);
+            this.Controls.Add(this.ChbEstadoDeUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtRut);
             this.MaximizeBox = false;
@@ -347,7 +374,7 @@
 
         private System.Windows.Forms.TextBox TxtRut;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox ChbCambiarEstado;
+        private System.Windows.Forms.CheckBox ChbEstadoDeUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtPrimerNombre;
         private System.Windows.Forms.Label label3;
@@ -372,5 +399,7 @@
         private System.Windows.Forms.TextBox TxtComuna;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TxtRegion;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button1;
     }
 }

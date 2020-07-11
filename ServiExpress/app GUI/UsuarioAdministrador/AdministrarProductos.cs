@@ -133,5 +133,10 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             }
             ActualizarInfo();
         }
+
+        private void ChbEstadoDeProducto_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

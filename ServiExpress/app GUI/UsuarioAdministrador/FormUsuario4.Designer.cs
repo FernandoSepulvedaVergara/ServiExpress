@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario4));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.BtnAdministrarSucursales = new System.Windows.Forms.Button();
             this.BtnAdministrarUsuarios = new System.Windows.Forms.Button();
+            this.BtnAdministrarProveedores = new System.Windows.Forms.Button();
+            this.BtnAdministrarSucursales = new System.Windows.Forms.Button();
             this.BtnPedidos = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.BtnAdministrarProducto = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.BtnAdministrarProveedores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -63,15 +63,6 @@
             this.splitContainer1.SplitterDistance = 192;
             this.splitContainer1.TabIndex = 0;
             // 
-            // BtnAdministrarSucursales
-            // 
-            this.BtnAdministrarSucursales.Location = new System.Drawing.Point(26, 417);
-            this.BtnAdministrarSucursales.Name = "BtnAdministrarSucursales";
-            this.BtnAdministrarSucursales.Size = new System.Drawing.Size(133, 41);
-            this.BtnAdministrarSucursales.TabIndex = 21;
-            this.BtnAdministrarSucursales.Text = "Administrar sucursales";
-            this.BtnAdministrarSucursales.UseVisualStyleBackColor = true;
-            // 
             // BtnAdministrarUsuarios
             // 
             this.BtnAdministrarUsuarios.Location = new System.Drawing.Point(26, 190);
@@ -81,6 +72,24 @@
             this.BtnAdministrarUsuarios.Text = "Administrar usuarios";
             this.BtnAdministrarUsuarios.UseVisualStyleBackColor = true;
             this.BtnAdministrarUsuarios.Click += new System.EventHandler(this.BtnAdministrarUsuarios_Click);
+            // 
+            // BtnAdministrarProveedores
+            // 
+            this.BtnAdministrarProveedores.Location = new System.Drawing.Point(26, 247);
+            this.BtnAdministrarProveedores.Name = "BtnAdministrarProveedores";
+            this.BtnAdministrarProveedores.Size = new System.Drawing.Size(133, 41);
+            this.BtnAdministrarProveedores.TabIndex = 22;
+            this.BtnAdministrarProveedores.Text = "Administrar proveedores";
+            this.BtnAdministrarProveedores.UseVisualStyleBackColor = true;
+            // 
+            // BtnAdministrarSucursales
+            // 
+            this.BtnAdministrarSucursales.Location = new System.Drawing.Point(26, 417);
+            this.BtnAdministrarSucursales.Name = "BtnAdministrarSucursales";
+            this.BtnAdministrarSucursales.Size = new System.Drawing.Size(133, 41);
+            this.BtnAdministrarSucursales.TabIndex = 21;
+            this.BtnAdministrarSucursales.Text = "Administrar sucursales";
+            this.BtnAdministrarSucursales.UseVisualStyleBackColor = true;
             // 
             // BtnPedidos
             // 
@@ -130,15 +139,7 @@
             this.button1.Size = new System.Drawing.Size(133, 101);
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // BtnAdministrarProveedores
-            // 
-            this.BtnAdministrarProveedores.Location = new System.Drawing.Point(26, 247);
-            this.BtnAdministrarProveedores.Name = "BtnAdministrarProveedores";
-            this.BtnAdministrarProveedores.Size = new System.Drawing.Size(133, 41);
-            this.BtnAdministrarProveedores.TabIndex = 22;
-            this.BtnAdministrarProveedores.Text = "Administrar proveedores";
-            this.BtnAdministrarProveedores.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormUsuario4
             // 

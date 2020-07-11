@@ -135,5 +135,23 @@ namespace ServiExpress.controlador
         {
             return webAdministrador.GetInfoUsuario(rut);
         }
+
+        public bool ActualizarEstadoDeUsuario(string rut, int idEstadoDeUsuario) {
+            return webAdministrador.ActualizarEstadoUsuario(rut, idEstadoDeUsuario);
+        }
+
+        public string[] ActualizarUsuario(usuario actualizarUsuario)
+        {
+            return webAdministrador.ActualizarUsuario(actualizarUsuario, this.login[0], this.login[1]);
+        }
+
+        public region[] GetRegiones() {
+            return webAdministrador.GetRegiones();
+        }
+
+        public comuna[] GetComunas(int idRegion)
+        {
+            return webAdministrador.GetComunas(idRegion);
+        }
     }
 }
