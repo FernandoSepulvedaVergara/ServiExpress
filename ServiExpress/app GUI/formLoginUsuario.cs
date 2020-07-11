@@ -96,7 +96,7 @@ namespace ServiExpress
 
         private void BtnIngresarProveedor_Click(object sender, EventArgs e)
         {
-            if (TxtNombreUsuarioProveedor.Text.Equals(null) || TxtContraseñaProveedor.Text.Equals(null))
+            if (TxtNombreUsuarioProveedor.Text.Equals(string.Empty) || TxtContraseñaProveedor.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Debe proporcionar todos los datos para ingresar");
             }

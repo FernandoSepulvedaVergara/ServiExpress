@@ -122,24 +122,30 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 actualizarUsuario.comuna = comuna;
 
                 try {
-                    string[] resultado = controladorAdministrador.ActualizarUsuario(actualizarUsuario);
-                    if (bool.Parse(resultado[0]))
-                    {
-                        MessageBox.Show(resultado[1]);
-                        BtnActualizarCancelar.Text = "Actualizar datos";
-                        HabilitarDeshabilitarEdicion(false);
-                        BtnGuardarDatos.Visible = false;
-                        ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
-                        string[] login = controladorLoginUsuario.ValidarUsuario(actualizarUsuario.nombreUsuario, actualizarUsuario.contraseña);
-                        controladorAdministrador.login = login;
-                        GetInfoUsuario();
+                    DialogResult dialogResult = MessageBox.Show("¿Actualizar datos?","Actualización de datos", MessageBoxButtons.YesNo);
 
-                    }
-                    else if (bool.Parse(resultado[0]).Equals(false)) {
-                        MessageBox.Show(resultado[1]);
-                    }
-                    else {
-                        MessageBox.Show("Actualización de usuario no devolvió true ni false");
+                    if (dialogResult.Equals(DialogResult.Yes)) {
+                        string[] resultado = controladorAdministrador.ActualizarUsuario(actualizarUsuario);
+                        if (bool.Parse(resultado[0]))
+                        {
+                            MessageBox.Show(resultado[1]);
+                            BtnActualizarCancelar.Text = "Actualizar datos";
+                            HabilitarDeshabilitarEdicion(false);
+                            BtnGuardarDatos.Visible = false;
+                            ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
+                            string[] login = controladorLoginUsuario.ValidarUsuario(actualizarUsuario.nombreUsuario, actualizarUsuario.contraseña);
+                            controladorAdministrador.login = login;
+                            GetInfoUsuario();
+
+                        }
+                        else if (bool.Parse(resultado[0]).Equals(false))
+                        {
+                            MessageBox.Show(resultado[1]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Actualización de usuario no devolvió true ni false","Error inesperado");
+                        }
                     }
                 }
                 catch (Exception ex) {
