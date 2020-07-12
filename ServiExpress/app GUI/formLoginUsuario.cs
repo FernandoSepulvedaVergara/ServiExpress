@@ -29,21 +29,21 @@ namespace ServiExpress
                 {
                     if (int.Parse(login[3]) == 1)
                     {
-                        FormUsuario1 usuario1 = new FormUsuario1(login);
+                        Cliente usuario1 = new Cliente(login);
                         this.Hide();
                         usuario1.Show();
                     }
 
                     else if (int.Parse(login[3]) == 3)
                     {
-                        FormUsuario3 usuario3 = new FormUsuario3(login);
+                        Empleado usuario3 = new Empleado(login);
                         this.Hide();
                         usuario3.Show();
                     }
 
                     else if (int.Parse(login[3]) == 4)
                     {
-                        FormUsuario4 usuario4 = new FormUsuario4(login);
+                        Administrador usuario4 = new Administrador(login);
                         this.Hide();
                         usuario4.Show();
                     }
@@ -109,7 +109,7 @@ namespace ServiExpress
                 }
                 else
                 {
-                    FormUsuario2 usuario2 = new FormUsuario2(login);
+                    Proveedor usuario2 = new Proveedor(login);
                     this.Hide();
                     usuario2.Show();
                 }
