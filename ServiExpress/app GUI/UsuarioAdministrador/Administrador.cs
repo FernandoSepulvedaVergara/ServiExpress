@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI
 {
-    public partial class FormUsuario4 : Form
+    public partial class Administrador : Form
     {
         ControladorAdministrador controladorAdministrador;
         
-        public FormUsuario4(string[] login)
+        public Administrador(string[] login)
         {
             InitializeComponent();
             this.controladorAdministrador = new ControladorAdministrador(login);

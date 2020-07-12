@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace ServiExpress.app_GUI
 {
-    public partial class FormUsuario3 : Form
+    public partial class Empleado : Form
     {
         private ControladorEmpleado controladorEmpleado;
-        public FormUsuario3(string[] login)
+        public Empleado(string[] login)
         {
             InitializeComponent();
             this.controladorEmpleado = new ControladorEmpleado(login);

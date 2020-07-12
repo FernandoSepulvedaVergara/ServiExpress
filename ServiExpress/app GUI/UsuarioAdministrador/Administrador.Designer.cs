@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class FormUsuario4
+    partial class Administrador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.BtnAdministrarUsuarios = new System.Windows.Forms.Button();
             this.BtnAdministrarProveedores = new System.Windows.Forms.Button();
@@ -141,7 +141,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FormUsuario4
+            // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,8 +149,8 @@
             this.ClientSize = new System.Drawing.Size(1364, 721);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormUsuario4";
-            this.Text = "formUsuario4";
+            this.Name = "Administrador";
+            this.Text = "Administrador";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario4_FormClosed);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

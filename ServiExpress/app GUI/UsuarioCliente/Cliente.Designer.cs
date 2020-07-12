@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class FormUsuario1
+    partial class Cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.BtnDatosPersonales = new System.Windows.Forms.Button();
             this.BtnReservaAtencion = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -202,7 +202,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos personales";
             // 
-            // FormUsuario1
+            // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,9 +214,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormUsuario1";
+            this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "ServiExpress";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario1_FormClosed);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

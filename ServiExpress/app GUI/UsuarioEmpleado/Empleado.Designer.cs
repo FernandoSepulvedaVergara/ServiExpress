@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class FormUsuario3
+    partial class Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@
             this.BtnVentas.UseVisualStyleBackColor = true;
             this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
             // 
-            // FormUsuario3
+            // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,8 +94,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormUsuario3";
-            this.Text = "formUsuario3";
+            this.Name = "Empleado";
+            this.Text = "Empleado";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario3_FormClosed);
             this.Load += new System.EventHandler(this.FormUsuario3_Load);
             this.ResumeLayout(false);

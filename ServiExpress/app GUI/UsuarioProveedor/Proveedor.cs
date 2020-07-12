@@ -14,10 +14,10 @@ using AdministrarProductos = ServiExpress.app_GUI.UsuarioProveedor.AdministrarPr
 
 namespace ServiExpress.app_GUI
 {
-    public partial class FormUsuario2 : Form
+    public partial class Proveedor : Form
     {
         private ControladorProveedor controladorProveedor;
-        public FormUsuario2(string[] login)
+        public Proveedor(string[] login)
         {
             InitializeComponent();
             this.controladorProveedor = new ControladorProveedor(login);

@@ -1,6 +1,6 @@
 ﻿namespace ServiExpress.app_GUI
 {
-    partial class FormUsuario2
+    partial class Proveedor
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.splitContainer2.SplitterDistance = 206;
             this.splitContainer2.TabIndex = 17;
             // 
-            // FormUsuario2
+            // Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,10 +102,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormUsuario2";
+            this.Name = "Proveedor";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Form2";
+            this.Text = "Proveedor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario2_FormClosed);
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
