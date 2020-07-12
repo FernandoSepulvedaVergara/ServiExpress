@@ -228,17 +228,17 @@
     <Compile Include="app GUI\UsuarioProveedor\AgregarNuevoTipoDeProducto.Designer.cs">
       <DependentUpon>AgregarNuevoTipoDeProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioProveedor\FormUsuario2.cs">
+    <Compile Include="app GUI\UsuarioProveedor\Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioProveedor\FormUsuario2.Designer.cs">
-      <DependentUpon>FormUsuario2.cs</DependentUpon>
+    <Compile Include="app GUI\UsuarioProveedor\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioCliente\FormUsuario1.cs">
+    <Compile Include="app GUI\UsuarioCliente\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioCliente\FormUsuario1.Designer.cs">
-      <DependentUpon>FormUsuario1.cs</DependentUpon>
+    <Compile Include="app GUI\UsuarioCliente\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\FormLoginUsuario.cs">
       <SubType>Form</SubType>
@@ -246,17 +246,17 @@
     <Compile Include="app GUI\FormLoginUsuario.Designer.cs">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario3.cs">
+    <Compile Include="app GUI\UsuarioEmpleado\Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioEmpleado\FormUsuario3.Designer.cs">
-      <DependentUpon>FormUsuario3.cs</DependentUpon>
+    <Compile Include="app GUI\UsuarioEmpleado\Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="app GUI\UsuarioAdministrador\FormUsuario4.cs">
+    <Compile Include="app GUI\UsuarioAdministrador\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="app GUI\UsuarioAdministrador\FormUsuario4.Designer.cs">
-      <DependentUpon>FormUsuario4.cs</DependentUpon>
+    <Compile Include="app GUI\UsuarioAdministrador\Administrador.Designer.cs">
+      <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioProveedor\Pedidos.cs">
       <SubType>Form</SubType>
@@ -398,20 +398,20 @@
     <EmbeddedResource Include="app GUI\UsuarioProveedor\AgregarNuevoTipoDeProducto.resx">
       <DependentUpon>AgregarNuevoTipoDeProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioProveedor\FormUsuario2.resx">
-      <DependentUpon>FormUsuario2.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\UsuarioProveedor\Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioCliente\FormUsuario1.resx">
-      <DependentUpon>FormUsuario1.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\UsuarioCliente\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\FormLoginUsuario.resx">
       <DependentUpon>FormLoginUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioEmpleado\FormUsuario3.resx">
-      <DependentUpon>FormUsuario3.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app GUI\UsuarioAdministrador\FormUsuario4.resx">
-      <DependentUpon>FormUsuario4.cs</DependentUpon>
+    <EmbeddedResource Include="app GUI\UsuarioAdministrador\Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioProveedor\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
