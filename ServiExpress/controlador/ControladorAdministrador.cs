@@ -62,9 +62,9 @@ namespace ServiExpress.controlador
             return webAdministrador.GetProveedores();
         }
 
-        public ordenDePedido[] GetOrdenesDePedido()
+        public ordenDePedido[] GetOrdenesDePedido(bool filtroSeleccionarTodosLosPedidos, bool filtroBuscar, bool filtroEstado,string tipoDeBusqueda, string valorFiltro)
         {
-            return webAdministrador.GetOrdenesDePedido();
+            return webAdministrador.GetOrdenesDePedido(filtroSeleccionarTodosLosPedidos, filtroBuscar, filtroEstado, tipoDeBusqueda, valorFiltro);
         }
 
         public string[] RegistrarOrdenDePedido(string fechaDePedido, int total, string usuarioRut, int idEstadoPedido, string rutProveedor)
@@ -152,6 +152,15 @@ namespace ServiExpress.controlador
         public comuna[] GetComunas(int idRegion)
         {
             return webAdministrador.GetComunas(idRegion);
+        }
+
+        public tipoDeUsuario[] GetTipoDeUsuario()
+        {
+            return webAdministrador.GetTiposDeUsuario();
+        }
+
+        public string[] RegistrarNuevoUsuario(usuario nuevoUsuario) {
+            return webAdministrador.RegistrarNuevoUsuario(nuevoUsuario);
         }
     }
 }

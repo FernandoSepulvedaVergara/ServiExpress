@@ -190,5 +190,12 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 MessageBox.Show("Error en cargar usuarios");
             }
         }
+
+        private void BtnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario nuevoUsuario = new NuevoUsuario(controladorAdministrador);
+            nuevoUsuario.ShowDialog();
+            Filtrar();
+        }
     }
 }

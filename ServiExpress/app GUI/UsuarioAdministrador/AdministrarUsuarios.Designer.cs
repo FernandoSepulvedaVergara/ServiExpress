@@ -44,12 +44,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnSeleccionarTodosLosUsuarios = new System.Windows.Forms.Button();
+            this.BtnNuevoUsuario = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TxtBuscarRut
             // 
-            this.TxtBuscarRut.Location = new System.Drawing.Point(351, 9);
+            this.TxtBuscarRut.Location = new System.Drawing.Point(97, 10);
             this.TxtBuscarRut.Name = "TxtBuscarRut";
             this.TxtBuscarRut.Size = new System.Drawing.Size(100, 20);
             this.TxtBuscarRut.TabIndex = 0;
@@ -57,7 +64,7 @@
             // ChbCliente
             // 
             this.ChbCliente.AutoSize = true;
-            this.ChbCliente.Location = new System.Drawing.Point(641, 11);
+            this.ChbCliente.Location = new System.Drawing.Point(110, 12);
             this.ChbCliente.Name = "ChbCliente";
             this.ChbCliente.Size = new System.Drawing.Size(58, 17);
             this.ChbCliente.TabIndex = 1;
@@ -79,7 +86,7 @@
             this.ApellidoPaterno,
             this.ApellidoMaterno,
             this.EstadoDeUsuario});
-            this.DgvUsuarios.Location = new System.Drawing.Point(12, 117);
+            this.DgvUsuarios.Location = new System.Drawing.Point(12, 133);
             this.DgvUsuarios.MultiSelect = false;
             this.DgvUsuarios.Name = "DgvUsuarios";
             this.DgvUsuarios.ReadOnly = true;
@@ -134,7 +141,7 @@
             // ChbAdministrador
             // 
             this.ChbAdministrador.AutoSize = true;
-            this.ChbAdministrador.Location = new System.Drawing.Point(641, 57);
+            this.ChbAdministrador.Location = new System.Drawing.Point(110, 58);
             this.ChbAdministrador.Name = "ChbAdministrador";
             this.ChbAdministrador.Size = new System.Drawing.Size(89, 17);
             this.ChbAdministrador.TabIndex = 5;
@@ -145,7 +152,7 @@
             // ChbEmpleado
             // 
             this.ChbEmpleado.AutoSize = true;
-            this.ChbEmpleado.Location = new System.Drawing.Point(641, 34);
+            this.ChbEmpleado.Location = new System.Drawing.Point(110, 35);
             this.ChbEmpleado.Name = "ChbEmpleado";
             this.ChbEmpleado.Size = new System.Drawing.Size(73, 17);
             this.ChbEmpleado.TabIndex = 6;
@@ -156,7 +163,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(534, 12);
+            this.label1.Location = new System.Drawing.Point(3, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 8;
@@ -165,7 +172,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(266, 12);
+            this.label2.Location = new System.Drawing.Point(12, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 9;
@@ -173,7 +180,7 @@
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(351, 35);
+            this.BtnBuscar.Location = new System.Drawing.Point(97, 36);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(100, 28);
             this.BtnBuscar.TabIndex = 10;
@@ -183,7 +190,7 @@
             // 
             // BtnSeleccionarTodosLosUsuarios
             // 
-            this.BtnSeleccionarTodosLosUsuarios.Location = new System.Drawing.Point(27, 7);
+            this.BtnSeleccionarTodosLosUsuarios.Location = new System.Drawing.Point(21, 5);
             this.BtnSeleccionarTodosLosUsuarios.Name = "BtnSeleccionarTodosLosUsuarios";
             this.BtnSeleccionarTodosLosUsuarios.Size = new System.Drawing.Size(168, 37);
             this.BtnSeleccionarTodosLosUsuarios.TabIndex = 12;
@@ -191,21 +198,59 @@
             this.BtnSeleccionarTodosLosUsuarios.UseVisualStyleBackColor = true;
             this.BtnSeleccionarTodosLosUsuarios.Click += new System.EventHandler(this.BtnSeleccionarTodosLosUsuarios_Click);
             // 
+            // BtnNuevoUsuario
+            // 
+            this.BtnNuevoUsuario.Location = new System.Drawing.Point(35, 69);
+            this.BtnNuevoUsuario.Name = "BtnNuevoUsuario";
+            this.BtnNuevoUsuario.Size = new System.Drawing.Size(136, 30);
+            this.BtnNuevoUsuario.TabIndex = 13;
+            this.BtnNuevoUsuario.Text = "Nuevo usuario";
+            this.BtnNuevoUsuario.UseVisualStyleBackColor = true;
+            this.BtnNuevoUsuario.Click += new System.EventHandler(this.BtnNuevoUsuario_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.BtnSeleccionarTodosLosUsuarios);
+            this.panel1.Controls.Add(this.BtnNuevoUsuario);
+            this.panel1.Location = new System.Drawing.Point(12, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 106);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.BtnBuscar);
+            this.panel2.Controls.Add(this.TxtBuscarRut);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(271, 9);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(219, 106);
+            this.panel2.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.ChbCliente);
+            this.panel3.Controls.Add(this.ChbAdministrador);
+            this.panel3.Controls.Add(this.ChbEmpleado);
+            this.panel3.Location = new System.Drawing.Point(542, 9);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(203, 106);
+            this.panel3.TabIndex = 16;
+            // 
             // AdministrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnSeleccionarTodosLosUsuarios);
-            this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ChbEmpleado);
-            this.Controls.Add(this.ChbAdministrador);
+            this.ClientSize = new System.Drawing.Size(843, 522);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.DgvUsuarios);
-            this.Controls.Add(this.ChbCliente);
-            this.Controls.Add(this.TxtBuscarRut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -214,8 +259,12 @@
             this.Text = "AdministrarUsuarios";
             this.Load += new System.EventHandler(this.AdministrarUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -237,5 +286,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoMaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDeUsuario;
         private System.Windows.Forms.Button BtnSeleccionarTodosLosUsuarios;
+        private System.Windows.Forms.Button BtnNuevoUsuario;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
