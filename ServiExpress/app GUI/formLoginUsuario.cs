@@ -18,14 +18,19 @@ namespace ServiExpress
 
         private void BtnIngresarUsuario_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.Equals(null) || txtContraseñaUsuario.Text.Equals(null))
+            if (txtUserName.Text.Equals(string.Empty) || txtContraseñaUsuario.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Debe proporcionar todos los datos para ingresar");
+                MessageBox.Show("Debe proporcionar todos los datos para ingresar","Ingresar");
             }
             else
             {
                 string[] login = controladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(), txtContraseñaUsuario.Text.Trim());
-                if (login != null)
+                if (int.Parse(login[0]) == -2146233087)
+                {
+                    MessageBox.Show("No hay respuesta del servidor", "Servidor");
+                  
+                }
+                else if (int.Parse(login[0]) != -2146233087 && login != null)
                 {
                     if (int.Parse(login[3]) == 1)
                     {
@@ -48,9 +53,12 @@ namespace ServiExpress
                         usuario4.Show();
                     }
                 }
+                else if(login == null) {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta", "Ingreso");
+                }
                 else
                 {
-                    MessageBox.Show("Usuario y/o contraseña incorrecta");
+                    MessageBox.Show("Error de configuración","Ingreso");
                 }
             }
         }
@@ -98,20 +106,29 @@ namespace ServiExpress
         {
             if (TxtNombreUsuarioProveedor.Text.Equals(string.Empty) || TxtContraseñaProveedor.Text.Equals(string.Empty))
             {
-                MessageBox.Show("Debe proporcionar todos los datos para ingresar");
+                MessageBox.Show("Debe proporcionar todos los datos para ingresar","Ingresar");
             }
             else
             {
                 string[] login = controladorLoginUsuario.ValidarUsuarioProveedor(TxtNombreUsuarioProveedor.Text, TxtContraseñaProveedor.Text);
-                if (login[0] == null)
+                if (int.Parse(login[0]) == -2146233087)
                 {
-                    MessageBox.Show("Usuario y/o contraseña incorrecta");
+                    MessageBox.Show("No hay respuesta del servidor", "Servidor");
+                    
                 }
-                else
+                else if (int.Parse(login[0]) != -2146233087 && login != null)
                 {
                     Proveedor usuario2 = new Proveedor(login);
                     this.Hide();
                     usuario2.Show();
+                }
+                else if (login == null)
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta", "Ingreso");
+                }
+                else
+                {
+                    MessageBox.Show("Error de configuración", "Ingreso");
                 }
             }
         }
