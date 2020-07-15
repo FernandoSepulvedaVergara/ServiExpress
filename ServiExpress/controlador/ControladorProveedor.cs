@@ -65,8 +65,8 @@ namespace ServiExpress.controlador
             return webProveedor.RegistrarNuevoProductoProveedor(descripcion, marca, fechaDeVencimiento, precioDeCompra, stock, idTipoDeProducto, this.login[0], idEstadoDeProducto);
         }
 
-        public WebServiceProveedor.ordenDePedido[] GetOrdenesDePedidoProveedor() {
-            return webProveedor.GetOrdenesDePedidoProveedor(login[0]);
+        public WebServiceProveedor.ordenDePedido[] GetOrdenesDePedidoProveedor(bool filtroSeleccionarTodosLosPedidos, bool filtroBuscar, bool filtroEstado, string tipoDeBusqueda, string valorFiltro) {
+            return webProveedor.GetOrdenesDePedidoProveedor(filtroSeleccionarTodosLosPedidos, filtroBuscar, filtroEstado, tipoDeBusqueda, valorFiltro, login[0]);
         }
         
         public WebServiceProveedor.ordenDePedido GetOrdenDePedidoProveedor(int idOrdenDePedido)

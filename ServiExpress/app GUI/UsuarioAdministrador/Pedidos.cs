@@ -100,7 +100,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             {
                 VerOrdenDePedido verOrdenDePedido = new VerOrdenDePedido(controladorAdministrador, int.Parse(DgvOrdenesDePedido.CurrentRow.Cells[1].Value.ToString()));
                 verOrdenDePedido.ShowDialog();
-                ActualizarOrdenesDePedido(filtroSeleccionarTodosLosPedidos,filtroBuscar,filtroEstado,this.tipoDeBusqueda, TxtBuscar.Text);
+                ActualizarOrdenesDePedido(filtroSeleccionarTodosLosPedidos,filtroBuscar,filtroEstado,this.tipoDeBusqueda, this.valorFiltro);
             }
         }
 

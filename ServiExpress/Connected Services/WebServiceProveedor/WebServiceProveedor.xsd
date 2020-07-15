@@ -87,16 +87,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:productoProveedor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="AgregarNuevoTipoDeProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="tipoDeProducto" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AgregarNuevoTipoDeProductoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="ActualizarProductosAprobarPedido">
     <xs:sequence>
       <xs:element name="idProductoProveedor" type="xs:int" />
@@ -104,6 +94,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarProductosAprobarPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarNuevoTipoDeProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipoDeProducto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarNuevoTipoDeProductoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -202,6 +202,11 @@
   </xs:complexType>
   <xs:complexType name="GetOrdenesDePedidoProveedor">
     <xs:sequence>
+      <xs:element name="filtroSeleccionarTodosLosPedidos" type="xs:boolean" />
+      <xs:element name="filtroBuscar" type="xs:boolean" />
+      <xs:element name="filtroEstado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="tipoDeBusqueda" type="xs:string" />
+      <xs:element minOccurs="0" name="valorFiltro" type="xs:string" />
       <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
