@@ -25,10 +25,21 @@ namespace ServiExpress
             else
             {
                 string[] login = controladorLoginUsuario.ValidarUsuario(txtUserName.Text.Trim(), txtContraseñaUsuario.Text.Trim());
-                if (int.Parse(login[0]) == -2146233087)
+
+
+                if (login == null)
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta", "Ingreso");
+                }
+                else if (int.Parse(login[0]) == -2146233087)
                 {
                     MessageBox.Show("No hay respuesta del servidor", "Servidor");
                   
+                }
+                else if (int.Parse(login[0]) == -2146233083)
+                {
+                    MessageBox.Show("Se agotó el tiempo de respuesta del servidor, inténtelo nuevamente", "Servidor");
+
                 }
                 else if (int.Parse(login[0]) != -2146233087 && login != null)
                 {
@@ -52,10 +63,7 @@ namespace ServiExpress
                         this.Hide();
                         usuario4.Show();
                     }
-                }
-                else if(login == null) {
-                    MessageBox.Show("Usuario y/o contraseña incorrecta", "Ingreso");
-                }
+                }                
                 else
                 {
                     MessageBox.Show("Error de configuración","Ingreso");
@@ -84,13 +92,14 @@ namespace ServiExpress
             if (BtnIngresoProveedores.Text.Equals("Ingreso proveedores"))
             {
                 panel2.Visible = true;
-                panel2.Visible = true;
+                panel1.Enabled = false;
                 btnRegistroUsuario.Visible = false;
                 BtnIngresoProveedores.Text = "Ingreso usuarios";
             }
             else
             {
                 panel1.Visible = true;
+                panel1.Enabled = true;
                 panel2.Visible = false;
                 btnRegistroUsuario.Visible = true;
                 BtnIngresoProveedores.Text = "Ingreso proveedores";
@@ -111,21 +120,28 @@ namespace ServiExpress
             else
             {
                 string[] login = controladorLoginUsuario.ValidarUsuarioProveedor(TxtNombreUsuarioProveedor.Text, TxtContraseñaProveedor.Text);
-                if (int.Parse(login[0]) == -2146233087)
+
+
+                if (login == null)
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta", "Ingreso");
+                }
+                else if (int.Parse(login[0]) == -2146233087)
+                {
+                    MessageBox.Show("Se agotó el tiempo de respuesta del servidor, inténtelo nuevamente", "Servidor");
+
+                }
+                else if (int.Parse(login[0]) == -2146233083)
                 {
                     MessageBox.Show("No hay respuesta del servidor", "Servidor");
-                    
+
                 }
                 else if (int.Parse(login[0]) != -2146233087 && login != null)
                 {
                     Proveedor usuario2 = new Proveedor(login);
                     this.Hide();
                     usuario2.Show();
-                }
-                else if (login == null)
-                {
-                    MessageBox.Show("Usuario y/o contraseña incorrecta", "Ingreso");
-                }
+                }                
                 else
                 {
                     MessageBox.Show("Error de configuración", "Ingreso");
@@ -137,6 +153,11 @@ namespace ServiExpress
         {
             Form1 form1 = new Form1();
             form1.ShowDialog();
+        }
+
+        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.NombreUsuarioContraseña(e);
         }
     }
 }
