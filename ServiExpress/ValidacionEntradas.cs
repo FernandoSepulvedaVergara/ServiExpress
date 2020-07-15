@@ -27,13 +27,29 @@ namespace ServiExpress
                 e.Handled = true;
         }
 
-        public static void NombreUsuario() 
+        public static void NombreUsuarioContraseña(KeyPressEventArgs e) 
         {
-        
-        }
-        public static void Contraseña()
-        {
- 
+            char punto = '.';
+            if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            else if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            else if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (punto == e.KeyChar)
+            {
+                e.Handled = false;
+            }
+            else
+                e.Handled = true;
         }
 
         public static void Email() 

@@ -59,6 +59,10 @@
             this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.BtnAdministrarProducto);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Size = new System.Drawing.Size(1364, 721);
             this.splitContainer1.SplitterDistance = 192;
             this.splitContainer1.TabIndex = 0;

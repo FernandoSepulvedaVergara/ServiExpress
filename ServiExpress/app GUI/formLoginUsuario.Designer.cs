@@ -93,6 +93,7 @@
             this.txtContraseñaUsuario.PasswordChar = '*';
             this.txtContraseñaUsuario.Size = new System.Drawing.Size(137, 20);
             this.txtContraseñaUsuario.TabIndex = 19;
+            this.txtContraseñaUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // txtUserName
             // 
@@ -101,6 +102,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(137, 20);
             this.txtUserName.TabIndex = 18;
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // label2
             // 
@@ -143,7 +145,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtContraseñaUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSalir);
@@ -163,7 +164,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.TxtNombreUsuarioProveedor);
             this.panel2.Controls.Add(this.BtnIngresarProveedor);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(218, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(207, 243);
             this.panel2.TabIndex = 25;
@@ -177,6 +178,7 @@
             this.TxtContraseñaProveedor.PasswordChar = '*';
             this.TxtContraseñaProveedor.Size = new System.Drawing.Size(137, 20);
             this.TxtContraseñaProveedor.TabIndex = 19;
+            this.TxtContraseñaProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // label3
             // 
@@ -214,6 +216,7 @@
             this.TxtNombreUsuarioProveedor.Name = "TxtNombreUsuarioProveedor";
             this.TxtNombreUsuarioProveedor.Size = new System.Drawing.Size(137, 20);
             this.TxtNombreUsuarioProveedor.TabIndex = 18;
+            this.TxtNombreUsuarioProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // BtnIngresarProveedor
             // 
@@ -243,8 +246,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(426, 274);
+            this.ClientSize = new System.Drawing.Size(422, 270);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnIngresoProveedores);

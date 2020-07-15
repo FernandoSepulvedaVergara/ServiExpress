@@ -150,16 +150,19 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         private void RdbIdOrdenDePedido_CheckedChanged(object sender, EventArgs e)
         {
             this.tipoDeBusqueda = RdbIdOrdenDePedido.Text;
+            TxtBuscar.Enabled = true;
         }
 
         private void RdbProveedor_CheckedChanged(object sender, EventArgs e)
         {
             this.tipoDeBusqueda = RdbProveedor.Text;
+            TxtBuscar.Enabled = true;
         }
 
         private void RdbFechaDePedido_CheckedChanged(object sender, EventArgs e)
         {
             this.tipoDeBusqueda = RdbFechaDePedido.Text;
+            TxtBuscar.Enabled = true;
         }
     }
 }

@@ -163,6 +163,7 @@
             // 
             // TxtBuscar
             // 
+            this.TxtBuscar.Enabled = false;
             this.TxtBuscar.Location = new System.Drawing.Point(220, 24);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(100, 20);
