@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.DgvVehiculosCliente = new System.Windows.Forms.DataGridView();
+            this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
             this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_de_vehículo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_de_motor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_de_chasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVehiculosCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,8 +47,9 @@
             this.DgvVehiculosCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Patente,
             this.Tipo_de_vehículo,
-            this.Numero_de_motor,
-            this.Numero_de_chasis});
+            this.Marca,
+            this.Modelo,
+            this.Año});
             this.DgvVehiculosCliente.Location = new System.Drawing.Point(180, 54);
             this.DgvVehiculosCliente.MultiSelect = false;
             this.DgvVehiculosCliente.Name = "DgvVehiculosCliente";
@@ -57,6 +59,16 @@
             this.DgvVehiculosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvVehiculosCliente.Size = new System.Drawing.Size(544, 384);
             this.DgvVehiculosCliente.TabIndex = 0;
+            // 
+            // BtnAgregarVehiculo
+            // 
+            this.BtnAgregarVehiculo.Location = new System.Drawing.Point(12, 54);
+            this.BtnAgregarVehiculo.Name = "BtnAgregarVehiculo";
+            this.BtnAgregarVehiculo.Size = new System.Drawing.Size(141, 39);
+            this.BtnAgregarVehiculo.TabIndex = 1;
+            this.BtnAgregarVehiculo.Text = "Agregar Vehículo";
+            this.BtnAgregarVehiculo.UseVisualStyleBackColor = true;
+            this.BtnAgregarVehiculo.Click += new System.EventHandler(this.BtnAgregarVehiculo_Click);
             // 
             // Patente
             // 
@@ -70,27 +82,23 @@
             this.Tipo_de_vehículo.Name = "Tipo_de_vehículo";
             this.Tipo_de_vehículo.ReadOnly = true;
             // 
-            // Numero_de_motor
+            // Marca
             // 
-            this.Numero_de_motor.HeaderText = "Numero de motor";
-            this.Numero_de_motor.Name = "Numero_de_motor";
-            this.Numero_de_motor.ReadOnly = true;
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
             // 
-            // Numero_de_chasis
+            // Modelo
             // 
-            this.Numero_de_chasis.HeaderText = "Numero de chasis";
-            this.Numero_de_chasis.Name = "Numero_de_chasis";
-            this.Numero_de_chasis.ReadOnly = true;
+            this.Modelo.HeaderText = "Modelo";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.ReadOnly = true;
             // 
-            // BtnAgregarVehiculo
+            // Año
             // 
-            this.BtnAgregarVehiculo.Location = new System.Drawing.Point(12, 54);
-            this.BtnAgregarVehiculo.Name = "BtnAgregarVehiculo";
-            this.BtnAgregarVehiculo.Size = new System.Drawing.Size(141, 39);
-            this.BtnAgregarVehiculo.TabIndex = 1;
-            this.BtnAgregarVehiculo.Text = "Agregar Vehículo";
-            this.BtnAgregarVehiculo.UseVisualStyleBackColor = true;
-            this.BtnAgregarVehiculo.Click += new System.EventHandler(this.BtnAgregarVehiculo_Click);
+            this.Año.HeaderText = "Año";
+            this.Año.Name = "Año";
+            this.Año.ReadOnly = true;
             // 
             // VehiculosCliente
             // 
@@ -118,7 +126,8 @@
         private System.Windows.Forms.Button BtnAgregarVehiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_de_vehículo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_motor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_chasis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Año;
     }
 }

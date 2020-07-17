@@ -2,12 +2,20 @@
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="ActualizarProductos" type="tns:ActualizarProductos" />
   <xs:element name="ActualizarProductosResponse" type="tns:ActualizarProductosResponse" />
+  <xs:element name="ActualizarUsuario" type="tns:ActualizarUsuario" />
+  <xs:element name="ActualizarUsuarioResponse" type="tns:ActualizarUsuarioResponse" />
   <xs:element name="GetAtencion" type="tns:GetAtencion" />
   <xs:element name="GetAtencionResponse" type="tns:GetAtencionResponse" />
   <xs:element name="GetAtenciones" type="tns:GetAtenciones" />
   <xs:element name="GetAtencionesResponse" type="tns:GetAtencionesResponse" />
+  <xs:element name="GetComunas" type="tns:GetComunas" />
+  <xs:element name="GetComunasResponse" type="tns:GetComunasResponse" />
+  <xs:element name="GetInfoUsuario" type="tns:GetInfoUsuario" />
+  <xs:element name="GetInfoUsuarioResponse" type="tns:GetInfoUsuarioResponse" />
   <xs:element name="GetProductos" type="tns:GetProductos" />
   <xs:element name="GetProductosResponse" type="tns:GetProductosResponse" />
+  <xs:element name="GetRegiones" type="tns:GetRegiones" />
+  <xs:element name="GetRegionesResponse" type="tns:GetRegionesResponse" />
   <xs:element name="GetTipoDeDocumento" type="tns:GetTipoDeDocumento" />
   <xs:element name="GetTipoDeDocumentoResponse" type="tns:GetTipoDeDocumentoResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
@@ -22,6 +30,20 @@
   <xs:element name="RegistrarAtencionResponse" type="tns:RegistrarAtencionResponse" />
   <xs:element name="RegistrarVenta" type="tns:RegistrarVenta" />
   <xs:element name="RegistrarVentaResponse" type="tns:RegistrarVentaResponse" />
+  <xs:complexType name="GetTipoDeProducto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDeProducto">
+    <xs:sequence>
+      <xs:element name="idTipoDeProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="producto" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetAtencion">
     <xs:sequence>
       <xs:element name="idReserva" type="xs:int" />
@@ -55,58 +77,12 @@
       <xs:element minOccurs="0" name="servicio" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetTipoDeProducto">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetTipoDeProductoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeProducto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoDeProducto">
-    <xs:sequence>
-      <xs:element name="idTipoDeProducto" type="xs:int" />
-      <xs:element minOccurs="0" name="producto" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="GetTipoDeServicios">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="GetTipoDeServiciosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeServicio" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetProductos">
-    <xs:sequence>
-      <xs:element name="idTipoDeProducto" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetProductosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:producto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="producto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="estadoDeProducto" type="tns:estadoDeProducto" />
-      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:string" />
-      <xs:element name="idOrdenDePedido" type="xs:int" />
-      <xs:element name="idProducto" type="xs:int" />
-      <xs:element name="idTipoDeProducto" type="xs:int" />
-      <xs:element minOccurs="0" name="marca" type="xs:string" />
-      <xs:element name="precioCompra" type="xs:int" />
-      <xs:element name="precioVenta" type="xs:int" />
-      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
-      <xs:element name="stock" type="xs:int" />
-      <xs:element name="stockCritico" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="estadoDeProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="estado" type="xs:string" />
-      <xs:element name="idEstadoDeProducto" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetAtenciones">
@@ -177,13 +153,16 @@
       <xs:element name="id_tipo_de_documento" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Pagar">
+  <xs:complexType name="RegistrarAtencion">
     <xs:sequence>
-      <xs:element name="id_venta" type="xs:int" />
-      <xs:element name="montoPagado" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaAtencion" type="xs:string" />
+      <xs:element minOccurs="0" name="horaAtencion" type="xs:string" />
+      <xs:element name="idTipoDeServicio" type="xs:int" />
+      <xs:element name="idReserva" type="xs:int" />
+      <xs:element name="idEstadoDeAtencion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="PagarResponse">
+  <xs:complexType name="RegistrarAtencionResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -202,20 +181,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="RegistrarAtencion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fechaAtencion" type="xs:string" />
-      <xs:element minOccurs="0" name="horaAtencion" type="xs:string" />
-      <xs:element name="idTipoDeServicio" type="xs:int" />
-      <xs:element name="idReserva" type="xs:int" />
-      <xs:element name="idEstadoDeAtencion" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="RegistrarAtencionResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="RegistrarVenta">
     <xs:sequence>
       <xs:element name="idAtencion" type="xs:int" />
@@ -229,6 +194,131 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="RegistrarVentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRegiones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetRegionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:int" />
+      <xs:element minOccurs="0" name="region" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actualizarUsuario" type="tns:usuario" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="comuna" type="tns:comuna" />
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoDeUsuario" type="tns:estadoDeUsuario" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="primerNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="region" type="tns:region" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="segundoNombre" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoDeUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comuna">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comuna" type="xs:string" />
+      <xs:element name="idComuna" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoDeUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estadoDeUsuario" type="xs:string" />
+      <xs:element name="idEstadoDeUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDeUsuario">
+    <xs:sequence>
+      <xs:element name="idTipoDeUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoDeUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetInfoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetInfoUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetProductos">
+    <xs:sequence>
+      <xs:element name="idTipoDeProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetProductosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoDeProducto" type="tns:estadoDeProducto" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:string" />
+      <xs:element name="idOrdenDePedido" type="xs:int" />
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element name="idTipoDeProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="marca" type="xs:string" />
+      <xs:element name="precioCompra" type="xs:int" />
+      <xs:element name="precioVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="rutProveedor" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="stockCritico" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoDeProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="idEstadoDeProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetComunas">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetComunasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:comuna" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Pagar">
+    <xs:sequence>
+      <xs:element name="id_venta" type="xs:int" />
+      <xs:element name="montoPagado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PagarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>

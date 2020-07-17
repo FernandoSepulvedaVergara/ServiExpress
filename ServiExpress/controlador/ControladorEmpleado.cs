@@ -202,5 +202,25 @@ namespace ServiExpress.controlador
         {
             return webEmpleado.Pagar(id_venta,montoPagado);
         }
+
+        public WebServiceEmpleado.usuario GetInfoUsuario(string rut)
+        {
+            return webEmpleado.GetInfoUsuario(rut);
+        }
+
+        public string[] ActualizarUsuario(WebServiceEmpleado.usuario actualizarUsuario)
+        {
+            return webEmpleado.ActualizarUsuario(actualizarUsuario, this.login[0], this.login[1]);
+        }
+
+        public WebServiceEmpleado.region[] GetRegiones()
+        {
+            return webEmpleado.GetRegiones();
+        }
+
+        public WebServiceEmpleado.comuna[] GetComunas(int idRegion)
+        {
+            return webEmpleado.GetComunas(idRegion);
+        }
     }
 }

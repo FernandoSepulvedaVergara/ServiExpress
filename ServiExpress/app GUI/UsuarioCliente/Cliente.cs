@@ -89,7 +89,15 @@ namespace ServiExpress.app_GUI
 
         private void BtnDatosPersonales_Click(object sender, EventArgs e)
         {
-
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            UsuarioCliente.Info info = new UsuarioCliente.Info(controladorCliente);
+            info.TopLevel = false;
+            info.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(info);
+            info.Show();
         }
 
         private void BtnReservaciones_Click(object sender, EventArgs e)

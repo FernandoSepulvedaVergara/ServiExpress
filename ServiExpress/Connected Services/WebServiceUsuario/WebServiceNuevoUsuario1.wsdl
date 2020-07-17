@@ -5,6 +5,18 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceNuevoUsuario?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
+  <message name="GetComunas">
+    <part name="parameters" element="tns:GetComunas" />
+  </message>
+  <message name="GetComunasResponse">
+    <part name="parameters" element="tns:GetComunasResponse" />
+  </message>
+  <message name="GetRegiones">
+    <part name="parameters" element="tns:GetRegiones" />
+  </message>
+  <message name="GetRegionesResponse">
+    <part name="parameters" element="tns:GetRegionesResponse" />
+  </message>
   <message name="NuevoUsuario">
     <part name="parameters" element="tns:NuevoUsuario" />
   </message>
@@ -12,6 +24,14 @@
     <part name="parameters" element="tns:NuevoUsuarioResponse" />
   </message>
   <portType name="WebServiceUsuario">
+    <operation name="GetComunas">
+      <input wsam:Action="http://servicios/WebServiceUsuario/GetComunasRequest" message="tns:GetComunas" />
+      <output wsam:Action="http://servicios/WebServiceUsuario/GetComunasResponse" message="tns:GetComunasResponse" />
+    </operation>
+    <operation name="GetRegiones">
+      <input wsam:Action="http://servicios/WebServiceUsuario/GetRegionesRequest" message="tns:GetRegiones" />
+      <output wsam:Action="http://servicios/WebServiceUsuario/GetRegionesResponse" message="tns:GetRegionesResponse" />
+    </operation>
     <operation name="NuevoUsuario">
       <input wsam:Action="http://servicios/WebServiceUsuario/NuevoUsuarioRequest" message="tns:NuevoUsuario" />
       <output wsam:Action="http://servicios/WebServiceUsuario/NuevoUsuarioResponse" message="tns:NuevoUsuarioResponse" />
@@ -19,6 +39,24 @@
   </portType>
   <binding name="WebServiceUsuarioPortBinding" type="tns:WebServiceUsuario">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetComunas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRegiones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="NuevoUsuario">
       <soap:operation soapAction="" />
       <input>

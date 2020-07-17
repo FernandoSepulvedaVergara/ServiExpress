@@ -38,8 +38,9 @@ namespace ServiExpress.controlador
                     {
                         listaTemporal.Add(r.patente);
                         listaTemporal.Add(r.tipoDeVehiculo.tipo_de_vehiculo);
-                        listaTemporal.Add(r.numero_motor.ToString());
-                        listaTemporal.Add(r.numero_chasis);
+                        listaTemporal.Add(r.marca);
+                        listaTemporal.Add(r.modelo);
+                        listaTemporal.Add(r.año);
 
                         DataGridViewRow fila = new DataGridViewRow();
                         fila.CreateCells(Dgv);
@@ -188,9 +189,9 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
-        public string[] RegistrarNuevoVehiculo(string patente, int numeroMotor, string numeroChasis, int idTipoDeVehiculo, string rut)
+        public string[] RegistrarNuevoVehiculo(string patente, string marca, string modelo, string año, int idTipoDeVehiculo, string rut)
         {
-            string[] resultado = webCliente.IngresarVehiculo(patente, numeroMotor, numeroChasis, idTipoDeVehiculo, rut);
+            string[] resultado = webCliente.IngresarVehiculo(patente, marca, modelo, año, idTipoDeVehiculo, rut);
             return resultado;
         }
 
@@ -205,5 +206,26 @@ namespace ServiExpress.controlador
             bool?[] resultado = webCliente.ValidarDisponibilidad(fecha, hora, rut);
             return resultado;
         }
+
+        public usuario GetInfoUsuario(string rut)
+        {
+            return webCliente.GetInfoUsuario(rut);
+        }
+
+        public region[] GetRegiones()
+        {
+            return webCliente.GetRegiones();
+        }
+
+        public comuna[] GetComunas(int idRegion)
+        {
+            return webCliente.GetComunas(idRegion);
+        }
+
+        public string[] ActualizarUsuario(usuario actualizarUsuario)
+        {
+            return webCliente.ActualizarUsuario(actualizarUsuario, this.login[0], this.login[1]);
+        }
+
     }
 }

@@ -96,6 +96,12 @@
     <Compile Include="app GUI\UsuarioAdministrador\AdministrarProductos.Designer.cs">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\AdministrarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\AdministrarProveedores.Designer.cs">
+      <DependentUpon>AdministrarProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioAdministrador\AdministrarSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     <Compile Include="app GUI\UsuarioCliente\GlosarioDePagos.Designer.cs">
       <DependentUpon>GlosarioDePagos.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioCliente\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioCliente\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioCliente\ReservaDeAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </Compile>
     <Compile Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.Designer.cs">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioEmpleado\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
     </Compile>
     <Compile Include="app GUI\UsuarioEmpleado\Pagar.cs">
       <SubType>Form</SubType>
@@ -313,6 +331,7 @@
     <Compile Include="controlador\ControladorLoginUsuario.cs" />
     <Compile Include="ApiFeriados.cs" />
     <Compile Include="controlador\ControladorProveedor.cs" />
+    <Compile Include="controlador\ControladorUsuario.cs" />
     <Compile Include="Horas.cs" />
     <Compile Include="Informes\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -337,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\AdministrarProductos.resx">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioAdministrador\AdministrarProveedores.resx">
+      <DependentUpon>AdministrarProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\AdministrarSucursales.resx">
       <DependentUpon>AdministrarSucursales.cs</DependentUpon>
@@ -365,6 +387,9 @@
     <EmbeddedResource Include="app GUI\UsuarioCliente\GlosarioDePagos.resx">
       <DependentUpon>GlosarioDePagos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioCliente\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\ReservaDeAtencion.resx">
       <DependentUpon>ReservaDeAtencion.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioCliente\VehiculoCliente\VehiculosCliente.resx">
       <DependentUpon>VehiculosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioEmpleado\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioEmpleado\Pagar.resx">
       <DependentUpon>Pagar.cs</DependentUpon>
@@ -549,10 +577,25 @@
     <None Include="Connected Services\WebServiceAdministrador\WebServiceAdministrador.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.ActualizarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.atenciones.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.comuna.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetComunasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetInfoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetRegionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetReservacionesResponse.datasource">
@@ -576,6 +619,9 @@
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.IngresarVehiculoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.RegistrarReservaDeAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -586,6 +632,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.tipoDeVehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.ValidarDisponibilidadResponse.datasource">
@@ -604,10 +653,16 @@
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.ActualizarProductosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.ActualizarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atencion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.atenciones.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.comuna.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetAtencionesResponse.datasource">
@@ -616,7 +671,16 @@
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetComunasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetInfoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetRegionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.GetTipoDeDocumentoResponse.datasource">
@@ -637,6 +701,9 @@
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.producto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.RegistrarAtencionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -650,6 +717,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.tipoDeServicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceEmpleado\ServiExpress.WebServiceEmpleado.ventas.datasource">
@@ -721,7 +791,19 @@
     <None Include="Connected Services\WebServiceProveedor\WebServiceProveedor.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.comuna.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.GetComunasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.GetRegionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.NuevoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceUsuario\ServiExpress.WebServiceUsuario.region.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceUsuario\WebServiceNuevoUsuario1.wsdl" />

@@ -59,6 +59,7 @@
             this.BtnDatosPersonales.TabIndex = 10;
             this.BtnDatosPersonales.Text = "Datos personales";
             this.BtnDatosPersonales.UseVisualStyleBackColor = true;
+            this.BtnDatosPersonales.Click += new System.EventHandler(this.BtnDatosPersonales_Click);
             // 
             // BtnReservasDeAtencion
             // 

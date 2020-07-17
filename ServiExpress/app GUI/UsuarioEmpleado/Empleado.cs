@@ -62,5 +62,18 @@ namespace ServiExpress.app_GUI
         {
             Application.Exit();
         }
+
+        private void BtnDatosPersonales_Click(object sender, EventArgs e)
+        {
+            if (panel1.Controls.Count > 0)
+            {
+                panel1.Controls.Clear();
+            }
+            Info info = new Info(controladorEmpleado);
+            info.TopLevel = false;
+            info.Dock = DockStyle.Fill;
+            panel1.Controls.Add(info);
+            info.Show();
+        }
     }
 }

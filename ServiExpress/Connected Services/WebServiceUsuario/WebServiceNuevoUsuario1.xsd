@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetComunas" type="tns:GetComunas" />
+  <xs:element name="GetComunasResponse" type="tns:GetComunasResponse" />
+  <xs:element name="GetRegiones" type="tns:GetRegiones" />
+  <xs:element name="GetRegionesResponse" type="tns:GetRegionesResponse" />
   <xs:element name="NuevoUsuario" type="tns:NuevoUsuario" />
   <xs:element name="NuevoUsuarioResponse" type="tns:NuevoUsuarioResponse" />
+  <xs:complexType name="GetRegiones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetRegionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:int" />
+      <xs:element minOccurs="0" name="region" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetComunas">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetComunasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:comuna" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comuna">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comuna" type="xs:string" />
+      <xs:element name="idComuna" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="NuevoUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="rut" type="xs:string" />
@@ -16,6 +50,7 @@
       <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
       <xs:element name="tipoUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element name="idEstadoUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="NuevoUsuarioResponse">

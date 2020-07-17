@@ -41,7 +41,13 @@ namespace ServiExpress.app_GUI.UsuarioCliente
                     feriados[i] = feriado;
                 }
                 monthCalendar.BoldedDates = feriados;
-                try
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error conexión API \n " + ex.Message);
+            }
+            try
                 {
                     CmbSeleccionarServicios.Items.Clear();
                     CmbSeleccionarVehículo.Items.Clear();
@@ -61,7 +67,7 @@ namespace ServiExpress.app_GUI.UsuarioCliente
                     {
                         foreach (var r in vehiculos)
                         {
-                            CmbSeleccionarVehículo.Items.Add(String.Format("{0} - {1}", r.patente, r.tipoDeVehiculo.tipo_de_vehiculo));
+                            CmbSeleccionarVehículo.Items.Add(String.Format("{0} - {1} {2}", r.patente, r.marca, r.modelo));
                         }
                     }
                     else
@@ -74,12 +80,6 @@ namespace ServiExpress.app_GUI.UsuarioCliente
                 {
                     MessageBox.Show("Error de configuración \n" + ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error conexión API \n " + ex.Message);
-            }
-
             MapsSucursal mps = new MapsSucursal();
             if (panel1.Controls.Count > 0)
             {

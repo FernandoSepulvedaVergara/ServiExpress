@@ -128,7 +128,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error inesperado \n" + ex.Message);
+                MessageBox.Show("Error de configuración \n" + ex.Message);
             }
         }
         private void Limpiar() {

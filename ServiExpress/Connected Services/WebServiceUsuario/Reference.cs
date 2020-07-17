@@ -16,6 +16,24 @@ namespace ServiExpress.WebServiceUsuario {
     public interface WebServiceUsuario {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/GetComunasRequest", ReplyAction="http://servicios/WebServiceUsuario/GetComunasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceUsuario.GetComunasResponse GetComunas(ServiExpress.WebServiceUsuario.GetComunasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/GetComunasRequest", ReplyAction="http://servicios/WebServiceUsuario/GetComunasResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.GetComunasResponse> GetComunasAsync(ServiExpress.WebServiceUsuario.GetComunasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/GetRegionesRequest", ReplyAction="http://servicios/WebServiceUsuario/GetRegionesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ServiExpress.WebServiceUsuario.GetRegionesResponse GetRegiones(ServiExpress.WebServiceUsuario.GetRegionesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/GetRegionesRequest", ReplyAction="http://servicios/WebServiceUsuario/GetRegionesResponse")]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.GetRegionesResponse> GetRegionesAsync(ServiExpress.WebServiceUsuario.GetRegionesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://servicios/WebServiceUsuario/NuevoUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -23,6 +41,162 @@ namespace ServiExpress.WebServiceUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://servicios/WebServiceUsuario/NuevoUsuarioRequest", ReplyAction="http://servicios/WebServiceUsuario/NuevoUsuarioResponse")]
         System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> NuevoUsuarioAsync(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
+    public partial class comuna : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string comuna1Field;
+        
+        private int idComunaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("comuna", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string comuna1 {
+            get {
+                return this.comuna1Field;
+            }
+            set {
+                this.comuna1Field = value;
+                this.RaisePropertyChanged("comuna1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idComuna {
+            get {
+                return this.idComunaField;
+            }
+            set {
+                this.idComunaField = value;
+                this.RaisePropertyChanged("idComuna");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios/")]
+    public partial class region : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idRegionField;
+        
+        private string region1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idRegion {
+            get {
+                return this.idRegionField;
+            }
+            set {
+                this.idRegionField = value;
+                this.RaisePropertyChanged("idRegion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("region", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string region1 {
+            get {
+                return this.region1Field;
+            }
+            set {
+                this.region1Field = value;
+                this.RaisePropertyChanged("region1");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetComunas", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetComunasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idRegion;
+        
+        public GetComunasRequest() {
+        }
+        
+        public GetComunasRequest(int idRegion) {
+            this.idRegion = idRegion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetComunasResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetComunasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public ServiExpress.WebServiceUsuario.comuna[] @return;
+        
+        public GetComunasResponse() {
+        }
+        
+        public GetComunasResponse(ServiExpress.WebServiceUsuario.comuna[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRegiones", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetRegionesRequest {
+        
+        public GetRegionesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRegionesResponse", WrapperNamespace="http://servicios/", IsWrapped=true)]
+    public partial class GetRegionesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public ServiExpress.WebServiceUsuario.region[] @return;
+        
+        public GetRegionesResponse() {
+        }
+        
+        public GetRegionesResponse(ServiExpress.WebServiceUsuario.region[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -79,10 +253,14 @@ namespace ServiExpress.WebServiceUsuario {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string contraseña;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios/", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEstadoUsuario;
+        
         public NuevoUsuarioRequest() {
         }
         
-        public NuevoUsuarioRequest(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
+        public NuevoUsuarioRequest(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña, int idEstadoUsuario) {
             this.rut = rut;
             this.primerNombre = primerNombre;
             this.segundoNombre = segundoNombre;
@@ -95,6 +273,7 @@ namespace ServiExpress.WebServiceUsuario {
             this.nombreUsuario = nombreUsuario;
             this.tipoUsuario = tipoUsuario;
             this.contraseña = contraseña;
+            this.idEstadoUsuario = idEstadoUsuario;
         }
     }
     
@@ -144,11 +323,55 @@ namespace ServiExpress.WebServiceUsuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceUsuario.GetComunasResponse ServiExpress.WebServiceUsuario.WebServiceUsuario.GetComunas(ServiExpress.WebServiceUsuario.GetComunasRequest request) {
+            return base.Channel.GetComunas(request);
+        }
+        
+        public ServiExpress.WebServiceUsuario.comuna[] GetComunas(int idRegion) {
+            ServiExpress.WebServiceUsuario.GetComunasRequest inValue = new ServiExpress.WebServiceUsuario.GetComunasRequest();
+            inValue.idRegion = idRegion;
+            ServiExpress.WebServiceUsuario.GetComunasResponse retVal = ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).GetComunas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.GetComunasResponse> ServiExpress.WebServiceUsuario.WebServiceUsuario.GetComunasAsync(ServiExpress.WebServiceUsuario.GetComunasRequest request) {
+            return base.Channel.GetComunasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.GetComunasResponse> GetComunasAsync(int idRegion) {
+            ServiExpress.WebServiceUsuario.GetComunasRequest inValue = new ServiExpress.WebServiceUsuario.GetComunasRequest();
+            inValue.idRegion = idRegion;
+            return ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).GetComunasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiExpress.WebServiceUsuario.GetRegionesResponse ServiExpress.WebServiceUsuario.WebServiceUsuario.GetRegiones(ServiExpress.WebServiceUsuario.GetRegionesRequest request) {
+            return base.Channel.GetRegiones(request);
+        }
+        
+        public ServiExpress.WebServiceUsuario.region[] GetRegiones() {
+            ServiExpress.WebServiceUsuario.GetRegionesRequest inValue = new ServiExpress.WebServiceUsuario.GetRegionesRequest();
+            ServiExpress.WebServiceUsuario.GetRegionesResponse retVal = ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).GetRegiones(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.GetRegionesResponse> ServiExpress.WebServiceUsuario.WebServiceUsuario.GetRegionesAsync(ServiExpress.WebServiceUsuario.GetRegionesRequest request) {
+            return base.Channel.GetRegionesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.GetRegionesResponse> GetRegionesAsync() {
+            ServiExpress.WebServiceUsuario.GetRegionesRequest inValue = new ServiExpress.WebServiceUsuario.GetRegionesRequest();
+            return ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).GetRegionesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ServiExpress.WebServiceUsuario.NuevoUsuarioResponse ServiExpress.WebServiceUsuario.WebServiceUsuario.NuevoUsuario(ServiExpress.WebServiceUsuario.NuevoUsuarioRequest request) {
             return base.Channel.NuevoUsuario(request);
         }
         
-        public string[] NuevoUsuario(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
+        public string[] NuevoUsuario(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña, int idEstadoUsuario) {
             ServiExpress.WebServiceUsuario.NuevoUsuarioRequest inValue = new ServiExpress.WebServiceUsuario.NuevoUsuarioRequest();
             inValue.rut = rut;
             inValue.primerNombre = primerNombre;
@@ -162,6 +385,7 @@ namespace ServiExpress.WebServiceUsuario {
             inValue.nombreUsuario = nombreUsuario;
             inValue.tipoUsuario = tipoUsuario;
             inValue.contraseña = contraseña;
+            inValue.idEstadoUsuario = idEstadoUsuario;
             ServiExpress.WebServiceUsuario.NuevoUsuarioResponse retVal = ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).NuevoUsuario(inValue);
             return retVal.@return;
         }
@@ -171,7 +395,7 @@ namespace ServiExpress.WebServiceUsuario {
             return base.Channel.NuevoUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> NuevoUsuarioAsync(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña) {
+        public System.Threading.Tasks.Task<ServiExpress.WebServiceUsuario.NuevoUsuarioResponse> NuevoUsuarioAsync(string rut, string primerNombre, string segundoNombre, string apellidoPaterno, string apellidoMaterno, int telefono, string email, string direccion, int comuna, string nombreUsuario, int tipoUsuario, string contraseña, int idEstadoUsuario) {
             ServiExpress.WebServiceUsuario.NuevoUsuarioRequest inValue = new ServiExpress.WebServiceUsuario.NuevoUsuarioRequest();
             inValue.rut = rut;
             inValue.primerNombre = primerNombre;
@@ -185,6 +409,7 @@ namespace ServiExpress.WebServiceUsuario {
             inValue.nombreUsuario = nombreUsuario;
             inValue.tipoUsuario = tipoUsuario;
             inValue.contraseña = contraseña;
+            inValue.idEstadoUsuario = idEstadoUsuario;
             return ((ServiExpress.WebServiceUsuario.WebServiceUsuario)(this)).NuevoUsuarioAsync(inValue);
         }
     }
