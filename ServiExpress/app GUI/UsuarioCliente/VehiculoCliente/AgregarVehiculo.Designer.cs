@@ -64,6 +64,7 @@
             this.TxtPatente.Name = "TxtPatente";
             this.TxtPatente.Size = new System.Drawing.Size(100, 26);
             this.TxtPatente.TabIndex = 1;
+            this.TxtPatente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPatente_KeyPress);
             // 
             // CmbTipoDeVehiculo
             // 
@@ -122,6 +123,7 @@
             this.TxtModelo.Name = "TxtModelo";
             this.TxtModelo.Size = new System.Drawing.Size(100, 26);
             this.TxtModelo.TabIndex = 8;
+            this.TxtModelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPatente_KeyPress);
             // 
             // TxtMarca
             // 
@@ -130,6 +132,7 @@
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.Size = new System.Drawing.Size(100, 26);
             this.TxtMarca.TabIndex = 9;
+            this.TxtMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMarca_KeyPress);
             // 
             // label11
             // 
@@ -157,9 +160,11 @@
             // 
             this.TxtAño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAño.Location = new System.Drawing.Point(20, 313);
+            this.TxtAño.MaxLength = 4;
             this.TxtAño.Name = "TxtAño";
             this.TxtAño.Size = new System.Drawing.Size(100, 26);
             this.TxtAño.TabIndex = 32;
+            this.TxtAño.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAño_KeyPress);
             // 
             // label5
             // 

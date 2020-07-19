@@ -31,9 +31,12 @@
             this.CmbProveedores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtFechaDePedido = new System.Windows.Forms.TextBox();
             this.CmbProductos = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CmbTipoDeProducto = new System.Windows.Forms.ComboBox();
+            this.BtnRegistrarPedido = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.LblMontoAPagar = new System.Windows.Forms.Label();
@@ -47,9 +50,6 @@
             this.PrecioDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnRegistrarPedido = new System.Windows.Forms.Button();
-            this.TxtFechaDePedido = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,7 +63,7 @@
             this.CmbProveedores.FormattingEnabled = true;
             this.CmbProveedores.Location = new System.Drawing.Point(42, 33);
             this.CmbProveedores.Name = "CmbProveedores";
-            this.CmbProveedores.Size = new System.Drawing.Size(280, 21);
+            this.CmbProveedores.Size = new System.Drawing.Size(317, 24);
             this.CmbProveedores.TabIndex = 0;
             this.CmbProveedores.SelectedIndexChanged += new System.EventHandler(this.CmbProveedores_SelectedIndexChanged);
             // 
@@ -72,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.Size = new System.Drawing.Size(152, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccionar proveedor :";
             // 
@@ -94,6 +94,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.CmbProveedores);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer1.Panel2
             // 
@@ -101,9 +102,28 @@
             this.splitContainer1.Panel2.Controls.Add(this.LblMontoAPagar);
             this.splitContainer1.Panel2.Controls.Add(this.BtnQuitarProducto);
             this.splitContainer1.Panel2.Controls.Add(this.DgvProductosProveedor);
+            this.splitContainer1.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Size = new System.Drawing.Size(959, 459);
             this.splitContainer1.SplitterDistance = 187;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(458, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Fecha de pedido :";
+            // 
+            // TxtFechaDePedido
+            // 
+            this.TxtFechaDePedido.Enabled = false;
+            this.TxtFechaDePedido.Location = new System.Drawing.Point(581, 33);
+            this.TxtFechaDePedido.Name = "TxtFechaDePedido";
+            this.TxtFechaDePedido.ReadOnly = true;
+            this.TxtFechaDePedido.Size = new System.Drawing.Size(100, 22);
+            this.TxtFechaDePedido.TabIndex = 6;
             // 
             // CmbProductos
             // 
@@ -111,7 +131,7 @@
             this.CmbProductos.FormattingEnabled = true;
             this.CmbProductos.Location = new System.Drawing.Point(42, 120);
             this.CmbProductos.Name = "CmbProductos";
-            this.CmbProductos.Size = new System.Drawing.Size(280, 21);
+            this.CmbProductos.Size = new System.Drawing.Size(317, 24);
             this.CmbProductos.TabIndex = 4;
             this.CmbProductos.SelectedIndexChanged += new System.EventHandler(this.CmbProductos_SelectedIndexChanged);
             // 
@@ -120,7 +140,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(39, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
+            this.label3.Size = new System.Drawing.Size(142, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Seleccionar producto :";
             // 
@@ -130,16 +150,26 @@
             this.CmbTipoDeProducto.FormattingEnabled = true;
             this.CmbTipoDeProducto.Location = new System.Drawing.Point(42, 77);
             this.CmbTipoDeProducto.Name = "CmbTipoDeProducto";
-            this.CmbTipoDeProducto.Size = new System.Drawing.Size(280, 21);
+            this.CmbTipoDeProducto.Size = new System.Drawing.Size(317, 24);
             this.CmbTipoDeProducto.TabIndex = 2;
             this.CmbTipoDeProducto.SelectedIndexChanged += new System.EventHandler(this.CmbTipoDeProducto_SelectedIndexChanged);
+            // 
+            // BtnRegistrarPedido
+            // 
+            this.BtnRegistrarPedido.Location = new System.Drawing.Point(796, 33);
+            this.BtnRegistrarPedido.Name = "BtnRegistrarPedido";
+            this.BtnRegistrarPedido.Size = new System.Drawing.Size(138, 50);
+            this.BtnRegistrarPedido.TabIndex = 7;
+            this.BtnRegistrarPedido.Text = "Registrar pedido";
+            this.BtnRegistrarPedido.UseVisualStyleBackColor = true;
+            this.BtnRegistrarPedido.Click += new System.EventHandler(this.BtnRegistrarPedido_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 13);
+            this.label2.Size = new System.Drawing.Size(186, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Seleccionar tipo de producto :";
             // 
@@ -148,7 +178,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(585, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 13);
+            this.label4.Size = new System.Drawing.Size(129, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Monto total a pagar :";
             // 
@@ -157,15 +187,15 @@
             this.LblMontoAPagar.AutoSize = true;
             this.LblMontoAPagar.Location = new System.Drawing.Point(710, 14);
             this.LblMontoAPagar.Name = "LblMontoAPagar";
-            this.LblMontoAPagar.Size = new System.Drawing.Size(13, 13);
+            this.LblMontoAPagar.Size = new System.Drawing.Size(15, 16);
             this.LblMontoAPagar.TabIndex = 6;
             this.LblMontoAPagar.Text = "0";
             // 
             // BtnQuitarProducto
             // 
-            this.BtnQuitarProducto.Location = new System.Drawing.Point(24, 27);
+            this.BtnQuitarProducto.Location = new System.Drawing.Point(12, 14);
             this.BtnQuitarProducto.Name = "BtnQuitarProducto";
-            this.BtnQuitarProducto.Size = new System.Drawing.Size(118, 20);
+            this.BtnQuitarProducto.Size = new System.Drawing.Size(126, 33);
             this.BtnQuitarProducto.TabIndex = 9;
             this.BtnQuitarProducto.Text = "Quitar producto";
             this.BtnQuitarProducto.UseVisualStyleBackColor = true;
@@ -243,34 +273,6 @@
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
-            // 
-            // BtnRegistrarPedido
-            // 
-            this.BtnRegistrarPedido.Location = new System.Drawing.Point(796, 33);
-            this.BtnRegistrarPedido.Name = "BtnRegistrarPedido";
-            this.BtnRegistrarPedido.Size = new System.Drawing.Size(138, 50);
-            this.BtnRegistrarPedido.TabIndex = 7;
-            this.BtnRegistrarPedido.Text = "Registrar pedido";
-            this.BtnRegistrarPedido.UseVisualStyleBackColor = true;
-            this.BtnRegistrarPedido.Click += new System.EventHandler(this.BtnRegistrarPedido_Click);
-            // 
-            // TxtFechaDePedido
-            // 
-            this.TxtFechaDePedido.Enabled = false;
-            this.TxtFechaDePedido.Location = new System.Drawing.Point(557, 33);
-            this.TxtFechaDePedido.Name = "TxtFechaDePedido";
-            this.TxtFechaDePedido.ReadOnly = true;
-            this.TxtFechaDePedido.Size = new System.Drawing.Size(100, 20);
-            this.TxtFechaDePedido.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(458, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Fecha de pedido :";
             // 
             // GenerarPedido
             // 

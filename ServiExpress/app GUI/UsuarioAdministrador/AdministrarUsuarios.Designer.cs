@@ -48,25 +48,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // TxtBuscarRut
             // 
-            this.TxtBuscarRut.Location = new System.Drawing.Point(97, 10);
+            this.TxtBuscarRut.Location = new System.Drawing.Point(112, 9);
             this.TxtBuscarRut.Name = "TxtBuscarRut";
-            this.TxtBuscarRut.Size = new System.Drawing.Size(100, 20);
+            this.TxtBuscarRut.Size = new System.Drawing.Size(100, 22);
             this.TxtBuscarRut.TabIndex = 0;
+            this.TxtBuscarRut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscarRut_KeyPress);
             // 
             // ChbCliente
             // 
             this.ChbCliente.AutoSize = true;
-            this.ChbCliente.Location = new System.Drawing.Point(110, 12);
+            this.ChbCliente.Location = new System.Drawing.Point(135, 13);
             this.ChbCliente.Name = "ChbCliente";
-            this.ChbCliente.Size = new System.Drawing.Size(58, 17);
+            this.ChbCliente.Size = new System.Drawing.Size(68, 20);
             this.ChbCliente.TabIndex = 1;
             this.ChbCliente.Text = "Cliente";
             this.ChbCliente.UseVisualStyleBackColor = true;
@@ -86,13 +89,13 @@
             this.ApellidoPaterno,
             this.ApellidoMaterno,
             this.EstadoDeUsuario});
-            this.DgvUsuarios.Location = new System.Drawing.Point(12, 133);
+            this.DgvUsuarios.Location = new System.Drawing.Point(8, 19);
             this.DgvUsuarios.MultiSelect = false;
             this.DgvUsuarios.Name = "DgvUsuarios";
             this.DgvUsuarios.ReadOnly = true;
             this.DgvUsuarios.RowHeadersVisible = false;
             this.DgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvUsuarios.Size = new System.Drawing.Size(776, 321);
+            this.DgvUsuarios.Size = new System.Drawing.Size(827, 339);
             this.DgvUsuarios.TabIndex = 4;
             this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             // 
@@ -141,9 +144,9 @@
             // ChbAdministrador
             // 
             this.ChbAdministrador.AutoSize = true;
-            this.ChbAdministrador.Location = new System.Drawing.Point(110, 58);
+            this.ChbAdministrador.Location = new System.Drawing.Point(135, 59);
             this.ChbAdministrador.Name = "ChbAdministrador";
-            this.ChbAdministrador.Size = new System.Drawing.Size(89, 17);
+            this.ChbAdministrador.Size = new System.Drawing.Size(110, 20);
             this.ChbAdministrador.TabIndex = 5;
             this.ChbAdministrador.Text = "Administrador";
             this.ChbAdministrador.UseVisualStyleBackColor = true;
@@ -152,9 +155,9 @@
             // ChbEmpleado
             // 
             this.ChbEmpleado.AutoSize = true;
-            this.ChbEmpleado.Location = new System.Drawing.Point(110, 35);
+            this.ChbEmpleado.Location = new System.Drawing.Point(135, 36);
             this.ChbEmpleado.Name = "ChbEmpleado";
-            this.ChbEmpleado.Size = new System.Drawing.Size(73, 17);
+            this.ChbEmpleado.Size = new System.Drawing.Size(90, 20);
             this.ChbEmpleado.TabIndex = 6;
             this.ChbEmpleado.Text = "Empleado";
             this.ChbEmpleado.UseVisualStyleBackColor = true;
@@ -165,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Buscar por usuario :";
             // 
@@ -174,13 +177,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Buscar por rut :";
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(97, 36);
+            this.BtnBuscar.Location = new System.Drawing.Point(112, 35);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(100, 28);
             this.BtnBuscar.TabIndex = 10;
@@ -192,7 +195,7 @@
             // 
             this.BtnSeleccionarTodosLosUsuarios.Location = new System.Drawing.Point(21, 5);
             this.BtnSeleccionarTodosLosUsuarios.Name = "BtnSeleccionarTodosLosUsuarios";
-            this.BtnSeleccionarTodosLosUsuarios.Size = new System.Drawing.Size(168, 37);
+            this.BtnSeleccionarTodosLosUsuarios.Size = new System.Drawing.Size(172, 41);
             this.BtnSeleccionarTodosLosUsuarios.TabIndex = 12;
             this.BtnSeleccionarTodosLosUsuarios.Text = "Seleccionar todos los usuarios";
             this.BtnSeleccionarTodosLosUsuarios.UseVisualStyleBackColor = true;
@@ -213,6 +216,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.BtnSeleccionarTodosLosUsuarios);
             this.panel1.Controls.Add(this.BtnNuevoUsuario);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(12, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 106);
@@ -224,9 +228,10 @@
             this.panel2.Controls.Add(this.BtnBuscar);
             this.panel2.Controls.Add(this.TxtBuscarRut);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(271, 9);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 106);
+            this.panel2.Size = new System.Drawing.Size(231, 106);
             this.panel2.TabIndex = 15;
             // 
             // panel3
@@ -236,10 +241,20 @@
             this.panel3.Controls.Add(this.ChbCliente);
             this.panel3.Controls.Add(this.ChbAdministrador);
             this.panel3.Controls.Add(this.ChbEmpleado);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(542, 9);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(203, 106);
+            this.panel3.Size = new System.Drawing.Size(254, 106);
             this.panel3.TabIndex = 16;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.DgvUsuarios);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(-4, 121);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(850, 389);
+            this.panel4.TabIndex = 17;
             // 
             // AdministrarUsuarios
             // 
@@ -247,10 +262,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(843, 522);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.DgvUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -264,6 +279,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -290,5 +306,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

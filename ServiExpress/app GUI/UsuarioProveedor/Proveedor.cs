@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdministrarProductos = ServiExpress.app_GUI.UsuarioProveedor.AdministrarProductos;
+using Info = ServiExpress.app_GUI.UsuarioProveedor.Info;
 
 namespace ServiExpress.app_GUI
 {
@@ -62,6 +63,19 @@ namespace ServiExpress.app_GUI
             pedidos.Dock = DockStyle.Fill;
             splitContainer2.Panel2.Controls.Add(pedidos);
             pedidos.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (splitContainer2.Panel2.Controls.Count > 0)
+            {
+                splitContainer2.Panel2.Controls.Clear();
+            }
+            Info info = new Info(controladorProveedor);
+            info.TopLevel = false;
+            info.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(info);
+            info.Show();
         }
     }
 }

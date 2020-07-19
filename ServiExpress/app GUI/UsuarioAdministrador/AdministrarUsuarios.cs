@@ -152,10 +152,20 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            this.filtroTodosLosUsuario = false;
-            this.filtroRut = true;
-            this.filtroUsuarios = false;
-            FiltrarPorRut();
+            if (TxtBuscarRut.Text.Equals(string.Empty)) {
+                MessageBox.Show("No se ha dado ningún valor");
+            }
+            else {
+                if (ValidacionEntradas.ValidarRut(TxtBuscarRut.Text)) {
+                    this.filtroTodosLosUsuario = false;
+                    this.filtroRut = true;
+                    this.filtroUsuarios = false;
+                    FiltrarPorRut();
+                }
+                else {
+                    MessageBox.Show("El rut es incorrecto");
+                }
+            }
         }
 
         private void BtnSeleccionarTodosLosUsuarios_Click(object sender, EventArgs e)
@@ -196,6 +206,11 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             NuevoUsuario nuevoUsuario = new NuevoUsuario(controladorAdministrador);
             nuevoUsuario.ShowDialog();
             Filtrar();
+        }
+
+        private void TxtBuscarRut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoRut(TxtBuscarRut,e);
         }
     }
 }

@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceLogin?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="ValidarLoginProveedor">
-    <part name="parameters" element="tns:ValidarLoginProveedor" />
-  </message>
-  <message name="ValidarLoginProveedorResponse">
-    <part name="parameters" element="tns:ValidarLoginProveedorResponse" />
-  </message>
   <message name="ValidarLogin">
     <part name="parameters" element="tns:ValidarLogin" />
   </message>
   <message name="ValidarLoginResponse">
     <part name="parameters" element="tns:ValidarLoginResponse" />
   </message>
+  <message name="ValidarLoginProveedor">
+    <part name="parameters" element="tns:ValidarLoginProveedor" />
+  </message>
+  <message name="ValidarLoginProveedorResponse">
+    <part name="parameters" element="tns:ValidarLoginProveedorResponse" />
+  </message>
   <portType name="WebServiceLogin">
-    <operation name="ValidarLoginProveedor">
-      <input wsam:Action="http://servicios/WebServiceLogin/ValidarLoginProveedorRequest" message="tns:ValidarLoginProveedor" />
-      <output wsam:Action="http://servicios/WebServiceLogin/ValidarLoginProveedorResponse" message="tns:ValidarLoginProveedorResponse" />
-    </operation>
     <operation name="ValidarLogin">
       <input wsam:Action="http://servicios/WebServiceLogin/ValidarLoginRequest" message="tns:ValidarLogin" />
       <output wsam:Action="http://servicios/WebServiceLogin/ValidarLoginResponse" message="tns:ValidarLoginResponse" />
     </operation>
+    <operation name="ValidarLoginProveedor">
+      <input wsam:Action="http://servicios/WebServiceLogin/ValidarLoginProveedorRequest" message="tns:ValidarLoginProveedor" />
+      <output wsam:Action="http://servicios/WebServiceLogin/ValidarLoginProveedorResponse" message="tns:ValidarLoginProveedorResponse" />
+    </operation>
   </portType>
   <binding name="WebServiceLoginPortBinding" type="tns:WebServiceLogin">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="ValidarLoginProveedor">
+    <operation name="ValidarLogin">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ValidarLogin">
+    <operation name="ValidarLoginProveedor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

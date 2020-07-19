@@ -152,39 +152,45 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 MessageBox.Show("No se ha agregado ningún producto");
             }
             else {
-                string rutProveedor = CmbProveedores.SelectedItem.ToString().Substring(0, CmbProveedores.SelectedItem.ToString().IndexOf("-")).Trim();
-                string[] resultadoRegistrarOrdePedido = controladorAdministrador.RegistrarOrdenDePedido(TxtFechaDePedido.Text,int.Parse(LblMontoAPagar.Text), controladorAdministrador.login[0], 1, rutProveedor);
-                bool resultado = false;
-                if (Convert.ToBoolean(resultadoRegistrarOrdePedido[0]))
-                {
-                    foreach (DataGridViewRow dataGridViewRow in DgvProductosProveedor.Rows){
-                        int cantidad = int.Parse(dataGridViewRow.Cells[7].Value.ToString());
-                        int totalAPagar = int.Parse(dataGridViewRow.Cells[5].Value.ToString()) * int.Parse(dataGridViewRow.Cells[7].Value.ToString());
-                        int idOrdenPedido = int.Parse(resultadoRegistrarOrdePedido[2]);
-                        int idProductoProveedor = int.Parse(dataGridViewRow.Cells[0].Value.ToString());
+                DialogResult dialogResult = MessageBox.Show("¿Generar pedido?","Generar pedido", MessageBoxButtons.YesNo);
 
-                        string[] resultadoRegistrarPedido = controladorAdministrador.RegistrarPedido(cantidad,totalAPagar,idOrdenPedido,idProductoProveedor);
-                        if (Convert.ToBoolean(resultadoRegistrarPedido[0]))
+                if (dialogResult == DialogResult.Yes) {
+                    string rutProveedor = CmbProveedores.SelectedItem.ToString().Substring(0, CmbProveedores.SelectedItem.ToString().IndexOf("-")).Trim();
+                    string[] resultadoRegistrarOrdePedido = controladorAdministrador.RegistrarOrdenDePedido(TxtFechaDePedido.Text, int.Parse(LblMontoAPagar.Text), controladorAdministrador.login[0], 1, rutProveedor);
+                    bool resultado = false;
+                    if (Convert.ToBoolean(resultadoRegistrarOrdePedido[0]))
+                    {
+                        foreach (DataGridViewRow dataGridViewRow in DgvProductosProveedor.Rows)
                         {
-                            resultado = true;
+                            int cantidad = int.Parse(dataGridViewRow.Cells[7].Value.ToString());
+                            int totalAPagar = int.Parse(dataGridViewRow.Cells[5].Value.ToString()) * int.Parse(dataGridViewRow.Cells[7].Value.ToString());
+                            int idOrdenPedido = int.Parse(resultadoRegistrarOrdePedido[2]);
+                            int idProductoProveedor = int.Parse(dataGridViewRow.Cells[0].Value.ToString());
+
+                            string[] resultadoRegistrarPedido = controladorAdministrador.RegistrarPedido(cantidad, totalAPagar, idOrdenPedido, idProductoProveedor);
+                            if (Convert.ToBoolean(resultadoRegistrarPedido[0]))
+                            {
+                                resultado = true;
+                            }
+                            else
+                            {
+                                resultado = false;
+                            }
                         }
-                        else 
+                        if (resultado != false)
                         {
-                            resultado = false;
-                        }                    
+                            MessageBox.Show("Orden de pedido guardado con éxito");
+                            DgvProductosProveedor.Rows.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al guardar los datos");
+                        }
                     }
-                    if (resultado != false)
+                    else
                     {
-                        MessageBox.Show("Orden de pedido guardado con éxito");
-                        DgvProductosProveedor.Rows.Clear();
+                        MessageBox.Show(resultadoRegistrarOrdePedido[1]);
                     }
-                    else 
-                    {
-                        MessageBox.Show("Error alguardar los datos");
-                    }
-                }                
-                else {
-                    MessageBox.Show(resultadoRegistrarOrdePedido[1]);
                 }
             }
         }

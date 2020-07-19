@@ -13,6 +13,7 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         bool filtroEstado = false;
         string tipoDeBusqueda;
         string valorFiltro;
+        int validarTextBox = 0;
 
         public Pedidos(ControladorAdministrador controladorAdministrador)
         {
@@ -151,18 +152,37 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
         {
             this.tipoDeBusqueda = RdbIdOrdenDePedido.Text;
             TxtBuscar.Enabled = true;
+            TxtBuscar.Clear();
+            this.validarTextBox = 1;
+            TxtBuscar.MaxLength = 9;
         }
 
         private void RdbProveedor_CheckedChanged(object sender, EventArgs e)
         {
             this.tipoDeBusqueda = RdbProveedor.Text;
             TxtBuscar.Enabled = true;
+            TxtBuscar.Clear();
+            this.validarTextBox = 2;
+            TxtBuscar.MaxLength = 9;
         }
 
         private void RdbFechaDePedido_CheckedChanged(object sender, EventArgs e)
         {
             this.tipoDeBusqueda = RdbFechaDePedido.Text;
             TxtBuscar.Enabled = true;
+            TxtBuscar.Clear();
+            this.validarTextBox = 3;
+            TxtBuscar.MaxLength = 8;
+        }
+
+        private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarPedidos(e,this.validarTextBox, TxtBuscar);
+        }
+
+        private void TxtBuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoFecha(TxtBuscar,this.validarTextBox);
         }
     }
 }

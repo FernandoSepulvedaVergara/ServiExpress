@@ -36,23 +36,33 @@ namespace ServiExpress.app_GUI.Usuario1.VehiculoCliente
 
         private void BtnGuardarAgregarVehiculo_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("¿Registrar vehículo?", "Nuevo vehículo", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                int idTipoDeVehiculo = int.Parse(CmbTipoDeVehiculo.SelectedItem.ToString().Substring(0, CmbTipoDeVehiculo.SelectedItem.ToString().IndexOf("-")).Trim());
-                string[] resultado = controladorCliente.RegistrarNuevoVehiculo(TxtPatente.Text, TxtMarca.Text, TxtModelo.Text, TxtAño.Text, idTipoDeVehiculo, controladorCliente.login[0]);
-                if (resultado[0] != "false")
-                {
-                    LimpiarFormulario();
-                    MessageBox.Show(resultado[1]);
+            if (TxtPatente.Text.Equals(string.Empty) || TxtMarca.Text.Equals(string.Empty) || TxtModelo.Text.Equals(string.Empty) || TxtAño.Text.Equals(string.Empty) || CmbTipoDeVehiculo.SelectedItem == null) {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else {
+                if (TxtAño.Text.Length <4 || int.Parse(TxtAño.Text) < 1975 || int.Parse(TxtAño.Text) > DateTime.Now.Year) {
+                    MessageBox.Show("El año no es correcto");
                 }
                 else
                 {
-                    MessageBox.Show(resultado[1]);
-                }
+                    DialogResult dialogResult = MessageBox.Show("¿Registrar vehículo?", "Nuevo vehículo", MessageBoxButtons.YesNo);
 
-            }
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        int idTipoDeVehiculo = int.Parse(CmbTipoDeVehiculo.SelectedItem.ToString().Substring(0, CmbTipoDeVehiculo.SelectedItem.ToString().IndexOf("-")).Trim());
+                        string[] resultado = controladorCliente.RegistrarNuevoVehiculo(TxtPatente.Text, TxtMarca.Text, TxtModelo.Text, TxtAño.Text, idTipoDeVehiculo, controladorCliente.login[0]);
+                        if (resultado[0] != "false")
+                        {
+                            LimpiarFormulario();
+                            MessageBox.Show(resultado[1]);
+                        }
+                        else
+                        {
+                            MessageBox.Show(resultado[1]);
+                        }
+                    }
+                }               
+            }           
         }
 
         private void LimpiarFormulario()
@@ -60,6 +70,21 @@ namespace ServiExpress.app_GUI.Usuario1.VehiculoCliente
             TxtModelo.Clear();
             TxtMarca.Clear();
             TxtPatente.Clear();
+        }
+
+        private void TxtPatente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarModelo(e);
+        }
+
+        private void TxtMarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarString(e);
+        }
+
+        private void TxtAño_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarAño(e);
         }
     }
 }

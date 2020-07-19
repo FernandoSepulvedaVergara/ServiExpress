@@ -46,7 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxtNombreUsuarioProveedor = new System.Windows.Forms.TextBox();
             this.BtnIngresarProveedor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,9 +65,10 @@
             // btnRegistroUsuario
             // 
             this.btnRegistroUsuario.BackColor = System.Drawing.Color.Yellow;
-            this.btnRegistroUsuario.Location = new System.Drawing.Point(40, 225);
+            this.btnRegistroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistroUsuario.Location = new System.Drawing.Point(28, 266);
             this.btnRegistroUsuario.Name = "btnRegistroUsuario";
-            this.btnRegistroUsuario.Size = new System.Drawing.Size(75, 28);
+            this.btnRegistroUsuario.Size = new System.Drawing.Size(104, 28);
             this.btnRegistroUsuario.TabIndex = 21;
             this.btnRegistroUsuario.Text = "Registrarse";
             this.btnRegistroUsuario.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@
             this.txtContraseñaUsuario.MaxLength = 25;
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
             this.txtContraseñaUsuario.PasswordChar = '*';
-            this.txtContraseñaUsuario.Size = new System.Drawing.Size(137, 20);
+            this.txtContraseñaUsuario.Size = new System.Drawing.Size(137, 24);
             this.txtContraseñaUsuario.TabIndex = 19;
             this.txtContraseñaUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
@@ -100,7 +100,7 @@
             this.txtUserName.Location = new System.Drawing.Point(28, 59);
             this.txtUserName.MaxLength = 20;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(137, 20);
+            this.txtUserName.Size = new System.Drawing.Size(137, 24);
             this.txtUserName.TabIndex = 18;
             this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
@@ -109,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 17;
             this.label2.Text = "Contraseña";
             // 
@@ -118,14 +118,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(135, 18);
             this.label1.TabIndex = 16;
             this.label1.Text = "Nombre de usuario";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 103);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 124);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,9 +135,10 @@
             // BtnIngresoProveedores
             // 
             this.BtnIngresoProveedores.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.BtnIngresoProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresoProveedores.Location = new System.Drawing.Point(12, 12);
             this.BtnIngresoProveedores.Name = "BtnIngresoProveedores";
-            this.BtnIngresoProveedores.Size = new System.Drawing.Size(132, 28);
+            this.BtnIngresoProveedores.Size = new System.Drawing.Size(129, 46);
             this.BtnIngresoProveedores.TabIndex = 23;
             this.BtnIngresoProveedores.Text = "Ingreso proveedores";
             this.BtnIngresoProveedores.UseVisualStyleBackColor = false;
@@ -145,26 +146,29 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtContraseñaUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Controls.Add(this.btnIngresarUsuario);
-            this.panel1.Location = new System.Drawing.Point(218, 23);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(279, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(207, 243);
             this.panel1.TabIndex = 24;
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.TxtContraseñaProveedor);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.BtnSalirProveedor);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.TxtNombreUsuarioProveedor);
             this.panel2.Controls.Add(this.BtnIngresarProveedor);
-            this.panel2.Location = new System.Drawing.Point(218, 23);
+            this.panel2.Location = new System.Drawing.Point(279, 29);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(207, 243);
             this.panel2.TabIndex = 25;
@@ -172,26 +176,29 @@
             // 
             // TxtContraseñaProveedor
             // 
+            this.TxtContraseñaProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseñaProveedor.Location = new System.Drawing.Point(28, 129);
             this.TxtContraseñaProveedor.MaxLength = 25;
             this.TxtContraseñaProveedor.Name = "TxtContraseñaProveedor";
             this.TxtContraseñaProveedor.PasswordChar = '*';
-            this.TxtContraseñaProveedor.Size = new System.Drawing.Size(137, 20);
+            this.TxtContraseñaProveedor.Size = new System.Drawing.Size(137, 24);
             this.TxtContraseñaProveedor.TabIndex = 19;
             this.TxtContraseñaProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(25, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 16;
             this.label3.Text = "Proovedor";
             // 
             // BtnSalirProveedor
             // 
             this.BtnSalirProveedor.BackColor = System.Drawing.Color.Red;
+            this.BtnSalirProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalirProveedor.Location = new System.Drawing.Point(124, 181);
             this.BtnSalirProveedor.Name = "BtnSalirProveedor";
             this.BtnSalirProveedor.Size = new System.Drawing.Size(75, 28);
@@ -203,24 +210,27 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(25, 101);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 17;
             this.label4.Text = "Contraseña";
             // 
             // TxtNombreUsuarioProveedor
             // 
+            this.TxtNombreUsuarioProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreUsuarioProveedor.Location = new System.Drawing.Point(28, 59);
             this.TxtNombreUsuarioProveedor.MaxLength = 20;
             this.TxtNombreUsuarioProveedor.Name = "TxtNombreUsuarioProveedor";
-            this.TxtNombreUsuarioProveedor.Size = new System.Drawing.Size(137, 20);
+            this.TxtNombreUsuarioProveedor.Size = new System.Drawing.Size(137, 24);
             this.TxtNombreUsuarioProveedor.TabIndex = 18;
             this.TxtNombreUsuarioProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // BtnIngresarProveedor
             // 
             this.BtnIngresarProveedor.BackColor = System.Drawing.Color.Yellow;
+            this.BtnIngresarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresarProveedor.Location = new System.Drawing.Point(28, 181);
             this.BtnIngresarProveedor.Name = "BtnIngresarProveedor";
             this.BtnIngresarProveedor.Size = new System.Drawing.Size(75, 28);
@@ -229,27 +239,15 @@
             this.BtnIngresarProveedor.UseVisualStyleBackColor = false;
             this.BtnIngresarProveedor.Click += new System.EventHandler(this.BtnIngresarProveedor_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Location = new System.Drawing.Point(137, 225);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Registrarse";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // formLoginUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(422, 270);
+            this.ClientSize = new System.Drawing.Size(514, 312);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnIngresoProveedores);
             this.Controls.Add(this.btnRegistroUsuario);
@@ -289,7 +287,6 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox TxtNombreUsuarioProveedor;
         private System.Windows.Forms.Button BtnIngresarProveedor;
-        private System.Windows.Forms.Button button1;
     }
 }
 

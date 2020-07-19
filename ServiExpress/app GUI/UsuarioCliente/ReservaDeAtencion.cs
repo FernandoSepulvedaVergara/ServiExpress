@@ -106,23 +106,32 @@ namespace ServiExpress.app_GUI.UsuarioCliente
             DateTime fechaSeleccionadaDateTime = new DateTime(int.Parse(fechaSeleccionada.Substring(4, 2)), int.Parse(fechaSeleccionada.Substring(2, 2)), int.Parse(fechaSeleccionada.Substring(0, 2)));
             string fechaSeleccionadaLbl = null;
             bool validarDisponibilidad = false;
-            foreach (var r in monthCalendar.BoldedDates)
+
+            if (monthCalendar.BoldedDates.Length != 0)
             {
-                if (r.Date.ToString().Equals(fechaSeleccionadaDateTime.Date.ToString()))
+                foreach (var r in monthCalendar.BoldedDates)
                 {
-                    MessageBox.Show("No se puede seleccionar fecha por día festivo");
-                    fechaSeleccionada = "";
-                    LblFechaSeleccionada.Text = null;
-                    fechaSeleccionadaLbl = null;
-                    validarDisponibilidad = false;
-                    break;
-                }
-                else
-                {
-                    fechaSeleccionadaLbl = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8);
-                    validarDisponibilidad = true;
+                    if (r.Date.ToString().Equals(fechaSeleccionadaDateTime.Date.ToString()))
+                    {
+                        MessageBox.Show("No se puede seleccionar fecha por día festivo");
+                        fechaSeleccionada = "";
+                        LblFechaSeleccionada.Text = null;
+                        fechaSeleccionadaLbl = null;
+                        validarDisponibilidad = false;
+                        break;
+                    }
+                    else
+                    {
+                        fechaSeleccionadaLbl = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8);
+                        validarDisponibilidad = true;
+                    }
                 }
             }
+            else {
+                fechaSeleccionadaLbl = monthCalendar.SelectionStart.Date.ToString().Substring(0, 8);
+                validarDisponibilidad = true;
+            }
+            
 
             if (validarDisponibilidad) 
             {

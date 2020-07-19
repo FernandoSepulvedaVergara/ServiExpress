@@ -103,5 +103,14 @@ namespace ServiExpress.controlador
             }
             return resultado;
         }
+
+        public WebServiceProveedor.proveedor GetInfoUsuarioProveedor() {
+            return webProveedor.GetInfoUsuarioProveedor(this.login[0]);
+        }
+
+        public string[] ActualizarUsuarioProveedor(WebServiceProveedor.proveedor actualizarUsuarioProveedor)
+        {
+            return webProveedor.ActualizarUsuarioProveedor(actualizarUsuarioProveedor,login[0], login[2]);
+        }
     }
 }

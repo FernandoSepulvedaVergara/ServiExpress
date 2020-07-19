@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.DgvVehiculosCliente = new System.Windows.Forms.DataGridView();
-            this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
             this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_de_vehículo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVehiculosCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,16 +60,6 @@
             this.DgvVehiculosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvVehiculosCliente.Size = new System.Drawing.Size(544, 384);
             this.DgvVehiculosCliente.TabIndex = 0;
-            // 
-            // BtnAgregarVehiculo
-            // 
-            this.BtnAgregarVehiculo.Location = new System.Drawing.Point(12, 54);
-            this.BtnAgregarVehiculo.Name = "BtnAgregarVehiculo";
-            this.BtnAgregarVehiculo.Size = new System.Drawing.Size(141, 39);
-            this.BtnAgregarVehiculo.TabIndex = 1;
-            this.BtnAgregarVehiculo.Text = "Agregar Vehículo";
-            this.BtnAgregarVehiculo.UseVisualStyleBackColor = true;
-            this.BtnAgregarVehiculo.Click += new System.EventHandler(this.BtnAgregarVehiculo_Click);
             // 
             // Patente
             // 
@@ -100,6 +91,27 @@
             this.Año.Name = "Año";
             this.Año.ReadOnly = true;
             // 
+            // BtnAgregarVehiculo
+            // 
+            this.BtnAgregarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarVehiculo.Location = new System.Drawing.Point(12, 54);
+            this.BtnAgregarVehiculo.Name = "BtnAgregarVehiculo";
+            this.BtnAgregarVehiculo.Size = new System.Drawing.Size(141, 39);
+            this.BtnAgregarVehiculo.TabIndex = 1;
+            this.BtnAgregarVehiculo.Text = "Agregar vehículo";
+            this.BtnAgregarVehiculo.UseVisualStyleBackColor = true;
+            this.BtnAgregarVehiculo.Click += new System.EventHandler(this.BtnAgregarVehiculo_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 39);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Eliminar vehículo";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // VehiculosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +119,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(812, 457);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnAgregarVehiculo);
             this.Controls.Add(this.DgvVehiculosCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -129,5 +142,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Año;
+        private System.Windows.Forms.Button button1;
     }
 }

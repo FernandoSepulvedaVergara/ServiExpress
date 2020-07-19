@@ -99,6 +99,26 @@ namespace ServiExpress.app_GUI.UsuarioProveedor
                         MessageBox.Show("No se pudo actualizar");
                     }
                 }
+                else if (actualizarEstado.Equals("Rechazar pedido"))
+                {
+                    if (controladorProveedor.ActualizarEstadoPedido(int.Parse(TxtIdOrdenDePedido.Text), 3))
+                    {
+                        bool actualizarProductosCancelarPedidos = controladorProveedor.ActualizarProductosAprobarPedido(DgvPedidos.Rows);
+                        if (actualizarProductosCancelarPedidos)
+                        {
+                            MessageBox.Show("Orden de pedido se ha actualizado correctamente");
+                            InfoOrdenDePedido(this.idOrdenPedido);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudieron actualizar los productos del proveedor");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar");
+                    }
+                }
             }
         }
     }

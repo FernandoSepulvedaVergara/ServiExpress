@@ -47,24 +47,40 @@ namespace ServiExpress.app_GUI
             try
             {
                 if (TxtPrimerNombre.Text.Equals(string.Empty) || TxtSegundoNombre.Text.Equals(string.Empty) || TxtApellidoPaterno.Text.Equals(string.Empty) || TxtApellidoMaterno.Text.Equals(string.Empty) || TxtEmail.Text.Equals(string.Empty) ||
-                        TxtTelefono.Text.Equals(string.Empty) || TxtDireccion.Text.Equals(string.Empty) || CmbComuna.SelectedItem == null || CmbRegion.SelectedItem == null  || TxtNombreUsuario.Text.Equals(string.Empty) || TxtContraseña.Text.Equals(string.Empty))
+                                        TxtTelefono.Text.Equals(string.Empty) || TxtDireccion.Text.Equals(string.Empty) || CmbComuna.SelectedItem == null || CmbRegion.SelectedItem == null || TxtNombreUsuario.Text.Equals(string.Empty) || TxtContraseña.Text.Equals(string.Empty))
                 {
                     MessageBox.Show("Faltan datos por ingresar");
                 }
                 else
                 {
-                    int idComuna = int.Parse(CmbComuna.SelectedItem.ToString().Substring(0, CmbComuna.SelectedItem.ToString().IndexOf("-")).Trim());
-                    string[] resultado = controladorUsuario.NuevoUsuario(TxtRut.Text,TxtPrimerNombre.Text,TxtSegundoNombre.Text,TxtApellidoPaterno.Text,TxtApellidoMaterno.Text, int.Parse(TxtTelefono.Text.ToString()), TxtEmail.Text,TxtDireccion.Text,idComuna,TxtNombreUsuario.Text,1,TxtContraseña.Text,1);
-                    if (bool.Parse(resultado[0]))
+                    if (ValidacionEntradas.ValidarRut(TxtRut.Text))
                     {
-                        MessageBox.Show(resultado[1],"Nuevo usuario");
-                        this.Close();
+                        if (ValidacionEntradas.ValidarEmail(TxtEmail))
+                        {
+                            int idComuna = int.Parse(CmbComuna.SelectedItem.ToString().Substring(0, CmbComuna.SelectedItem.ToString().IndexOf("-")).Trim());
+                            string[] resultado = controladorUsuario.NuevoUsuario(TxtRut.Text, TxtPrimerNombre.Text, TxtSegundoNombre.Text, TxtApellidoPaterno.Text, TxtApellidoMaterno.Text, int.Parse(TxtTelefono.Text.ToString()), TxtEmail.Text, TxtDireccion.Text, idComuna, TxtNombreUsuario.Text, 1, TxtContraseña.Text, 1);
+                            if (bool.Parse(resultado[0]))
+                            {
+                                MessageBox.Show(resultado[1], "Nuevo usuario");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show(resultado[1], "Nuevo usuario");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email es incorrecto");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(resultado[1], "Nuevo usuario");
+                        MessageBox.Show("El rut es incorrecto");
                     }
+
                 }
+
             }
             catch (Exception ex)
             {
@@ -114,6 +130,41 @@ namespace ServiExpress.app_GUI
             {
                 MessageBox.Show("Error de configuración \n" + ex.Message);
             }
+        }
+
+        private void TxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.NombreUsuarioContraseña(e);
+        }
+
+        private void TxtPrimerNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarString(e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool resultado = ValidacionEntradas.ValidarEmail(TxtEmail);
+        }
+
+        private void TxtRut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoRut(TxtRut,e);
+        }
+
+        private void TxtRut_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarNumeros(e);
+        }
+
+        private void TxtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarDireccion(e);
         }
     }
 }

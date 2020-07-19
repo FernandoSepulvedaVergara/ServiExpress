@@ -90,39 +90,54 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
                 }
                 else
                 {
-                    int idComuna = int.Parse(CmbComuna.SelectedItem.ToString().Substring(0, CmbComuna.SelectedItem.ToString().IndexOf("-")).Trim());
-                    int idTipoDeUsuario = int.Parse(CmbTipoDeUsuario.SelectedItem.ToString().Substring(0, CmbTipoDeUsuario.SelectedItem.ToString().IndexOf("-")).Trim());
-                    usuario nuevoUsuario = new usuario();
-                    nuevoUsuario.rut = TxtRut.Text;
-                    nuevoUsuario.primerNombre = TxtPrimerNombre.Text;
-                    nuevoUsuario.segundoNombre = TxtSegundoNombre.Text;
-                    nuevoUsuario.apellidoPaterno = TxtApellidoPaterno.Text;
-                    nuevoUsuario.apellidoMaterno = TxtApellidoMaterno.Text;
-                    nuevoUsuario.telefono = int.Parse(TxtTelefono.Text);
-                    nuevoUsuario.email = TxtEmail.Text;
-                    nuevoUsuario.direccion = TxtDireccion.Text;
-                    nuevoUsuario.nombreUsuario = TxtNombreUsuario.Text;
-                    nuevoUsuario.contraseña = TxtContraseña.Text;
-                    tipoDeUsuario tipoDeUsuario = new tipoDeUsuario();
-                    tipoDeUsuario.idTipoDeUsuario = idTipoDeUsuario;
-                    nuevoUsuario.tipoUsuario = tipoDeUsuario;
-                    comuna comuna = new comuna();
-                    comuna.idComuna = idComuna;
-                    nuevoUsuario.comuna = comuna;
-                    estadoDeUsuario estadoDeUsuario = new estadoDeUsuario();
-                    estadoDeUsuario.idEstadoDeUsuario = 1;
-                    nuevoUsuario.estadoDeUsuario = estadoDeUsuario;
+                    if (ValidacionEntradas.ValidarRut(TxtRut.Text)) {
+                        if (ValidacionEntradas.ValidarEmail(TxtEmail))
+                        {
+                            int idComuna = int.Parse(CmbComuna.SelectedItem.ToString().Substring(0, CmbComuna.SelectedItem.ToString().IndexOf("-")).Trim());
+                            int idTipoDeUsuario = int.Parse(CmbTipoDeUsuario.SelectedItem.ToString().Substring(0, CmbTipoDeUsuario.SelectedItem.ToString().IndexOf("-")).Trim());
+                            usuario nuevoUsuario = new usuario();
+                            nuevoUsuario.rut = TxtRut.Text;
+                            nuevoUsuario.primerNombre = TxtPrimerNombre.Text;
+                            nuevoUsuario.segundoNombre = TxtSegundoNombre.Text;
+                            nuevoUsuario.apellidoPaterno = TxtApellidoPaterno.Text;
+                            nuevoUsuario.apellidoMaterno = TxtApellidoMaterno.Text;
+                            nuevoUsuario.telefono = int.Parse(TxtTelefono.Text);
+                            nuevoUsuario.email = TxtEmail.Text;
+                            nuevoUsuario.direccion = TxtDireccion.Text;
+                            nuevoUsuario.nombreUsuario = TxtNombreUsuario.Text;
+                            nuevoUsuario.contraseña = TxtContraseña.Text;
+                            tipoDeUsuario tipoDeUsuario = new tipoDeUsuario();
+                            tipoDeUsuario.idTipoDeUsuario = idTipoDeUsuario;
+                            nuevoUsuario.tipoUsuario = tipoDeUsuario;
+                            comuna comuna = new comuna();
+                            comuna.idComuna = idComuna;
+                            nuevoUsuario.comuna = comuna;
+                            estadoDeUsuario estadoDeUsuario = new estadoDeUsuario();
+                            estadoDeUsuario.idEstadoDeUsuario = 1;
+                            nuevoUsuario.estadoDeUsuario = estadoDeUsuario;
 
-                    string[] resultado = controladorAdministrador.RegistrarNuevoUsuario(nuevoUsuario);
-                    if (bool.Parse(resultado[0])) {
-                        MessageBox.Show(resultado[1]);
-                        Limpiar();
-                    }
-                    else if (bool.Parse(resultado[0]) == false) {
-                        MessageBox.Show(resultado[1]);
+                            string[] resultado = controladorAdministrador.RegistrarNuevoUsuario(nuevoUsuario);
+                            if (bool.Parse(resultado[0]))
+                            {
+                                MessageBox.Show(resultado[1]);
+                                Limpiar();
+                            }
+                            else if (bool.Parse(resultado[0]) == false)
+                            {
+                                MessageBox.Show(resultado[1]);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error, resultado no devolicó true ni false");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("El email es incorrecto");
+                        }
                     }
                     else {
-                        MessageBox.Show("Error, resultado no devolicó true ni false");
+                        MessageBox.Show("El rut es incorrecto");
                     }
                 }
             }
@@ -142,6 +157,31 @@ namespace ServiExpress.app_GUI.UsuarioAdministrador
             TxtDireccion.Clear();
             TxtNombreUsuario.Clear();
             TxtContraseña.Clear();
+        }
+
+        private void TxtRut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoRut(TxtRut,e);
+        }
+
+        private void TxtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarString(e);
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarNumeros(e);
+        }
+
+        private void TxtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarDireccion(e);
+        }
+
+        private void TxtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.NombreUsuarioContraseña(e);
         }
     }
 }

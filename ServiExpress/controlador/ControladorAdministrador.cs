@@ -28,17 +28,17 @@ namespace ServiExpress.controlador
             throw new NotImplementedException();
         }
 
-        public tipoDeProducto[] GetTipoDeProductos() 
+        public tipoDeProducto[] GetTipoDeProductos()
         {
 
-            tipoDeProducto[] resultado =  webAdministrador.GetTipoDeProducto();
+            tipoDeProducto[] resultado = webAdministrador.GetTipoDeProducto();
             return resultado;
         }
 
         public productoProveedor[] GetProductosProveedor(int idTipoDeProducto, string rutProveedor)
         {
 
-            productoProveedor[] resultado = webAdministrador.GetProductosProveedor(idTipoDeProducto,rutProveedor);
+            productoProveedor[] resultado = webAdministrador.GetProductosProveedor(idTipoDeProducto, rutProveedor);
             return resultado;
         }
 
@@ -57,27 +57,28 @@ namespace ServiExpress.controlador
             return webAdministrador.GetInfoProductoProveedor(idProductoProveedor, rutProveedor);
         }
 
-        public proveedor[] GetProveedores() 
+        public proveedor[] GetProveedores()
         {
             return webAdministrador.GetProveedores();
         }
 
-        public ordenDePedido[] GetOrdenesDePedido(bool filtroSeleccionarTodosLosPedidos, bool filtroBuscar, bool filtroEstado,string tipoDeBusqueda, string valorFiltro)
+        public ordenDePedido[] GetOrdenesDePedido(bool filtroSeleccionarTodosLosPedidos, bool filtroBuscar, bool filtroEstado, string tipoDeBusqueda, string valorFiltro)
         {
             return webAdministrador.GetOrdenesDePedido(filtroSeleccionarTodosLosPedidos, filtroBuscar, filtroEstado, tipoDeBusqueda, valorFiltro);
         }
 
         public string[] RegistrarOrdenDePedido(string fechaDePedido, int total, string usuarioRut, int idEstadoPedido, string rutProveedor)
         {
-            return webAdministrador.RegistrarOrdenDePedido(fechaDePedido,total, usuarioRut, idEstadoPedido, rutProveedor);
+            return webAdministrador.RegistrarOrdenDePedido(fechaDePedido, total, usuarioRut, idEstadoPedido, rutProveedor);
         }
 
-        public string[] RegistrarPedido(int cantidad, int totalAPagar,int idOrdenPedido,int idProductoProveedor) {
+        public string[] RegistrarPedido(int cantidad, int totalAPagar, int idOrdenPedido, int idProductoProveedor)
+        {
 
             return webAdministrador.RegistrarPedido(cantidad, totalAPagar, idOrdenPedido, idProductoProveedor);
         }
 
-        public ordenDePedido GetOrdenDePedido(int idOrdenDePedido) 
+        public ordenDePedido GetOrdenDePedido(int idOrdenDePedido)
         {
             return webAdministrador.GetOrdenDePedido(idOrdenDePedido);
         }
@@ -95,13 +96,16 @@ namespace ServiExpress.controlador
         public bool ActualizarProductosCancelarPedido(DataGridViewRowCollection dataGridViewRows)
         {
             bool resultado = false;
-            foreach (DataGridViewRow dataGridViewRow in dataGridViewRows) {
+            foreach (DataGridViewRow dataGridViewRow in dataGridViewRows)
+            {
                 string[] actualizarProductosCancelarPedido = webAdministrador.ActualizarProductosCancelarPedido(int.Parse(dataGridViewRow.Cells[4].Value.ToString()), int.Parse(dataGridViewRow.Cells[1].Value.ToString()));
-                
-                if (bool.Parse(actualizarProductosCancelarPedido[0])) {
+
+                if (bool.Parse(actualizarProductosCancelarPedido[0]))
+                {
                     resultado = true;
                 }
-                else {
+                else
+                {
                     resultado = false;
                     break;
                 }
@@ -109,11 +113,13 @@ namespace ServiExpress.controlador
             return resultado;
         }
 
-        public string[] ActualizarProductosEntregarPedido(int idOrdenDePedido) {
+        public string[] ActualizarProductosEntregarPedido(int idOrdenDePedido)
+        {
             return webAdministrador.ActualizarProductosEntregarPedido(idOrdenDePedido);
         }
 
-        public bool ActualizarEstadoProducto(int idProducto, int idEstado) {
+        public bool ActualizarEstadoProducto(int idProducto, int idEstado)
+        {
             return webAdministrador.ActualizarEstadoProducto(idProducto, idEstado);
         }
 
@@ -122,7 +128,8 @@ namespace ServiExpress.controlador
             return webAdministrador.SeleccionarTodosLosUsuarios();
         }
 
-       public usuarios[] FiltrarPorUsuario(bool filtroAdministrado, bool filtroCliente, bool filtroEmpleado) {
+        public usuarios[] FiltrarPorUsuario(bool filtroAdministrado, bool filtroCliente, bool filtroEmpleado)
+        {
             return webAdministrador.FiltrarPorUsuario(filtroAdministrado, filtroCliente, filtroEmpleado);
         }
 
@@ -136,7 +143,8 @@ namespace ServiExpress.controlador
             return webAdministrador.GetInfoUsuario(rut);
         }
 
-        public bool ActualizarEstadoDeUsuario(string rut, int idEstadoDeUsuario) {
+        public bool ActualizarEstadoDeUsuario(string rut, int idEstadoDeUsuario)
+        {
             return webAdministrador.ActualizarEstadoUsuario(rut, idEstadoDeUsuario);
         }
 
@@ -145,7 +153,8 @@ namespace ServiExpress.controlador
             return webAdministrador.ActualizarUsuario(actualizarUsuario, this.login[0], this.login[1]);
         }
 
-        public region[] GetRegiones() {
+        public region[] GetRegiones()
+        {
             return webAdministrador.GetRegiones();
         }
 
@@ -159,8 +168,29 @@ namespace ServiExpress.controlador
             return webAdministrador.GetTiposDeUsuario();
         }
 
-        public string[] RegistrarNuevoUsuario(usuario nuevoUsuario) {
+        public string[] RegistrarNuevoUsuario(usuario nuevoUsuario)
+        {
             return webAdministrador.RegistrarNuevoUsuario(nuevoUsuario);
+        }
+
+        public proveedor[] GetGestionarProveedores(bool filtroTodosLosProveedores, bool filtroRut, string valorFiltro)
+        {
+            return webAdministrador.GetGestionarProveedores(filtroTodosLosProveedores, filtroRut, valorFiltro);
+        }
+
+        public proveedor GetProveedor(string rut)
+        {
+            return webAdministrador.GetProveedor(rut);
+        }
+
+        public string[] RegistrarNuevoProveedor(proveedor nuevoProveedor)
+        {
+            return webAdministrador.RegistrarNuevoProveedor(nuevoProveedor);
+        }
+
+        public bool ActualizarEstadoProveedor(string rutProveedor, int idEstadoDeProveedor)
+        {
+            return webAdministrador.ActualizarEstadoProveedor(rutProveedor, idEstadoDeProveedor);
         }
     }
 }

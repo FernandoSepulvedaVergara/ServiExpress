@@ -69,6 +69,7 @@
             // 
             // BtnAdministrarUsuarios
             // 
+            this.BtnAdministrarUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministrarUsuarios.Location = new System.Drawing.Point(26, 190);
             this.BtnAdministrarUsuarios.Name = "BtnAdministrarUsuarios";
             this.BtnAdministrarUsuarios.Size = new System.Drawing.Size(133, 41);
@@ -79,15 +80,18 @@
             // 
             // BtnAdministrarProveedores
             // 
+            this.BtnAdministrarProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministrarProveedores.Location = new System.Drawing.Point(26, 247);
             this.BtnAdministrarProveedores.Name = "BtnAdministrarProveedores";
             this.BtnAdministrarProveedores.Size = new System.Drawing.Size(133, 41);
             this.BtnAdministrarProveedores.TabIndex = 22;
             this.BtnAdministrarProveedores.Text = "Administrar proveedores";
             this.BtnAdministrarProveedores.UseVisualStyleBackColor = true;
+            this.BtnAdministrarProveedores.Click += new System.EventHandler(this.BtnAdministrarProveedores_Click);
             // 
             // BtnAdministrarSucursales
             // 
+            this.BtnAdministrarSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministrarSucursales.Location = new System.Drawing.Point(26, 417);
             this.BtnAdministrarSucursales.Name = "BtnAdministrarSucursales";
             this.BtnAdministrarSucursales.Size = new System.Drawing.Size(133, 41);
@@ -97,6 +101,7 @@
             // 
             // BtnPedidos
             // 
+            this.BtnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPedidos.Location = new System.Drawing.Point(26, 360);
             this.BtnPedidos.Name = "BtnPedidos";
             this.BtnPedidos.Size = new System.Drawing.Size(133, 41);
@@ -108,14 +113,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 13);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(32, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.Size = new System.Drawing.Size(116, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "Datos Personales";
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(26, 525);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 41);
@@ -125,6 +132,7 @@
             // 
             // BtnAdministrarProducto
             // 
+            this.BtnAdministrarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministrarProducto.Location = new System.Drawing.Point(26, 304);
             this.BtnAdministrarProducto.Name = "BtnAdministrarProducto";
             this.BtnAdministrarProducto.Size = new System.Drawing.Size(133, 41);
@@ -138,6 +146,7 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(26, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 101);
