@@ -159,5 +159,14 @@ namespace ServiExpress
         {
             ValidacionEntradas.NombreUsuarioContraseña(e);
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+        }
     }
 }
