@@ -17,6 +17,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
         ControladorEmpleado controladorEmpleado;
         string filtro = null;
         string valorFiltro = null;
+        int validarTextbox = 0;
 
         public Ventas(ControladorEmpleado controladorEmpleado)
         {
@@ -56,6 +57,29 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             else if (DgvVentas.Rows[DgvVentas.CurrentRow.Index].Cells[7].ColumnIndex.Equals(e.ColumnIndex))
             {
                 MessageBox.Show("Documento");
+            }
+        }
+
+        private void CmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbFiltro.SelectedItem.ToString() == "id venta") {
+                this.validarTextbox = 1;
+                TxtFiltro.Clear();
+            }
+            else if (CmbFiltro.SelectedItem.ToString() == "Rut")
+            {
+                this.validarTextbox = 2;
+                TxtFiltro.Clear();
+            }
+            else if (CmbFiltro.SelectedItem.ToString() == "Fecha venta")
+            {
+                this.validarTextbox = 3;
+                TxtFiltro.Clear();
+            }
+            else if (CmbFiltro.SelectedItem.ToString() == "Patente")
+            {
+                this.validarTextbox = 4;
+                TxtFiltro.Clear();
             }
         }
     }

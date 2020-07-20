@@ -119,6 +119,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.BtnReservaAtencion);
             this.splitContainer1.Panel1.Controls.Add(this.BtnDatosPersonales);
             this.splitContainer1.Panel1.Controls.Add(this.BtnVehículos);
+            this.splitContainer1.Panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer1.Panel2
             // 
@@ -133,9 +134,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 418);
+            this.label5.Location = new System.Drawing.Point(69, 426);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.Size = new System.Drawing.Size(100, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Reservaciones";
             // 
@@ -169,36 +170,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 559);
+            this.label4.Location = new System.Drawing.Point(58, 567);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.Size = new System.Drawing.Size(114, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Glosario de Pago";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 282);
+            this.label3.Location = new System.Drawing.Point(54, 290);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(118, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Reservar atención";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 151);
+            this.label2.Location = new System.Drawing.Point(69, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(89, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mis vehículos";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 26);
+            this.label1.Location = new System.Drawing.Point(54, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos personales";
             // 

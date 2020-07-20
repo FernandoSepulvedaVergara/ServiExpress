@@ -36,7 +36,9 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvVentas
@@ -53,7 +55,7 @@
             this.Fecha,
             this.IdAtencion,
             this.Documento});
-            this.DgvVentas.Location = new System.Drawing.Point(12, 47);
+            this.DgvVentas.Location = new System.Drawing.Point(3, 12);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
@@ -104,6 +106,15 @@
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DgvVentas);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(3, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(822, 366);
+            this.panel1.TabIndex = 1;
+            // 
             // GlosarioDePagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,7 +122,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(828, 450);
-            this.Controls.Add(this.DgvVentas);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -119,6 +130,7 @@
             this.Text = "GlosarioDePagos";
             this.Load += new System.EventHandler(this.GlosarioDePagos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -133,5 +145,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAtencion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
+        private System.Windows.Forms.Panel panel1;
     }
 }

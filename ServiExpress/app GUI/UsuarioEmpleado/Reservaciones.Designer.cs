@@ -52,13 +52,14 @@
             this.Patente,
             this.IdReservación,
             this.Sucursal});
-            this.DgvReservaciones.Location = new System.Drawing.Point(10, 12);
+            this.DgvReservaciones.Location = new System.Drawing.Point(13, 15);
+            this.DgvReservaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvReservaciones.MultiSelect = false;
             this.DgvReservaciones.Name = "DgvReservaciones";
             this.DgvReservaciones.ReadOnly = true;
             this.DgvReservaciones.RowHeadersVisible = false;
             this.DgvReservaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvReservaciones.Size = new System.Drawing.Size(780, 360);
+            this.DgvReservaciones.Size = new System.Drawing.Size(864, 379);
             this.DgvReservaciones.TabIndex = 1;
             // 
             // EstadoDeAtención
@@ -105,13 +106,15 @@
             // 
             // Reservaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(891, 490);
             this.Controls.Add(this.DgvReservaciones);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Reservaciones";

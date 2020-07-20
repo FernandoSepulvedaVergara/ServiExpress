@@ -19,6 +19,7 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
         string id_sucursal = null;
         string filtro = null;
         string valorFiltro = null;
+        int validarTextbox = 0;
         public ReservasDeHora(ControladorEmpleado controladorEmpleado)
         {
             this.controladorEmpleado = controladorEmpleado;
@@ -89,6 +90,31 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
                 CmbSucursales.Visible = false;
                 CmbSucursales.Enabled = false;
             }
+
+            if (CmbFiltros.SelectedItem.Equals("Fecha"))
+            {
+                this.validarTextbox = 3;
+                TxtValorFiltro.MaxLength = 8;
+                TxtValorFiltro.Clear();
+            }
+            else if (CmbFiltros.SelectedItem.Equals("Rut"))
+            {
+                this.validarTextbox = 1;
+                TxtValorFiltro.MaxLength = 9;
+                TxtValorFiltro.Clear();
+            }
+            else if (CmbFiltros.SelectedItem.Equals("Patente"))
+            {
+                this.validarTextbox = 2;
+                TxtValorFiltro.MaxLength = 9;
+                TxtValorFiltro.Clear();
+            }
+            else if (CmbFiltros.SelectedItem.Equals("Id reservación"))
+            {
+                this.validarTextbox = 4;
+                TxtValorFiltro.MaxLength = 9;
+                TxtValorFiltro.Clear();
+            }
         }
 
         private void DgvReservasDeHora_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -139,6 +165,16 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
                 }
                 controladorEmpleado.SetDataGridView(DgvReservasDeHora, this.id_sucursal, this.filtro, this.valorFiltro);
             }           
+        }
+
+        private void TxtValorFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarReservaciones(e,this.validarTextbox , TxtValorFiltro);
+        }
+
+        private void TxtValorFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoFecha(TxtValorFiltro,this.validarTextbox);
         }
     }
 }

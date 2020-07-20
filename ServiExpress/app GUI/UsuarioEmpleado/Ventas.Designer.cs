@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BtnFiltrar = new System.Windows.Forms.Button();
             this.DgvVentas = new System.Windows.Forms.DataGridView();
-            this.TxtFiltro = new System.Windows.Forms.TextBox();
             this.EstadoDeVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Patente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +41,7 @@
             this.Rut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TxtFiltro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,26 +54,30 @@
             "Fecha venta",
             "Rut",
             "Patente"});
-            this.CmbFiltro.Location = new System.Drawing.Point(113, 14);
+            this.CmbFiltro.Location = new System.Drawing.Point(151, 17);
+            this.CmbFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CmbFiltro.Name = "CmbFiltro";
-            this.CmbFiltro.Size = new System.Drawing.Size(121, 21);
+            this.CmbFiltro.Size = new System.Drawing.Size(160, 24);
             this.CmbFiltro.TabIndex = 0;
+            this.CmbFiltro.SelectedIndexChanged += new System.EventHandler(this.CmbFiltro_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 17);
+            this.label1.Location = new System.Drawing.Point(56, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Filtrar por :";
             // 
             // BtnFiltrar
             // 
             this.BtnFiltrar.BackColor = System.Drawing.Color.Yellow;
-            this.BtnFiltrar.Location = new System.Drawing.Point(266, 49);
+            this.BtnFiltrar.Location = new System.Drawing.Point(355, 60);
+            this.BtnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnFiltrar.Name = "BtnFiltrar";
-            this.BtnFiltrar.Size = new System.Drawing.Size(138, 33);
+            this.BtnFiltrar.Size = new System.Drawing.Size(184, 41);
             this.BtnFiltrar.TabIndex = 2;
             this.BtnFiltrar.Text = "Filtrar";
             this.BtnFiltrar.UseVisualStyleBackColor = false;
@@ -94,22 +98,16 @@
             this.Rut,
             this.IdAtencion,
             this.IdDocumento});
-            this.DgvVentas.Location = new System.Drawing.Point(12, 106);
+            this.DgvVentas.Location = new System.Drawing.Point(16, 130);
+            this.DgvVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
             this.DgvVentas.RowHeadersVisible = false;
             this.DgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvVentas.Size = new System.Drawing.Size(910, 349);
+            this.DgvVentas.Size = new System.Drawing.Size(930, 351);
             this.DgvVentas.TabIndex = 3;
             this.DgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvVentas_CellClick);
-            // 
-            // TxtFiltro
-            // 
-            this.TxtFiltro.Location = new System.Drawing.Point(113, 61);
-            this.TxtFiltro.Name = "TxtFiltro";
-            this.TxtFiltro.Size = new System.Drawing.Size(121, 20);
-            this.TxtFiltro.TabIndex = 4;
             // 
             // EstadoDeVenta
             // 
@@ -165,19 +163,29 @@
             this.IdDocumento.Name = "IdDocumento";
             this.IdDocumento.ReadOnly = true;
             // 
+            // TxtFiltro
+            // 
+            this.TxtFiltro.Location = new System.Drawing.Point(151, 75);
+            this.TxtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtFiltro.Name = "TxtFiltro";
+            this.TxtFiltro.Size = new System.Drawing.Size(160, 22);
+            this.TxtFiltro.TabIndex = 4;
+            // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(986, 482);
+            this.ClientSize = new System.Drawing.Size(1032, 514);
             this.Controls.Add(this.TxtFiltro);
             this.Controls.Add(this.DgvVentas);
             this.Controls.Add(this.BtnFiltrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CmbFiltro);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Ventas";

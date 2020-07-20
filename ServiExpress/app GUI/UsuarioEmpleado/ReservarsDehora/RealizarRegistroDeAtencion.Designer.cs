@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnRegistrarAtencion = new System.Windows.Forms.Button();
             this.BtnCancelarAtencion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,9 +71,10 @@
             // BtnRegistrarAtencion
             // 
             this.BtnRegistrarAtencion.BackColor = System.Drawing.Color.LimeGreen;
-            this.BtnRegistrarAtencion.Location = new System.Drawing.Point(819, 44);
+            this.BtnRegistrarAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarAtencion.Location = new System.Drawing.Point(816, 47);
             this.BtnRegistrarAtencion.Name = "BtnRegistrarAtencion";
-            this.BtnRegistrarAtencion.Size = new System.Drawing.Size(108, 34);
+            this.BtnRegistrarAtencion.Size = new System.Drawing.Size(131, 58);
             this.BtnRegistrarAtencion.TabIndex = 1;
             this.BtnRegistrarAtencion.Text = "Registrar atención";
             this.BtnRegistrarAtencion.UseVisualStyleBackColor = false;
@@ -80,9 +83,10 @@
             // BtnCancelarAtencion
             // 
             this.BtnCancelarAtencion.BackColor = System.Drawing.Color.Gold;
-            this.BtnCancelarAtencion.Location = new System.Drawing.Point(819, 108);
+            this.BtnCancelarAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelarAtencion.Location = new System.Drawing.Point(816, 145);
             this.BtnCancelarAtencion.Name = "BtnCancelarAtencion";
-            this.BtnCancelarAtencion.Size = new System.Drawing.Size(108, 34);
+            this.BtnCancelarAtencion.Size = new System.Drawing.Size(131, 58);
             this.BtnCancelarAtencion.TabIndex = 2;
             this.BtnCancelarAtencion.Text = "Cancelar atención";
             this.BtnCancelarAtencion.UseVisualStyleBackColor = false;
@@ -102,26 +106,27 @@
             this.panel1.Controls.Add(this.TxtIdReservaDeAtencion);
             this.panel1.Controls.Add(this.TxtHoraAtencion);
             this.panel1.Controls.Add(this.TxtFechaAtencion);
-            this.panel1.Location = new System.Drawing.Point(32, 23);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(29, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(746, 571);
+            this.panel1.Size = new System.Drawing.Size(769, 595);
             this.panel1.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 50);
+            this.label10.Location = new System.Drawing.Point(92, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.Size = new System.Drawing.Size(76, 16);
             this.label10.TabIndex = 17;
-            this.label10.Text = "Rut cliente:";
+            this.label10.Text = "Rut cliente :";
             // 
             // TxtRutCliente
             // 
             this.TxtRutCliente.Enabled = false;
-            this.TxtRutCliente.Location = new System.Drawing.Point(149, 47);
+            this.TxtRutCliente.Location = new System.Drawing.Point(179, 47);
             this.TxtRutCliente.Name = "TxtRutCliente";
-            this.TxtRutCliente.Size = new System.Drawing.Size(287, 20);
+            this.TxtRutCliente.Size = new System.Drawing.Size(159, 22);
             this.TxtRutCliente.TabIndex = 16;
             // 
             // label8
@@ -148,9 +153,10 @@
             this.panel2.Controls.Add(this.CmbProductos);
             this.panel2.Controls.Add(this.CmbTipoDeProducto);
             this.panel2.Controls.Add(this.label6);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 180);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(746, 391);
+            this.panel2.Size = new System.Drawing.Size(769, 415);
             this.panel2.TabIndex = 15;
             // 
             // label11
@@ -158,7 +164,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(20, 45);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 13);
+            this.label11.Size = new System.Drawing.Size(125, 16);
             this.label11.TabIndex = 18;
             this.label11.Text = "Tipo de documento";
             // 
@@ -168,7 +174,7 @@
             this.CmbTipoDeDocumento.FormattingEnabled = true;
             this.CmbTipoDeDocumento.Location = new System.Drawing.Point(23, 61);
             this.CmbTipoDeDocumento.Name = "CmbTipoDeDocumento";
-            this.CmbTipoDeDocumento.Size = new System.Drawing.Size(350, 21);
+            this.CmbTipoDeDocumento.Size = new System.Drawing.Size(401, 24);
             this.CmbTipoDeDocumento.TabIndex = 17;
             // 
             // BtnQuitarProducto
@@ -207,6 +213,14 @@
             this.DgvProductos.AllowUserToDeleteRows = false;
             this.DgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DgvProductos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
@@ -217,8 +231,16 @@
             this.Stock,
             this.Cantidad});
             this.DgvProductos.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvProductos.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvProductos.EnableHeadersVisualStyles = false;
-            this.DgvProductos.Location = new System.Drawing.Point(0, 211);
+            this.DgvProductos.Location = new System.Drawing.Point(3, 211);
             this.DgvProductos.MultiSelect = false;
             this.DgvProductos.Name = "DgvProductos";
             this.DgvProductos.ReadOnly = true;
@@ -233,49 +255,49 @@
             this.IdProducto.HeaderText = "Id producto";
             this.IdProducto.Name = "IdProducto";
             this.IdProducto.ReadOnly = true;
-            this.IdProducto.Width = 79;
+            this.IdProducto.Width = 92;
             // 
             // Descripcion
             // 
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 88;
+            this.Descripcion.Width = 105;
             // 
             // Marca
             // 
             this.Marca.HeaderText = "Marca";
             this.Marca.Name = "Marca";
             this.Marca.ReadOnly = true;
-            this.Marca.Width = 62;
+            this.Marca.Width = 71;
             // 
             // Fecha_de_vencimiento
             // 
             this.Fecha_de_vencimiento.HeaderText = "Fecha de vencimiento";
             this.Fecha_de_vencimiento.Name = "Fecha_de_vencimiento";
             this.Fecha_de_vencimiento.ReadOnly = true;
-            this.Fecha_de_vencimiento.Width = 125;
+            this.Fecha_de_vencimiento.Width = 150;
             // 
             // Precio_unitario
             // 
             this.Precio_unitario.HeaderText = "Precio unitario";
             this.Precio_unitario.Name = "Precio_unitario";
             this.Precio_unitario.ReadOnly = true;
-            this.Precio_unitario.Width = 91;
+            this.Precio_unitario.Width = 108;
             // 
             // Stock
             // 
             this.Stock.HeaderText = "Stock";
             this.Stock.Name = "Stock";
             this.Stock.ReadOnly = true;
-            this.Stock.Width = 60;
+            this.Stock.Width = 67;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 74;
+            this.Cantidad.Width = 87;
             // 
             // label7
             // 
@@ -293,7 +315,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(20, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.Size = new System.Drawing.Size(111, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Tipo de producto";
             // 
@@ -303,7 +325,7 @@
             this.CmbProductos.FormattingEnabled = true;
             this.CmbProductos.Location = new System.Drawing.Point(24, 141);
             this.CmbProductos.Name = "CmbProductos";
-            this.CmbProductos.Size = new System.Drawing.Size(349, 21);
+            this.CmbProductos.Size = new System.Drawing.Size(400, 24);
             this.CmbProductos.TabIndex = 11;
             this.CmbProductos.SelectedIndexChanged += new System.EventHandler(this.CmbProductos_SelectedIndexChanged);
             // 
@@ -313,7 +335,7 @@
             this.CmbTipoDeProducto.FormattingEnabled = true;
             this.CmbTipoDeProducto.Location = new System.Drawing.Point(23, 101);
             this.CmbTipoDeProducto.Name = "CmbTipoDeProducto";
-            this.CmbTipoDeProducto.Size = new System.Drawing.Size(350, 21);
+            this.CmbTipoDeProducto.Size = new System.Drawing.Size(401, 24);
             this.CmbTipoDeProducto.TabIndex = 10;
             this.CmbTipoDeProducto.SelectedIndexChanged += new System.EventHandler(this.CmbTipoDeProducto_SelectedIndexChanged);
             // 
@@ -322,77 +344,77 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(21, 125);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "Producto";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 76);
+            this.label4.Location = new System.Drawing.Point(43, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.Size = new System.Drawing.Size(125, 16);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Fecha de atención:";
+            this.label4.Text = "Fecha de atención :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 102);
+            this.label3.Location = new System.Drawing.Point(51, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Hora de atención:";
+            this.label3.Text = "Hora de atención :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 131);
+            this.label2.Location = new System.Drawing.Point(46, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Servicio realizado:";
+            this.label2.Text = "Servicio realizado :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.Size = new System.Drawing.Size(147, 16);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Id reserva de atención:";
+            this.label1.Text = "Id reserva de atención :";
             // 
             // CmbTipoDeServicios
             // 
             this.CmbTipoDeServicios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTipoDeServicios.FormattingEnabled = true;
-            this.CmbTipoDeServicios.Location = new System.Drawing.Point(149, 128);
+            this.CmbTipoDeServicios.Location = new System.Drawing.Point(179, 125);
             this.CmbTipoDeServicios.Name = "CmbTipoDeServicios";
-            this.CmbTipoDeServicios.Size = new System.Drawing.Size(287, 21);
+            this.CmbTipoDeServicios.Size = new System.Drawing.Size(360, 24);
             this.CmbTipoDeServicios.TabIndex = 3;
             // 
             // TxtIdReservaDeAtencion
             // 
             this.TxtIdReservaDeAtencion.Enabled = false;
-            this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(149, 155);
+            this.TxtIdReservaDeAtencion.Location = new System.Drawing.Point(179, 155);
             this.TxtIdReservaDeAtencion.Name = "TxtIdReservaDeAtencion";
-            this.TxtIdReservaDeAtencion.Size = new System.Drawing.Size(287, 20);
+            this.TxtIdReservaDeAtencion.Size = new System.Drawing.Size(159, 22);
             this.TxtIdReservaDeAtencion.TabIndex = 2;
             // 
             // TxtHoraAtencion
             // 
             this.TxtHoraAtencion.Enabled = false;
-            this.TxtHoraAtencion.Location = new System.Drawing.Point(149, 99);
+            this.TxtHoraAtencion.Location = new System.Drawing.Point(179, 99);
             this.TxtHoraAtencion.Name = "TxtHoraAtencion";
-            this.TxtHoraAtencion.Size = new System.Drawing.Size(287, 20);
+            this.TxtHoraAtencion.Size = new System.Drawing.Size(119, 22);
             this.TxtHoraAtencion.TabIndex = 1;
             // 
             // TxtFechaAtencion
             // 
             this.TxtFechaAtencion.Enabled = false;
-            this.TxtFechaAtencion.Location = new System.Drawing.Point(149, 73);
+            this.TxtFechaAtencion.Location = new System.Drawing.Point(179, 73);
             this.TxtFechaAtencion.Name = "TxtFechaAtencion";
-            this.TxtFechaAtencion.Size = new System.Drawing.Size(287, 20);
+            this.TxtFechaAtencion.Size = new System.Drawing.Size(119, 22);
             this.TxtFechaAtencion.TabIndex = 0;
             // 
             // RealizarRegistroDeAtencion
@@ -400,8 +422,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(939, 606);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1043, 636);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnCancelarAtencion);
             this.Controls.Add(this.BtnRegistrarAtencion);

@@ -28,5 +28,10 @@ namespace ServiExpress.app_GUI.Usuario1
         {
             controladorCliente.SetDataGridView(DgvVehiculosCliente);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

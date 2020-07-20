@@ -132,55 +132,85 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
             }
             else
             {
-                int idComuna = int.Parse(CmbComuna.SelectedItem.ToString().Substring(0, CmbComuna.SelectedItem.ToString().IndexOf("-")).Trim());
-                usuario actualizarUsuario = new usuario();
-                actualizarUsuario.primerNombre = TxtPrimerNombre.Text;
-                actualizarUsuario.segundoNombre = TxtSegundoNombre.Text;
-                actualizarUsuario.apellidoPaterno = TxtApellidoPaterno.Text;
-                actualizarUsuario.apellidoMaterno = TxtApellidoMaterno.Text;
-                actualizarUsuario.telefono = int.Parse(TxtTelefono.Text);
-                actualizarUsuario.email = TxtEmail.Text;
-                actualizarUsuario.direccion = TxtDireccion.Text;
-                actualizarUsuario.nombreUsuario = TxtNombreUsuario.Text;
-                actualizarUsuario.contraseña = TxtContraseña.Text;
-                comuna comuna = new comuna();
-                comuna.idComuna = idComuna;
-                actualizarUsuario.comuna = comuna;
+                if (ValidacionEntradas.ValidarEmail(TxtEmail)) {
+                    int idComuna = int.Parse(CmbComuna.SelectedItem.ToString().Substring(0, CmbComuna.SelectedItem.ToString().IndexOf("-")).Trim());
+                    usuario actualizarUsuario = new usuario();
+                    actualizarUsuario.primerNombre = TxtPrimerNombre.Text;
+                    actualizarUsuario.segundoNombre = TxtSegundoNombre.Text;
+                    actualizarUsuario.apellidoPaterno = TxtApellidoPaterno.Text;
+                    actualizarUsuario.apellidoMaterno = TxtApellidoMaterno.Text;
+                    actualizarUsuario.telefono = int.Parse(TxtTelefono.Text);
+                    actualizarUsuario.email = TxtEmail.Text;
+                    actualizarUsuario.direccion = TxtDireccion.Text;
+                    actualizarUsuario.nombreUsuario = TxtNombreUsuario.Text;
+                    actualizarUsuario.contraseña = TxtContraseña.Text;
+                    comuna comuna = new comuna();
+                    comuna.idComuna = idComuna;
+                    actualizarUsuario.comuna = comuna;
 
-                try
-                {
-                    DialogResult dialogResult = MessageBox.Show("¿Actualizar datos?", "Actualización de datos", MessageBoxButtons.YesNo);
-
-                    if (dialogResult.Equals(DialogResult.Yes))
+                    try
                     {
-                        string[] resultado = controladorEmpleado.ActualizarUsuario(actualizarUsuario);
-                        if (bool.Parse(resultado[0]))
-                        {
-                            MessageBox.Show(resultado[1]);
-                            BtnActualizarCancelar.Text = "Actualizar datos";
-                            HabilitarDeshabilitarEdicion(false);
-                            BtnGuardarDatos.Visible = false;
-                            ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
-                            string[] login = controladorLoginUsuario.ValidarUsuario(actualizarUsuario.nombreUsuario, actualizarUsuario.contraseña);
-                            controladorEmpleado.login = login;
-                            GetInfoUsuario();
+                        DialogResult dialogResult = MessageBox.Show("¿Actualizar datos?", "Actualización de datos", MessageBoxButtons.YesNo);
 
-                        }
-                        else if (bool.Parse(resultado[0]).Equals(false))
+                        if (dialogResult.Equals(DialogResult.Yes))
                         {
-                            MessageBox.Show(resultado[1]);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Actualización de usuario no devolvió true ni false", "Error inesperado");
+                            string[] resultado = controladorEmpleado.ActualizarUsuario(actualizarUsuario);
+                            if (bool.Parse(resultado[0]))
+                            {
+                                MessageBox.Show(resultado[1]);
+                                BtnActualizarCancelar.Text = "Actualizar datos";
+                                HabilitarDeshabilitarEdicion(false);
+                                BtnGuardarDatos.Visible = false;
+                                ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
+                                string[] login = controladorLoginUsuario.ValidarUsuario(actualizarUsuario.nombreUsuario, actualizarUsuario.contraseña);
+                                controladorEmpleado.login = login;
+                                GetInfoUsuario();
+
+                            }
+                            else if (bool.Parse(resultado[0]).Equals(false))
+                            {
+                                MessageBox.Show(resultado[1]);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Actualización de usuario no devolvió true ni false", "Error inesperado");
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar datos \n" + ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar datos \n" + ex.Message);
+                else {
+                    MessageBox.Show("El email es incorrecto");
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TxtPrimerNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarString(e);
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarNumeros(e);
+        }
+
+        private void TxtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarDireccion(e);
+        }
+
+        private void TxtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.NombreUsuarioContraseña(e);
         }
     }
 }

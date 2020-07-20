@@ -36,23 +36,26 @@
             // 
             // TxtMontoPago
             // 
-            this.TxtMontoPago.Location = new System.Drawing.Point(133, 74);
+            this.TxtMontoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMontoPago.Location = new System.Drawing.Point(159, 71);
             this.TxtMontoPago.Name = "TxtMontoPago";
-            this.TxtMontoPago.Size = new System.Drawing.Size(100, 20);
+            this.TxtMontoPago.Size = new System.Drawing.Size(127, 24);
             this.TxtMontoPago.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 34);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(116, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Monto a pagar: ";
+            this.label2.Text = "Monto a pagar : ";
             // 
             // BtnPagar
             // 
-            this.BtnPagar.Location = new System.Drawing.Point(327, 65);
+            this.BtnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPagar.Location = new System.Drawing.Point(355, 65);
             this.BtnPagar.Name = "BtnPagar";
             this.BtnPagar.Size = new System.Drawing.Size(117, 37);
             this.BtnPagar.TabIndex = 3;
@@ -63,9 +66,10 @@
             // LblMontoAPagar
             // 
             this.LblMontoAPagar.AutoSize = true;
-            this.LblMontoAPagar.Location = new System.Drawing.Point(130, 34);
+            this.LblMontoAPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMontoAPagar.Location = new System.Drawing.Point(156, 45);
             this.LblMontoAPagar.Name = "LblMontoAPagar";
-            this.LblMontoAPagar.Size = new System.Drawing.Size(0, 13);
+            this.LblMontoAPagar.Size = new System.Drawing.Size(0, 18);
             this.LblMontoAPagar.TabIndex = 4;
             // 
             // Pagar

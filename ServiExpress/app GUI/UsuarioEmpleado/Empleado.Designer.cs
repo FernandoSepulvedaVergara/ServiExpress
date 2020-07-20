@@ -44,6 +44,7 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(6, 359);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 41);
@@ -53,6 +54,7 @@
             // 
             // BtnDatosPersonales
             // 
+            this.BtnDatosPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDatosPersonales.Location = new System.Drawing.Point(6, 29);
             this.BtnDatosPersonales.Name = "BtnDatosPersonales";
             this.BtnDatosPersonales.Size = new System.Drawing.Size(133, 41);
@@ -63,9 +65,10 @@
             // 
             // BtnReservasDeAtencion
             // 
-            this.BtnReservasDeAtencion.Location = new System.Drawing.Point(6, 76);
+            this.BtnReservasDeAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReservasDeAtencion.Location = new System.Drawing.Point(6, 164);
             this.BtnReservasDeAtencion.Name = "BtnReservasDeAtencion";
-            this.BtnReservasDeAtencion.Size = new System.Drawing.Size(133, 41);
+            this.BtnReservasDeAtencion.Size = new System.Drawing.Size(133, 50);
             this.BtnReservasDeAtencion.TabIndex = 15;
             this.BtnReservasDeAtencion.Text = "Reservas de atención";
             this.BtnReservasDeAtencion.UseVisualStyleBackColor = true;
@@ -73,7 +76,8 @@
             // 
             // BtnVentas
             // 
-            this.BtnVentas.Location = new System.Drawing.Point(6, 123);
+            this.BtnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVentas.Location = new System.Drawing.Point(6, 220);
             this.BtnVentas.Name = "BtnVentas";
             this.BtnVentas.Size = new System.Drawing.Size(133, 41);
             this.BtnVentas.TabIndex = 16;

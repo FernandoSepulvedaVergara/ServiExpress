@@ -41,11 +41,13 @@
             this.RdbSeleccionarHoy = new System.Windows.Forms.RadioButton();
             this.BtnFiltrar = new System.Windows.Forms.Button();
             this.TxtValorFiltro = new System.Windows.Forms.TextBox();
-            this.CmbSucursales = new System.Windows.Forms.ComboBox();
             this.PanelFiltrar = new System.Windows.Forms.Panel();
             this.RdbFiltrar = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.CmbSucursales = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvReservasDeHora)).BeginInit();
             this.PanelFiltrar.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvReservasDeHora
@@ -61,7 +63,7 @@
             this.Patente,
             this.IdReservación,
             this.Sucursal});
-            this.DgvReservasDeHora.Location = new System.Drawing.Point(12, 111);
+            this.DgvReservasDeHora.Location = new System.Drawing.Point(0, 3);
             this.DgvReservasDeHora.MultiSelect = false;
             this.DgvReservasDeHora.Name = "DgvReservasDeHora";
             this.DgvReservasDeHora.ReadOnly = true;
@@ -121,11 +123,10 @@
             "Fecha",
             "Rut",
             "Patente",
-            "Id reservación",
-            "Sucursal"});
+            "Id reservación"});
             this.CmbFiltros.Location = new System.Drawing.Point(29, 21);
             this.CmbFiltros.Name = "CmbFiltros";
-            this.CmbFiltros.Size = new System.Drawing.Size(148, 21);
+            this.CmbFiltros.Size = new System.Drawing.Size(148, 24);
             this.CmbFiltros.TabIndex = 1;
             this.CmbFiltros.SelectedIndexChanged += new System.EventHandler(this.CmbFiltros_SelectedIndexChanged);
             // 
@@ -134,16 +135,17 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtrar por:";
             // 
             // RdbSeleccionarHoy
             // 
             this.RdbSeleccionarHoy.AutoSize = true;
+            this.RdbSeleccionarHoy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RdbSeleccionarHoy.Location = new System.Drawing.Point(62, 53);
             this.RdbSeleccionarHoy.Name = "RdbSeleccionarHoy";
-            this.RdbSeleccionarHoy.Size = new System.Drawing.Size(101, 17);
+            this.RdbSeleccionarHoy.Size = new System.Drawing.Size(123, 20);
             this.RdbSeleccionarHoy.TabIndex = 3;
             this.RdbSeleccionarHoy.TabStop = true;
             this.RdbSeleccionarHoy.Text = "Seleccionar hoy";
@@ -165,19 +167,10 @@
             // 
             this.TxtValorFiltro.Location = new System.Drawing.Point(29, 48);
             this.TxtValorFiltro.Name = "TxtValorFiltro";
-            this.TxtValorFiltro.Size = new System.Drawing.Size(100, 20);
+            this.TxtValorFiltro.Size = new System.Drawing.Size(100, 22);
             this.TxtValorFiltro.TabIndex = 5;
-            // 
-            // CmbSucursales
-            // 
-            this.CmbSucursales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbSucursales.Enabled = false;
-            this.CmbSucursales.FormattingEnabled = true;
-            this.CmbSucursales.Location = new System.Drawing.Point(29, 48);
-            this.CmbSucursales.Name = "CmbSucursales";
-            this.CmbSucursales.Size = new System.Drawing.Size(148, 21);
-            this.CmbSucursales.TabIndex = 6;
-            this.CmbSucursales.Visible = false;
+            this.TxtValorFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtValorFiltro_KeyPress);
+            this.TxtValorFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtValorFiltro_KeyUp);
             // 
             // PanelFiltrar
             // 
@@ -187,6 +180,7 @@
             this.PanelFiltrar.Controls.Add(this.TxtValorFiltro);
             this.PanelFiltrar.Controls.Add(this.label1);
             this.PanelFiltrar.Enabled = false;
+            this.PanelFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelFiltrar.Location = new System.Drawing.Point(352, 5);
             this.PanelFiltrar.Name = "PanelFiltrar";
             this.PanelFiltrar.Size = new System.Drawing.Size(367, 100);
@@ -195,26 +189,47 @@
             // RdbFiltrar
             // 
             this.RdbFiltrar.AutoSize = true;
+            this.RdbFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RdbFiltrar.Location = new System.Drawing.Point(194, 54);
             this.RdbFiltrar.Name = "RdbFiltrar";
-            this.RdbFiltrar.Size = new System.Drawing.Size(50, 17);
+            this.RdbFiltrar.Size = new System.Drawing.Size(59, 20);
             this.RdbFiltrar.TabIndex = 8;
             this.RdbFiltrar.TabStop = true;
             this.RdbFiltrar.Text = "Filtrar";
             this.RdbFiltrar.UseVisualStyleBackColor = true;
             this.RdbFiltrar.CheckedChanged += new System.EventHandler(this.RdbFiltrar_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DgvReservasDeHora);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(12, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(790, 320);
+            this.panel1.TabIndex = 9;
+            // 
+            // CmbSucursales
+            // 
+            this.CmbSucursales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbSucursales.Enabled = false;
+            this.CmbSucursales.FormattingEnabled = true;
+            this.CmbSucursales.Location = new System.Drawing.Point(29, 47);
+            this.CmbSucursales.Name = "CmbSucursales";
+            this.CmbSucursales.Size = new System.Drawing.Size(148, 24);
+            this.CmbSucursales.TabIndex = 6;
+            this.CmbSucursales.Visible = false;
+            // 
             // ReservasDeHora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(804, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.RdbFiltrar);
             this.Controls.Add(this.PanelFiltrar);
             this.Controls.Add(this.RdbSeleccionarHoy);
-            this.Controls.Add(this.DgvReservasDeHora);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -224,6 +239,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvReservasDeHora)).EndInit();
             this.PanelFiltrar.ResumeLayout(false);
             this.PanelFiltrar.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +253,6 @@
         private System.Windows.Forms.RadioButton RdbSeleccionarHoy;
         private System.Windows.Forms.Button BtnFiltrar;
         private System.Windows.Forms.TextBox TxtValorFiltro;
-        private System.Windows.Forms.ComboBox CmbSucursales;
         private System.Windows.Forms.Panel PanelFiltrar;
         private System.Windows.Forms.RadioButton RdbFiltrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDeAtención;
@@ -247,5 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Patente;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdReservación;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sucursal;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox CmbSucursales;
     }
 }

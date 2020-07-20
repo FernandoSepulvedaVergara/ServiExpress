@@ -304,5 +304,21 @@ namespace ServiExpress
                 }
             }
         }
+
+        public static void ValidarReservaciones(KeyPressEventArgs e, int tipoDeFiltro, TextBox txt)
+        {
+            if (tipoDeFiltro == 1)
+            {
+                ValidarFormatoRut(txt,e);
+            }
+            else if (tipoDeFiltro == 2)
+            {
+                ValidarModelo(e);
+            }
+            else if (tipoDeFiltro == 4)
+            {
+                ValidarNumeros(e);
+            }
+        }
     }
 }

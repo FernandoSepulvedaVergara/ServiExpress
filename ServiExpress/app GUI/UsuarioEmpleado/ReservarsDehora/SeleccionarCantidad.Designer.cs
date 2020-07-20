@@ -41,7 +41,8 @@
             // 
             // NudCantidad
             // 
-            this.NudCantidad.Location = new System.Drawing.Point(74, 83);
+            this.NudCantidad.Location = new System.Drawing.Point(80, 95);
+            this.NudCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NudCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -49,7 +50,7 @@
             0});
             this.NudCantidad.Name = "NudCantidad";
             this.NudCantidad.ReadOnly = true;
-            this.NudCantidad.Size = new System.Drawing.Size(83, 20);
+            this.NudCantidad.Size = new System.Drawing.Size(110, 22);
             this.NudCantidad.TabIndex = 1;
             this.NudCantidad.Value = new decimal(new int[] {
             1,
@@ -61,18 +62,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 30);
+            this.label1.Location = new System.Drawing.Point(81, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Stock : ";
             // 
             // BtnGuardarCantidad
             // 
             this.BtnGuardarCantidad.BackColor = System.Drawing.Color.Yellow;
-            this.BtnGuardarCantidad.Location = new System.Drawing.Point(74, 119);
+            this.BtnGuardarCantidad.Location = new System.Drawing.Point(80, 140);
+            this.BtnGuardarCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGuardarCantidad.Name = "BtnGuardarCantidad";
-            this.BtnGuardarCantidad.Size = new System.Drawing.Size(83, 27);
+            this.BtnGuardarCantidad.Size = new System.Drawing.Size(110, 33);
             this.BtnGuardarCantidad.TabIndex = 3;
             this.BtnGuardarCantidad.Text = "Guardar";
             this.BtnGuardarCantidad.UseVisualStyleBackColor = false;
@@ -81,55 +84,60 @@
             // LblStock
             // 
             this.LblStock.AutoSize = true;
-            this.LblStock.Location = new System.Drawing.Point(71, 30);
+            this.LblStock.Location = new System.Drawing.Point(149, 37);
+            this.LblStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblStock.Name = "LblStock";
-            this.LblStock.Size = new System.Drawing.Size(13, 13);
+            this.LblStock.Size = new System.Drawing.Size(15, 16);
             this.LblStock.TabIndex = 4;
             this.LblStock.Text = "0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(30, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.Size = new System.Drawing.Size(102, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Precio unitario : ";
             // 
             // LblPrecioUnitario
             // 
             this.LblPrecioUnitario.AutoSize = true;
-            this.LblPrecioUnitario.Location = new System.Drawing.Point(112, 9);
+            this.LblPrecioUnitario.Location = new System.Drawing.Point(149, 11);
+            this.LblPrecioUnitario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPrecioUnitario.Name = "LblPrecioUnitario";
-            this.LblPrecioUnitario.Size = new System.Drawing.Size(13, 13);
+            this.LblPrecioUnitario.Size = new System.Drawing.Size(15, 16);
             this.LblPrecioUnitario.TabIndex = 6;
             this.LblPrecioUnitario.Text = "0";
             // 
             // LblTotal
             // 
             this.LblTotal.AutoSize = true;
-            this.LblTotal.Location = new System.Drawing.Point(71, 54);
+            this.LblTotal.Location = new System.Drawing.Point(149, 67);
+            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(13, 13);
+            this.LblTotal.Size = new System.Drawing.Size(15, 16);
             this.LblTotal.TabIndex = 8;
             this.LblTotal.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 54);
+            this.label4.Location = new System.Drawing.Point(84, 67);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Total : ";
             // 
             // SeleccionarCantidad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(220, 158);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(255, 186);
             this.ControlBox = false;
             this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.label4);
@@ -139,7 +147,9 @@
             this.Controls.Add(this.BtnGuardarCantidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NudCantidad);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SeleccionarCantidad";
