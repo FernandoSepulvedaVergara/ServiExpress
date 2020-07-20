@@ -200,5 +200,20 @@ namespace ServiExpress.app_GUI.UsuarioProveedor
                 CmbSeleccionarTipoDeProducto.Items.Add(string.Format("{0} - {1}", tipoDeProducto.idTipoDeProducto, tipoDeProducto.producto));
             }
         }
+
+        private void TxtFechaDeVencimiento_KeyUp(object sender, KeyEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoFecha(TxtFechaDeVencimiento, 3);
+        }
+
+        private void TxtFechaDeVencimiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarFecha(e, TxtFechaDeVencimiento);
+        }
+
+        private void TxtPrecioDeCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarNumeros(e);
+        }
     }
 }

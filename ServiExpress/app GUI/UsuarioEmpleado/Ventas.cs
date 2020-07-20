@@ -62,25 +62,39 @@ namespace ServiExpress.app_GUI.UsuarioEmpleado
 
         private void CmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbFiltro.SelectedItem.ToString() == "id venta") {
+            if (CmbFiltro.SelectedItem.ToString() == "Id venta") {
                 this.validarTextbox = 1;
+                TxtFiltro.MaxLength = 9;
                 TxtFiltro.Clear();
             }
             else if (CmbFiltro.SelectedItem.ToString() == "Rut")
             {
                 this.validarTextbox = 2;
+                TxtFiltro.MaxLength = 9;
                 TxtFiltro.Clear();
             }
             else if (CmbFiltro.SelectedItem.ToString() == "Fecha venta")
             {
                 this.validarTextbox = 3;
+                TxtFiltro.MaxLength = 8;
                 TxtFiltro.Clear();
             }
             else if (CmbFiltro.SelectedItem.ToString() == "Patente")
             {
                 this.validarTextbox = 4;
+                TxtFiltro.MaxLength = 9;
                 TxtFiltro.Clear();
             }
+        }
+
+        private void TxtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarVentas(e, this.validarTextbox,TxtFiltro);
+        }
+
+        private void TxtFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoFecha(TxtFiltro,this.validarTextbox);
         }
     }
 }

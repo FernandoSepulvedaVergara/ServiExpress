@@ -89,6 +89,7 @@
             this.splitContainer2.Panel1.Controls.Add(this.button3);
             this.splitContainer2.Panel1.Controls.Add(this.BtnAdministrarProducto);
             this.splitContainer2.Panel1.Controls.Add(this.button2);
+            this.splitContainer2.Panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer2.Size = new System.Drawing.Size(1364, 711);
             this.splitContainer2.SplitterDistance = 206;
             this.splitContainer2.TabIndex = 17;

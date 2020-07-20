@@ -95,47 +95,67 @@ namespace ServiExpress.app_GUI.UsuarioProveedor
             }
             else
             {
-                proveedor actualizarUsuarioProveedor = new proveedor();
-                actualizarUsuarioProveedor.rutProveedor = TxtRutProveedor.Text;
-                actualizarUsuarioProveedor.razonSocial = TxtRazonSocial.Text;
-                actualizarUsuarioProveedor.telefono = int.Parse(TxtTelefono.Text);
-                actualizarUsuarioProveedor.email = TxtEmail.Text;
-                actualizarUsuarioProveedor.nombreUsuario = TxtNombreUsuario.Text;
-                actualizarUsuarioProveedor.contraseña = TxtContraseña.Text;
-                try
-                {
-                    DialogResult dialogResult = MessageBox.Show("¿Actualizar datos?", "Actualización de datos", MessageBoxButtons.YesNo);
-
-                    if (dialogResult.Equals(DialogResult.Yes))
+                if (ValidacionEntradas.ValidarEmail(TxtEmail)) {
+                    proveedor actualizarUsuarioProveedor = new proveedor();
+                    actualizarUsuarioProveedor.rutProveedor = TxtRutProveedor.Text;
+                    actualizarUsuarioProveedor.razonSocial = TxtRazonSocial.Text;
+                    actualizarUsuarioProveedor.telefono = int.Parse(TxtTelefono.Text);
+                    actualizarUsuarioProveedor.email = TxtEmail.Text;
+                    actualizarUsuarioProveedor.nombreUsuario = TxtNombreUsuario.Text;
+                    actualizarUsuarioProveedor.contraseña = TxtContraseña.Text;
+                    try
                     {
-                        string[] resultado = controladoProveedor.ActualizarUsuarioProveedor(actualizarUsuarioProveedor);
-                        if (bool.Parse(resultado[0]))
-                        {
-                            MessageBox.Show(resultado[1]);
-                            BtnActualizarCancelar.Text = "Actualizar datos";
-                            HabilitarDeshabilitarEdicion(false);
-                            BtnGuardarDatos.Visible = false;
-                            ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
-                            string[] login = controladorLoginUsuario.ValidarUsuarioProveedor(actualizarUsuarioProveedor.nombreUsuario, actualizarUsuarioProveedor.contraseña);
-                            controladoProveedor.login = login;
-                            GetInfoUsuarioProveedor();
+                        DialogResult dialogResult = MessageBox.Show("¿Actualizar datos?", "Actualización de datos", MessageBoxButtons.YesNo);
 
-                        }
-                        else if (bool.Parse(resultado[0]).Equals(false))
+                        if (dialogResult.Equals(DialogResult.Yes))
                         {
-                            MessageBox.Show(resultado[1]);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Actualización de usuario no devolvió true ni false", "Error inesperado");
+                            string[] resultado = controladoProveedor.ActualizarUsuarioProveedor(actualizarUsuarioProveedor);
+                            if (bool.Parse(resultado[0]))
+                            {
+                                MessageBox.Show(resultado[1]);
+                                BtnActualizarCancelar.Text = "Actualizar datos";
+                                HabilitarDeshabilitarEdicion(false);
+                                BtnGuardarDatos.Visible = false;
+                                ControladorLoginUsuario controladorLoginUsuario = new ControladorLoginUsuario();
+                                string[] login = controladorLoginUsuario.ValidarUsuarioProveedor(actualizarUsuarioProveedor.nombreUsuario, actualizarUsuarioProveedor.contraseña);
+                                controladoProveedor.login = login;
+                                GetInfoUsuarioProveedor();
+
+                            }
+                            else if (bool.Parse(resultado[0]).Equals(false))
+                            {
+                                MessageBox.Show(resultado[1]);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Actualización de usuario no devolvió true ni false", "Error inesperado");
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar datos \n" + ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al guardar datos \n" + ex.Message);
+                else {
+                    MessageBox.Show("El email es incorrecto");
                 }
             }
+        }
+
+        private void TxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.NombreUsuarioContraseña(e);
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarNumeros(e);
+        }
+
+        private void TxtRazonSocial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarRazonSocial(e);
         }
     }
 }

@@ -170,6 +170,8 @@
             this.TxtFiltro.Name = "TxtFiltro";
             this.TxtFiltro.Size = new System.Drawing.Size(160, 22);
             this.TxtFiltro.TabIndex = 4;
+            this.TxtFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFiltro_KeyPress);
+            this.TxtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFiltro_KeyUp);
             // 
             // Ventas
             // 

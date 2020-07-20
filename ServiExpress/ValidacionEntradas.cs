@@ -271,6 +271,39 @@ namespace ServiExpress
                 ValidarFecha(e, txt);
             }
         }
+
+        public static void ValidarVentas(KeyPressEventArgs e, int tipoDeFiltro, TextBox txt)
+        {
+            if (tipoDeFiltro == 1)
+            {
+                ValidarNumeros(e);
+            }
+            else if (tipoDeFiltro == 2)
+            {
+                ValidarFormatoRut(txt, e);
+            }
+            else if (tipoDeFiltro == 3)
+            {
+                ValidarFecha(e,txt);
+            }
+            else if (tipoDeFiltro == 4)
+            {
+                ValidarModelo(e);
+            }
+        }
+
+        public static void ValidarPedidosProveedor(KeyPressEventArgs e, int tipoDeFiltro, TextBox txt)
+        {
+            if (tipoDeFiltro == 1)
+            {
+                ValidarNumeros(e);
+            }
+            else if (tipoDeFiltro == 3)
+            {
+                ValidarFecha(e, txt);
+            }
+        }
+
         public static void ValidarFecha(KeyPressEventArgs e, TextBox txt)
         {
             if (char.IsControl(e.KeyChar))

@@ -47,5 +47,25 @@ namespace ServiExpress.app_GUI.UsuarioProveedor
                 }
             }
         }
+
+        private void TxtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarModelo(e);
+        }
+
+        private void TxtFechaDeVencimiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarFecha(e, TxtFechaDeVencimiento);
+        }
+
+        private void TxtFechaDeVencimiento_KeyUp(object sender, KeyEventArgs e)
+        {
+            ValidacionEntradas.ValidarFormatoFecha(TxtFechaDeVencimiento,3);
+        }
+
+        private void TxtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarNumeros(e);
+        }
     }
 }

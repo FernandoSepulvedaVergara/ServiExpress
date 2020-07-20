@@ -35,9 +35,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(191, 132);
+            this.button1.Location = new System.Drawing.Point(196, 154);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 54);
+            this.button1.Size = new System.Drawing.Size(176, 66);
             this.button1.TabIndex = 0;
             this.button1.Text = "Guardar tipo de producto";
             this.button1.UseVisualStyleBackColor = true;
@@ -45,30 +46,35 @@
             // 
             // TxtNuevoTipoDeProducto
             // 
-            this.TxtNuevoTipoDeProducto.Location = new System.Drawing.Point(136, 58);
+            this.TxtNuevoTipoDeProducto.Location = new System.Drawing.Point(173, 72);
+            this.TxtNuevoTipoDeProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtNuevoTipoDeProducto.Name = "TxtNuevoTipoDeProducto";
-            this.TxtNuevoTipoDeProducto.Size = new System.Drawing.Size(365, 20);
+            this.TxtNuevoTipoDeProducto.Size = new System.Drawing.Size(370, 22);
             this.TxtNuevoTipoDeProducto.TabIndex = 1;
+            this.TxtNuevoTipoDeProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNuevoTipoDeProducto_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 61);
+            this.label1.Location = new System.Drawing.Point(48, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tipo de producto :";
             // 
             // AgregarNuevoTipoDeProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(513, 224);
+            this.ClientSize = new System.Drawing.Size(556, 249);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtNuevoTipoDeProducto);
             this.Controls.Add(this.button1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarNuevoTipoDeProducto";

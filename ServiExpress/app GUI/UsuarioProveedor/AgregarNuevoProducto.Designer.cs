@@ -45,16 +45,19 @@
             // 
             // TxtDescripcion
             // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(258, 118);
+            this.TxtDescripcion.Location = new System.Drawing.Point(344, 145);
+            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(246, 20);
+            this.TxtDescripcion.Size = new System.Drawing.Size(327, 22);
             this.TxtDescripcion.TabIndex = 0;
+            this.TxtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDescripcion_KeyPress);
             // 
             // BtnGuardarProducto
             // 
-            this.BtnGuardarProducto.Location = new System.Drawing.Point(258, 324);
+            this.BtnGuardarProducto.Location = new System.Drawing.Point(344, 399);
+            this.BtnGuardarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardarProducto.Name = "BtnGuardarProducto";
-            this.BtnGuardarProducto.Size = new System.Drawing.Size(102, 38);
+            this.BtnGuardarProducto.Size = new System.Drawing.Size(136, 47);
             this.BtnGuardarProducto.TabIndex = 1;
             this.BtnGuardarProducto.Text = "Guardar nuevo producto";
             this.BtnGuardarProducto.UseVisualStyleBackColor = true;
@@ -64,99 +67,116 @@
             // 
             this.CmbTipoDeProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbTipoDeProducto.FormattingEnabled = true;
-            this.CmbTipoDeProducto.Location = new System.Drawing.Point(52, 57);
+            this.CmbTipoDeProducto.Location = new System.Drawing.Point(69, 70);
+            this.CmbTipoDeProducto.Margin = new System.Windows.Forms.Padding(4);
             this.CmbTipoDeProducto.Name = "CmbTipoDeProducto";
-            this.CmbTipoDeProducto.Size = new System.Drawing.Size(258, 21);
+            this.CmbTipoDeProducto.Size = new System.Drawing.Size(343, 24);
             this.CmbTipoDeProducto.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 41);
+            this.label1.Location = new System.Drawing.Point(77, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 13);
+            this.label1.Size = new System.Drawing.Size(186, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Seleccionar tipo de producto :";
             // 
             // TxtMarca
             // 
-            this.TxtMarca.Location = new System.Drawing.Point(258, 148);
+            this.TxtMarca.Location = new System.Drawing.Point(344, 182);
+            this.TxtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.TxtMarca.Name = "TxtMarca";
-            this.TxtMarca.Size = new System.Drawing.Size(246, 20);
+            this.TxtMarca.Size = new System.Drawing.Size(327, 22);
             this.TxtMarca.TabIndex = 4;
+            this.TxtMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDescripcion_KeyPress);
             // 
             // TxtStock
             // 
-            this.TxtStock.Location = new System.Drawing.Point(258, 244);
+            this.TxtStock.Location = new System.Drawing.Point(344, 300);
+            this.TxtStock.Margin = new System.Windows.Forms.Padding(4);
             this.TxtStock.Name = "TxtStock";
-            this.TxtStock.Size = new System.Drawing.Size(131, 20);
+            this.TxtStock.Size = new System.Drawing.Size(173, 22);
             this.TxtStock.TabIndex = 7;
+            this.TxtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtStock_KeyPress);
             // 
             // TxtPrecioDeCompra
             // 
-            this.TxtPrecioDeCompra.Location = new System.Drawing.Point(258, 211);
+            this.TxtPrecioDeCompra.Location = new System.Drawing.Point(344, 260);
+            this.TxtPrecioDeCompra.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPrecioDeCompra.Name = "TxtPrecioDeCompra";
-            this.TxtPrecioDeCompra.Size = new System.Drawing.Size(131, 20);
+            this.TxtPrecioDeCompra.Size = new System.Drawing.Size(173, 22);
             this.TxtPrecioDeCompra.TabIndex = 8;
+            this.TxtPrecioDeCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtStock_KeyPress);
             // 
             // TxtFechaDeVencimiento
             // 
-            this.TxtFechaDeVencimiento.Location = new System.Drawing.Point(258, 179);
+            this.TxtFechaDeVencimiento.Location = new System.Drawing.Point(344, 220);
+            this.TxtFechaDeVencimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtFechaDeVencimiento.MaxLength = 8;
             this.TxtFechaDeVencimiento.Name = "TxtFechaDeVencimiento";
-            this.TxtFechaDeVencimiento.Size = new System.Drawing.Size(131, 20);
+            this.TxtFechaDeVencimiento.Size = new System.Drawing.Size(173, 22);
             this.TxtFechaDeVencimiento.TabIndex = 9;
+            this.TxtFechaDeVencimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFechaDeVencimiento_KeyPress);
+            this.TxtFechaDeVencimiento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFechaDeVencimiento_KeyUp);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 121);
+            this.label2.Location = new System.Drawing.Point(77, 149);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Producto :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 151);
+            this.label3.Location = new System.Drawing.Point(77, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Marca :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 182);
+            this.label4.Location = new System.Drawing.Point(77, 224);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 13);
+            this.label4.Size = new System.Drawing.Size(146, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "Fecha de vencimiento :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 214);
+            this.label5.Location = new System.Drawing.Point(77, 263);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.Size = new System.Drawing.Size(121, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "Precio de compra :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 244);
+            this.label6.Location = new System.Drawing.Point(77, 300);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.Size = new System.Drawing.Size(85, 16);
             this.label6.TabIndex = 14;
             this.label6.Text = "Stock inicial :";
             // 
             // AgregarNuevoProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(598, 415);
+            this.ClientSize = new System.Drawing.Size(797, 511);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -170,7 +190,9 @@
             this.Controls.Add(this.CmbTipoDeProducto);
             this.Controls.Add(this.BtnGuardarProducto);
             this.Controls.Add(this.TxtDescripcion);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarNuevoProducto";

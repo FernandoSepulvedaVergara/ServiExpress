@@ -63,13 +63,14 @@
             this.FechaDePedido,
             this.Total,
             this.Administrador});
-            this.DgvOrdenesDePedido.Location = new System.Drawing.Point(12, 152);
+            this.DgvOrdenesDePedido.Location = new System.Drawing.Point(16, 187);
+            this.DgvOrdenesDePedido.Margin = new System.Windows.Forms.Padding(4);
             this.DgvOrdenesDePedido.MultiSelect = false;
             this.DgvOrdenesDePedido.Name = "DgvOrdenesDePedido";
             this.DgvOrdenesDePedido.ReadOnly = true;
             this.DgvOrdenesDePedido.RowHeadersVisible = false;
             this.DgvOrdenesDePedido.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvOrdenesDePedido.Size = new System.Drawing.Size(776, 297);
+            this.DgvOrdenesDePedido.Size = new System.Drawing.Size(1035, 366);
             this.DgvOrdenesDePedido.TabIndex = 3;
             this.DgvOrdenesDePedido.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrdenesDePedido_CellClick);
             // 
@@ -108,9 +109,10 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.CmbEstado);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(668, 12);
+            this.panel3.Location = new System.Drawing.Point(793, 15);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(263, 122);
+            this.panel3.Size = new System.Drawing.Size(350, 150);
             this.panel3.TabIndex = 30;
             // 
             // CmbEstado
@@ -124,18 +126,20 @@
             "En camino",
             "Entregado",
             "Cancelado"});
-            this.CmbEstado.Location = new System.Drawing.Point(108, 23);
+            this.CmbEstado.Location = new System.Drawing.Point(144, 28);
+            this.CmbEstado.Margin = new System.Windows.Forms.Padding(4);
             this.CmbEstado.Name = "CmbEstado";
-            this.CmbEstado.Size = new System.Drawing.Size(140, 21);
+            this.CmbEstado.Size = new System.Drawing.Size(185, 24);
             this.CmbEstado.TabIndex = 18;
             this.CmbEstado.SelectedIndexChanged += new System.EventHandler(this.CmbEstado_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 27);
+            this.label1.Location = new System.Drawing.Point(4, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.Size = new System.Drawing.Size(124, 16);
             this.label1.TabIndex = 17;
             this.label1.Text = "Buscar por estado :";
             // 
@@ -147,17 +151,19 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.BtnBuscar);
             this.panel2.Controls.Add(this.RdbIdOrdenDePedido);
-            this.panel2.Location = new System.Drawing.Point(275, 12);
+            this.panel2.Location = new System.Drawing.Point(318, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(351, 122);
+            this.panel2.Size = new System.Drawing.Size(467, 150);
             this.panel2.TabIndex = 29;
             // 
             // RdbFechaDePedido
             // 
             this.RdbFechaDePedido.AutoSize = true;
-            this.RdbFechaDePedido.Location = new System.Drawing.Point(96, 56);
+            this.RdbFechaDePedido.Location = new System.Drawing.Point(128, 69);
+            this.RdbFechaDePedido.Margin = new System.Windows.Forms.Padding(4);
             this.RdbFechaDePedido.Name = "RdbFechaDePedido";
-            this.RdbFechaDePedido.Size = new System.Drawing.Size(105, 17);
+            this.RdbFechaDePedido.Size = new System.Drawing.Size(129, 20);
             this.RdbFechaDePedido.TabIndex = 23;
             this.RdbFechaDePedido.TabStop = true;
             this.RdbFechaDePedido.Text = "Fecha de pedido";
@@ -167,25 +173,30 @@
             // TxtBuscar
             // 
             this.TxtBuscar.Enabled = false;
-            this.TxtBuscar.Location = new System.Drawing.Point(220, 24);
+            this.TxtBuscar.Location = new System.Drawing.Point(293, 30);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.TxtBuscar.Size = new System.Drawing.Size(132, 22);
             this.TxtBuscar.TabIndex = 13;
+            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
+            this.TxtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtBuscar_KeyUp);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 27);
+            this.label2.Location = new System.Drawing.Point(15, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 18;
             this.label2.Text = "Buscar por  :";
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(220, 50);
+            this.BtnBuscar.Location = new System.Drawing.Point(293, 62);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.BtnBuscar.Size = new System.Drawing.Size(133, 34);
             this.BtnBuscar.TabIndex = 19;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = true;
@@ -194,9 +205,10 @@
             // RdbIdOrdenDePedido
             // 
             this.RdbIdOrdenDePedido.AutoSize = true;
-            this.RdbIdOrdenDePedido.Location = new System.Drawing.Point(96, 25);
+            this.RdbIdOrdenDePedido.Location = new System.Drawing.Point(128, 31);
+            this.RdbIdOrdenDePedido.Margin = new System.Windows.Forms.Padding(4);
             this.RdbIdOrdenDePedido.Name = "RdbIdOrdenDePedido";
-            this.RdbIdOrdenDePedido.Size = new System.Drawing.Size(114, 17);
+            this.RdbIdOrdenDePedido.Size = new System.Drawing.Size(140, 20);
             this.RdbIdOrdenDePedido.TabIndex = 21;
             this.RdbIdOrdenDePedido.TabStop = true;
             this.RdbIdOrdenDePedido.Text = "Id orden de pedido";
@@ -207,16 +219,18 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.BtnSeleccionarTodosLosPedidos);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 122);
+            this.panel1.Size = new System.Drawing.Size(275, 150);
             this.panel1.TabIndex = 28;
             // 
             // BtnSeleccionarTodosLosPedidos
             // 
-            this.BtnSeleccionarTodosLosPedidos.Location = new System.Drawing.Point(14, 15);
+            this.BtnSeleccionarTodosLosPedidos.Location = new System.Drawing.Point(19, 18);
+            this.BtnSeleccionarTodosLosPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSeleccionarTodosLosPedidos.Name = "BtnSeleccionarTodosLosPedidos";
-            this.BtnSeleccionarTodosLosPedidos.Size = new System.Drawing.Size(168, 37);
+            this.BtnSeleccionarTodosLosPedidos.Size = new System.Drawing.Size(224, 46);
             this.BtnSeleccionarTodosLosPedidos.TabIndex = 20;
             this.BtnSeleccionarTodosLosPedidos.Text = "Seleccionar todos los pedidos";
             this.BtnSeleccionarTodosLosPedidos.UseVisualStyleBackColor = true;
@@ -224,16 +238,18 @@
             // 
             // Pedidos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(955, 509);
+            this.ClientSize = new System.Drawing.Size(1156, 580);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DgvOrdenesDePedido);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pedidos";

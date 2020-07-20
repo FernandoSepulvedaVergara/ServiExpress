@@ -25,5 +25,10 @@ namespace ServiExpress.app_GUI.UsuarioProveedor
             string[] resultado = controladorProveedor.AgregarNuevoTipoDeProducto(TxtNuevoTipoDeProducto.Text);
             MessageBox.Show(string.Format("{0}",resultado[1]));
         }
+
+        private void TxtNuevoTipoDeProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidacionEntradas.ValidarModelo(e);
+        }
     }
 }

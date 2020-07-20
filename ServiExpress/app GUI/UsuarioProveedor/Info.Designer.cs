@@ -88,6 +88,7 @@
             this.TxtContraseña.PasswordChar = '*';
             this.TxtContraseña.Size = new System.Drawing.Size(180, 24);
             this.TxtContraseña.TabIndex = 73;
+            this.TxtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombreUsuario_KeyPress);
             // 
             // label9
             // 
@@ -107,6 +108,7 @@
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(180, 24);
             this.TxtNombreUsuario.TabIndex = 71;
+            this.TxtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombreUsuario_KeyPress);
             // 
             // label4
             // 
@@ -145,6 +147,7 @@
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(151, 24);
             this.TxtTelefono.TabIndex = 59;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // label2
             // 
@@ -164,6 +167,7 @@
             this.TxtRazonSocial.Name = "TxtRazonSocial";
             this.TxtRazonSocial.Size = new System.Drawing.Size(151, 24);
             this.TxtRazonSocial.TabIndex = 57;
+            this.TxtRazonSocial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRazonSocial_KeyPress);
             // 
             // label1
             // 
@@ -188,7 +192,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 197);
+            this.label5.Location = new System.Drawing.Point(58, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 18);
             this.label5.TabIndex = 82;
