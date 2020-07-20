@@ -227,5 +227,9 @@ namespace ServiExpress.controlador
             return webCliente.ActualizarUsuario(actualizarUsuario, this.login[0], this.login[1]);
         }
 
+        public string[] EliminarVehiculo(string patente)
+        {
+            return webCliente.EliminarVehiculo(patente,this.login[0]);
+        }
     }
 }

@@ -622,6 +622,9 @@
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.comuna.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.EliminarVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceCliente\ServiExpress.WebServiceCliente.GetComunasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

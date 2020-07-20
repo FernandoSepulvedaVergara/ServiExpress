@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="ActualizarUsuario" type="tns:ActualizarUsuario" />
   <xs:element name="ActualizarUsuarioResponse" type="tns:ActualizarUsuarioResponse" />
+  <xs:element name="EliminarVehiculo" type="tns:EliminarVehiculo" />
+  <xs:element name="EliminarVehiculoResponse" type="tns:EliminarVehiculoResponse" />
   <xs:element name="GetComunas" type="tns:GetComunas" />
   <xs:element name="GetComunasResponse" type="tns:GetComunasResponse" />
   <xs:element name="GetInfoCliente" type="tns:GetInfoCliente" />
@@ -28,18 +30,6 @@
   <xs:element name="RegistrarReservaDeAtencionResponse" type="tns:RegistrarReservaDeAtencionResponse" />
   <xs:element name="ValidarDisponibilidad" type="tns:ValidarDisponibilidad" />
   <xs:element name="ValidarDisponibilidadResponse" type="tns:ValidarDisponibilidadResponse" />
-  <xs:complexType name="ValidarDisponibilidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fecha" type="xs:string" />
-      <xs:element minOccurs="0" name="hora" type="xs:string" />
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ValidarDisponibilidadResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="GetVentasCliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="rut" type="xs:string" />
@@ -69,6 +59,18 @@
       <xs:element name="idEstadoDeVenta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ValidarDisponibilidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="hora" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidarDisponibilidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetSucursales">
     <xs:sequence />
   </xs:complexType>
@@ -82,6 +84,17 @@
       <xs:element minOccurs="0" name="direccion" type="xs:string" />
       <xs:element name="id_sucursal" type="xs:int" />
       <xs:element minOccurs="0" name="sucursal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="patente" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarVehiculoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetComunas">
@@ -139,20 +152,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="GetTipoDeServicios">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetTipoDeServiciosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeServicio" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoDeServicio">
-    <xs:sequence>
-      <xs:element name="id_servicio" type="xs:int" />
-      <xs:element minOccurs="0" name="servicio" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="IngresarVehiculo">
     <xs:sequence>
       <xs:element minOccurs="0" name="patente" type="xs:string" />
@@ -166,6 +165,20 @@
   <xs:complexType name="IngresarVehiculoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeServicios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetTipoDeServiciosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tipoDeServicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDeServicio">
+    <xs:sequence>
+      <xs:element name="id_servicio" type="xs:int" />
+      <xs:element minOccurs="0" name="servicio" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetVehiculos">

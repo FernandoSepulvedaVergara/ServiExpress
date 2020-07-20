@@ -35,7 +35,7 @@
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnAgregarVehiculo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnEliminarVehiculo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVehiculosCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,16 +102,16 @@
             this.BtnAgregarVehiculo.UseVisualStyleBackColor = true;
             this.BtnAgregarVehiculo.Click += new System.EventHandler(this.BtnAgregarVehiculo_Click);
             // 
-            // button1
+            // BtnEliminarVehiculo
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 39);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Eliminar vehículo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnEliminarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminarVehiculo.Location = new System.Drawing.Point(12, 99);
+            this.BtnEliminarVehiculo.Name = "BtnEliminarVehiculo";
+            this.BtnEliminarVehiculo.Size = new System.Drawing.Size(141, 39);
+            this.BtnEliminarVehiculo.TabIndex = 2;
+            this.BtnEliminarVehiculo.Text = "Eliminar vehículo";
+            this.BtnEliminarVehiculo.UseVisualStyleBackColor = true;
+            this.BtnEliminarVehiculo.Click += new System.EventHandler(this.button1_Click);
             // 
             // VehiculosCliente
             // 
@@ -120,7 +120,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(812, 457);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnEliminarVehiculo);
             this.Controls.Add(this.BtnAgregarVehiculo);
             this.Controls.Add(this.DgvVehiculosCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -143,6 +143,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Año;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnEliminarVehiculo;
     }
 }
