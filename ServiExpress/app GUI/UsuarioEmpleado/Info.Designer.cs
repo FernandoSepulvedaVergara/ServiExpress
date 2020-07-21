@@ -149,6 +149,7 @@
             // 
             this.TxtContraseña.Enabled = false;
             this.TxtContraseña.Location = new System.Drawing.Point(519, 131);
+            this.TxtContraseña.MaxLength = 30;
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.PasswordChar = '*';
             this.TxtContraseña.Size = new System.Drawing.Size(180, 22);
@@ -168,6 +169,7 @@
             // 
             this.TxtNombreUsuario.Enabled = false;
             this.TxtNombreUsuario.Location = new System.Drawing.Point(519, 105);
+            this.TxtNombreUsuario.MaxLength = 50;
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(180, 22);
             this.TxtNombreUsuario.TabIndex = 99;
@@ -186,6 +188,7 @@
             // 
             this.TxtDireccion.Enabled = false;
             this.TxtDireccion.Location = new System.Drawing.Point(519, 24);
+            this.TxtDireccion.MaxLength = 40;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(223, 22);
             this.TxtDireccion.TabIndex = 97;
@@ -204,6 +207,7 @@
             // 
             this.TxtEmail.Enabled = false;
             this.TxtEmail.Location = new System.Drawing.Point(132, 180);
+            this.TxtEmail.MaxLength = 50;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(242, 22);
             this.TxtEmail.TabIndex = 95;
@@ -239,6 +243,7 @@
             // 
             this.TxtApellidoMaterno.Enabled = false;
             this.TxtApellidoMaterno.Location = new System.Drawing.Point(132, 128);
+            this.TxtApellidoMaterno.MaxLength = 50;
             this.TxtApellidoMaterno.Name = "TxtApellidoMaterno";
             this.TxtApellidoMaterno.Size = new System.Drawing.Size(151, 22);
             this.TxtApellidoMaterno.TabIndex = 91;
@@ -257,6 +262,7 @@
             // 
             this.TxtApellidoPaterno.Enabled = false;
             this.TxtApellidoPaterno.Location = new System.Drawing.Point(132, 102);
+            this.TxtApellidoPaterno.MaxLength = 50;
             this.TxtApellidoPaterno.Name = "TxtApellidoPaterno";
             this.TxtApellidoPaterno.Size = new System.Drawing.Size(151, 22);
             this.TxtApellidoPaterno.TabIndex = 89;
@@ -275,6 +281,7 @@
             // 
             this.TxtSegundoNombre.Enabled = false;
             this.TxtSegundoNombre.Location = new System.Drawing.Point(132, 76);
+            this.TxtSegundoNombre.MaxLength = 50;
             this.TxtSegundoNombre.Name = "TxtSegundoNombre";
             this.TxtSegundoNombre.Size = new System.Drawing.Size(151, 22);
             this.TxtSegundoNombre.TabIndex = 87;
@@ -293,6 +300,7 @@
             // 
             this.TxtPrimerNombre.Enabled = false;
             this.TxtPrimerNombre.Location = new System.Drawing.Point(132, 50);
+            this.TxtPrimerNombre.MaxLength = 50;
             this.TxtPrimerNombre.Name = "TxtPrimerNombre";
             this.TxtPrimerNombre.Size = new System.Drawing.Size(151, 22);
             this.TxtPrimerNombre.TabIndex = 85;

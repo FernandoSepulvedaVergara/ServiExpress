@@ -75,7 +75,7 @@
             // 
             this.TxtPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPrimerNombre.Location = new System.Drawing.Point(25, 207);
-            this.TxtPrimerNombre.MaxLength = 30;
+            this.TxtPrimerNombre.MaxLength = 50;
             this.TxtPrimerNombre.Name = "TxtPrimerNombre";
             this.TxtPrimerNombre.Size = new System.Drawing.Size(144, 24);
             this.TxtPrimerNombre.TabIndex = 3;
@@ -120,6 +120,7 @@
             // 
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(241, 346);
+            this.TxtEmail.MaxLength = 50;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(306, 24);
             this.TxtEmail.TabIndex = 7;
@@ -128,7 +129,7 @@
             // 
             this.TxtSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSegundoNombre.Location = new System.Drawing.Point(239, 207);
-            this.TxtSegundoNombre.MaxLength = 30;
+            this.TxtSegundoNombre.MaxLength = 50;
             this.TxtSegundoNombre.Name = "TxtSegundoNombre";
             this.TxtSegundoNombre.Size = new System.Drawing.Size(144, 24);
             this.TxtSegundoNombre.TabIndex = 4;
@@ -161,7 +162,7 @@
             // 
             this.TxtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidoPaterno.Location = new System.Drawing.Point(25, 274);
-            this.TxtApellidoPaterno.MaxLength = 30;
+            this.TxtApellidoPaterno.MaxLength = 50;
             this.TxtApellidoPaterno.Name = "TxtApellidoPaterno";
             this.TxtApellidoPaterno.Size = new System.Drawing.Size(144, 24);
             this.TxtApellidoPaterno.TabIndex = 5;
@@ -172,7 +173,7 @@
             // 
             this.TxtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidoMaterno.Location = new System.Drawing.Point(241, 274);
-            this.TxtApellidoMaterno.MaxLength = 30;
+            this.TxtApellidoMaterno.MaxLength = 50;
             this.TxtApellidoMaterno.Name = "TxtApellidoMaterno";
             this.TxtApellidoMaterno.Size = new System.Drawing.Size(149, 24);
             this.TxtApellidoMaterno.TabIndex = 6;
@@ -275,7 +276,7 @@
             this.TxtContraseña.MaxLength = 30;
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.PasswordChar = '*';
-            this.TxtContraseña.Size = new System.Drawing.Size(168, 24);
+            this.TxtContraseña.Size = new System.Drawing.Size(223, 24);
             this.TxtContraseña.TabIndex = 13;
             this.TxtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombreUsuario_KeyPress);
             // 
@@ -283,9 +284,9 @@
             // 
             this.TxtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreUsuario.Location = new System.Drawing.Point(29, 656);
-            this.TxtNombreUsuario.MaxLength = 30;
+            this.TxtNombreUsuario.MaxLength = 50;
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
-            this.TxtNombreUsuario.Size = new System.Drawing.Size(214, 24);
+            this.TxtNombreUsuario.Size = new System.Drawing.Size(256, 24);
             this.TxtNombreUsuario.TabIndex = 12;
             this.TxtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombreUsuario_KeyPress);
             // 
@@ -328,7 +329,7 @@
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(26, 413);
-            this.TxtDireccion.MaxLength = 50;
+            this.TxtDireccion.MaxLength = 40;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(364, 24);
             this.TxtDireccion.TabIndex = 9;

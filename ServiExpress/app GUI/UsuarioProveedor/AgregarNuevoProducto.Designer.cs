@@ -47,6 +47,7 @@
             // 
             this.TxtDescripcion.Location = new System.Drawing.Point(344, 145);
             this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtDescripcion.MaxLength = 100;
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(327, 22);
             this.TxtDescripcion.TabIndex = 0;
@@ -87,6 +88,7 @@
             // 
             this.TxtMarca.Location = new System.Drawing.Point(344, 182);
             this.TxtMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtMarca.MaxLength = 30;
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.Size = new System.Drawing.Size(327, 22);
             this.TxtMarca.TabIndex = 4;

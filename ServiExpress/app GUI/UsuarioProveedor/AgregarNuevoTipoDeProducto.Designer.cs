@@ -36,7 +36,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(196, 154);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(176, 66);
             this.button1.TabIndex = 0;
@@ -47,7 +47,8 @@
             // TxtNuevoTipoDeProducto
             // 
             this.TxtNuevoTipoDeProducto.Location = new System.Drawing.Point(173, 72);
-            this.TxtNuevoTipoDeProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNuevoTipoDeProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtNuevoTipoDeProducto.MaxLength = 30;
             this.TxtNuevoTipoDeProducto.Name = "TxtNuevoTipoDeProducto";
             this.TxtNuevoTipoDeProducto.Size = new System.Drawing.Size(370, 22);
             this.TxtNuevoTipoDeProducto.TabIndex = 1;
@@ -74,7 +75,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarNuevoTipoDeProducto";

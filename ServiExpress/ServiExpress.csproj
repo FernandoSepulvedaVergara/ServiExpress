@@ -111,6 +111,12 @@
     <Compile Include="app GUI\UsuarioAdministrador\AdministrarUsuarios.Designer.cs">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\AgregarSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app GUI\UsuarioAdministrador\AgregarSucursal.Designer.cs">
+      <DependentUpon>AgregarSucursal.cs</DependentUpon>
+    </Compile>
     <Compile Include="app GUI\UsuarioAdministrador\GenerarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\AdministrarUsuarios.resx">
       <DependentUpon>AdministrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app GUI\UsuarioAdministrador\AgregarSucursal.resx">
+      <DependentUpon>AgregarSucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app GUI\UsuarioAdministrador\GenerarPedido.resx">
       <DependentUpon>GenerarPedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,7 +519,13 @@
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.ActualizarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.AgregarSucursalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.comuna.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.EliminarSucursalResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.FiltrarPorRutResponse.datasource">
@@ -558,6 +573,9 @@
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetRegionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetSucursalesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.GetTipoDeProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -595,6 +613,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.SeleccionarTodosLosUsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.sucursal.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServiceAdministrador\ServiExpress.WebServiceAdministrador.tipoDeProducto.datasource">

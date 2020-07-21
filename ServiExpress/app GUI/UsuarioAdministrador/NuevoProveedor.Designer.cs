@@ -68,6 +68,7 @@
             // 
             this.TxtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseña.Location = new System.Drawing.Point(585, 128);
+            this.TxtContraseña.MaxLength = 30;
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.PasswordChar = '*';
             this.TxtContraseña.Size = new System.Drawing.Size(180, 24);
@@ -88,6 +89,7 @@
             // 
             this.TxtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreUsuario.Location = new System.Drawing.Point(585, 102);
+            this.TxtNombreUsuario.MaxLength = 40;
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(180, 24);
             this.TxtNombreUsuario.TabIndex = 101;
@@ -107,6 +109,7 @@
             // 
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(148, 180);
+            this.TxtEmail.MaxLength = 40;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(243, 24);
             this.TxtEmail.TabIndex = 97;
@@ -144,6 +147,7 @@
             // 
             this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRazonSocial.Location = new System.Drawing.Point(148, 128);
+            this.TxtRazonSocial.MaxLength = 30;
             this.TxtRazonSocial.Name = "TxtRazonSocial";
             this.TxtRazonSocial.Size = new System.Drawing.Size(151, 24);
             this.TxtRazonSocial.TabIndex = 87;

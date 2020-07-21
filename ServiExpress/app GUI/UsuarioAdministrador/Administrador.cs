@@ -89,5 +89,18 @@ namespace ServiExpress.app_GUI
             splitContainer1.Panel2.Controls.Add(administrarProveedores);
             administrarProveedores.Show();
         }
+
+        private void BtnAdministrarSucursales_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.Clear();
+            }
+            AdministrarSucursales administrarSucursales = new AdministrarSucursales(controladorAdministrador);
+            administrarSucursales.TopLevel = false;
+            administrarSucursales.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(administrarSucursales);
+            administrarSucursales.Show();
+        }
     }
 }

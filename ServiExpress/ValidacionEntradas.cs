@@ -147,6 +147,10 @@ namespace ServiExpress
             {
                 e.Handled = false;
             }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
             else
                 e.Handled = true;
         }

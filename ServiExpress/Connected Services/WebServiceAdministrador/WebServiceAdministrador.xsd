@@ -14,6 +14,10 @@
   <xs:element name="ActualizarProductosEntregarPedidoResponse" type="tns:ActualizarProductosEntregarPedidoResponse" />
   <xs:element name="ActualizarUsuario" type="tns:ActualizarUsuario" />
   <xs:element name="ActualizarUsuarioResponse" type="tns:ActualizarUsuarioResponse" />
+  <xs:element name="AgregarSucursal" type="tns:AgregarSucursal" />
+  <xs:element name="AgregarSucursalResponse" type="tns:AgregarSucursalResponse" />
+  <xs:element name="EliminarSucursal" type="tns:EliminarSucursal" />
+  <xs:element name="EliminarSucursalResponse" type="tns:EliminarSucursalResponse" />
   <xs:element name="FiltrarPorRut" type="tns:FiltrarPorRut" />
   <xs:element name="FiltrarPorRutResponse" type="tns:FiltrarPorRutResponse" />
   <xs:element name="FiltrarPorUsuario" type="tns:FiltrarPorUsuario" />
@@ -44,6 +48,8 @@
   <xs:element name="GetProveedoresResponse" type="tns:GetProveedoresResponse" />
   <xs:element name="GetRegiones" type="tns:GetRegiones" />
   <xs:element name="GetRegionesResponse" type="tns:GetRegionesResponse" />
+  <xs:element name="GetSucursales" type="tns:GetSucursales" />
+  <xs:element name="GetSucursalesResponse" type="tns:GetSucursalesResponse" />
   <xs:element name="GetTipoDeProducto" type="tns:GetTipoDeProducto" />
   <xs:element name="GetTipoDeProductoResponse" type="tns:GetTipoDeProductoResponse" />
   <xs:element name="GetTiposDeUsuario" type="tns:GetTiposDeUsuario" />
@@ -121,6 +127,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarSucursal">
+    <xs:sequence>
+      <xs:element name="idSucursal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarSucursalResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -287,6 +303,23 @@
       <xs:element minOccurs="0" name="marca" type="xs:string" />
       <xs:element name="precioCompra" type="xs:int" />
       <xs:element name="totalAPagar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarSucursal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sucursal" type="tns:sucursal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sucursal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="id_sucursal" type="xs:int" />
+      <xs:element minOccurs="0" name="sucursal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarSucursalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarEstadoPedido">
@@ -483,6 +516,14 @@
   <xs:complexType name="ActualizarProductosCancelarPedidoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSucursales">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetSucursalesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:sucursal" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetProductos">

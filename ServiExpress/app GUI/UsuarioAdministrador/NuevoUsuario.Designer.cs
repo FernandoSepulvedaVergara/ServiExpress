@@ -143,6 +143,7 @@
             // 
             this.TxtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreUsuario.Location = new System.Drawing.Point(641, 222);
+            this.TxtNombreUsuario.MaxLength = 50;
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(180, 24);
             this.TxtNombreUsuario.TabIndex = 71;
@@ -162,6 +163,7 @@
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(641, 65);
+            this.TxtDireccion.MaxLength = 40;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(222, 24);
             this.TxtDireccion.TabIndex = 69;
@@ -181,6 +183,7 @@
             // 
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(165, 222);
+            this.TxtEmail.MaxLength = 50;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(242, 24);
             this.TxtEmail.TabIndex = 67;
@@ -218,6 +221,7 @@
             // 
             this.TxtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidoMaterno.Location = new System.Drawing.Point(165, 170);
+            this.TxtApellidoMaterno.MaxLength = 50;
             this.TxtApellidoMaterno.Name = "TxtApellidoMaterno";
             this.TxtApellidoMaterno.Size = new System.Drawing.Size(151, 24);
             this.TxtApellidoMaterno.TabIndex = 63;
@@ -237,6 +241,7 @@
             // 
             this.TxtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtApellidoPaterno.Location = new System.Drawing.Point(165, 144);
+            this.TxtApellidoPaterno.MaxLength = 50;
             this.TxtApellidoPaterno.Name = "TxtApellidoPaterno";
             this.TxtApellidoPaterno.Size = new System.Drawing.Size(151, 24);
             this.TxtApellidoPaterno.TabIndex = 61;
@@ -256,6 +261,7 @@
             // 
             this.TxtSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSegundoNombre.Location = new System.Drawing.Point(165, 118);
+            this.TxtSegundoNombre.MaxLength = 50;
             this.TxtSegundoNombre.Name = "TxtSegundoNombre";
             this.TxtSegundoNombre.Size = new System.Drawing.Size(151, 24);
             this.TxtSegundoNombre.TabIndex = 59;
@@ -275,6 +281,7 @@
             // 
             this.TxtPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPrimerNombre.Location = new System.Drawing.Point(165, 92);
+            this.TxtPrimerNombre.MaxLength = 50;
             this.TxtPrimerNombre.Name = "TxtPrimerNombre";
             this.TxtPrimerNombre.Size = new System.Drawing.Size(151, 24);
             this.TxtPrimerNombre.TabIndex = 57;
@@ -294,6 +301,7 @@
             // 
             this.TxtRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRut.Location = new System.Drawing.Point(165, 66);
+            this.TxtRut.MaxLength = 10;
             this.TxtRut.Name = "TxtRut";
             this.TxtRut.Size = new System.Drawing.Size(111, 24);
             this.TxtRut.TabIndex = 55;

@@ -84,6 +84,7 @@
             this.TxtContraseña.Enabled = false;
             this.TxtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseña.Location = new System.Drawing.Point(645, 113);
+            this.TxtContraseña.MaxLength = 30;
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.PasswordChar = '*';
             this.TxtContraseña.Size = new System.Drawing.Size(180, 24);
@@ -105,6 +106,7 @@
             this.TxtNombreUsuario.Enabled = false;
             this.TxtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreUsuario.Location = new System.Drawing.Point(645, 87);
+            this.TxtNombreUsuario.MaxLength = 40;
             this.TxtNombreUsuario.Name = "TxtNombreUsuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(180, 24);
             this.TxtNombreUsuario.TabIndex = 71;
@@ -125,6 +127,7 @@
             this.TxtEmail.Enabled = false;
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(202, 168);
+            this.TxtEmail.MaxLength = 40;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(237, 24);
             this.TxtEmail.TabIndex = 61;
@@ -164,6 +167,7 @@
             this.TxtRazonSocial.Enabled = false;
             this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRazonSocial.Location = new System.Drawing.Point(202, 116);
+            this.TxtRazonSocial.MaxLength = 30;
             this.TxtRazonSocial.Name = "TxtRazonSocial";
             this.TxtRazonSocial.Size = new System.Drawing.Size(151, 24);
             this.TxtRazonSocial.TabIndex = 57;

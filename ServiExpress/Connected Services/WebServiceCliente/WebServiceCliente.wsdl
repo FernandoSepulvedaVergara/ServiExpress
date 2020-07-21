@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServiceServiExpress/WebServiceCliente?xsd=1" namespace="http://servicios/" />
     </xsd:schema>
   </types>
-  <message name="GetTipoDeVehiculo">
-    <part name="parameters" element="tns:GetTipoDeVehiculo" />
+  <message name="GetReservaciones">
+    <part name="parameters" element="tns:GetReservaciones" />
   </message>
-  <message name="GetTipoDeVehiculoResponse">
-    <part name="parameters" element="tns:GetTipoDeVehiculoResponse" />
-  </message>
-  <message name="ActualizarUsuario">
-    <part name="parameters" element="tns:ActualizarUsuario" />
-  </message>
-  <message name="ActualizarUsuarioResponse">
-    <part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  <message name="GetReservacionesResponse">
+    <part name="parameters" element="tns:GetReservacionesResponse" />
   </message>
   <message name="GetVehiculos">
     <part name="parameters" element="tns:GetVehiculos" />
@@ -23,17 +17,17 @@
   <message name="GetVehiculosResponse">
     <part name="parameters" element="tns:GetVehiculosResponse" />
   </message>
-  <message name="GetReservaciones">
-    <part name="parameters" element="tns:GetReservaciones" />
+  <message name="ActualizarUsuario">
+    <part name="parameters" element="tns:ActualizarUsuario" />
   </message>
-  <message name="GetReservacionesResponse">
-    <part name="parameters" element="tns:GetReservacionesResponse" />
+  <message name="ActualizarUsuarioResponse">
+    <part name="parameters" element="tns:ActualizarUsuarioResponse" />
   </message>
-  <message name="GetComunas">
-    <part name="parameters" element="tns:GetComunas" />
+  <message name="GetTipoDeVehiculo">
+    <part name="parameters" element="tns:GetTipoDeVehiculo" />
   </message>
-  <message name="GetComunasResponse">
-    <part name="parameters" element="tns:GetComunasResponse" />
+  <message name="GetTipoDeVehiculoResponse">
+    <part name="parameters" element="tns:GetTipoDeVehiculoResponse" />
   </message>
   <message name="GetRegiones">
     <part name="parameters" element="tns:GetRegiones" />
@@ -47,17 +41,11 @@
   <message name="GetInfoUsuarioResponse">
     <part name="parameters" element="tns:GetInfoUsuarioResponse" />
   </message>
-  <message name="GetInfoCliente">
-    <part name="parameters" element="tns:GetInfoCliente" />
+  <message name="GetComunas">
+    <part name="parameters" element="tns:GetComunas" />
   </message>
-  <message name="GetInfoClienteResponse">
-    <part name="parameters" element="tns:GetInfoClienteResponse" />
-  </message>
-  <message name="EliminarVehiculo">
-    <part name="parameters" element="tns:EliminarVehiculo" />
-  </message>
-  <message name="EliminarVehiculoResponse">
-    <part name="parameters" element="tns:EliminarVehiculoResponse" />
+  <message name="GetComunasResponse">
+    <part name="parameters" element="tns:GetComunasResponse" />
   </message>
   <message name="IngresarVehiculo">
     <part name="parameters" element="tns:IngresarVehiculo" />
@@ -65,23 +53,29 @@
   <message name="IngresarVehiculoResponse">
     <part name="parameters" element="tns:IngresarVehiculoResponse" />
   </message>
+  <message name="GetInfoCliente">
+    <part name="parameters" element="tns:GetInfoCliente" />
+  </message>
+  <message name="GetInfoClienteResponse">
+    <part name="parameters" element="tns:GetInfoClienteResponse" />
+  </message>
   <message name="GetVentasCliente">
     <part name="parameters" element="tns:GetVentasCliente" />
   </message>
   <message name="GetVentasClienteResponse">
     <part name="parameters" element="tns:GetVentasClienteResponse" />
   </message>
+  <message name="EliminarVehiculo">
+    <part name="parameters" element="tns:EliminarVehiculo" />
+  </message>
+  <message name="EliminarVehiculoResponse">
+    <part name="parameters" element="tns:EliminarVehiculoResponse" />
+  </message>
   <message name="GetSucursales">
     <part name="parameters" element="tns:GetSucursales" />
   </message>
   <message name="GetSucursalesResponse">
     <part name="parameters" element="tns:GetSucursalesResponse" />
-  </message>
-  <message name="GetTipoDeServicios">
-    <part name="parameters" element="tns:GetTipoDeServicios" />
-  </message>
-  <message name="GetTipoDeServiciosResponse">
-    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
   </message>
   <message name="ValidarDisponibilidad">
     <part name="parameters" element="tns:ValidarDisponibilidad" />
@@ -95,26 +89,28 @@
   <message name="RegistrarReservaDeAtencionResponse">
     <part name="parameters" element="tns:RegistrarReservaDeAtencionResponse" />
   </message>
+  <message name="GetTipoDeServicios">
+    <part name="parameters" element="tns:GetTipoDeServicios" />
+  </message>
+  <message name="GetTipoDeServiciosResponse">
+    <part name="parameters" element="tns:GetTipoDeServiciosResponse" />
+  </message>
   <portType name="WebServiceCliente">
-    <operation name="GetTipoDeVehiculo">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoRequest" message="tns:GetTipoDeVehiculo" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoResponse" message="tns:GetTipoDeVehiculoResponse" />
-    </operation>
-    <operation name="ActualizarUsuario">
-      <input wsam:Action="http://servicios/WebServiceCliente/ActualizarUsuarioRequest" message="tns:ActualizarUsuario" />
-      <output wsam:Action="http://servicios/WebServiceCliente/ActualizarUsuarioResponse" message="tns:ActualizarUsuarioResponse" />
+    <operation name="GetReservaciones">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetReservacionesRequest" message="tns:GetReservaciones" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetReservacionesResponse" message="tns:GetReservacionesResponse" />
     </operation>
     <operation name="GetVehiculos">
       <input wsam:Action="http://servicios/WebServiceCliente/GetVehiculosRequest" message="tns:GetVehiculos" />
       <output wsam:Action="http://servicios/WebServiceCliente/GetVehiculosResponse" message="tns:GetVehiculosResponse" />
     </operation>
-    <operation name="GetReservaciones">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetReservacionesRequest" message="tns:GetReservaciones" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetReservacionesResponse" message="tns:GetReservacionesResponse" />
+    <operation name="ActualizarUsuario">
+      <input wsam:Action="http://servicios/WebServiceCliente/ActualizarUsuarioRequest" message="tns:ActualizarUsuario" />
+      <output wsam:Action="http://servicios/WebServiceCliente/ActualizarUsuarioResponse" message="tns:ActualizarUsuarioResponse" />
     </operation>
-    <operation name="GetComunas">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetComunasRequest" message="tns:GetComunas" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetComunasResponse" message="tns:GetComunasResponse" />
+    <operation name="GetTipoDeVehiculo">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoRequest" message="tns:GetTipoDeVehiculo" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeVehiculoResponse" message="tns:GetTipoDeVehiculoResponse" />
     </operation>
     <operation name="GetRegiones">
       <input wsam:Action="http://servicios/WebServiceCliente/GetRegionesRequest" message="tns:GetRegiones" />
@@ -124,29 +120,29 @@
       <input wsam:Action="http://servicios/WebServiceCliente/GetInfoUsuarioRequest" message="tns:GetInfoUsuario" />
       <output wsam:Action="http://servicios/WebServiceCliente/GetInfoUsuarioResponse" message="tns:GetInfoUsuarioResponse" />
     </operation>
-    <operation name="GetInfoCliente">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteRequest" message="tns:GetInfoCliente" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteResponse" message="tns:GetInfoClienteResponse" />
-    </operation>
-    <operation name="EliminarVehiculo">
-      <input wsam:Action="http://servicios/WebServiceCliente/EliminarVehiculoRequest" message="tns:EliminarVehiculo" />
-      <output wsam:Action="http://servicios/WebServiceCliente/EliminarVehiculoResponse" message="tns:EliminarVehiculoResponse" />
+    <operation name="GetComunas">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetComunasRequest" message="tns:GetComunas" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetComunasResponse" message="tns:GetComunasResponse" />
     </operation>
     <operation name="IngresarVehiculo">
       <input wsam:Action="http://servicios/WebServiceCliente/IngresarVehiculoRequest" message="tns:IngresarVehiculo" />
       <output wsam:Action="http://servicios/WebServiceCliente/IngresarVehiculoResponse" message="tns:IngresarVehiculoResponse" />
     </operation>
+    <operation name="GetInfoCliente">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteRequest" message="tns:GetInfoCliente" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetInfoClienteResponse" message="tns:GetInfoClienteResponse" />
+    </operation>
     <operation name="GetVentasCliente">
       <input wsam:Action="http://servicios/WebServiceCliente/GetVentasClienteRequest" message="tns:GetVentasCliente" />
       <output wsam:Action="http://servicios/WebServiceCliente/GetVentasClienteResponse" message="tns:GetVentasClienteResponse" />
     </operation>
+    <operation name="EliminarVehiculo">
+      <input wsam:Action="http://servicios/WebServiceCliente/EliminarVehiculoRequest" message="tns:EliminarVehiculo" />
+      <output wsam:Action="http://servicios/WebServiceCliente/EliminarVehiculoResponse" message="tns:EliminarVehiculoResponse" />
+    </operation>
     <operation name="GetSucursales">
       <input wsam:Action="http://servicios/WebServiceCliente/GetSucursalesRequest" message="tns:GetSucursales" />
       <output wsam:Action="http://servicios/WebServiceCliente/GetSucursalesResponse" message="tns:GetSucursalesResponse" />
-    </operation>
-    <operation name="GetTipoDeServicios">
-      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
-      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
     </operation>
     <operation name="ValidarDisponibilidad">
       <input wsam:Action="http://servicios/WebServiceCliente/ValidarDisponibilidadRequest" message="tns:ValidarDisponibilidad" />
@@ -156,19 +152,14 @@
       <input wsam:Action="http://servicios/WebServiceCliente/RegistrarReservaDeAtencionRequest" message="tns:RegistrarReservaDeAtencion" />
       <output wsam:Action="http://servicios/WebServiceCliente/RegistrarReservaDeAtencionResponse" message="tns:RegistrarReservaDeAtencionResponse" />
     </operation>
+    <operation name="GetTipoDeServicios">
+      <input wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosRequest" message="tns:GetTipoDeServicios" />
+      <output wsam:Action="http://servicios/WebServiceCliente/GetTipoDeServiciosResponse" message="tns:GetTipoDeServiciosResponse" />
+    </operation>
   </portType>
   <binding name="WebServiceClientePortBinding" type="tns:WebServiceCliente">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="GetTipoDeVehiculo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ActualizarUsuario">
+    <operation name="GetReservaciones">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -186,7 +177,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetReservaciones">
+    <operation name="ActualizarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -195,7 +186,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetComunas">
+    <operation name="GetTipoDeVehiculo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -222,16 +213,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetInfoCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliminarVehiculo">
+    <operation name="GetComunas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -249,6 +231,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="GetInfoCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="GetVentasCliente">
       <soap:operation soapAction="" />
       <input>
@@ -258,7 +249,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetSucursales">
+    <operation name="EliminarVehiculo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -267,7 +258,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="GetTipoDeServicios">
+    <operation name="GetSucursales">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -286,6 +277,15 @@
       </output>
     </operation>
     <operation name="RegistrarReservaDeAtencion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTipoDeServicios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

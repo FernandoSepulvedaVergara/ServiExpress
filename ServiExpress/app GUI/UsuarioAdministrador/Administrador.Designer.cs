@@ -98,6 +98,7 @@
             this.BtnAdministrarSucursales.TabIndex = 21;
             this.BtnAdministrarSucursales.Text = "Administrar sucursales";
             this.BtnAdministrarSucursales.UseVisualStyleBackColor = true;
+            this.BtnAdministrarSucursales.Click += new System.EventHandler(this.BtnAdministrarSucursales_Click);
             // 
             // BtnPedidos
             // 

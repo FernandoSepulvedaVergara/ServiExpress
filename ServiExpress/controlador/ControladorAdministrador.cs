@@ -192,5 +192,20 @@ namespace ServiExpress.controlador
         {
             return webAdministrador.ActualizarEstadoProveedor(rutProveedor, idEstadoDeProveedor);
         }
+
+        public sucursal[] GetSucursales()
+        {
+            return webAdministrador.GetSucursales();
+        }
+
+        public string[] AgregarSucursal(sucursal sucursal)
+        {
+            return webAdministrador.AgregarSucursal(sucursal);
+        }
+
+        public string[] EliminarSucursal(int idSucursal)
+        {
+            return webAdministrador.EliminarSucursal(idSucursal);
+        }
     }
 }

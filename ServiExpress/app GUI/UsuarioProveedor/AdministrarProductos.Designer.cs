@@ -291,7 +291,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(527, 156);
+            this.label7.Location = new System.Drawing.Point(527, 159);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 16);
             this.label7.TabIndex = 20;
@@ -321,7 +321,7 @@
             this.TxtPrecioDeCompra.Location = new System.Drawing.Point(662, 156);
             this.TxtPrecioDeCompra.Name = "TxtPrecioDeCompra";
             this.TxtPrecioDeCompra.ReadOnly = true;
-            this.TxtPrecioDeCompra.Size = new System.Drawing.Size(100, 22);
+            this.TxtPrecioDeCompra.Size = new System.Drawing.Size(130, 22);
             this.TxtPrecioDeCompra.TabIndex = 4;
             this.TxtPrecioDeCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecioDeCompra_KeyPress);
             // 
@@ -340,7 +340,7 @@
             this.TxtFechaDeVencimiento.Location = new System.Drawing.Point(185, 244);
             this.TxtFechaDeVencimiento.Name = "TxtFechaDeVencimiento";
             this.TxtFechaDeVencimiento.ReadOnly = true;
-            this.TxtFechaDeVencimiento.Size = new System.Drawing.Size(120, 22);
+            this.TxtFechaDeVencimiento.Size = new System.Drawing.Size(223, 22);
             this.TxtFechaDeVencimiento.TabIndex = 5;
             this.TxtFechaDeVencimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtFechaDeVencimiento_KeyPress);
             this.TxtFechaDeVencimiento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtFechaDeVencimiento_KeyUp);
@@ -358,6 +358,7 @@
             // 
             this.TxtMarca.Enabled = false;
             this.TxtMarca.Location = new System.Drawing.Point(185, 199);
+            this.TxtMarca.MaxLength = 30;
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.ReadOnly = true;
             this.TxtMarca.Size = new System.Drawing.Size(187, 22);
@@ -387,7 +388,7 @@
             this.TxtProveedor.Location = new System.Drawing.Point(662, 199);
             this.TxtProveedor.Name = "TxtProveedor";
             this.TxtProveedor.ReadOnly = true;
-            this.TxtProveedor.Size = new System.Drawing.Size(100, 22);
+            this.TxtProveedor.Size = new System.Drawing.Size(130, 22);
             this.TxtProveedor.TabIndex = 10;
             // 
             // AdministrarProductos
