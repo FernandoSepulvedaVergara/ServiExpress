@@ -35,7 +35,7 @@ namespace ServiExpress.controlador
         public DataGridView SetDataGridView(DataGridView Dgv, string id_sucursal, string filtro, string valorFiltro)
         {
             Dgv.Rows.Clear();
-            WebServiceEmpleado.atenciones[] resultado = GetAtenciones(id_sucursal, filtro, valorFiltro);
+            WebServiceEmpleado.atenciones[] resultado = GetAtenciones(filtro, valorFiltro);
             List<string> listaTemporal = new List<string>();
 
             if (resultado != null)
@@ -142,10 +142,10 @@ namespace ServiExpress.controlador
             return Dgv;
         }
 
-        public WebServiceEmpleado.atenciones[] GetAtenciones(string id_sucursal, string filtro, string valorFiltro)
+        public WebServiceEmpleado.atenciones[] GetAtenciones(string filtro, string valorFiltro)
         {
             WebServiceEmpleado.atenciones[] atenciones;
-            atenciones = webEmpleado.GetAtenciones(id_sucursal, filtro, valorFiltro);
+            atenciones = webEmpleado.GetAtenciones(filtro, valorFiltro);
             return atenciones;
         }
 

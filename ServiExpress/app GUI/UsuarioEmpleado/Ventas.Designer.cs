@@ -55,7 +55,7 @@
             "Rut",
             "Patente"});
             this.CmbFiltro.Location = new System.Drawing.Point(151, 17);
-            this.CmbFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.CmbFiltro.Name = "CmbFiltro";
             this.CmbFiltro.Size = new System.Drawing.Size(160, 24);
             this.CmbFiltro.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             this.BtnFiltrar.BackColor = System.Drawing.Color.Yellow;
             this.BtnFiltrar.Location = new System.Drawing.Point(355, 60);
-            this.BtnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnFiltrar.Name = "BtnFiltrar";
             this.BtnFiltrar.Size = new System.Drawing.Size(184, 41);
             this.BtnFiltrar.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.IdAtencion,
             this.IdDocumento});
             this.DgvVentas.Location = new System.Drawing.Point(16, 130);
-            this.DgvVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DgvVentas.Margin = new System.Windows.Forms.Padding(4);
             this.DgvVentas.MultiSelect = false;
             this.DgvVentas.Name = "DgvVentas";
             this.DgvVentas.ReadOnly = true;
@@ -166,7 +166,7 @@
             // TxtFiltro
             // 
             this.TxtFiltro.Location = new System.Drawing.Point(151, 75);
-            this.TxtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFiltro.Name = "TxtFiltro";
             this.TxtFiltro.Size = new System.Drawing.Size(160, 22);
             this.TxtFiltro.TabIndex = 4;
@@ -178,7 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(176)))), ((int)(((byte)(244)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1032, 514);
             this.Controls.Add(this.TxtFiltro);
             this.Controls.Add(this.DgvVentas);
@@ -187,7 +187,7 @@
             this.Controls.Add(this.CmbFiltro);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Ventas";

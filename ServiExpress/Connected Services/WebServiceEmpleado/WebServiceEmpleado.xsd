@@ -87,7 +87,6 @@
   </xs:complexType>
   <xs:complexType name="GetAtenciones">
     <xs:sequence>
-      <xs:element minOccurs="0" name="id_sucursal" type="xs:string" />
       <xs:element minOccurs="0" name="filtro" type="xs:string" />
       <xs:element minOccurs="0" name="valorFiltro" type="xs:string" />
     </xs:sequence>
@@ -181,6 +180,20 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="GetRegiones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetRegionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:int" />
+      <xs:element minOccurs="0" name="region" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="RegistrarVenta">
     <xs:sequence>
       <xs:element name="idAtencion" type="xs:int" />
@@ -196,20 +209,6 @@
   <xs:complexType name="RegistrarVentaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetRegiones">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="GetRegionesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:region" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="region">
-    <xs:sequence>
-      <xs:element name="idRegion" type="xs:int" />
-      <xs:element minOccurs="0" name="region" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarUsuario">

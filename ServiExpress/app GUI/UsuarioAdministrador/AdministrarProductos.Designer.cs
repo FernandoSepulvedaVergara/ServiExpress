@@ -336,7 +336,7 @@
             this.TxtFechaDeVencimiento.Location = new System.Drawing.Point(157, 244);
             this.TxtFechaDeVencimiento.Name = "TxtFechaDeVencimiento";
             this.TxtFechaDeVencimiento.ReadOnly = true;
-            this.TxtFechaDeVencimiento.Size = new System.Drawing.Size(100, 22);
+            this.TxtFechaDeVencimiento.Size = new System.Drawing.Size(253, 22);
             this.TxtFechaDeVencimiento.TabIndex = 5;
             // 
             // label3
